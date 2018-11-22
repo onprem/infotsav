@@ -18,7 +18,7 @@ class Lost extends Component {
   render() {
     return (
       <div>
-        <section className="min-vh-100 overflow-y-hidden bg-washed-blue">
+        <section className="min-vh-100 overflow-y-hidden bg-lightest-blue">
           <header className="tl ph4 lh-copy">
               <h1 className="f1 pb0 mb0 code fw9 dib tracked-tight light-purple">404</h1>
               <h2 className="pt0 mt0 fw2">Whoops! Page Not Found</h2>
@@ -28,10 +28,10 @@ class Lost extends Component {
               <div>
                 <p className="fw1 bold tc mt1 mt4-ns mt2-l f4 f3-ns fw6">{this.state.deadUser.toUpperCase()}, YOU'RE FIRED!</p>
                 <div className="ph3 w-100">
-                  <div className='w-25 dib'><img src='https://robohash.org/chopra?set=set2' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/kunji?set=set2' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/mavi?set=set2' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/sharm?set=set2' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/chopra?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/kunji?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/mavi?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/sharm?set=set2' alt ='' /></div>
                 </div>
 
                 <h2 className="pt0 dark-gray mt3 fw2 tc">Poor {this.state.deadUser}</h2>
@@ -42,10 +42,10 @@ class Lost extends Component {
                 <p className="fw1 bold tc mt1 mt4-ns mt2-l f4 f3-ns fw6">PICK WHO TO FIRE!</p>
 
                 <div className="ph3 w-100">
-                  <div className='w-25 dib'><img src='https://robohash.org/chopra?set=set2' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/kunji?set=set2' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/mavi?set=set2' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/sharm?set=set2' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/chopra?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/kunji?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/mavi?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/sharm?set=set2' alt ='' /></div>
                 </div>
 
 
