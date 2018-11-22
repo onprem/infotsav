@@ -1,197 +1,191 @@
-
-.navmenu {
-  box-sizing: border-box;
-  overflow-y: auto;
-  z-index: 1;
-  color: white;
+label {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 400px;
-  height: 100%;
-  padding: 60px 10px 30px;
-  background: linear-gradient(45deg, #00d5bd, #fb268c); /*fc1d37*/
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  color: #fff;
-  text-align: left;
-  transition: -webkit-transform 0.7s;
-  transition: transform 0.7s;
-  transition: transform 0.7s, -webkit-transform 0.7s;
-  -webkit-transform: translate3d(110%, 0, 0) rotateY(-45deg);
-          transform: translate3d(110%, 0, 0) rotateY(-45deg);
-  will-change: transform;
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-/*.credits-active .navmenu*/ 
-.credits-active {
-  transition: -webkit-transform 0.7s 0.2333333333s;
-  transition: transform 0.7s 0.2333333333s;
-  transition: transform 0.7s 0.2333333333s, -webkit-transform 0.7s 0.2333333333s;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-}
-.navmenu *, .navmenu *:before, .navmenu *:after {
-  box-sizing: border-box;
-}
-
-.Menu-list {
-  font-size: 2.25rem;
-  font-weight: bolder;
-  line-height: 1.2;
-  text-transform: uppercase;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-/*  -webkit-transform: rotateX(-10deg) rotateY(12deg);
-          transform: rotateX(-10deg) rotateY(12deg);*/
-}
-
-.Menu-list-item {
-  position: relative;
-  color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
   cursor: pointer;
-  margin: 15px;
 }
-.Menu-list-item::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 90%;
-  width: 100%;
-  /*left: -10%;*/
-  /*right: -10%;*/
-  height: 4px;
-  border-radius: 4px;
-  margin-top: -2px;
-  background: #FF2C75;
-  background: #fff;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  transition: -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
-  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
-  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98), -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+label::before {
+  position: fixed;
   z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(18, 67, 100, 0.1);
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.Menu-list-item:hover::before,
-.Menu-list-item:active::before {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 380px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  background: linear-gradient(45deg, #00d5bd, #fb268c);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transform: translate3d(0, 0, 0);
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/*Hamburger Menu*/
+/*nav::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 25em;
+  content: '';
+  transform: skewX(15deg) translateX(100%);
+  transform-origin: bottom left;
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}*/
+@media (min-width: 40em) {
+  /*nav::before {
+    width: 40em;
+  }*/
+}
+nav a {
+  margin: .3em 0;
+  padding: .2em 2em;
+  font-size: 2em;
+  font-weight: bolder;
+  color: white;
+  text-decoration: none;
+  transform: translateX(100%);
+  transition: color .15s, transform .5s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+nav a:nth-child(1) {
+  margin-top: 25%;
+  transition-delay: 0s, 100ms;
+}
+nav a:nth-child(2) {
+  transition-delay: 0s, 150ms;
+}
+nav a:nth-child(3) {
+  transition-delay: 0s, 200ms;
+}
+nav a:nth-child(4) {
+  transition-delay: 0s, 250ms;
+}
+nav a:nth-child(5) {
+  transition-delay: 0s, 300ms;
+}
+nav a:nth-child(6) {
+  transition-delay: 0s, 350ms;
+}
+/*nav a:hover, nav a:focus {
+  color: black;
+}*/
 
-.menu-wrapper {
+.open ~ label::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+.shownav {
+  transform: translateX(0);
+}
+/*.shownav::before {
+  transform: skewX(-15deg) translateX(0);
+}*/
+.shownav > a {
+  transform: translateX(0);
+}
+
+
+/*@media (min-width: 60em) {
+  article {
+    width: 50%;
+  }
+}*/
+
+/* Hmaburger */
+
+.burgers {
   position: absolute;
   top: 30px;
   right: 30px;
-  margin: auto;
-  width: 50px;
-  height: 30px;
+  border: 0;
+  z-index: 5;
+  background: none;
+  outline: 0;
+  padding: 0;
   cursor: pointer;
-  z-index: 10;
-}
-
-.hamburger-menu,
-.hamburger-menu:after,
-.hamburger-menu:before {
+  border-bottom: 5px solid currentColor;
   width: 50px;
-  height: 5px;
+  transition: border-bottom 1s ease-in-out;
+  -webkit-transition: border-bottom 1s ease-in-out;
 }
-
-.hamburger-menu {
-  position: relative;
-  transform: translateY(25px);
-  background: white;
-  transition: all 0ms 300ms;
+.burgers::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
-.hamburger-menu.animate {
-  background: rgba(255, 255, 255, 0);
-}
-
-.hamburger-menu:before {
+.burgers:before {
   content: "";
-  position: absolute;
-  left: 0;
-  bottom: 12px;
-  background: white;
-  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  display: block;
+  border-bottom: 5px solid currentColor;
+  width: 100%;
+  margin-bottom: 7px;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
 }
-
-.hamburger-menu:after {
+.burgers:after {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 12px;
-  background: white;
-  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  display: block;
+  border-bottom: 5px solid currentColor;
+  width: 100%;
+  margin-bottom: 7px;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.burgers.open {
+  border-bottom: 5px solid transparent;
+  transition: border-bottom 0.8s ease-in-out;
+  -webkit-transition: border-bottom 0.8s ease-in-out;
+}
+.burgers.open:before {
+  transform: rotate(-405deg) translateY(2px) translateX(-3px);
+  -webkit-transform: rotate(-405deg) translateY(2px) translateX(-3px);
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.burgers.open:after {
+  transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
 }
 
-.hamburger-menu.animate:after {
-  top: 0;
-  transform: rotate(45deg);
-  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+.burgers {
+  color: white;
 }
 
-.hamburger-menu.animate:before {
-  bottom: 0;
-  transform: rotate(-45deg);
-  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-
-@media only screen and (max-width: 1200px) {
-  .infologo {
-    left: 10%;
-    margin-top: 8%;
-    width: 80%;
-  }
-
-  .centimg {
-    margin-top: 7%;
-    margin-bottom: 8%;
-  }
-  .container {
-    height: 90vh;
-  }
-
-  .image {
-    width: 250px;
-  }
-  
-  .menu-wrapper {
-    top: 5px;
+@media only screen and (max-width: 800px) {
+  .burgers {
+    top: 20px;
     right: 5px;
     width: 40px;
-    height: 30px;
   }
-  .social {
-    position: fixed;
-    font-size: 32px;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+  nav {
+    width: 280px;
   }
-  .hamburger-menu,
-  .hamburger-menu:after,
-  .hamburger-menu:before {
-    width: 40px;
-    height: 4px;
+  nav a {
+    padding: .2em 1em;
+    font-size: 1.75em;
   }
-
-  .hamburger-menu {
-    transform: translateY(20px);
-  }
-
-  .hamburger-menu:before {
-    bottom: 10px;
-  }
-
-  .hamburger-menu:after {
-    top: 10px;
+  nav a:nth-child(1) {
+    margin-top: 40%;
   }
 }

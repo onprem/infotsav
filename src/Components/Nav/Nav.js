@@ -9,37 +9,25 @@ class Nav extends Component {
     this.state={
     }
   }
-  
+
   toggleNavView(){
-	    document.querySelector(".hamburger-menu").classList.toggle('animate');
-	    var $demoCont = document.querySelector(".navmenu");
-	    $demoCont.classList.toggle("credits-active");
+	    document.getElementById('menu').classList.toggle('shownav');
+		document.getElementsByClassName('burgers')[0].classList.toggle('open');
   }
 
   render() {
     return (
-	   	<div>
-			<div className="menu-wrapper" onClick={this.toggleNavView}>
-			  <div className="hamburger-menu"></div>	  
-			</div>
-			<div className="navmenu" id="navm">
-			    <div className="Menu">
-				  <ul className="Menu-list" data-offset="10">
-				    <li className="Menu-list-item" data-offset="20" onclick>
-				      <Link to='/' onClick={this.toggleNavView}>HOME</Link>
-				    </li>
-				    <li className="Menu-list-item" data-offset="16" onclick>
-				      <a href="events.html">EVENTS</a>
-				    </li>
-				    <li className="Menu-list-item" data-offset="12" onclick>
-				      <a href="register.html">REGISTER</a>
-				    </li>
-				    <li className="Menu-list-item" data-offset="8" onclick>
-				      <a href="#">CONTACT</a>
-				    </li>
-				  </ul>
-				</div>
-			</div>
+	   	<div className='main-nav-div'>
+			<button className="burgers" onClick={this.toggleNavView} />
+			<label aria-hidden="true" onClick={this.toggleNavView} title="menu" id="labeel">
+			</label>
+			<nav id="menu">
+				<Link to="/" onClick={this.toggleNavView}>HOME</Link>
+				<a href="events.html">EVENTS</a>
+				<a href="#">CONTACT US</a>
+				<a href="#">SPONSORS</a>
+				<a href="#">ABOUT</a>
+			</nav>
 		</div>
     );
   }
