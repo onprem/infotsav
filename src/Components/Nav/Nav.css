@@ -9,7 +9,7 @@ label {
 }
 label::before {
   position: fixed;
-  z-index: 1;
+  z-index: 6;
   top: 0;
   left: 0;
   right: 0;
@@ -21,12 +21,12 @@ label::before {
   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-nav {
+.main-nav-nav {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 7;
   width: 380px;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   background: linear-gradient(45deg, #00d5bd, #fb268c);
@@ -56,7 +56,7 @@ nav {
     width: 40em;
   }*/
 }
-nav a {
+.main-nav-nav a {
   margin: .3em 0;
   padding: .2em 2em;
   font-size: 2em;
@@ -67,26 +67,26 @@ nav a {
   transition: color .15s, transform .5s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
-nav a:nth-child(1) {
+.main-nav-nav a:nth-child(1) {
   margin-top: 25%;
   transition-delay: 0s, 100ms;
 }
-nav a:nth-child(2) {
+.main-nav-nav a:nth-child(2) {
   transition-delay: 0s, 150ms;
 }
-nav a:nth-child(3) {
+.main-nav-nav a:nth-child(3) {
   transition-delay: 0s, 200ms;
 }
-nav a:nth-child(4) {
+.main-nav-nav a:nth-child(4) {
   transition-delay: 0s, 250ms;
 }
-nav a:nth-child(5) {
+.main-nav-nav a:nth-child(5) {
   transition-delay: 0s, 300ms;
 }
-nav a:nth-child(6) {
+.main-nav-nav a:nth-child(6) {
   transition-delay: 0s, 350ms;
 }
-/*nav a:hover, nav a:focus {
+/*.main-nav-nav a:hover, .main-nav-nav a:focus {
   color: black;
 }*/
 
@@ -118,7 +118,7 @@ nav a:nth-child(6) {
   top: 30px;
   right: 30px;
   border: 0;
-  z-index: 5;
+  z-index: 8;
   background: none;
   outline: 0;
   padding: 0;
@@ -178,14 +178,18 @@ nav a:nth-child(6) {
     right: 5px;
     width: 40px;
   }
-  nav {
+  .main-nav-nav {
     width: 280px;
   }
-  nav a {
+  .main-nav-nav a {
     padding: .2em 1em;
     font-size: 1.75em;
   }
-  nav a:nth-child(1) {
+  .main-nav-nav a:nth-child(1) {
     margin-top: 40%;
   }
+}
+
+.main-nav-div{
+  z-index: 6;
 }

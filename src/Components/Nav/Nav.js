@@ -21,12 +21,12 @@ class Nav extends Component {
 			<button className="burgers" onClick={this.toggleNavView} />
 			<label aria-hidden="true" onClick={this.toggleNavView} title="menu" id="labeel">
 			</label>
-			<nav id="menu">
+			<nav id="menu" className='main-nav-nav'>
 				<Link to="/" onClick={this.toggleNavView}>HOME</Link>
-				<a href="events.html">EVENTS</a>
-				<a href="#">CONTACT US</a>
-				<a href="#">SPONSORS</a>
-				<a href="#">ABOUT</a>
+				<Link onClick={this.toggleNavView} to="#">ABOUT</Link>
+				<Link onClick={this.toggleNavView} to="/events">EVENTS</Link>
+				<Link onClick={this.toggleNavView} to="#">CONTACT US</Link>
+				<Link onClick={this.toggleNavView} to="#">SPONSORS</Link>
 			</nav>
 		</div>
     );
