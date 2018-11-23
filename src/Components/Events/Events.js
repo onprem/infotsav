@@ -35,8 +35,8 @@ class Events extends Component {
 		            </h2>
 		            <a href="events/online_events.html">
 		              <button type="button" className="fnc-slide__action-btn">
-		              Events
-		                <span data-text="Events">Events</span>
+		              Explore
+		                <span data-text="Explore">Explore</span>
 		              </button>
 		            </a>
 		          </div>
@@ -58,8 +58,8 @@ class Events extends Component {
 		            </h2>
 		            <a href="events/info_events.html">
 		              <button type="button" className="fnc-slide__action-btn">
-		              Events
-		                <span data-text="Events">Events</span>
+		              Explore
+		                <span data-text="Explore">Explore</span>
 		              </button>
 		            </a>
 		          </div>
@@ -81,8 +81,8 @@ class Events extends Component {
 		            </h2>
 		            <a href="events/tech_events.html">
 		              <button type="button" className="fnc-slide__action-btn">
-		              Events
-		                <span data-text="Events">Events</span>
+		              Explore
+		                <span data-text="Explore">Explore</span>
 		              </button>
 		            </a>
 		          </div>
@@ -104,8 +104,8 @@ class Events extends Component {
 		            </h2>
 		            <a href="events/SUSP_events.html">
 		              <button type="button" className="fnc-slide__action-btn">
-		              Events
-		                <span data-text="Events">Events</span>
+		              Explore
+		                <span data-text="Explore">Explore</span>
 		              </button>
 		            </a>
 		          </div>
@@ -127,8 +127,8 @@ class Events extends Component {
 		            </h2>
 		            <a href="events/man_events.html">
 		              <button type="button" className="fnc-slide__action-btn">
-		              Events
-		                <span data-text="Events">Events</span>
+		              Explore
+		                <span data-text="Explore">Explore</span>
 		              </button>
 		            </a>
 		          </div>
@@ -150,8 +150,8 @@ class Events extends Component {
 		            </h2>
 		            <a href="events/gamiacs.html">
 		              <button type="button" className="fnc-slide__action-btn">
-		              Events
-		                <span data-text="Events">Events</span>
+		              Explore
+		                <span data-text="Explore">Explore</span>
 		              </button>
 		            </a>
 		          </div>
@@ -173,8 +173,8 @@ class Events extends Component {
 		            </h2>
 		            <a href="events/robo_events.html">
 		              <button type="button" className="fnc-slide__action-btn">
-		              Events
-		                <span data-text="Events">Events</span>
+		              Explore
+		                <span data-text="Explore">Explore</span>
 		              </button>
 		            </a>
 		          </div>

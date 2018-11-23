@@ -229,22 +229,23 @@
 /*-------------------Events Button -----------------*/
 
 .fnc-slide__action-btn {
-  position: absolute;
-  margin-top: 50px;
-  margin-left: 180px;
-  padding: 5px 15px;
+  position: fixed;
+  right: 15%;
+  bottom: 20%;
+  padding: 10px 15px;
   font-size: 50px;
   line-height: 1;
   color: transparent;
   border: none;
   text-transform: uppercase;
-  background: transparent;
+  background: #1F2833;
   cursor: pointer;
   text-align: center;
   outline: none;
 }
 .fnc-slide__action-btn span {
   position: absolute;
+  padding: 10px 0;
   left: 0;
   top: 0;
   -webkit-text-stroke:0.4px black;
@@ -278,7 +279,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  line-height: 60px;
+  line-height: 70px;
   background: #1F2833;
   opacity: 0;
   -webkit-transform-origin: 50% 0;
@@ -460,7 +461,7 @@ body {
 .example-slider .fnc-slide__action-btn,
 .example-slider .fnc-slide__action-btn2,
 .example-slider .fnc-nav__control {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Rubik", "Montserrat", sans-serif;
 }
 .example-slider .fnc-slide-7 .fnc-slide__inner,
 .example-slider .fnc-slide-7 .fnc-slide__mask-inner {
@@ -474,30 +475,33 @@ body {
     top: 30%;
   }
   .demo-cont {
-  height: 93vh;
+  height: 92vh;
   }
   .fnc-slide__heading-line {
-    font-size: 150px;
+    font-size: 50px;
   }
-  .managerial {
-    font-size: 130px;
-  }
+  /*.managerial {
+    font-size: 50px;
+  }*/
   .fnc-slide__action-btn {
     position: fixed;
-    bottom: 20%;
-    margin-left: 200px;
+    bottom: 18%;
+    right: 10%;
+    /*margin-left: 200px;*/
     padding: 1px 15px;
-    font-size: 100px;
+    font-size: 40px;
   }
   .fnc-slide__action-btn span:after {
-    line-height: 95px;
+    line-height: 45px;
   }
   .fnc-slide__action-btn span {
-  line-height: 95px;
+    line-height: 45px;
+    padding: 0;
   }
   .fnc-nav {
-    height: 100px;
+    height: 47px;
     width: 100%;
+    bottom: 0;
   }
   .fnc-nav__bg.m--active-nav-bg {
     z-index: 1;
@@ -508,9 +512,10 @@ body {
           transform: translateX(0);
   }
   .fnc-nav__control {
-    width: 140px;
-    height: 100px;
-    font-size: 20px;
+    width: 14vw;
+    height: 45px;
+    font-size: 9px;
+    padding-left: 1px;
   }
 
 	.example-slider .fnc-slide-1 .fnc-slide__inner,

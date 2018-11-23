@@ -28,7 +28,7 @@ label::before {
   bottom: 0;
   z-index: 7;
   width: 380px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: linear-gradient(45deg, #00d5bd, #fb268c);
   display: flex;
   flex-flow: column nowrap;
@@ -39,26 +39,9 @@ label::before {
   transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/*nav::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  width: 25em;
-  content: '';
-  transform: skewX(15deg) translateX(100%);
-  transform-origin: bottom left;
-  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-}*/
-@media (min-width: 40em) {
-  /*nav::before {
-    width: 40em;
-  }*/
-}
 .main-nav-nav a {
-  margin: .3em 0;
-  padding: .2em 2em;
+  margin: .3em 2em;
+  padding: .2em 0em;
   font-size: 2em;
   font-weight: bolder;
   color: white;
@@ -67,6 +50,33 @@ label::before {
   transition: color .15s, transform .5s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
+
+.main-nav-nav a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  padding: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: -2px;
+  background: #FF2C75;
+  background: #fff;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98), -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  z-index: 1;
+}
+
+.main-nav-nav a:hover::before,
+.main-nav-nav a:active::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .main-nav-nav a:nth-child(1) {
   margin-top: 25%;
   transition-delay: 0s, 100ms;
@@ -182,7 +192,8 @@ label::before {
     width: 280px;
   }
   .main-nav-nav a {
-    padding: .2em 1em;
+    margin-left: 1em;
+    padding: .2em 0em;
     font-size: 1.75em;
   }
   .main-nav-nav a:nth-child(1) {
