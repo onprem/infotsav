@@ -9,6 +9,9 @@ import '../../assets/css/fontawesome.min.css'
 import '../../assets/css/brands.min.css'
 import '../../assets/css/csshake.min.css'
 import {homeFunctions, stopHomeFunctions} from './HomeFunctions.js';
+import Particles from 'react-particles-js';
+import particleConfig from '../../assets/particlesjs-config.json';
+
 
 class Home extends Component {
 
@@ -17,8 +20,11 @@ class Home extends Component {
     this.state={
     }
   }
+
+  // particleParams =
   componentDidMount(){
   	homeFunctions();
+  	// console.log(particleConfig);
   }
 
   componentWillUnmount(){
@@ -28,6 +34,7 @@ class Home extends Component {
   render() {
     return (
 	   	<div className='home-container'>
+	   		<Particles className='particlesBack' params={particleConfig} />
 			<div>
 				<img src={headers} className="headimg" alt="infotsav logo" />
 			</div>
