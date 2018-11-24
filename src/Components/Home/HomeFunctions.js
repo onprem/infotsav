@@ -9,10 +9,17 @@ import thorfinal from "../../assets/hero/thorfinal.png";
 import strange from "../../assets/hero/strange.png";
 
 
-let myVar;
+let myVar, myTar, myBar1, myBar2, myBar3, myBar4, myBar;
 
 export const stopHomeFunctions = () => {
 	clearInterval(myVar);
+	clearTimeout(myTar);
+	clearTimeout(myBar1);
+	clearTimeout(myBar2);
+	clearTimeout(myBar3);
+	clearTimeout(myBar4);
+	clearTimeout(myBar);
+
 }
 
 export const homeFunctions = () => {
@@ -126,13 +133,13 @@ export const homeFunctions = () => {
 	        }
 	    	document.getElementById("inimg").style.filter = shadows[i++%4];
 	    } 
-	    var myTar = setTimeout(sTimer, 350);
+	    myTar = setTimeout(sTimer, 350);
 
-	    var myBar1 = setTimeout(Timer1, 250);
-	    var myBar2 = setTimeout(Timer2, 330);
-	    var myBar3 = setTimeout(Timer3, 550);
-	    var myBar4 = setTimeout(Timer4, 650);
-	    var myBar = setTimeout(Timer, 1000);
+	    myBar1 = setTimeout(Timer1, 250);
+	    myBar2 = setTimeout(Timer2, 330);
+	    myBar3 = setTimeout(Timer3, 550);
+	    myBar4 = setTimeout(Timer4, 650);
+	    myBar = setTimeout(Timer, 1000);
 	} 
 
 	myVar = setInterval(myTimer, 8000);

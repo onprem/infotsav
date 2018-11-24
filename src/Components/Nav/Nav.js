@@ -19,8 +19,7 @@ class Nav extends Component {
     return (
 	   	<div className='main-nav-div'>
 			<button className="burgers" onClick={this.toggleNavView} />
-			<label aria-hidden="true" onClick={this.toggleNavView} title="menu" id="labeel">
-			</label>
+			<label aria-hidden="true" onClick={this.toggleNavView} id="labeel" />
 			<nav id="menu" className='main-nav-nav'>
 				<Link to="/" onClick={this.toggleNavView}>HOME</Link>
 				<Link onClick={this.toggleNavView} to="#">ABOUT</Link>

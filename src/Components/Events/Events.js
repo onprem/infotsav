@@ -10,6 +10,10 @@ class Events extends Component {
     this.state={
     }
   }
+  componentWillMount(){
+
+  }
+
   componentDidMount(){
   	EventsFunctions();
   }
