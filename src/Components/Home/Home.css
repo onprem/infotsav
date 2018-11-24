@@ -9,7 +9,7 @@ a {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	height: 100vmin;
+	height: 100vh;
 	margin: auto;
 	text-align: center;.
   font-family: "Montserrat", sans-serif;
@@ -348,8 +348,8 @@ a {
     margin-top: 7%;
     margin-bottom: 2%;
   }
-  .container {
-    height: 90vh;
+  .home-container {
+    height: 100vh;
   }
 
 	.image {
