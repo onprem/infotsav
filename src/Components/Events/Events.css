@@ -475,7 +475,8 @@ body {
     top: 30%;
   }
   .demo-cont {
-  height: 92vh;
+    height: 92vh;
+    height: calc(var(--vh, 1vh) * 100);
   }
   .fnc-slide__heading-line {
     font-size: 50px;
