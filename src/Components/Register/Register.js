@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import {Footer} from '../Footer/Footer';
 import '../../assets/css/solid.min.css'
 import '../../assets/css/fontawesome.min.css'
-import './Register.css';
+import '../../assets/css/signup.css'
+import headers from "../../assets/logo/headers.png"
 import {registerFunctions} from './RegisterFunctions'
 
 class Register extends Component {
@@ -68,8 +70,14 @@ class Register extends Component {
 
     return (
 	   	<div className='register-container'>
+	   	  <div>
+			<img src={headers} className="headim" alt="infotsav logo" />
+		  </div>
    		  <div id="progress"></div>
 		  <div className="center">
+		    <div id="headdin">
+		  		<h1>Register</h1>
+		  	</div>
 		    <div id="register">
 		      <i id="progressButton" className="fas fa-arrow-right next"></i>
 		      <div id="inputContainer">
@@ -83,8 +91,10 @@ class Register extends Component {
 		        <div id="inputProgress"></div>
 		      </div>
 		    </div>
-	  	</div>
-  
+		    <div id="sendto">Already have an account? <Link to="/login">LOGIN</Link></div>
+		    <div id="holdit"></div>
+	  	  </div>
+  		  <Footer />
 		</div>
     );
   }

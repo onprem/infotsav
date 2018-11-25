@@ -40,7 +40,7 @@ label::before {
 }
 
 .main-nav-nav a {
-  margin: .3em 2em;
+  margin: .2em 2em;
   padding: .2em 0em;
   font-size: 2em;
   font-weight: bolder;
@@ -193,6 +193,7 @@ label::before {
   }
   .main-nav-nav a {
     margin-left: 1em;
+    margin-right: 0;
     padding: .2em 0em;
     font-size: 1.75em;
   }

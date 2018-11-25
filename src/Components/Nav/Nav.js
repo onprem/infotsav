@@ -24,6 +24,8 @@ class Nav extends Component {
 				<Link to="/" onClick={this.toggleNavView}>HOME</Link>
 				<Link onClick={this.toggleNavView} to="#">ABOUT</Link>
 				<Link onClick={this.toggleNavView} to="/events">EVENTS</Link>
+				<Link onClick={this.toggleNavView} to="/register">REGISTER</Link>
+				<Link onClick={this.toggleNavView} to="/login">LOGIN</Link>
 				<Link onClick={this.toggleNavView} to="#">CONTACT US</Link>
 				<Link onClick={this.toggleNavView} to="#">SPONSORS</Link>
 			</nav>
