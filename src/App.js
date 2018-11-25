@@ -5,6 +5,7 @@ import Nav from './Components/Nav/Nav';
 import Events from './Components/Events/Events';
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
+import Login from './Components/Login/Login';
 import logo from './assets/icon.png';
 import './App.css';
 
@@ -16,7 +17,8 @@ class App extends Component {
     		<Switch>
     			<Route path="/" exact component={Home} />
           <Route path="/events" exact component={Events} />
-     			<Route path="/register" exact component={Register} />
+          <Route path="/register" exact component={Register} />
+     			<Route path="/login" exact component={Login} />
           <Route component={Lost} />
     		</Switch>
       </div>
