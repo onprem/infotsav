@@ -11,7 +11,7 @@
   display: block;
 }
 
-h1 {
+.registerDoneDone {
   position: relative;
   color: #fff;
   opacity: 0;

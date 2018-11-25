@@ -69,6 +69,7 @@ export const registerFunctions = (last) => {
 
     var h1 = document.createElement('h1')
     h1.appendChild(document.createTextNode('Welcome ' + questions[0].value + '!'))
+    h1.classList.add('registerDoneDone');
     setTimeout(function() {
       register.parentElement.appendChild(h1)     
       setTimeout(function() {h1.style.opacity = 1}, 50)
