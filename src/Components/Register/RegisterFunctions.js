@@ -75,7 +75,7 @@ export const registerFunctions = (last) => {
       setTimeout(function() {h1.style.opacity = 1}, 50)
     }, eTime)
 
-    last.setState({questions});
+    last.setState({questions, gotData: true});
     // window.location.href = '/events';
     
   }
