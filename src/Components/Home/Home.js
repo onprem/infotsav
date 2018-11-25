@@ -56,7 +56,7 @@ class Home extends Component {
 					<span>8-9</span>
 					<span>Feb '19</span>
 				</div>
-				<a href="#" className="colsch">
+				<Link to="/register" className="colsch">
 				<div className="box">
 					<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
 						<line className="top" x1="0" y1="0" x2="720" y2="0"/>
@@ -66,7 +66,7 @@ class Home extends Component {
 					</svg>
 					<span>REGISTER</span>
 				</div>
-				</a>
+				</Link>
 			</div>
 			<div className="social colsch">
 				<a className="soc" href="https://www.facebook.com/infotsav" target="_blank"><span className="fab fa-facebook-f"></span></a>
