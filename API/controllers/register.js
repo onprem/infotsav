@@ -1,27 +1,27 @@
 const randomstring = require("randomstring");
 
 const isUniqueIFID = (db, IFID) =>{
+	var booll = false;
 	db.select('*').from('users').where({ifid: IFID})
 	.then(users => {
-		console.log(users);
-		console.log(users.length);
-			console.log(users.length ===0);
-			console.log(users.length ==0);
-
-		if(users.length == 0){
-			return true;
+		if(users.length === 0){
+			booll = true;
 		}
-		else {return false;}
+		else { 
+			booll = false;
+		};
 	})
+	return booll;	
 }
 
 const generateIFID = (db, name) => {
 	let IFID = 'IF-';
 	let nameChars = name.substr(0,2).toUpperCase();
 	IFID = IFID+nameChars+'-'+randomstring.generate({length:3, charset:'numeric'});
-	console.log(IFID);
-	if(true)
+	let unique = isUniqueIFID(db, IFID);
+	if(unique){
 		return IFID;
+	}
 	else generateIFID(db, name);
 }
 
