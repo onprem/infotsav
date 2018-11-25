@@ -36,8 +36,15 @@ class Register extends Component {
   	registerFunctions(this);
   }
 
-  requestRegistration = () =>{
-  	
+  requestRegistration = (userData) =>{
+	fetch('http://localhost:3001/register', {
+		method: 'post',
+		headers: {'Content-type': 'application/json'},
+		body: JSON.stringify({userData})
+	})
+	.then(response => response.json())
+	.then((user) => {console.log(user);})
+	.catch(console.log);
   }
 
   updateUserData = () =>{
@@ -51,7 +58,7 @@ class Register extends Component {
 		password: this.state.questions[6].value
   	};
   	if(this.state.gotData){
-  		this.requestRegistration();
+  		this.requestRegistration(this.userData);
   	}
   }
 
