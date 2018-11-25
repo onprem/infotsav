@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../../assets/css/solid.min.css'
 import '../../assets/css/fontawesome.min.css'
-import './Register.css';
+import '../../assets/css/signup.css'
+import headers from "../../assets/logo/headers.png"
 import {registerFunctions} from './RegisterFunctions'
 
 class Register extends Component {
@@ -61,6 +62,9 @@ class Register extends Component {
 
     return (
 	   	<div className='register-container'>
+	   	  <div>
+			<img src={headers} className="headimg" alt="infotsav logo" />
+		  </div>
    		  <div id="progress"></div>
 		  <div className="center">
 		    <div id="register">

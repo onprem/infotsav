@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link, Redirect} from 'react-router-dom';
 import '../../assets/css/solid.min.css'
 import '../../assets/css/fontawesome.min.css'
-import './Login.css';
+import '../../assets/css/signup.css'
 import {registerFunctions} from './LoginFunctions'
 
 class Login extends Component {
