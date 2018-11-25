@@ -1,4 +1,40 @@
 const randomstring = require("randomstring");
+const nodemailer = require('nodemailer');
+
+const sendEmail = () => {
+	var transporter = nodemailer.createTransport({
+        host: 'infotsav.in',
+        port: 25,
+        secure: false, // true for 465, false for other ports
+        auth: {
+            user: 'ubuntu', // generated ethereal user
+            pass: 'cybrwr3' // generated ethereal password
+        }
+    });
+    transporter.verify(function(error, success) {
+	   if (error) {
+	        console.log(error);
+	   } else {
+	        console.log('Server is ready to take our messages');
+
+	        let mailOptions = {
+		        from: '"Infotsav" <ubuntu@infotsav.in>', // sender address
+		        to: 'prmsrswt@pm.me', // list of receivers
+		        subject: 'This is a test mail', // Subject line
+		        text: 'This is a test for you eden.', // plain text body
+		        html: '<b>This is a test for you eden.</b>' // html body
+		    };
+		    transporter.sendMail(mailOptions, (error, info) => {
+		        if (error) {
+		            return console.log(error);
+		        }
+		        console.log('Message sent: %s', info.messageId);
+		        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+		    });
+	   }
+	});
+	
+}
 
 const isUniqueIFID = (db, IFID) =>{
 	var booll = false;
