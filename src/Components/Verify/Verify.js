@@ -10,7 +10,7 @@ class Login extends Component {
   constructor(props){
     super(props);
     this.state={
-    	isVerified: true,
+    	isVerified: false,
     	verificationResponse: '',
     	navigate: false
     }
@@ -30,7 +30,7 @@ class Login extends Component {
 			isVerified: true,
 			verificationResponse: message
 		})
-		setTimeout(this.redirectToLogin, 1000);
+		setTimeout(this.redirectToLogin, 2000);
 	})
 	.catch(console.log);
   }
