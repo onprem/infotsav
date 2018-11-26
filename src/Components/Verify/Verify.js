@@ -16,6 +16,7 @@ class Login extends Component {
     }
   }
   verifyUserFromUrl = () =>{
+  	console.log(this.props.match.params);
 	fetch('/api/verify', {
 		method: 'post',
 		headers: {'Content-type': 'application/json'},
@@ -24,7 +25,7 @@ class Login extends Component {
 			hash: this.props.match.params.hash
 		})
 	})
-	.then(response => response.json())
+	.then(response => response.text())
 	.then((message) => {
 		this.setState({
 			isVerified: true,
@@ -41,7 +42,7 @@ class Login extends Component {
   }
 
   componentDidMount(){
-  	this.verifyUserFromUrl();
+  	setTimeout(this.verifyUserFromUrl,500);
   }
 
   render() {
