@@ -20,7 +20,7 @@ class App extends Component {
           <Route path="/events" exact component={Events} />
           <Route path="/register" exact component={Register} />
      			<Route path="/login" exact component={Login} />
-          <Route path="/verify/id=:IFID-:hash" exact component={Verify} />
+          <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
           <Route component={Lost} />
     		</Switch>
       </div>

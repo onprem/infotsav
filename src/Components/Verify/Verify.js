@@ -12,7 +12,8 @@ class Login extends Component {
     this.state={
     	isVerified: false,
     	verificationResponse: '',
-    	navigate: false
+    	navigate: false,
+    	responseFailed: false
     }
   }
   verifyUserFromUrl = () =>{
@@ -27,17 +28,25 @@ class Login extends Component {
 	})
 	.then(response => response.text())
 	.then((message) => {
-		this.setState({
-			isVerified: true,
-			verificationResponse: message
-		})
-		setTimeout(this.redirectToLogin, 2000);
+		if(message==='Email verification successfull!'){
+			this.setState({
+				isVerified: true,
+				verificationResponse: message
+			})
+			setTimeout(this.redirectToLogin, 2000);
+		}
+		else{
+			this.setState({
+				isVerified: false,
+				responseFailed: true,
+				verificationResponse: 'Some error occurred :('
+			})
+		}
 	})
 	.catch(console.log);
   }
 
   redirectToLogin = () =>{
-  	console.log('Hello');
   	this.setState({navigate: true});
   }
 
@@ -68,20 +77,25 @@ class Login extends Component {
 				    <div id="sendto">You're all set! <Link to="/login">LOGIN</Link></div>
 			    </div>
 			    :
-		      	<div className="spinner_on_verification">
-					<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-						<circle className="length" fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
-					</svg>
-					<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-						<circle fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
-					</svg>
-					<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-						<circle fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
-					</svg>
-					<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-						<circle fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
-					</svg>
-				</div>
+			    (!this.state.responseFailed)?
+			      	<div className="spinner_on_verification">
+						<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+							<circle className="length" fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
+						</svg>
+						<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+							<circle fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
+						</svg>
+						<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+							<circle fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
+						</svg>
+						<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+							<circle fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
+						</svg>
+					</div>
+					:
+					<div className='f3 white'>
+						{this.state.verificationResponse}
+					</div>
 			}
 		    <div id="holdit"></div>
 	  	</div>
