@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.get('/api', (req,res)=>{ res.send('it is working')});
 app.post('/api/register', (req,res)=> {register.handleRegister(req, res, db, bcrypt)});
 app.post('/api/verify', (req,res)=>{verify.handleVerifyRequest(req, res, db)});
-app.get('/api/*', (req,res) => {res.status(404).redirect('https://infotsav.in/404')});
+app.get('/api/*', (req,res) => {res.status(404).redirect('https://react.infotsav.in/404')});
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, ()=>{

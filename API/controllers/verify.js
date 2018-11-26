@@ -19,7 +19,7 @@ const handleVerifyRequest = (req,res,db)=>{
 					.catch(trx.rollback)
 			}
 			else
-				res.status(404).redirect('https://infotsav.in/404');
+				res.status(404).redirect('https://react.infotsav.in/404');
 		})
 		.catch(trx.rollback)
 	})
