@@ -1,9 +1,10 @@
 const randomstring = require("randomstring");
 const nodemailer = require('nodemailer');
 
-const sendEmail = (email, verifyHash, eyeFID) => {
+const sendEmail = (semail, sverifyHash, seyeFID) => {
 	console.log("Oh Yeah");
-	const verifyLink = 'https://infotsav.in/verify?id='+eyeFID+'&hash='+verifyHash;
+	const verifyLink = 'https://infotsav.in/verify?id='+seyeFID+'&hash='+sverifyHash;
+	console.log(verifyLink);
 	var transporter = nodemailer.createTransport({
         host: 'infotsav.in',
         port: 25,
@@ -21,7 +22,7 @@ const sendEmail = (email, verifyHash, eyeFID) => {
 
 	        let mailOptions = {
 		        from: '"Infotsav" <admin@infotsav.in>', // sender address
-		        to: email, // list of receivers
+		        to: semail, // list of receivers
 		        subject: 'Verify your account for Infotsav', // Subject line
 		        text: 'Your request for registration in Infotsav 19 has been recieved. Please verify your email account to complete the registration by clicking the following link'+verifyLink+'Team Infotsav', // plain text body
 		        html: '<p>Your request for registration in Infotsav 19 has been recieved. Please verify your email account to complete the registration by clicking the following link </p> <a href="'+verifyLink+'">'+verifyLink+'</a><br />Team Infotsav' // html body
