@@ -108,9 +108,9 @@ const handleRegister = (req,res, db, bcrypt) =>{
 					.then(trx.commit)
 				}).catch(trx.rollback)
 			})
-			.catch(err => {console.log(err); res.status(400).json('Unable to register')});
+			.catch(trx.rollback)
 		})
-		.catch(err => {console.log(err); res.status(405).json('Unablee to register')});
+		.catch(err => {console.log(err); res.status(400).json('Something went wrong!')});
 	})
 }
 

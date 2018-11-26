@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
 const register = require('./controllers/register');
+const verify = require('./controllers/verify');
  
 
 const db = knex({
@@ -25,7 +26,8 @@ app.use(bodyParser.json());
 
 app.get('/api', (req,res)=>{ res.send('it is working')});
 app.post('/api/register', (req,res)=> {register.handleRegister(req, res, db, bcrypt)});
-
+app.post('/api/verify', (req,res)=>{verify.handleVerifyRequest(req, res, db)});
+app.get('/api/*', (req,res) => {res.status(404).redirect('https://infotsav.in/404')});
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, ()=>{
