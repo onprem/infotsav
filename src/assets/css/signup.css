@@ -171,4 +171,17 @@
   #inputLabel {
     font-size: 18px;
   }
-}
+  #holdit {
+    height: 120px;
+  }
+  .headim {
+    z-index: 2;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 50px;
+  }
+  #headdin {
+    font-size: 1.25em;
+  }
+  }

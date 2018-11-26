@@ -15,8 +15,8 @@ class Register extends Component {
 	  	questions: [
 		  {question:"What's your name?"},
 		  {question:"Gender", type: "sellect"},
-		  {question:"Which College do you study in?"},
-		  {question:"Which City do you live in?"},
+		  {question:"College Name?"},
+		  {question:"City?"},
 		  {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
 		  {question:"What's your phone number?", type:'tel', pattern: /^\d{10}$/},
 		  {question:"Create your password", type: "password"},
