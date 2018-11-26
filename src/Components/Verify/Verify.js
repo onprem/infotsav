@@ -19,7 +19,6 @@ class Login extends Component {
   verifyUserFromUrl = () =>{
 	fetch('/api/verify', {
 		method: 'post',
-		redirect: 'follow',
 		headers: {'Content-type': 'application/json'},
 		body: JSON.stringify({
 			id: this.props.match.params.IFID,
@@ -27,6 +26,7 @@ class Login extends Component {
 		})
 	})
 	.then((response) => {
+		console.log(response);
 		if(response.status===200){
 			this.setState({
 				isVerified: true,
@@ -34,8 +34,8 @@ class Login extends Component {
 			})
 			setTimeout(this.redirectToLogin, 2000);
 		}
-		else if(response.status===301){
-			this.props.history.push(res.url)
+		else if(response.status===302){
+			this.props.history.push(response.url)
 		}
 		else{
 			this.setState({
