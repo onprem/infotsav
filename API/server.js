@@ -23,8 +23,8 @@ const app=express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/', (req,res)=>{ res.send('it is working')});
-app.post('/register', (req,res)=> {register.handleRegister(req, res, db, bcrypt)});
+app.get('/api', (req,res)=>{ res.send('it is working')});
+app.post('/api/register', (req,res)=> {register.handleRegister(req, res, db, bcrypt)});
 
 
 const PORT = process.env.PORT || 3001

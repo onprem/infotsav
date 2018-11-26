@@ -1,14 +1,16 @@
 const randomstring = require("randomstring");
 const nodemailer = require('nodemailer');
 
-const sendEmail = () => {
+const sendEmail = (email, verifyHash, eyeFID) => {
+	console.log("Oh Yeah");
+	const verifyLink = 'https://infotsav.in/verify?id='+eyeFID+'&hash='+verifyHash;
 	var transporter = nodemailer.createTransport({
         host: 'infotsav.in',
         port: 25,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'ubuntu', // generated ethereal user
-            pass: 'cybrwr3' // generated ethereal password
+            user: 'admin', // generated ethereal user
+            pass: 'test123' // generated ethereal password
         }
     });
     transporter.verify(function(error, success) {
@@ -18,11 +20,11 @@ const sendEmail = () => {
 	        console.log('Server is ready to take our messages');
 
 	        let mailOptions = {
-		        from: '"Infotsav" <ubuntu@infotsav.in>', // sender address
-		        to: 'prmsrswt@pm.me', // list of receivers
-		        subject: 'This is a test mail', // Subject line
-		        text: 'This is a test for you eden.', // plain text body
-		        html: '<b>This is a test for you eden.</b>' // html body
+		        from: '"Infotsav" <admin@infotsav.in>', // sender address
+		        to: email, // list of receivers
+		        subject: 'Verify your account for Infotsav', // Subject line
+		        text: 'Your request for registration in Infotsav 19 has been recieved. Please verify your email account to complete the registration by clicking the following link'+verifyLink+'Team Infotsav', // plain text body
+		        html: '<p>Your request for registration in Infotsav 19 has been recieved. Please verify your email account to complete the registration by clicking the following link </p> <a href="'+verifyLink+'">'+verifyLink+'</a><br />Team Infotsav' // html body
 		    };
 		    transporter.sendMail(mailOptions, (error, info) => {
 		        if (error) {
@@ -55,7 +57,7 @@ const generateIFID = (db, name) => {
 	let nameChars = name.substr(0,2).toUpperCase();
 	IFID = IFID+nameChars+'-'+randomstring.generate({length:3, charset:'numeric'});
 	let unique = isUniqueIFID(db, IFID);
-	if(unique){
+	if(true){
 		return IFID;
 	}
 	else generateIFID(db, name);
@@ -64,6 +66,10 @@ const generateIFID = (db, name) => {
 const handleRegister = (req,res, db, bcrypt) =>{
 	const {email, name, college, city, phone, gender, password} =req.body.userData;
 	console.log(req.body.userData);
+
+	const verifyHash = randomstring.generate(15);
+	const eyeFID = generateIFID(db, name);
+
 	if(!email || !name || !password || !college || !city || !phone || !gender)
 	{
 		return res.status(400).json('Incorrect form submission');
@@ -81,7 +87,7 @@ const handleRegister = (req,res, db, bcrypt) =>{
 				return trx('verify')
 				.insert({
 					email: email,
-					hash: randomstring.generate(15)
+					hash: verifyHash
 				})
 				.then(() =>{
 					return trx('users')
@@ -92,18 +98,18 @@ const handleRegister = (req,res, db, bcrypt) =>{
 						gender: gender,
 						city: city,
 						mobile: phone,
-						ifid: generateIFID(db, name)
+						ifid: eyeFID
 					})
 					.then(() => {
 						res.status(200).json('Sucessfully Registered');
-						sendEmail();
+						sendEmail(email, verifyHash, eyeFID);
 					})
 					.then(trx.commit)
 				}).catch(trx.rollback)
 			})
 			.catch(err => {console.log(err); res.status(400).json('Unable to register')});
 		})
-		.catch(err => {console.log(err); res.status(400).json('Unable to register')});
+		.catch(err => {console.log(err); res.status(405).json('Unablee to register')});
 	})
 }
 

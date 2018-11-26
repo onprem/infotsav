@@ -39,7 +39,7 @@ class Register extends Component {
   }
 
   requestRegistration = (userData) =>{
-	fetch('https://infotsav.in:3001/register', {
+	fetch('/api/register', {
 		method: 'post',
 		headers: {'Content-type': 'application/json'},
 		body: JSON.stringify({userData})
