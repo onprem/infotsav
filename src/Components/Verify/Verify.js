@@ -34,8 +34,8 @@ class Login extends Component {
 			})
 			setTimeout(this.redirectToLogin, 2000);
 		}
-		else if(response.status===302){
-			this.props.history.push(response.url)
+		else if(response.redirected){
+			this.props.history.push('/404')
 		}
 		else{
 			this.setState({
