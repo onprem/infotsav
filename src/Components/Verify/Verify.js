@@ -17,23 +17,25 @@ class Login extends Component {
     }
   }
   verifyUserFromUrl = () =>{
-  	console.log(this.props.match.params);
 	fetch('/api/verify', {
 		method: 'post',
+		redirect: 'follow',
 		headers: {'Content-type': 'application/json'},
 		body: JSON.stringify({
 			id: this.props.match.params.IFID,
 			hash: this.props.match.params.hash
 		})
 	})
-	.then(response => response.text())
-	.then((message) => {
-		if(message==='Email verification successfull!'){
+	.then((response) => {
+		if(response.status===200){
 			this.setState({
 				isVerified: true,
-				verificationResponse: message
+				verificationResponse: 'Verification Successful'
 			})
 			setTimeout(this.redirectToLogin, 2000);
+		}
+		else if(response.status===301){
+			this.props.history.push(res.url)
 		}
 		else{
 			this.setState({
