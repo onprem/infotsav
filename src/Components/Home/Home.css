@@ -227,8 +227,9 @@ a {
   position: absolute;
   display: flex;
   right: 2%;
-  top: 0;
-  height: 100vh;
+  top: 30vh;
+  /*bottom: 0;*/
+  height: 40vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;

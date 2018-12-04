@@ -7,7 +7,7 @@ const sendEmail = (semail, sverifyHash, seyeFID) => {
 	console.log(verifyLink);
 	var transporter = nodemailer.createTransport({
         host: 'infotsav.in',
-        port: 25,
+        port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
             user: 'admin', // generated ethereal user
