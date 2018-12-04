@@ -36,7 +36,7 @@ class Home extends Component {
 	   	<div className='home-container'>
 	   		<Particles className='particlesBack' params={particleConfig} />
 			<div>
-				<img src={headers} className="headimg" alt="infotsav logo" />
+				<Link to='#'><img src={headers} className="headimg" alt="infotsav logo" /></Link>
 			</div>
 			<div className="circles">
 				<span className="c0 activec" id="c0"></span>

@@ -160,8 +160,10 @@ a {
 .circles {
   z-index: 1;
   position: absolute;
-  /*top: 25%;*/
-  height: 100%;
+  top: 25%;
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
   justify-content: center;
   width: auto;
   display: flex;
@@ -208,7 +210,6 @@ a {
   right: 30px;
   bottom: 0px;
   width: 100px;
-  z-index: 10;
 }
 
 .yt:hover {

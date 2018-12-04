@@ -71,7 +71,7 @@ class Register extends Component {
     return (
 	   	<div className='register-container'>
 	   	  <div>
-			<img src={headers} className="headim" alt="infotsav logo" />
+			<Link to='/'><img src={headers} className="headim" alt="infotsav logo" /></Link>
 		  </div>
    		  <div id="progress"></div>
 		  <div className="center">
