@@ -8,6 +8,7 @@ import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
 import Verify from './Components/Verify/Verify';
 import logo from './assets/icon.png';
+import withAuth from './Components/WithAuth/withAuth';
 import './App.css';
 
 class App extends Component {
