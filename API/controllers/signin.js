@@ -10,19 +10,22 @@ const handleSignin = (req,res,db,bcrypt)=>{
 	db.select('email', 'password').from('credentials')
 	.where({email})
 	.then(data => {
-		bcrypt.compare(password, data[0].password, function(err, result) {
-			if(result)
-				{
-					return db.select('*').from('users')
-					.where({email})
-					.then(user =>{
-						res.status(200).json(user[0])
-					})
-					.catch(err => res.status(400).json('Invalid User'))
-				}
-			else
-				return res.status(400).json("Invalid Credentials");
-		 })
+		if(data.length){
+			bcrypt.compare(password, data[0].password, function(err, result) {
+				if(result)
+					{
+						return db.select('*').from('users')
+						.where({email})
+						.then(user =>{
+							res.status(200).json(user[0])
+						})
+						.catch(err => res.status(400).json('Invalid User'))
+					}
+				else
+					return res.status(400).json("Invalid Credentials");
+			 })
+		}
+		else res.status(400).json("Invalid Credentials");
 	})
 	.catch(err=> {console.log(err); res.status(400).json('Some error occurred')})	
 }

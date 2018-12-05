@@ -20,7 +20,8 @@ class Login extends Component {
     	password: '',
     	gotUserData: false,
     	verification: 0,
-    	errorRes: ""    
+    	errorRes: "",
+    	done: ''
     }
   }
 
@@ -60,6 +61,11 @@ class Login extends Component {
 
   	if(this.state.gotUserData && this.state.verification){
   		return <Redirect to='/profile' />
+  	}
+  	if(this.state.errorRes){
+  		setTimeout(()=>{
+  			window.location.reload();
+  		}, 1000);
   	}
 
     return (
