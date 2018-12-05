@@ -16,7 +16,7 @@ const handleSignin = (req,res,db,bcrypt)=>{
 					return db.select('*').from('users')
 					.where({email})
 					.then(user =>{
-						res.json(user[0])
+						res.status(200).json(user[0])
 					})
 					.catch(err => res.status(400).json('Invalid User'))
 				}
@@ -24,7 +24,7 @@ const handleSignin = (req,res,db,bcrypt)=>{
 				return res.status(400).json("Invalid Credentials");
 		 })
 	})
-	.catch(err=> res.status(400).json('Invalid Credentials'))	
+	.catch(err=> {console.log(err); res.status(400).json('Some error occurred')})	
 }
 
 module.exports={

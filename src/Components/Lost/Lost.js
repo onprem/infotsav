@@ -28,10 +28,10 @@ class Lost extends Component {
               <div>
                 <p className="fw1 bold tc mt1 mt4-ns mt2-l f4 f3-ns fw6">{this.state.deadUser.toUpperCase()}, YOU'RE FIRED!</p>
                 <div className="ph3 w-100">
-                  <div className='w-25 dib'><img src='https://robohash.org/chopra?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/kunji?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/mavi?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/sharm?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/chop?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/kun?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/ma?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/sh?set=set2' alt ='' /></div>
                 </div>
 
                 <h2 className="pt0 dark-gray mt3 fw2 tc">Poor {this.state.deadUser}</h2>

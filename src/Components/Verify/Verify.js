@@ -53,7 +53,7 @@ class Login extends Component {
   }
 
   componentDidMount(){
-  	setTimeout(this.verifyUserFromUrl,500);
+  	setTimeout(this.verifyUserFromUrl,400);
   }
 
   render() {
