@@ -16,7 +16,7 @@ class Login extends Component {
 		  {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
 		  {question:"What's your password", type: "password"},
 	    ],
-    	email: '',
+    	username: '',
     	password: ''
     }
   }

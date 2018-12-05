@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
+const signin = require('./controllers/signin');
 const register = require('./controllers/register');
 const verify = require('./controllers/verify');
  
@@ -27,6 +28,8 @@ app.use(bodyParser.json());
 app.get('/api', (req,res)=>{ res.send('it is working')});
 app.post('/api/register', (req,res)=> {register.handleRegister(req, res, db, bcrypt)});
 app.post('/api/verify', (req,res)=>{verify.handleVerifyRequest(req, res, db)});
+app.post('/api/login', (req,res)=> {register.handleSignin(req, res, db, bcrypt)});
+
 // app.get('/api/*', (req,res) => {res.status(404).redirect('https://react.infotsav.in/404')});
 
 const PORT = process.env.PORT || 3001
