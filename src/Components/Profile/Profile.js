@@ -1,61 +1,56 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import {Footer} from '../Footer/Footer';
 import '../../assets/css/solid.min.css'
 import '../../assets/css/fontawesome.min.css'
 import '../../assets/css/signup.css'
 import headers from "../../assets/logo/headers.png"
+import {Loader} from '../_Loader/Loader'
 
 class Profile extends Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state={
-    		name: '',
-    		gender: '',
-    		college: '',
-    		city: '',
-    		email: '',
-    		phone: '',
-    		password: ''
-    	}
+    	loading: true,
+	    redirect: false,
+	};
   }
 
-  componentDidMount(){
-  	this.requestData();
-  }
-
-  requestData = () =>{
-  	let err=false;
-	fetch('/api/profilex')
-	.then(response => {
-		if(response.status!==200)
-			err=true;
-		return response.json();
-	})
-	.then(res => {
-		if(err)
-			throw res;
-		this.setState({
-			email: res
+  componentWillMount(){
+  	if(!this.props.isLoggedIn){
+		let err=false;
+		fetch('/api/checkToken')
+		.then(response => {
+			if(response.status!==200)
+				throw(response);
+		    this.setState({ loading: false });
+		    this.props.updateLoginState(true);
 		})
-	})
-	.catch(console.log);
+		.catch(() => {this.setState({ loading: false, redirect: true });});
+	} else this.setState({loading: false});
   }
-
-
 
   render() {
-
+  	console.log(this.props);
+  	const { loading, redirect } = this.state;
     return (
 	   	<div className='register-container'>
 	   	  <div>
 			<Link to='/'><img src={headers} className="headim" alt="infotsav logo" /></Link>
 		  </div>
 		  <div className="center">
-		    <div id="headdin">
-		  		<h1>Welcome {this.state.email}</h1>
-		  	</div>
+		  {(!loading)?
+		  		(redirect)?
+		  			<Redirect to='/login' />
+	  			:
+				    <div id="headdin">
+		  				<h1>Welcome {this.props.userData.email}</h1>
+		  			</div>
+  			:
+  				<Loader />
+  			}
+
 		    <div id="holdit"></div>
 	  	  </div>
   		  <Footer />

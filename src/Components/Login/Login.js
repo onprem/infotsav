@@ -63,9 +63,9 @@ class Login extends Component {
   		return <Redirect to='/profile' />
   	}
   	if(this.state.errorRes){
-  		// setTimeout(()=>{
-  		// 	window.location.reload();
-  		// }, 1000);
+  		setTimeout(()=>{
+  			window.location.reload();
+  		}, 1000);
   	}
 
     return (
