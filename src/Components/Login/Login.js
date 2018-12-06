@@ -9,8 +9,8 @@ import {registerFunctions} from './LoginFunctions'
 
 class Login extends Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state={
 	  	questions: [
 		  {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
@@ -50,6 +50,8 @@ class Login extends Component {
 			gotUserData: true, 
 			verification: user.confirm
 		})
+		this.props.updateLoginState(true);
+		this.props.updateUserOnLogin(user);
 	})
 	.catch(err => this.setState({errorRes: err}));
   }

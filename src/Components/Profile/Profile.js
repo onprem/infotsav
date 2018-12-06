@@ -32,7 +32,6 @@ class Profile extends Component {
   }
 
   render() {
-  	console.log(this.props);
   	const { loading, redirect } = this.state;
     return (
 	   	<div className='register-container'>

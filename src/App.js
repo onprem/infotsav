@@ -38,8 +38,12 @@ class App extends Component {
     }
   }
 
+  componentDidMount(){
+    this.requestData();
+    setTimeout(this.logOut, 3000);
+  }
+
   requestData = () =>{
-    console.log('Hi');
     let err=false;
     fetch('/api/profilex')
     .then(response => {
@@ -74,9 +78,14 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){
-    this.requestData();
-    setTimeout(this.logOut, 3000);
+  updateUserOnLogin = (user) =>{
+    this.setState(Object.assign(this.state.user, {
+      id: user.ifid,
+      name: user.name,
+      email: user.email,
+      college: user.college,
+      mobile: user.mobile
+    }))
   }
 
   render() {
@@ -87,7 +96,9 @@ class App extends Component {
     			<Route path="/" exact component={Home} />
           <Route path="/events" exact component={Events} />
           <Route path="/register" exact component={Register} />
-     			<Route path="/login" exact component={Login} />
+     			<Route path="/login" exact render={(props) =>
+            <Login {...props} updateUserOnLogin={this.updateUserOnLogin} updateLoginState={this.updateLoginState} />}
+          />
           <Route path="/profile" render={(props)=> 
             <Profile {...props} userData={this.state.user} isLoggedIn={this.state.isLoggedIn} updateLoginState={this.updateLoginState} />} 
           />

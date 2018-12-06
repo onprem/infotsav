@@ -32,7 +32,7 @@ app.get('/api', (req,res)=>{ res.send('it is working')});
 app.post('/api/register', (req,res)=> {register.handleRegister(req, res, db, bcrypt)});
 app.post('/api/verify', (req,res)=>{verify.handleVerifyRequest(req, res, db)});
 app.post('/api/signin', (req,res)=> {signin.handleSignin(req, res, db, bcrypt)});
-app.get('/api/logout', (req, res) => {console.log('Aayi'); res.clearCookie('token'); res.status(301).redirect('/login');});
+app.get('/api/logout', (req, res) => {res.clearCookie('token'); res.status(301).redirect('/login');});
 app.get('/api/profilex', withAuth, (req, res) => {
   res.status(200).json('Potato');
 });
