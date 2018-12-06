@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken');
 const secret = 'iAmVeryBadAtThis';
 
 const withAuth = function(req, res, next) {

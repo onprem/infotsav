@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken');
 const secret = 'iAmVeryBadAtThis';
 
 const handleSignin = (req,res,db,bcrypt)=>{
@@ -19,14 +20,13 @@ const handleSignin = (req,res,db,bcrypt)=>{
 						return db.select('*').from('users')
 						.where({email})
 						.then(user =>{
-							// res.status(200).json(user[0])
+							
 							// Issue token
-					        const payload = { email };
+					        const payload = {email};
 					        const token = jwt.sign(payload, secret, {
-					        	expiresIn: '1h'
+					        	expiresIn: '24h'
 					        });
-					        res.cookie('token', token, { httpOnly: true })
-					        .sendStatus(200);
+					        res.status(200).cookie('token', token, { httpOnly: true }).json(user[0])
 						})
 						.catch(err => res.status(400).json('Invalid User'))
 					}
