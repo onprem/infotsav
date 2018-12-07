@@ -44,7 +44,7 @@ class Profile extends Component {
 		  			<Redirect to='/login' />
 	  			:
 				    <div id="headdin">
-		  				<h1>Welcome {this.props.userData.email}</h1>
+		  				<h3>Welcome {this.props.userData.id}</h3>
 		  			</div>
   			:
   				<Loader />
