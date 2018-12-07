@@ -31,7 +31,7 @@ class Lost extends Component {
                   <div className='w-25 dib'><img src='https://robohash.org/chopra?set=set2' alt ='' /></div>
                   <div className='w-25 dib'><img src='https://robohash.org/kunji?set=set2' alt ='' /></div>
                   <div className='w-25 dib'><img src='https://robohash.org/mavi?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/sharm?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/sharma?set=set2' alt ='' /></div>
                 </div>
 
                 <h2 className="pt0 dark-gray mt3 fw2 tc">Poor {this.state.deadUser}</h2>
@@ -45,7 +45,7 @@ class Lost extends Component {
                   <div className='w-25 dib'><img src='https://robohash.org/chopra?set=set2' alt ='' /></div>
                   <div className='w-25 dib'><img src='https://robohash.org/kunji?set=set2' alt ='' /></div>
                   <div className='w-25 dib'><img src='https://robohash.org/mavi?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/sharm?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img src='https://robohash.org/sharma?set=set2' alt ='' /></div>
                 </div>
 
 

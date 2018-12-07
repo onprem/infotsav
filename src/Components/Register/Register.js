@@ -21,7 +21,9 @@ class Register extends Component {
 		  {question:"What's your phone number?", type:'tel', pattern: /^\d{10}$/},
 		  {question:"Create your password", type: "password"},
 	    ],
-	    gotData: false
+	    gotData: false,
+	    responseMessage: '',
+	    receivedError: false 
     }
     this.userData= {
     		name: '',
@@ -39,14 +41,23 @@ class Register extends Component {
   }
 
   requestRegistration = (userData) =>{
+  	let err = false;
 	fetch('/api/register', {
 		method: 'post',
 		headers: {'Content-type': 'application/json'},
 		body: JSON.stringify({userData})
 	})
-	.then(response => response.json())
-	.then((user) => {console.log(user);})
-	.catch(console.log);
+	.then(response => {
+		if(response.status !== 200)
+			err = true;
+		return response.json()
+	})
+	.then((user) => {
+		if(err)
+			throw(user);
+		this.setState({responseMessage: user});
+	})
+	.catch(err => {this.setState({receivedError: true, responseMessage: err})});
   }
 
   updateUserData = () =>{
@@ -59,14 +70,20 @@ class Register extends Component {
 		phone: this.state.questions[5].value,
 		password: this.state.questions[6].value
   	};
-  	if(this.state.gotData){
+  	if(this.state.gotData && !this.state.responseMessage){
   		this.requestRegistration(this.userData);
   	}
   }
 
   render() {
-  	if(this.state.questions[0].value)
+  	if(this.state.questions[0].value && !this.state.responseMessage)
   		this.updateUserData();
+
+  	if(this.state.receivedError){
+  		setTimeout(()=>{
+  			window.location.reload();
+  		}, 1200);
+  	}
 
     return (
 	   	<div className='register-container'>
@@ -78,19 +95,32 @@ class Register extends Component {
 		    <div id="headdin">
 		  		<h1>Register</h1>
 		  	</div>
-		    <div id="register">
-		      <i id="progressButton" className="fas fa-arrow-right next"></i>
-		      <div id="inputContainer">
-		        <input id="inputField" required autoFocus />
-		        <label id="inputLabel"></label>
-		        <select id="selectBox" className='doNotDisplay'>
-		          <option value="male">Male</option>
-		          <option value="female">Female</option>
-		          <option value="other">Other</option>
-		        </select>
-		        <div id="inputProgress"></div>
-		      </div>
-		    </div>
+		  	{
+		  	(this.state.responseMessage)?
+		  		(this.state.receivedError)?
+					<div className='f3 white'>
+						{this.state.responseMessage}
+					</div>
+				:
+					<div className='f3 white'>
+						{this.state.responseMessage} <br />
+						Please verify your email to continue
+					</div>
+			:
+			    <div id="register">
+			      <i id="progressButton" className="fas fa-arrow-right next"></i>
+			      <div id="inputContainer">
+			        <input id="inputField" required autoFocus />
+			        <label id="inputLabel"></label>
+			        <select id="selectBox" className='doNotDisplay'>
+			          <option value="male">Male</option>
+			          <option value="female">Female</option>
+			          <option value="other">Other</option>
+			        </select>
+			        <div id="inputProgress"></div>
+			      </div>
+			    </div>
+			}
 		    <div id="sendto">Already have an account? <Link to="/login">LOGIN</Link></div>
 		    <div id="holdit"></div>
 	  	  </div>
