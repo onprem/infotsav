@@ -6,6 +6,7 @@ import Events from './Components/Events/Events';
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
+import Contact from './Components/Contact/Contact'
 import Verify from './Components/Verify/Verify';
 import logo from './assets/icon.png';
 import './App.css';
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path="/events" exact component={Events} />
           <Route path="/register" exact component={Register} />
      			<Route path="/login" exact component={Login} />
+          <Route path="/contact" exact component={Contact} />
           <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
           <Route component={Lost} />
     		</Switch>
