@@ -54,9 +54,9 @@ class App extends Component {
     .then(res => {
       if(err)
         throw res;
-      this.setState(Object.assign(this.state.user, {email: res}));
+      this.updateUser(res.user);
+      this.updateEvent(res.userEventReg);
       this.setState({isLoggedIn: true});
-      console.log(this.state.isLoggedIn);
     })
     .catch(console.log);
   }
@@ -77,8 +77,11 @@ class App extends Component {
       .catch(console.log)
     }
   }
+  updateEvent = (data) =>{
+    this.setState({userEventReg: data});
+  }
 
-  updateUserOnLogin = (user) =>{
+  updateUser = (user) =>{
     this.setState(Object.assign(this.state.user, {
       id: user.ifid,
       name: user.name,
@@ -89,6 +92,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="App">
          <Nav />
@@ -97,7 +101,7 @@ class App extends Component {
           <Route path="/events" exact component={Events} />
           <Route path="/register" exact component={Register} />
      			<Route path="/login" exact render={(props) =>
-            <Login {...props} updateUserOnLogin={this.updateUserOnLogin} updateLoginState={this.updateLoginState} />}
+            <Login {...props} updateUser={this.updateUser} updateLoginState={this.updateLoginState} updateEvent={this.updateEvent} />}
           />
           <Route path="/profile" render={(props)=> 
             <Profile {...props} userData={this.state.user} isLoggedIn={this.state.isLoggedIn} updateLoginState={this.updateLoginState} />} 

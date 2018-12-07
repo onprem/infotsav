@@ -21,7 +21,6 @@ class Login extends Component {
     	gotUserData: false,
     	verification: 0,
     	errorRes: "",
-    	done: ''
     }
   }
 
@@ -46,12 +45,13 @@ class Login extends Component {
 	.then((user) => {
 		if(error)
 			throw(user);
+		this.props.updateLoginState(true);
+		this.props.updateEvent(user.userEventReg);
+		this.props.updateUser(user.user);
 		this.setState({
 			gotUserData: true, 
-			verification: user.confirm
+			verification: user.user.confirm
 		})
-		this.props.updateLoginState(true);
-		this.props.updateUserOnLogin(user);
 	})
 	.catch(err => this.setState({errorRes: err}));
   }

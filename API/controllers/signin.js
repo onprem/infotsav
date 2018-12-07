@@ -20,13 +20,21 @@ const handleSignin = (req,res,db,bcrypt)=>{
 						return db.select('*').from('users')
 						.where({email})
 						.then(user =>{
-							
-							// Issue token
-					        const payload = {email};
-					        const token = jwt.sign(payload, secret, {
-					        	expiresIn: '24h'
-					        });
-					        res.status(200).cookie('token', token, { httpOnly: true }).json(user[0])
+							const {ifid} = user[0];
+							db.select('*').from('event_reg').where({ifid})
+							.then(registrations => {
+								let userData = {
+									userEventReg: registrations,
+									user: user[0]
+								}
+
+								// Issue token
+						        const payload = {email};
+						        const token = jwt.sign(payload, secret, {
+						        	expiresIn: '24h'
+						        });
+						        res.status(200).cookie('token', token, { httpOnly: true }).json(userData)
+							})
 						})
 						.catch(err => res.status(400).json('Invalid User'))
 					}
