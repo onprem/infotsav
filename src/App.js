@@ -40,7 +40,7 @@ class App extends Component {
 
   componentDidMount(){
     this.requestData();
-    setTimeout(this.logOut, 3000);
+    // setTimeout(this.logOut, 3000);
   }
 
   requestData = () =>{
@@ -92,19 +92,30 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="App">
          <Nav />
     		<Switch>
     			<Route path="/" exact component={Home} />
           <Route path="/events" exact component={Events} />
-          <Route path="/register" exact component={Register} />
+          <Route path="/register" exact render={(props) =>
+            <Register {...props} 
+              isLoggedIn={this.state.isLoggedIn} />}
+              updateLoginState={this.updateLoginState} 
+          />
      			<Route path="/login" exact render={(props) =>
-            <Login {...props} updateUser={this.updateUser} updateLoginState={this.updateLoginState} updateEvent={this.updateEvent} />}
+            <Login {...props} 
+              updateUser={this.updateUser}
+              isLoggedIn={this.state.isLoggedIn}
+              logOut={this.logOut}
+              updateLoginState={this.updateLoginState} 
+              updateEvent={this.updateEvent} />}
           />
           <Route path="/profile" render={(props)=> 
-            <Profile {...props} userData={this.state.user} isLoggedIn={this.state.isLoggedIn} updateLoginState={this.updateLoginState} />} 
+            <Profile {...props} 
+              userData={this.state.user} 
+              isLoggedIn={this.state.isLoggedIn} 
+              updateLoginState={this.updateLoginState} />} 
           />
           <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
           <Route component={Lost} />
