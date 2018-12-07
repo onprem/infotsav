@@ -79,7 +79,7 @@ class Register extends Component {
   	if(this.state.questions[0].value && !this.state.responseMessage)
   		this.updateUserData();
 
-  	if(this.state.errorRes){
+  	if(this.state.receivedError){
   		setTimeout(()=>{
   			window.location.reload();
   		}, 1200);
