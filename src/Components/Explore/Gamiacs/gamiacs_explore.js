@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {gam_explore_function} from './gamiacs_explore_function';
 import './gamiacs_explore.css';
 import './gamiacs_explore_main.css'
+import Extab from '../Extab/Extab'
 
 class gamiacs_explore extends Component {
 
@@ -24,12 +25,9 @@ class gamiacs_explore extends Component {
 			          <div class="gam_el__content">
 			            <div class="gam_el__text">NFS</div>
 			            <div class="gam_el__close-btn"></div>
-			            <p class="event_data">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			            <p class="event_data">
+			            	<Extab />
+			            </p>
 			          </div>
 			        </div>
 			      </div>
