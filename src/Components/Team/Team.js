@@ -5,9 +5,9 @@ import CoordList from './CoordList';
 import TMList from './TMList';
 import {emts,coord,TMheads} from './Data';
 // import {parallax} from './Contact_parallax.js';
-import './contact.css'
+import './team.css'
 
-class Contact extends Component {
+class Team extends Component {
 
 	componentDidMount() {
 		// parallax();
@@ -117,9 +117,21 @@ class Contact extends Component {
 			       </div>
 			     </section>
 			</div>
+			<div className="mob_container">
+				<div className="mob_content-wrapper">
+		   			<h1>Meet Our Coordinators</h1>
+					<CoordList coord={coord} />
+
+		   			<h1>A lot Of juhi ma'am</h1>
+					<EmtList emts={emts} />
+
+		   			<h1>Technical & Managerial Heads</h1>
+					<TMList TMheads={TMheads} />
+				</div>
+			</div>
 		</div>
 		);
 	}
 }
 
-export default Contact;
+export default Team;
