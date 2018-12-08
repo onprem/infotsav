@@ -99,7 +99,7 @@ class Team extends Component {
 				 <section className="background">
 				   <div className="content-wrapper">
 				   		<div className='tc'>
-				   			<h1>A lot Of juhi ma'am</h1>
+				   			<h1>A lot Of emts</h1>
 							<EmtList emts={emts} />
 						</div>
 				   </div>
