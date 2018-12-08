@@ -2,101 +2,101 @@ export const emts = [
 
 	{
 		id:1,
-		name: 'Juhi Tiwari',
 		icon: '../../assets/photos/co_juhi.jpg',
-		phone: '9599474147',
-		email:'juhi@infotsav.in'
+		name: 'Ankit Bansal',
+		phone: '9810705130',
+		email:'ankit@infotsav.in'
 	},
 
 	{
 		id:2,
-		name: 'Juhi Tiwari',
 		icon: '../../assets/photos/co_shub.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Ayushi Rastogi',
+		phone: '8959657283',
+		email: 'ayushi@infotsav.in'
 	},
 
 	{
 		id:3,
-		name: 'Juhi Tiwari',
 		icon: '../../assets/photos/co_juhi.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Deepankar Singh',
+		phone: '7440525079',
+		email: 'deepankar@infotsav.in'
 	},
 
 	{
 		id:4,
-		name: 'Juhi Tiwari',
 		icon: '../../assets/photos/co_prat.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Juhi Purswani',
+		phone: '9462109001',
+		email: 'juhi.p@infotsav.in'
 	},
 
 	{
 		id:5,
-		name: 'Juhi Tiwari',
 		icon: '../../assets/photos/co_shub.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Prakhar Bansal',
+		phone: '7351480777',
+		email: 'prakhar@infotsav.in'
 	},
 
 	{
 		id:6,
-		name: 'Juhi Tiwari',
 		icon: '../../assets/photos/co_juhi.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Shubham Bhattacharya',
+		phone: '7507008911',
+		email: 'shubham@infotsav.in'
 	},
 
 	{
 		id:7,
-		name: 'Juhi Tiwari',
 		icon: '../../assets/photos/co_shub.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Swarup Padhy',
+		phone: '9873626099',
+		email: 'swarup@infotsav.in'
 	},
 
 	{
 		id:8,
-		name: 'Juhi Tiwari',
 		icon: '../../assets/photos/co_prat.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Vivek Alladi',
+		phone: '8885260958',
+		email: 'vivek@infotsav.in'
 	},
 
 	{
 		id:9,
-		name: 'Juhi Tiwari',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Dinesh Verra',
+		phone: '8179515709',
+		email: 'dinesh@infotsav.in'
 	},
 
 	{
 		id:10,
-		name: 'Juhi Tiwari',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Nilay Gupta',
+		phone: '9044712480',
+		email: 'nilay@infotsav.in'
 	},
 
 	{
 		id:11,
-		name: 'Juhi Tiwari',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Palak Jain',
+		phone: '8899919655',
+		email: 'palak@infotsav.in'
 	},
 
 	{
 		id:12,
-		name: 'Juhi Tiwari',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Priyansh Gaharana',
+		phone: '9452685369',
+		email: 'priyansh@infotsav.in'
 	},
 
 	{
 		id:13,
-		name: 'Juhi Tiwari',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Tanmay Sharma',
+		phone: '9549052975',
+		email: 'tanmay@infotsav.in'
 	},
 	{
 		id:14,
@@ -106,9 +106,9 @@ export const emts = [
 	},
 	{
 		id:15,
-		name: 'Juhi Tiwari',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Vishesh Khandelwal',
+		phone: '7978122119',
+		email: 'vishesh@infotsav.in'
 	}
 ];
 
@@ -117,46 +117,46 @@ export const coord = [
 	{
 		name: 'Juhi Tiwari',
 		icon: 'co_juhi.jpg',
-		phone: '9599474147',
+		phone: '9461155105',
 		email: 'juhi@infotsav.in'
 	},
 
 	{
-		name: 'Juhi Tiwari',
 		icon: 'co_shub.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		name: 'Mukul Sikka',
+		phone: '7988621548',
+		email: 'mukul@infotsav.in'
 	},
 
 	{
-		name: 'Juhi Tiwari',
-		icon: 'co_prat.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		icon: 'co_shub.jpg',
+		name: 'Pratyush Ranjan',
+		phone: '9598319698',
+		email: 'pratyush@infotsav.in'
 	},
 
 	{
-		name: 'Juhi Tiwari',
+		name: 'Shubhanker Srivastava',
 		icon: 'co_juhi.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		phone: '9454932137',
+		email: 'shubhankar@infotsav.in'
 	}
 
 ];
 
 export const TMheads = [
 	{
-		name: 'Juhi Tiwari',
+		name: 'Asif Mohammed',
 		icon: 'co_prat.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		phone: '9848994293',
+		email: 'asif@infotsav.in'
 	},
 
 	{
-		name: 'Juhi Tiwari',
+		name: 'Neha Sharma',
 		icon: 'co_prat.jpg',
-		phone: '9599474147',
-		email: 'juhi@infotsav.in'
+		phone: '8827691666',
+		email: 'neha@infotsav.in'
 	}
 ];
 
