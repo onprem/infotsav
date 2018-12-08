@@ -1,248 +1,246 @@
 {
-	"online":[
-	  {"EventName":"Trovetrace",
+	"online":{
+	  "0": {"EventName":"Trovetrace",
+	   		"rules":"",
+	   		"description":"",
+	   		"eventHead":"",
+	   		"prizes":""
+	  	},
+
+	  "1":{"EventName":"Job Bureau",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Job Bureau",
+	  "2":{"EventName":"Musically",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Musically",
+	  "3":{"EventName":"Boomerang",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Boomerang",
+	  "4":{"EventName":"Pranksters",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Pranksters",
+	  "5":{"EventName":"Fill in the Memes",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Fill in the Memes",
+	  "6":{"EventName":"Poster Making",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Poster Making",
+	  "7":{"EventName":"Photography Contest",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
-	  },
-
-	  {"EventName":"Photography Contest",
-	   "rules":"",
-	   "description":"",
-	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  }
-	],
+	},
 
-	"informal":[
-	  {"EventName":"Aptitude Quiz",
+	"informal":{
+	  "0":{"EventName":"Aptitude Quiz",
 	   "rules":"<li>There will be two rounds conducted. First online round qualifier and then final pen and paper round.</li><li>Total 40 teams will be selected for the pen and paper round.</li><li>A team should consist a maximum of two members.</li><li>Online round will consists of 25 questions.</li><li>50% of the teams selected for the final round will be from ABV-IIITM.</li><li>In any case of false behavior or violation of rules, the team will be disqualified.</li><li>Teams should have its own working internet connection.</li>",
 	   "description":"A standardized test designed to predict an individual's ability to learn certain skills compare intelligence test. An aptitude test is an assessment that evaluates the talent/ability/potential to perform a certain task, with no prior knowledge and/or training.",
 	   "eventHead":"<li>Abhinav Jaiswal (8959063666)</li><li>Surendra Gangwar (9756066966)</li>",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Anime/MCU Quiz",
+	  "1":{"EventName":"Anime/MCU Quiz",
 	   "rules":"<li>Rules and regulation correspondence to quiz:</li><li>Each participating team will have a maximum of 2 members.</li><li>Each team has to bring their own laptop/smartphone to participate in online round and must have resources to access internet at the time of event.</li><li>The quiz consists of two rounds .</li><li>Rules for round 1:</li><li>This will be an online round.</li><li>There will be 40 questions and duration of the quiz is 20 min.</li><li>There will be multiple choice questions out of which only one option will be correct.</li><li>A link to the quiz will be provided which will only be active for 25 min.</li><li>Maximum 40 teams will qualify for round 2.</li><li>20 slots will be for teams from ABV-IIITM and rest will be filled by teams from other colleges.</li><li>In case of any ambiguity, decision of event heads will be final.</li><li>In the event of a tie, it will be resolved according to time taken by the tied teams for quiz submission.</li><li>Rules for round 2:</li><li>This part will be pen-paper based.</li><li>There will be 50 questions and duration for the quiz will be 25 min.</li><li>All questions will be Multiple choice questions with 4 options and only one correct answer.</li><li>There will be negative marking of 25% for each incorrect response.</li><li>In case of any ambiguity, decision of event heads will be final.</li><li>Any tie will be resolved by giving preference to the Marvel section of quiz.</li>",
 	   "description":"Marvellous Cinephila is going to be the next big thing during INFOTSAV’19.This event will test the participants’ knowledge of Marvel Universe(movies,comics, and tv series) and other tv-series, movies(Hollywood) and anime and will feature questions from these above-mentioned fields. The quiz will put 50% weight on Marvel Universe and rest 50% on other anime, tv-series, and movies(Hollywood).",
 	   "eventHead":"<li>Sanyam Gupta (7080864810)</li><li>Sanjal Dhir Katiyar (9670112872)</li>",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"BIT Quiz",
+	  "2":{"EventName":"BIT Quiz",
 	   "rules":"<li>General Rules:<ul><li>Each participating team will have a maximum of 2 members.</li><li>Each team has to bring their own smartphones to participate in online round and must have resources to access internet at the time of event.</li></ul></li><li>Qualifying Round:<ul><li>This round will be conducted online.</li><li>All Teams are requested to pre install the app (Actionbound) from playstore before participating.</li><li>40 questions will flash on your screen one after another.</li><li>This is a variable time based round. Time alloted varies for each question.</li><li>Only 8 teams would be selected for the FINAL ROUND.</li><li>4 Teams from IIITM College and from other Colleges.</li><li>In case of tie among teams,time factor will be considered.</li><li>In case of any ambiguity the decision of the organising team will be final.</li></ul></li><li>Final Round:<ul><li>This round will be in form of the famous quiz show Jeopardy.</li><li>In case of tie among teams ,team with highest score in round 1 will be given preference .</li></ul></li>",
 	   "description":"Do you have impulse? Do you have the knowledge? Do you wish to feel a rush of Adrenaline? Infotsav’19 , IIITM Gwalior present it’s Bit Quiz competition. This quiz will test the participant’s Business and IT knowledge.",
 	   "eventHead":"<li>Mithilesh Raghav - 8989819765</li><li>Ankit Sharma - 7903284946</li>",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Language Quiz",
+	  "3":{"EventName":"Language Quiz",
 	   "rules":"",
 	   "description":"<li>Basic knowledge of algorithms and data structures is required as well as knowledge of a programming language (C++, Java, Python).</li><li>Each team will consist of two members. </li><li>There will be 2 rounds conducted. First online qualifier and then final pen and paper round.</li><li>Online round will consist of 20 questions (may vary slightly).</li><li>Most questions will have a time limit.</li><li>There will be negative marks for each incorrect answer, no negative marks will be allotted for unattempted questions.</li><li>In case of tie higher rank will be given to team having lesser wrong answers. </li><li>50% of the teams selected for final round will be from ABV-IIITM and rest 50% from other colleges. (at most 20 teams).</li><li>In case a team is found cheating, team will be disqualified straightaway.</li><li>Teams should have a proper internet connection, it won’t be provided by the institute.</li>",
 	   "eventHead":"<li>Mohd Farhan Tahir (9616407700)</li><li>Mohit Kumar (8717984757)</li>",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Treasure Hunt",
+	  "4":{"EventName":"Treasure Hunt",
 	   "rules":"<li>Maximum of five members per team.</li><li>Prelims will be conducted*.</li><li>The clues are to be found in a particular order. A team cannot skip a clue. Skipping a clue leads to disqualification of the team.</li><li>Do not search for clues in off-limit areas.</li><li>If you found other team’s clue by any chance never tamper it. A violation of this rule could cause disqualification of your team.</li><li>You move any object to search the clue, kindly replace it back.</li><li>All the clues of the teams are different and located at different places but the final destination i.e. the treasure is same. The team which finds the treasure wins first.</li>",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  }
-	],
+	},
 
-	"technical":[
-	  {"EventName":"Hackathon",
+	"technical":{
+	  "0":{"EventName":"Hackathon",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Techathlon",
+	  "1":{"EventName":"Techathlon",
 	   "rules":"<li>Participation is only allowed in teams with each team having at least two and at most three members. Round one of Code Stumble will act as a preliminary round for teams participating in Techathlon as a whole. Both Bug spot and Algo writing will be conducted onsite.</li><li>Prizes will be given to top two teams based on the cumulative scores of the three events. Prizes will also be given to top two teams of each individual event.</li><li>Teams participating in onsite events are required to pay an entry fees of __</li><li>The decision of the judges in declaring the results will be final. No queries in this regard will be entertained. Any participant found to be indulging in any form of malpractice will be immediately disqualified.</li>",
 	   "description":"The event is an ultimate test of codes and logic and consists of three events which can be played either individually or as a part of techathlon wherein the cumulative scores will be added to decide the winners. The events are: <br><br> Code Stumble: This event will consist of two rounds. The first round will be an online competitive coding contest hosted on codechef. Based on the results few teams will be selected for round 2, which be will be an onsite contest. <br> Bug spot: Participants are required to find out bugs from the code given to them on question paper in the least time possible.It will be a MCQ based test. <br>Algo writing: Participants would be given a problem statement, and they are required to write an algorithm to solve it on the paper. They will be judged on the basis of their efficiency and accuracy.",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 	  
-	  {"EventName":"Code Shuffle",
+	  "2":{"EventName":"Code Shuffle",
 	   "rules":"<li>Some selected top teams from the pen-paper round will qualify for the online round.</li><li>Languages : C++,Java,Python.</li><li>This is a team event. Each team can have a maximum of 2 people.</li><li>The participants must reach the venue well before time.</li><li>Use of any unfair means will lead to disqualification of  the participants involved.</li><li>Use of internet to access any site other than the contest pages is strictly prohibited.</li><li>Infotsav, IIITM Gwalior will not be responsible  for any late or lost entries or other such situations.</li><li>Decision of the organizing committee will be FINAL and BINDING.</li><li>The pen-paper round will be of 30 minutes and the computer round will be of 45 minutes(subject to change).</li>",
 	   "description":"To give an edge to the technical stuff going on in the events, code shuffle would give a different angle as the code would be given to the students beforehand, but in a shuffled manner. The sequence of the commands would be different. The participants are required to find out the correct sequence and come up with the final code and the correct output. <br> A two round coding contest where the participants have to find out the correct order of the  jumbled code given to them . The contest would happen in two rounds with the first round being a pen-paper round and the second round being a computer round.",
 	   "eventHead":"<li>Saurabh Gupta +91-9695320340</li><li>Sanjit Prasad +91-9174275078</li>",
-	   "prizes":"",
+	   "prizes":""
 	  },
 	  
-	  {"EventName":"Code Rush",
+	  "3":{"EventName":"Code Rush",
 	   "rules":"<li>Event Structure:</li><li>A single coding contest with questions related to logic, mathematics,  puzzles, data structures and algorithms with twisted problem statements.</li><li>Languages Allowed–C, C++11, Java, Python 2, Python 3, pypy2, pypy3.</li><li>This is NOT a team event.</li><li>The participants must reach the venue well before time.</li><li>Each participant will be provided a computer.</li><li>Use of any unfair means will lead to disqualification of  the participants involved.</li><li>Use of internet to access any site other than the contest pages is strictly prohibited.</li><li>Infotsav, IIITM Gwalior will not be responsible  for any late or lost entries or other such situations.</li><li>Decision of the organizing committee will be FINAL and BINDING.</li><li>Objective</li><li>Write a program to solve the given problem statements after you are able to decipher what they mean.</li><li>The program should run on all test cases provided beforehand.</li><li>Time Limit is 2 hours(subject to change)</li><li>Number of questions is 12(subject to change)</li><li>Scoring</li><li>Each challenge has equal points. Points will be awarded once the solution passes all the test cases for that problem.</li><li>Participants are ranked by score. If two or more participants achieve the same score, then the tie is broken by the total time taken to submit the last accepted solution. </li><li>There are no penalties for wrong submissions.</li>",
 	   "description":"",
 	   "eventHead":"<li>Arjan Singh Bal</li><li>arjan3141@gmail.com</li><li>+91 9479383902</li>",
-	   "prizes":"",
+	   "prizes":""
 	  }
-	],
+	},
 
-	"school":[
-	  {"EventName":"School Olympiad",
+	"school":{
+	  "0":{"EventName":"School Olympiad",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Innovate the Good",
+	  "1":{"EventName":"Innovate the Good",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
-	  }
-	],
+	   "prizes":""
+	  },
 
-	"whiztroop":[
-	  {"EventName":"Whizz Troop",
+	  "2":{"EventName":"Whizz Troop",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  }
-	],
+	},
 
-	"managerial":[
-	  {"EventName":"Jobs",
+	"managerial":{
+	  "0":{"EventName":"Jobs",
 	   "rules":"<li>There will be three on-campus rounds for the event. Rounds shall proceed parallelly for candidates with technical and managerial background.</li><li>Round 1: It will be an MCQ round of one hour with 50 questions. It will contain aptitude and Technical/Managerial (whichever applicable) questions to test the basic knowledge of the candidates. There will be negative marking for incorrect response in this round.</li><li>Round 2: It will be a 2-hour programming round, consisting of 5 questions for the Technical position, and a Group Discussion round for the Managerial position.</li><li>Round 3: The final round will be an interview round. Here the candidates will be expected to answer the questions similar to a regular company interview. The result of this round lies solely in the hands of the judges. Separate interview would be conducted for candidates of Technical and Managerial background.</li><li>Candidates are also requested to remain updated with the event updates that comes up on Facebook page of INFOTSAV and Infotsav website. </li><li>An online mock MCQ round will be conducted which will give a necessary preparation assessment.</li>",
 	   "description":"Why wait for the final year to prepare yourself for placements? Infotsav 19 brings you an event for you to experience just the same - Jobs. It is an on-site event where candidates would go through multiple rounds designed as a replica of an actual placement procedure, for both, a Technical and a Managerial position.",
 	   "eventHead":"<li>Nikita Sharma (+91 95753 46899)</li><li>Shivam Sharma (+91 99819 41446)</li>",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Pinnacle",
+	  "1":{"EventName":"Pinnacle",
 	   "rules":"<li>Event Timeline:</li><li>Phase 1: Executive Summary Submission (Online): </li><li>A complete description of your Business Plan should be submitted on or before 04/02/2019, entries submitted after the deadline shall NOT be considered.</li><li>The Executive Summary will be submitted online, in the .PDF format only.</li><li>The PDF file can have a maximum of 5 pages (excluding the cover page).</li><li>Phase 2: Presentation of final Business plans (On Campus):</li><li>The shortlisted teams will be invited to the campus for the presentation of their Final Business Plans. </li><li>A total of 10 minutes (8 minutes for presentation & 2 minutes for binding) will be allotted to every team to showcase their complete B-Plan to the Judges.</li><li>Teams are restricted to use Microsoft PowerPoint for presentations.</li><li>Each team shall consist either of 1,2,3 participants. Cross institute/organization teams are also allowed.</li><li>Registration fee is ₹100 per team (for Phase-2 only)</li><li>Any identified act of plagiarism will be immediately DISQUALIFIED.</li><li>The decision of the Judges and organizers will be FINAL and binding to all the participants. (All conflicts subject to the jurisdiction of Gwalior court only).</li><li>Executive Summary and all other documents/queries to be sent to pinnacle.infotsav19@gmail.com</li><li>Subject of e-mail: PINNACLE, Infotsav'19 (<Team name>)</li><li>Any of the terms and conditions can be changed by the organizers anytime ensuring to give the participants appropriate time to respond to the changes.</li><li>The teams should strictly adhere to the rules mentioned.</li><li>Notes:</li><li>There are no Registration charges for Phase –1. The above-mentioned Registration fee is for selected candidates for Phase-2 only.</li><li>All the details, instructions and format of Executive Summary, B-Plan will be e-mailed to the registered candidates.</li><li>Results of Phase-1 will be declared before 05/02/2019 midnight. Candidates will be notified by an e-mail, you can also check it on our Facebook page.</li><li>Little weightage (15%) of Phase-1 will also be considered in final Evaluation.</li><li>The above-mentioned rules and schedules are less likely to be changed or get delayed. However, special-circumstances may be considered with the permissions of Event-Head only.</li><li></li>",
 	   "description":"If you have a unique idea that carves you out as a successful entrepreneur, then we welcome you to the most appreciated event of Infotsav. It provides your idea, a platform and eventually a spark just sufficient to ignite you. Pinnacle is the flagship event of Infotsav’19 which is attracting students from the best B-schools and Engineering colleges all over the country.",
 	   "eventHead":"<li>Prashant Kumar Tiwari</li><li>kumartiwariprashant@gmail.com</li><li>+91 9451476957</li>",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Corporate Crisis",
+	  "3":{"EventName":"Corporate Crisis",
 	   "rules":"<li>Participation - A team of 2 to 3 members can participate in this event.</li><li>Event will be divided into three rounds</li><li>Round 1: A list of designation in company will be given to the team and they will have to decide what position every individual have to play in team. For example: A team of 2/3 participants will be given a list of designations in a company (CEO, manager etc.) from which they can choose. Each member will select a unique position for him/her. Each individual will be given a problem/crisis statement which may occur in a company and he/she has to answer accordingly. </li><li>Time of 1 min will be given to team to discuss the points and maximum of 1.5 min will be given to each individual to present his/her points. </li><li>Points of each individual will be added to team points.</li><li>Round 2: Team as a whole will be given a situation of crisis. </li><li>Time of 60 sec will be given to team to discuss the points and maximum of 2 min will be given to each team to present their points. </li><li>Round 3: The top 2 teams will compete against each other in face-off. In 1st half of this round, a problem statement will be given to both the teams. One team will present the solution of the crisis and the other team will counter their points and vice-versa in second half (another problem statement).</li><li>Each half will be of 3 min.</li><li>Types of crisis that will be covered in problem statements – Technical, Employee misconduct, Product recalls/defect, Conflict with interest, Rumors , Management misconduct or work-place violence. </li>",
 	   "description":"The participants would be given a real life crisis situation that they have to overcome. They need to show their managerial skill, team work and witty tactics that they will implementing in order to solve the crisis.",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"IPL Auction",
+	  "4":{"EventName":"IPL Auction",
 	   "rules":"<li>Teams will consist of 3 members each. </li><li>Eight teams will qualify for the Main Round and will represent an IPL Franchise. </li><li>Each Team will be required to form a squad of 15-20 players.</li><li>The Squad must have at least 7 Batsmen, 5 Bowlers, 2 All-Rounders, and a Wicket-Keeper. </li><li>A squad cannot have more than 7 foreign players. </li><li>Every Franchise will have equal budget and will get a list of players with their ratings in advance. </li><li>The Team that represents the Squad with highest cumulative rating wins.</li>",
 	   "description":"This event is a live simulation of the IPL Auctions and gauges Contestants’ analytical and managerial skills in real time.The Event will consist of two rounds. The Preliminary round will be a multiple-choice based quiz to select 8 teams for the Main Round which would feature a live auction.",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Brandsome",
+	  "5":{"EventName":"Brandsome",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Sameeksha",
+	  "6":{"EventName":"Sameeksha",
 	   "rules":"<li>The competition is open to School students, undergraduates, postgraduates and research scholars.</li><li>Maximum number of participants in a Team is 2 (persons from different institution are allowed but multiple entries will not be entertained).</li><li>The presentation should be based on one of the suggestive topics. Other topics within the domain are also acceptable.</li><li>Abstract should not exceed 1 page and Paper should not exceed 15 pages of maximum word limit 1000-3000 containing all figures and tables within and a separate title page with authors name and identification.</li><li>The oral presentation must be of maximum 12 minutes, inclusive of 2 minutes for questions.</li><li>Bring your college I-Card, 2 hardcopies of the submitted paper and PowerPoint presentation (on a CD and pen-drive) on event day.</li><li>Soft-copies of the submitted paper and PowerPoint presentations must be in the .docx format.</li><li>Please Mail your abstract, paper and PowerPoint presentation to sameeksha@infotsav.com with the following contents:<ol><li>Title- theme of the paper</li><li>Name of both the authors (with Institutes name)</li><li>Contact no. of both the authors</li><li>E- Mail ID </li></ol></li><li>Last day to submit soft copy of your report (via e-mail) will be seven days prior to the day of presentation. The soft copy is evaluated and used to shortlist, of which you will be notified.</li><li>The abstract mail should contain abstract, references, your e-mail id and mobile number.</li><li>The decision of judges will be final and no arguments or appeal will be entertained.</li><li>The submitted papers shall become the property of Sameeksha.</li>",
 	   "description":"The Annual Paper Presentation Conference is intended to encourage students to prepare and present meaningful papers and presentations on subjects relating to various domains (Technical & Non-Technical).Researching, writing, and presenting a paper provides a student with invaluable early experience in expressing ideas related to its research area.",
 	   "eventHead":"<li>Apurva Srivastava - 9414703738</li><li>Riya Khandelwal - 9410873749</li>",
-	   "prizes":"",
+	   "prizes":""
 	  }
-	],
+	},
 
-	"gamiacs":[
-	  {"EventName":"FIFA",
+	"gamiacs":{
+	  "0":{"EventName":"FIFA",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Counter Strike Global Offensive",
+	  "1":{"EventName":"Counter Strike Global Offensive",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Need For Speed",
+	  "2":{"EventName":"Need For Speed",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  }
-	],
+	},
 	
-	"robotics":[
-	  {"EventName":"Blazing Wheel",
+	"robotics":{
+	  "0":{"EventName":"Blazing Wheel",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Robo War",
+	  "1":{"EventName":"Robo War",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Robo Maze",
+	  "2":{"EventName":"Robo Maze",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  },
 
-	  {"EventName":"Robo Soccer",
+	  "3":{"EventName":"Robo Soccer",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
-	   "prizes":"",
+	   "prizes":""
 	  }
-	]
+	}
 }
