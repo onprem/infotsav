@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {online_explore_function} from './online_explore_function';
 import './online_explore.css';
-import './online_explore_main.css'
+import './online_explore_main.css';
 
 class online_explore extends Component {
 

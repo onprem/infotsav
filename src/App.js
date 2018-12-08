@@ -13,7 +13,7 @@ import Technical_Events from './Components/Explore/Technical/tech_explore'
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
-import Contact from './Components/Contact/Contact'
+import Team from './Components/Team/Team'
 import Verify from './Components/Verify/Verify';
 import Profile from './Components/Profile/Profile';
 import logo from './assets/icon.png';
@@ -106,7 +106,7 @@ class App extends Component {
     		<Switch>
     			<Route path="/" exact component={Home} />
           <Route path="/events" exact component={Events} />
-          <Route path="/contact" exact component={Contact} />
+          <Route path="/team" exact component={Team} />
 
           <Route path="/events/online_events" exact component={Online_Events} />
           <Route path="/events/info_events" exact component={Informal_Events} />

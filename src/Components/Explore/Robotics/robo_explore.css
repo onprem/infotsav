@@ -152,7 +152,7 @@
     -webkit-transform-origin: 365.625% 50%;
             transform-origin: 365.625% 50%;
   }
-  .robo_el:nth-child(4) .el__bg {
+  .robo_el:nth-child(4) .robo_el__bg {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
