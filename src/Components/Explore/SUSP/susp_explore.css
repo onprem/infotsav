@@ -1,0 +1,119 @@
+.susp_el {
+  width: 32%;
+}
+.susp_el:nth-child(1) {
+  -webkit-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.susp_cont.s--susp_el-active .susp_el:nth-child(1):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(0%, 0, 0);
+          transform: scale(0.5) translate3d(0%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.susp_el:nth-child(1) .susp_el__inner {
+  transition-delay: 0s;
+}
+.susp_el:nth-child(1) .susp_el__bg {
+  -webkit-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+}
+.susp_el:nth-child(1) .susp_el__bg:before {
+  transition-delay: 0s;
+  background-image: url("../../../assets/photos/thor.jpg");
+}
+.susp_el:nth-child(2) {
+  -webkit-transform: translate3d(105.2083333333%, 0, 0);
+          transform: translate3d(105.2083333333%, 0, 0);
+  -webkit-transform-origin: 155.2083333333% 50%;
+          transform-origin: 155.2083333333% 50%;
+}
+.susp_cont.s--susp_el-active .susp_el:nth-child(2):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+          transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.susp_el:nth-child(2) .susp_el__inner {
+  transition-delay: 0.1s;
+}
+.susp_el:nth-child(2) .susp_el__bg {
+  -webkit-transform: translate3d(-15.36%, 0, 0);
+          transform: translate3d(-15.36%, 0, 0);
+}
+.susp_el:nth-child(2) .susp_el__bg:before {
+  transition-delay: 0.1s;
+  background-image: url("../../../assets/photos/thor.jpg");
+}
+.susp_el:nth-child(3) {
+  -webkit-transform: translate3d(210.4166666667%, 0, 0);
+          transform: translate3d(210.4166666667%, 0, 0);
+  -webkit-transform-origin: 260.4166666667% 50%;
+          transform-origin: 260.4166666667% 50%;
+}
+.susp_cont.s--susp_el-active .susp_el:nth-child(3):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(210.4166666667%, 0, 0);
+          transform: scale(0.5) translate3d(210.4166666667%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.susp_el:nth-child(3) .susp_el__inner {
+  transition-delay: 0.2s;
+}
+.susp_el:nth-child(3) .susp_el__bg {
+  -webkit-transform: translate3d(-30.72%, 0, 0);
+          transform: translate3d(-30.72%, 0, 0);
+}
+.susp_el:nth-child(3) .susp_el__bg:before {
+  transition-delay: 0.2s;
+  background-image: url("../../../assets/photos/thor.jpg");
+}
+@media only screen and (max-width: 1000px) {
+  .susp_el {
+    height: 32% !important;
+  }
+
+  .susp_cont.s--susp_el-active .susp_el:nth-child(1):not(.s--active) {
+    transform: none;
+    opacity: 0;
+    transition: opacity 0.95s;
+  }
+  .susp_cont.s--susp_el-active .susp_el:nth-child(2):not(.s--active) {
+    -webkit-transform: translate3d(0, 105.2083333333%, 0);
+          transform: translate3d(0, 105.2083333333%, 0);
+    transition: opacity 0.95s;
+  }
+  .susp_cont.s--susp_el-active .susp_el:nth-child(3):not(.s--active) {
+    -webkit-transform: translate3d(0, 210.4166666667%, 0);
+          transform: translate3d(0, 210.4166666667%, 0);
+    transition: opacity 0.95s;
+  }
+  .susp_el:nth-child(2) {
+    -webkit-transform: translate3d(0, 105.2083333333%, 0);
+            transform: translate3d(0, 105.2083333333%, 0);
+    -webkit-transform-origin: 155.2083333333% 50%;
+            transform-origin: 155.2083333333% 50%;
+  }
+  .susp_el:nth-child(2) .susp_el__bg {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .susp_el:nth-child(3) {
+    -webkit-transform: translate3d(0, 210.4166666667%, 0);
+            transform: translate3d(0, 210.4166666667%, 0);
+    -webkit-transform-origin: 260.4166666667% 50%;
+            transform-origin: 260.4166666667% 50%;
+  }
+  .susp_el:nth-child(3) .susp_el__bg {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}

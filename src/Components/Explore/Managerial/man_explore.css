@@ -1,0 +1,240 @@
+.man_el {
+  width: 16%;
+}
+.man_el:nth-child(1) {
+  -webkit-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.man_cont.s--man_el-active .man_el:nth-child(1):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(0%, 0, 0);
+          transform: scale(0.5) translate3d(0%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.man_el:nth-child(1) .man_el__inner {
+  transition-delay: 0s;
+}
+.man_el:nth-child(1) .man_el__bg {
+  -webkit-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+}
+.man_el:nth-child(1) .man_el__bg:before {
+  transition-delay: 0s;
+  background-image: url("../../../assets/photos/nickfury.jpg");
+}
+.man_el:nth-child(2) {
+  -webkit-transform: translate3d(105.2083333333%, 0, 0);
+          transform: translate3d(105.2083333333%, 0, 0);
+  -webkit-transform-origin: 155.2083333333% 50%;
+          transform-origin: 155.2083333333% 50%;
+}
+.man_cont.s--man_el-active .man_el:nth-child(2):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+          transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.man_el:nth-child(2) .man_el__inner {
+  transition-delay: 0.1s;
+}
+.man_el:nth-child(2) .man_el__bg {
+  -webkit-transform: translate3d(-15.36%, 0, 0);
+          transform: translate3d(-15.36%, 0, 0);
+}
+.man_el:nth-child(2) .man_el__bg:before {
+  transition-delay: 0.1s;
+  background-image: url("../../../assets/photos/nickfury.jpg");
+}
+.man_el:nth-child(3) {
+  -webkit-transform: translate3d(210.4166666667%, 0, 0);
+          transform: translate3d(210.4166666667%, 0, 0);
+  -webkit-transform-origin: 260.4166666667% 50%;
+          transform-origin: 260.4166666667% 50%;
+}
+.man_cont.s--man_el-active .man_el:nth-child(3):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(210.4166666667%, 0, 0);
+          transform: scale(0.5) translate3d(210.4166666667%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.man_el:nth-child(3) .man_el__inner {
+  transition-delay: 0.2s;
+}
+.man_el:nth-child(3) .man_el__bg {
+  -webkit-transform: translate3d(-30.72%, 0, 0);
+          transform: translate3d(-30.72%, 0, 0);
+}
+.man_el:nth-child(3) .man_el__bg:before {
+  transition-delay: 0.2s;
+  background-image: url("../../../assets/photos/nickfury.jpg");
+}
+.man_el:nth-child(4) {
+  -webkit-transform: translate3d(315.625%, 0, 0);
+          transform: translate3d(315.625%, 0, 0);
+  -webkit-transform-origin: 365.625% 50%;
+          transform-origin: 365.625% 50%;
+}
+.man_cont.s--man_el-active .man_el:nth-child(4):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(315.625%, 0, 0);
+          transform: scale(0.5) translate3d(315.625%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.man_el:nth-child(4) .man_el__inner {
+  transition-delay: 0.3s;
+}
+.man_el:nth-child(4) .man_el__bg {
+  -webkit-transform: translate3d(-46.08%, 0, 0);
+          transform: translate3d(-46.08%, 0, 0);
+}
+.man_el:nth-child(4) .man_el__bg:before {
+  transition-delay: 0.3s;
+  background-image: url("../../../assets/photos/nickfury.jpg");
+}
+.man_el:nth-child(5) {
+  -webkit-transform: translate3d(420.8333333333%, 0, 0);
+          transform: translate3d(420.8333333333%, 0, 0);
+  -webkit-transform-origin: 470.8333333333% 50%;
+          transform-origin: 470.8333333333% 50%;
+}
+.man_cont.s--man_el-active .man_el:nth-child(5):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(420.8333333333%, 0, 0);
+          transform: scale(0.5) translate3d(420.8333333333%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.man_el:nth-child(5) .man_el__inner {
+  transition-delay: 0.4s;
+}
+.man_el:nth-child(5) .man_el__bg {
+  -webkit-transform: translate3d(-61.44%, 0, 0);
+          transform: translate3d(-61.44%, 0, 0);
+}
+.man_el:nth-child(5) .man_el__bg:before {
+  transition-delay: 0.4s;
+  background-image: url("../../../assets/photos/nickfury.jpg");
+}
+.man_el:nth-child(6) {
+  -webkit-transform: translate3d(526.041333333%, 0, 0);
+          transform: translate3d(526.041333333%, 0, 0);
+  -webkit-transform-origin: 575.8333333333% 50%;
+          transform-origin: 575.8333333333% 50%;
+}
+.man_cont.s--man_el-active .man_el:nth-child(6):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(526.041333333%, 0, 0);
+          transform: scale(0.5) translate3d(526.041333333%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.man_el:nth-child(6) .man_el__inner {
+  transition-delay: 0.5s;
+}
+.man_el:nth-child(6) .man_el__bg {
+  -webkit-transform: translate3d(-76.8%, 0, 0);
+          transform: translate3d(-76.8%, 0, 0);
+}
+.man_el:nth-child(6) .man_el__bg:before {
+  transition-delay: 0.4s;
+  background-image: url("../../../assets/photos/nickfury.jpg");
+}
+@media only screen and (max-width: 1000px) {
+
+  .man_el {
+    height: 16% !important;
+  }
+
+  .man_cont.s--man_el-active .man_el:nth-child(1):not(.s--active) {
+    transform: none;
+    opacity: 0;
+    transition: opacity 0.95s;
+  }
+  .man_cont.s--man_el-active .man_el:nth-child(2):not(.s--active) {
+    -webkit-transform: translate3d(0, 105.2083333333%, 0);
+          transform: translate3d(0, 105.2083333333%, 0);
+    transition: opacity 0.95s;
+  }
+  .man_cont.s--man_el-active .man_el:nth-child(3):not(.s--active) {
+    -webkit-transform: translate3d(0, 210.4166666667%, 0);
+          transform: translate3d(0, 210.4166666667%, 0);
+    transition: opacity 0.95s;
+  }
+  .man_cont.s--man_el-active .man_el:nth-child(4):not(.s--active) {
+    -webkit-transform: translate3d(0, 315.625%, 0);
+          transform: translate3d(0, 315.625%, 0);
+    transition: opacity 0.95s;
+  }
+  .man_cont.s--man_el-active .man_el:nth-child(5):not(.s--active) {
+    -webkit-transform: translate3d(0, 420.8333333333%, 0);
+          transform: translate3d(0, 420.8333333333%, 0);
+    transition: opacity 0.95s;
+  }
+  .man_cont.s--man_el-active .man_el:nth-child(6):not(.s--active) {
+    -webkit-transform: translate3d(0, 526.041333333%, 0);
+          transform: translate3d(0, 526.041333333%, 0);
+    transition: opacity 0.95s;
+  }
+  .man_el:nth-child(2) {
+    -webkit-transform: translate3d(0, 105.2083333333%, 0);
+            transform: translate3d(0, 105.2083333333%, 0);
+    -webkit-transform-origin: 155.2083333333% 50%;
+            transform-origin: 155.2083333333% 50%;
+  }
+  .man_el:nth-child(2) .man_el__bg {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .man_el:nth-child(3) {
+    -webkit-transform: translate3d(0, 210.4166666667%, 0);
+            transform: translate3d(0, 210.4166666667%, 0);
+    -webkit-transform-origin: 260.4166666667% 50%;
+            transform-origin: 260.4166666667% 50%;
+  }
+  .man_el:nth-child(3) .man_el__bg {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .man_el:nth-child(4) {
+    -webkit-transform: translate3d(0, 315.625%, 0);
+            transform: translate3d(0, 315.625%, 0);
+    -webkit-transform-origin: 365.625% 50%;
+            transform-origin: 365.625% 50%;
+  }
+  .man_el:nth-child(4) .man_el__bg {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .man_el:nth-child(5) {
+    -webkit-transform: translate3d(0, 420.8333333333%, 0);
+            transform: translate3d(0, 420.8333333333%, 0);
+    -webkit-transform-origin: 470.8333333333% 50%;
+            transform-origin: 470.8333333333% 50%;
+  }
+  .man_el:nth-child(5) .man_el__bg {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .man_el:nth-child(6) {
+    -webkit-transform: translate3d(0, 526.041333333%, 0);
+            transform: translate3d(0, 526.041333333%, 0);
+    -webkit-transform-origin: 575.8333333333% 50%;
+            transform-origin: 575.8333333333% 50%;
+  }
+  .man_el:nth-child(6) .man_el__bg {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
