@@ -112,7 +112,7 @@
     opacity: 0;
     transition: opacity 0.95s;
   }
-  .cont.s--tech_el-active .tech_el:nth-child(2):not(.s--active) {
+  .tech_cont.s--tech_el-active .tech_el:nth-child(2):not(.s--active) {
     -webkit-transform: translate3d(0, 105.2083333333%, 0);
           transform: translate3d(0, 105.2083333333%, 0);
     transition: opacity 0.95s;
