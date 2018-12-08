@@ -34,7 +34,7 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 .background:first-child {
-  background-image: url(https://i.postimg.cc/kXq9Qmnj/bgd1.jpg);
+  background-image: url(../../assets/photos/CoBackground.jpg);
   -webkit-transform: translateY(-15vh);
           transform: translateY(-15vh);
 }
@@ -43,10 +43,10 @@
           transform: translateY(15vh);
 }
 .background:nth-child(2) {
-  background-image: url(https://i.postimg.cc/W14vywqg/photo-1424746219973-8fe3bd07d8e3.jpg);
+  background-image: url(../../assets/photos/EMTBackground.jpg);
 }
 .background:nth-child(3) {
-  background-image: url(https://i.postimg.cc/TY0xQ41T/photo-1433840496881-cbd845929862.jpg);
+  background-image: url(../../assets/photos/TMBackground.jpg);
 }
 
 .background:nth-child(4) {

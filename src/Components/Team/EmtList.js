@@ -5,6 +5,7 @@ const EmtList = ({ emts }) => {
 	const cardComponent = emts.map((user, i) => {
 		return <Card 
 		key={i} 
+		icon={emts[i].icon}
 		name={emts[i].name} 
 		phone={emts[i].phone} 
 		email={emts[i].email} /> 
