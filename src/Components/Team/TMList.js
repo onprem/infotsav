@@ -6,6 +6,7 @@ const TMList = ({ TMheads }) => {
 		return <Card2 
 		key={i} 
 		name={TMheads[i].name} 
+		icon={TMheads[i].icon}
 		phone={TMheads[i].phone} 
 		email={TMheads[i].email} /> 
 	});

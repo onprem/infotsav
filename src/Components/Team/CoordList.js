@@ -6,6 +6,7 @@ const CoordList = ({ coord }) => {
 		return <Card2 
 		key={i} 
 		name={coord[i].name} 
+		icon={coord[i].icon}
 		phone={coord[i].phone} 
 		email={coord[i].email} /> 
 	});

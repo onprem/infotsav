@@ -3,6 +3,7 @@ export const emts = [
 	{
 		id:1,
 		name: 'Juhi Tiwari',
+		icon: '../../assets/photos/co_juhi.jpg',
 		phone: '9599474147',
 		email:'juhi@infotsav.in'
 	},
@@ -10,6 +11,7 @@ export const emts = [
 	{
 		id:2,
 		name: 'Juhi Tiwari',
+		icon: '../../assets/photos/co_shub.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
@@ -17,6 +19,7 @@ export const emts = [
 	{
 		id:3,
 		name: 'Juhi Tiwari',
+		icon: '../../assets/photos/co_juhi.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
@@ -24,6 +27,7 @@ export const emts = [
 	{
 		id:4,
 		name: 'Juhi Tiwari',
+		icon: '../../assets/photos/co_prat.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
@@ -31,6 +35,7 @@ export const emts = [
 	{
 		id:5,
 		name: 'Juhi Tiwari',
+		icon: '../../assets/photos/co_shub.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
@@ -38,6 +43,7 @@ export const emts = [
 	{
 		id:6,
 		name: 'Juhi Tiwari',
+		icon: '../../assets/photos/co_juhi.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
@@ -45,6 +51,7 @@ export const emts = [
 	{
 		id:7,
 		name: 'Juhi Tiwari',
+		icon: '../../assets/photos/co_shub.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
@@ -52,6 +59,7 @@ export const emts = [
 	{
 		id:8,
 		name: 'Juhi Tiwari',
+		icon: '../../assets/photos/co_prat.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
@@ -108,24 +116,28 @@ export const coord = [
 	
 	{
 		name: 'Juhi Tiwari',
+		icon: 'co_juhi.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
 
 	{
 		name: 'Juhi Tiwari',
+		icon: 'co_shub.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
 
 	{
 		name: 'Juhi Tiwari',
+		icon: 'co_prat.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
 
 	{
 		name: 'Juhi Tiwari',
+		icon: 'co_juhi.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	}
@@ -135,12 +147,14 @@ export const coord = [
 export const TMheads = [
 	{
 		name: 'Juhi Tiwari',
+		icon: 'co_prat.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	},
 
 	{
 		name: 'Juhi Tiwari',
+		icon: 'co_prat.jpg',
 		phone: '9599474147',
 		email: 'juhi@infotsav.in'
 	}
