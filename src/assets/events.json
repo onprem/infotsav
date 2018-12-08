@@ -218,7 +218,7 @@
 	},
 
 	"gamiacs":{
-	  "0":{"EventName":"FIFA",
+	  "a":{"EventName":"FIFA",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
@@ -226,7 +226,7 @@
    		"eid": 26
 	  },
 
-	  "1":{"EventName":"Counter Strike Global Offensive",
+	  "b":{"EventName":"Counter Strike Global Offensive",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",
@@ -234,7 +234,7 @@
    		"eid": 27
 	  },
 
-	  "2":{"EventName":"Need For Speed",
+	  "c":{"EventName":"Need For Speed",
 	   "rules":"",
 	   "description":"",
 	   "eventHead":"",

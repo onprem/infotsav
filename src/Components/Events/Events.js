@@ -5,8 +5,8 @@ import './Events.css';
 
 class Events extends Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state={
     }
   }
