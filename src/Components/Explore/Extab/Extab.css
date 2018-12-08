@@ -37,9 +37,9 @@
 .tabs .tab-content {
   z-index: 2;
   display: none;
-  /*overflow: scroll;*/
+  overflow: ;
   width: 100%;
-  font-size: 4rem;
+  font-size: 1.6rem;
   line-height: 25px;
   padding: 25px;
   position: absolute;
@@ -53,4 +53,28 @@
 }
 .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
   display: block;
+}
+.gam_el__close-btn, .info_el__close-btn, .man_el__close-btn, .online_el__close-btn, .robo_el__close-btn, .susp_el__close-btn, .tech_el__close-btn{
+  position: fixed;
+}
+.gam_el__content, .info_el__content, .man_el__content, .online_el__content, .robo_el__content, .susp_el__content, .tech_el__content{
+  background: rgba(0,0,0,0.6);
+  overflow-y: scroll;
+}
+@media only screen and (max-width: 1000px) {
+.gam_el__content, .info_el__content, .man_el__content, .online_el__content, .robo_el__content, .susp_el__content, .tech_el__content{
+    padding: 0;
+  }
+  .tabs label {
+    padding: 7px 21px;
+  }
+  .tabs .tab-content {
+    font-size: 1.2rem;
+    line-height: 22px;
+    padding: 2px;
+  }
+}
+.event_data {
+  margin-top: 0px;
+  color: #fff;
 }
