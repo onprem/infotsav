@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {info_explore_function} from './info_explore_function';
 import './info_explore.css';
 import './info_explore_main.css'
+import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 
 class info_explore extends Component {
 
@@ -12,7 +13,9 @@ class info_explore extends Component {
 
 	render() {
 		return (
-			<div className="info_cont s--inactive">
+			<div>
+				<BackToEvents/>
+				<div className="info_cont s--inactive">
 			  <div className="info_cont__inner">
 			    <div className="info_el">
 			      <div className="info_el__overflow">
@@ -145,6 +148,7 @@ class info_explore extends Component {
 			      </div>
 			    </div>
 			  </div>
+				</div>
 			</div>
 		)
 	}

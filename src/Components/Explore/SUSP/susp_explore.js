@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {susp_explore_function} from './susp_explore_function';
 import './susp_explore.css';
 import './susp_explore_main.css'
+import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 
 class susp_explore extends Component {
 
@@ -12,6 +13,8 @@ class susp_explore extends Component {
 
 	render() {
 		return (
+			<div>
+				<BackToEvents />
 			 <div class="susp_cont s--inactive">
 			  <div class="susp_cont__inner">
 			    <div class="susp_el">
@@ -95,6 +98,7 @@ class susp_explore extends Component {
 			      </div>
 			    </div>
 			  </div>
+				</div>
 			</div>
 		)
 	}

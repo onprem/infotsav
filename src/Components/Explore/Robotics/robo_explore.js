@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {robo_explore_function} from './robo_explore_function';
 import './robo_explore.css';
 import './robo_explore_main.css'
+import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 
 class robo_explore extends Component {
 
@@ -12,6 +13,10 @@ class robo_explore extends Component {
 
 	render() {
 		return (
+			<div>
+			<BackToEvents/>
+			
+
 			 <div class="robo_cont s--inactive">
 			  <div class="robo_cont__inner">
 			    <div class="robo_el">
@@ -119,6 +124,7 @@ class robo_explore extends Component {
 			      </div>
 			    </div>
 			  </div>
+			</div>
 			</div>
 
 		)

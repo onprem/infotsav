@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {man_explore_function} from './man_explore_function';
 import './man_explore.css';
 import './man_explore_main.css'
+import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 
 class man_explore extends Component {
 
@@ -12,6 +13,9 @@ class man_explore extends Component {
 
 	render() {
 		return (
+			<div>
+				<BackToEvents/>
+				
 			 <div class="man_cont s--inactive">
 			  <div class="man_cont__inner">
 			    <div class="man_el">
@@ -176,6 +180,7 @@ class man_explore extends Component {
 			      </div>
 			    </div>
 			  </div>
+				</div>
 			</div>
 		)
 	}

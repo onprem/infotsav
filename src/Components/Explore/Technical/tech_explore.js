@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {tech_explore_function} from './tech_explore_function';
 import './tech_explore.css';
 import './tech_explore_main.css'
+import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 
 class tech_explore extends Component {
 
@@ -12,7 +13,9 @@ class tech_explore extends Component {
 
 	render() {
 		return (
-			<div class="tech_cont s--inactive">
+			<div>
+				<BackToEvents/>
+				<div class="tech_cont s--inactive">
 			  <div class="tech_cont__inner">
 			    <div class="tech_el">
 			      <div class="tech_el__overflow">
@@ -119,6 +122,7 @@ class tech_explore extends Component {
 			      </div>
 			    </div>
 			  </div>
+				</div>
 			</div>
 
 		)
