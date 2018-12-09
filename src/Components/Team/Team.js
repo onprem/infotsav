@@ -114,6 +114,10 @@ class Team extends Component {
 			     </section>
 			     <section className="background">
 			       <div className="content-wrapper">
+			       		<div className='tc'>
+				   			<h1>WebTeam</h1>
+							<TMList TMheads={TMheads} />
+						</div>
 			       </div>
 			     </section>
 			</div>

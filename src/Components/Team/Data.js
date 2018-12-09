@@ -44,8 +44,8 @@ export const emts = [
 		id:6,
 		icon: 'shubham.jpg',
 		name: 'Shubham Bhattacharya',
-		phone: '7507008911',
-		email: 'shubham@infotsav.in'
+		phone: ' ',
+		email: ' '
 	},
 
 	{
@@ -116,7 +116,7 @@ export const emts = [
 		id:15,
 		icon: 'vishesh.jpg',
 		name: 'Vishesh Khandelwal',
-		phone: '7978122119',
+		phone: '7678122119',
 		email: 'vishesh@infotsav.in'
 	}
 ];
@@ -148,7 +148,7 @@ export const coord = [
 		name: 'Shubhanker Srivastava',
 		icon: 'shubhanker.jpg',
 		phone: '9454932137',
-		email: 'shubhankar@infotsav.in'
+		email: 'shubhanker@infotsav.in'
 	}
 
 ];
@@ -169,3 +169,32 @@ export const TMheads = [
 	}
 ];
 
+export const WebTeam = [
+	{
+		name: 'Manish Mavi',
+		icon: 'mavi.jpg',
+		phone: '9599474147',
+		email: 'mavi@infotsav.in'
+	},
+
+	{
+		name: 'Ojaswa Sharma',
+		icon: 'sharma.jpg',
+		phone: '9131102279',
+		email: 'ojaswa@infotsav.in'
+	},
+
+	{
+		name: 'Prem Kumar',
+		icon: 'chopra.jpg',
+		phone: '9950591608',
+		email: 'prem@infotsav.in'
+	},
+
+	{
+		name: 'Rohit Kunji',
+		icon: 'kunji.jpg',
+		phone: '8369616043',
+		email: 'kunji@infotsav.in'
+	}
+];
