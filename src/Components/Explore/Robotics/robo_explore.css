@@ -1,5 +1,5 @@
 .robo_el {
-  width: 24%;
+  width: 19.2%;
 }
 .robo_el:nth-child(1) {
   -webkit-transform: translate3d(0%, 0, 0);
@@ -101,9 +101,36 @@
   transition-delay: 0.3s;
   background-image: url("../../../assets/photos/ultron.jpg");
 }
+
+.robo_el:nth-child(5) {
+  -webkit-transform: translate3d(420.8333333333%, 0, 0);
+          transform: translate3d(420.8333333333%, 0, 0);
+  -webkit-transform-origin: 470.8333333333% 50%;
+          transform-origin: 470.8333333333% 50%;
+}
+.robo_cont.s--robo_el-active .robo_el:nth-child(5):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(420.8333333333%, 0, 0);
+          transform: scale(0.5) translate3d(420.8333333333%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.robo_el:nth-child(5) .robo_el__inner {
+  transition-delay: 0.4s;
+}
+.robo_el:nth-child(5) .robo_el__bg {
+  -webkit-transform: translate3d(-76.8%, 0, 0);
+          transform: translate3d(-76.8%, 0, 0);
+}
+.robo_el:nth-child(5) .robo_el__bg:before {
+  transition-delay: 0.4s;
+  background-image: url("../../../assets/photos/ultron.jpg");
+}
+
 @media only screen and (max-width: 1000px) {
   .robo_el {
-    height: 24% !important;
+    height: 19.2% !important;
   }
 
   .robo_cont.s--robo_el-active .robo_el:nth-child(1):not(.s--active) {
@@ -153,6 +180,16 @@
             transform-origin: 365.625% 50%;
   }
   .robo_el:nth-child(4) .robo_el__bg {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .robo_el:nth-child(5) {
+    -webkit-transform: translate3d(0, 420.8333333333%, 0);
+            transform: translate3d(0, 420.8333333333%, 0);
+    -webkit-transform-origin: 470.8333333333% 50%;
+            transform-origin: 470.8333333333% 50%;
+  }
+  .robo_el:nth-child(5) .robo_el__bg {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
