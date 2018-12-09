@@ -20,6 +20,8 @@ class Extab extends Component {
   	const event=this.props.eventDetails;
   	if(!event.eventHead)
   		event.eventHead='To be announced'
+    if(!event.organizers)
+      event.organizers='To be announced'
   	if(!event.description)
   		event.description='To be announced'  	
   	if(!event.prizes)
@@ -42,6 +44,10 @@ class Extab extends Component {
 
 	              <p className='eventHead' dangerouslySetInnerHTML={{__html: event.eventHead}}>
 	              </p>
+                <div className='f3 underline b'>Event Organizers</div>
+
+                <p className='eventHead' dangerouslySetInnerHTML={{__html: event.organizers}}>
+                </p>
 	              </div>
 
 	              <div className='f3 b underline'>Rules</div>
