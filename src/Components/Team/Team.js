@@ -116,7 +116,7 @@ class Team extends Component {
 			     <section className="background">
 			       <div className="content-wrapper">
 			       		<div className='tc'>
-				   			<h1>Awesome Web Developers</h1>
+				   			<h1>Our Awesome Web Developers</h1>
 							<WebList WebTeam={WebTeam} />
 						</div>
 			       </div>
@@ -127,13 +127,13 @@ class Team extends Component {
 		   			<h1>Meet Our Coordinators</h1>
 					<CoordList coord={coord} />
 
-		   			<h1>A lot Of emts</h1>
+		   			<h1>A lot Of EMTs</h1>
 					<EmtList emts={emts} />
 
 		   			<h1>Technical & Managerial Heads</h1>
 					<TMList TMheads={TMheads} />
 
-					<h1>Awesome Web Developers</h1>
+					<h1>Our Awesome Web Developers</h1>
 					<WebList WebTeam={WebTeam} />
 				</div>
 			</div>

@@ -145,21 +145,21 @@
     bottom: 30%;
 }
 .our-team .team-content .name{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
-    letter-spacing: 1px;
     display: block;
-    margin-bottom: 7px;
+    margin-bottom: 3px;
     text-transform: uppercase;
     transition:all 0.3s ease 0s;
 }
 .our-team:hover .team-content .name{
-    transform:translateY(20px);
+    transform:translateY(32px);
     transition-delay:0.3s;
 }
 .our-team .team-content .email{
-    font-size: 10px;
+    font-size: 13px;
     display: block;
+
     transition:all 0.3s ease 0s;
     /*text-transform: capitalize;*/
 }
@@ -169,7 +169,7 @@
 }
 
 .our-team .team-content .phone{
-    font-size: 10px;
+    font-size: 14px;
     display: block;
     transition:all 0.3s ease 0s;
     /*text-transform: capitalize;*/
@@ -208,4 +208,8 @@
   .width2 {
     width: 300px;
   }
+}
+a {
+  text-decoration: none;
+  color: white;
 }
