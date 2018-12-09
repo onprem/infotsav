@@ -218,7 +218,7 @@
 	},
 
 	"gamiacs":{
-	  "a":{"EventName":"FIFA",
+	  "0":{"EventName":"FIFA",
 	   "rules":"<li>Allowed Equipment ( to be arranged by participants)</li><li>Laptop</li><li>Cooling pad</li><li>Mouse </li><li>Mouse pad</li><li>Mouse bungee</li><li>Keyboard </li><li>Headphones/Earphones</li><li>Controller/Gamepad.</li><li>A laptop will be provided by default.</li><li>Matches</li><li>All Matches played are solo.There are no team matches.</li><li>Version</li><li>All matches are played in FIFA 2018 version only.</li><li>**GAME RULES**</li><li>Teams Allowed</li><li>The matches will be played between international teams only.Allowed teams are as follows:</li><li>ARGENTINA</li><li>BELGIUM</li><li>BRAZIL</li><li>FRANCE</li><li>GERMANY</li><li>ITAlY</li><li>PORTUGAL</li><li>SPAIN</li><li>Participants must select any one team from the above.</li><li>TIE BREAKER</li><li>In case of a tie,only Penalty shootout shall decide the winner of the game.Choice of the participants is not entertained</li><li>Game crash</li><li>In case if the game hangs or stops in the middle then the match will be restarted.</li>",
 	   "description":"Are you a FIFA Conqueror? We challenge you to prove your skills",
 	   "eventHead":"",
@@ -226,7 +226,7 @@
    		"eid": 26
 	  },
 
-	  "b":{"EventName":"Counter Strike Global Offensive",
+	  "1":{"EventName":"Counter Strike Global Offensive",
 	   "rules":"<li>Allowed Equipment ( to be arranged by participants)</li><li>Laptop</li><li>Cooling pad</li><li>Mouse </li><li>Mouse pad</li><li>Mouse bungee</li><li>Keyboard </li><li>Headphones/Earphones</li><li>A laptop will be provided by default.</li><li>**GAME RULES**</li><li>Map pool</li><li>The map pool will always be the Active Duty map pool and therefore might be updated before each tournament:</li><li>de_dust2</li><li>de_nuke</li><li>de_cache</li><li>de_train</li><li>de_mirage</li><li>de_cobblestone</li><li>de_overpass</li><li>Server settings</li><li>The following game settings will be used:</li><li>mp_startmoney 800</li><li>mp_roundtime 1.75</li><li>mp_freezetime 15</li><li>mp_maxrounds 30</li><li>mp_c4timer 35</li><li>sv_pausable 1</li><li>Server crash</li><li>If the server crashes before three rounds have been completed (in a half), the server must be restarted and the half’s score will be reset to 0-0.</li><li>If the server crashes after the third round has been completed, the half must be restarted with start money 2000 and the score will be counted from the last completed round. The start money is set to 2000 and the team that lost the last round kills itself using “kill” in the console. This round does not count. The half continues with the following round. The start money has to be set to 800 again.</li><li>Choice of side</li><li>A knife round will be played to determine the side. This is forced by the server. The winner of this knife round will choose the side by typing .stay or . switch in the chat.</li><li>Illegal scripts</li><li>In general, all scripts are illegal except for buy, toggle and demo scripts. Here are some examples for illegal scripts:</li><li>Stop shoot scripts (Use or AWP scripts)</li><li>Center view scripts</li><li>Turn scripts (180° or similar)</li><li>No recoil scripts</li><li>Burst fire scripts</li><li>Rate changers (Lag scripts)</li><li>FPS scripts</li><li>Anti-flash scripts or binding (snd_* bindings)</li><li>Bunny hop scripts</li><li>Stop sound scripts</li>",
 	   "description":"Well, you know",
 	   "eventHead":"",
@@ -234,7 +234,7 @@
    		"eid": 27
 	  },
 
-	  "c":{"EventName":"Need For Speed",
+	  "2":{"EventName":"Need For Speed",
 	   "rules":"Race, but calmly",
 	   "description":"Call yourself a drifting champion? Give us a try.",
 	   "eventHead":"",

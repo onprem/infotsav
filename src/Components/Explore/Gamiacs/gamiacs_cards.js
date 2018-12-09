@@ -24,9 +24,9 @@ export const Gamiac_Cards = () => {
 			        </div>
 			      </div>
 			      <div className="gam_el__index">
-			        <div className="gam_el__index-back">1</div>
+			        <div className="gam_el__index-back">{parseInt(key)+1}</div>
 			        <div className="gam_el__index-front">
-			          <div className="gam_el__index-overlay" data-index="1">1</div>
+			          <div className="gam_el__index-overlay" data-index={parseInt(key)+1}>{parseInt(key)+1}</div>
 			        </div>
 			      </div>
 			    </div>

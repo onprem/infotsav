@@ -61,6 +61,17 @@
   background: rgba(0,0,0,0.6);
   overflow-y: scroll;
 }
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0);
+}
+::-webkit-scrollbar-thumb {
+    background: white; 
+}
+
 @media only screen and (max-width: 1000px) {
 .gam_el__content, .info_el__content, .man_el__content, .online_el__content, .robo_el__content, .susp_el__content, .tech_el__content{
     padding: 0;
@@ -78,3 +89,4 @@
   margin-top: 0px;
   color: #fff;
 }
+
