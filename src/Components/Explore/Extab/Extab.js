@@ -47,8 +47,8 @@ class Extab extends Component {
 	              <div className='f3 b underline'>Rules</div>
 
 	              <div id="tab-content2" className="tab-content">
-	              	<p className='eventRules' dangerouslySetInnerHTML={{__html: event.rules}}>
-	              	</p>
+	              	<ul className='eventRules' dangerouslySetInnerHTML={{__html: event.rules}}>
+	              	</ul>
 	              </div>
 	      	</ul>
       	</div>

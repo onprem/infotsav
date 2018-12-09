@@ -5,6 +5,7 @@
   position: absolute;
   margin: 0 0 0 10px;
   text-align: left;
+  padding-bottom: 50px;
 }
 /*.tabs li {
   float: left;
@@ -91,6 +92,10 @@
     font-size: 1.2rem;
     line-height: 22px;
     padding: 2px;
+  }
+  .tabs {
+  width: 90%;
+    padding-left: 0px;
   }
 }
 .event_data {
