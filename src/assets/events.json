@@ -2,7 +2,7 @@
 	"online":{
 	  "0": {"EventName":"Trovetrace",
 	   		"rules":"",
-	   		"description":"",
+	   		"description":"Trove Trace is the simulation event of in form of the online treasure hunt contest. A series of hints would be provided on the facebook page and the participants would have to decipher them in order to win the hunt.",
 	   		"eventHead":"",
 	   		"prizes":"",
 	   		"eid": 0
@@ -10,7 +10,7 @@
 
 	  "1":{"EventName":"Job Bureau",
 	   "rules":"",
-	   "description":"",
+	   "description":"Jobs Bureau gives you a chance to get placed before the actual campus drive in a virtual world where you learn to be an efficient project leader and a skilled coder. The simulation takes you into the flock of assignments where you move ahead by gaining experience and money.",
 	   "eventHead":"",
 	   "prizes":"",
 		"eid": 1
@@ -26,7 +26,7 @@
 
 	  "3":{"EventName":"Boomerang",
 	   "rules":"",
-	   "description":"",
+	   "description":"This is an online event where the participants will use the boomerang feature of instagram and post it. They will be judged on the basis of likes and creativity.",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 3
@@ -34,7 +34,7 @@
 
 	  "4":{"EventName":"Pranksters",
 	   "rules":"",
-	   "description":"",
+	   "description":"The participants will perform a prank and post the video of it on Facebook. They will be judged on the basis of likes and creativity.",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 4
@@ -42,7 +42,7 @@
 
 	  "5":{"EventName":"Fill in the Memes",
 	   "rules":"",
-	   "description":"",
+	   "description":"The participants will be given an incomplete meme an they will have to fill it using all their creativity and would be judged on the same.",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 5
@@ -50,7 +50,7 @@
 
 	  "6":{"EventName":"Poster Making",
 	   "rules":"",
-	   "description":"",
+	   "description":"In this online event ,participants will show their imaginative and creativity skills by designing the poster for the next Infinity Wars movie. They will be judged on the basis of likes as well as aesthetic and graphic designing skills.",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 6
@@ -109,8 +109,8 @@
 
 	"technical":{
 	  "0":{"EventName":"Hackathon",
-	   "rules":"",
-	   "description":"",
+	   "rules":"<li>Overview :</li><li>There will be two rounds in Hackin’city -</li><li>Regionals (Preliminary Round)</li><li>Onsite (Final Round)</li><li>The preliminary round will be held for the duration of 48 hours.</li><li>The final round will be held for 24 hours onsite.</li><li>Entry Rules for Regionals (Preliminary Round) :</li><li>No registration fees will be charged.</li><li>Project requirements: Teams will submit the summary of the project in one page, adhering to the Submission Guidelines listed above.    </li><li>The project has to be submitted in the asked time period on given platform.    </li><li>The summary will include:   </li><li>The steps taken to solve the problem and why the solution to the problem is beneficial to the community.   </li><li>Teams may choose to include graphics when deemed fit, but all graphics must be of reasonable, readable size.  All images used should reflect your original work.</li><li>Along with the summary, below details should be included on the front   page:</li><li>Team name including name of all the members</li><li>College Name   </li><li>Phone number   </li><li>Email address</li><li>Registered    ID on the Infotsav website</li><li>The decision of the judges would be final and binding.</li><li>Entry Rules for Onsite (Final Round) :</li><li>A nominal fee of Rs 450 will be charged per team while registering for the Onsite round.</li><li>Maximum of seven teams will be selected from every region for the finals.</li><li>The final round will be held at ABV-IIITM.</li><li>Bring your own laptops, phones and tablets.</li><li>We provide access to internet and infrastructure support, while we shall not be liable for any network failure.</li><li>Any kind of plagiarism will lead to immediate disqualification.</li><li>By participating in this hackathon, you agree that the hackathon organizers shall not be liable for any disputes or damages related to hackathon, its attendees, intellectual property, and related projects.</li>",
+	   "description":"Our one of the flagship events will be Hackathon which has attracted widespread enthusiasm and huge participation in the previous years. Hackathon provides platform for coders, software programmers, developers to build and design something unconventional. Nerve wrecking problem statements and an environment full of code and logic, hackathon will provide a platform to the participants to make a website, android app or desktop app in limited time period based on a problem related to real life.",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 13
@@ -201,9 +201,9 @@
 	  },
 
 	  "5":{"EventName":"Brandsome",
-	   "rules":"",
-	   "description":"",
-	   "eventHead":"",
+	   "rules":"<li>Each Team may consist of a maximum of 4 participants. And all the members should be of same institute/organization.</li><li>For teams qualifying to Chapter 2, registration fee is ₨.100 per team.</li><li>Registration fee shall be paid before the given deadline. Or else they might get disqualified.</li><li>Shortlisted teams will be provided some offbeat rules on the spot.</li><li>Idea of product/brand should be unique i.e. plagiarism is not entertained.Idea Submission and all other documents/queries to be mailed to-brandsome.infotsav19@gmail.com</li><li>Teams must mention their team name in the subject of the E-mail.</li><li>Equipment or props required for the act is to be arranged by the participants.</li><li>Participants would be awarded points solely on the basis of their creativity, time management and marketing skills. Any kind of unfair means will lead to disqualification.</li><li>Vulgarity, indiscipline or offensive language shall lead the team to disqualification.</li><li>During ambiguous situations/conflicts decision of the judges or the organizers would be final and would be binding to all the participants/teams.</li><li>Any of the Terms and Conditions can be modified or deleted by the organizers anytime (applying to all the teams).</li><li>All the teams are required to strictly follow and adhere to the above mentioned rules and regulations.</li>",
+	   "description":"Are you the kind of person who expects an ad to be more innovative? Are you the person brimming with marketing ideas and waiting for your luck to showcast it? BRANDSOME is an event to test your convincing capabilities in selling a really wacky or non-existing product. In this event the participants are required to come up with an offbeat product that can prove to be a benchmark in making the lives of people easier. Participants also have to show their convincing skills, while trying to promote their product as an influential brand. You can now zap everyone's mind with your imagination and creativity. So, come up with all your bizarre product brands and extraordinary convincing skills.",
+	   "eventHead":"<li>Gajpal Singh Gond - +919174062987</li><li>Divya Lakhwani</li>",
 	   "prizes":"",
    		"eid": 24
 	  },
@@ -219,24 +219,24 @@
 
 	"gamiacs":{
 	  "a":{"EventName":"FIFA",
-	   "rules":"",
-	   "description":"",
+	   "rules":"<li>Allowed Equipment ( to be arranged by participants)</li><li>Laptop</li><li>Cooling pad</li><li>Mouse </li><li>Mouse pad</li><li>Mouse bungee</li><li>Keyboard </li><li>Headphones/Earphones</li><li>Controller/Gamepad.</li><li>A laptop will be provided by default.</li><li>Matches</li><li>All Matches played are solo.There are no team matches.</li><li>Version</li><li>All matches are played in FIFA 2018 version only.</li><li>**GAME RULES**</li><li>Teams Allowed</li><li>The matches will be played between international teams only.Allowed teams are as follows:</li><li>ARGENTINA</li><li>BELGIUM</li><li>BRAZIL</li><li>FRANCE</li><li>GERMANY</li><li>ITAlY</li><li>PORTUGAL</li><li>SPAIN</li><li>Participants must select any one team from the above.</li><li>TIE BREAKER</li><li>In case of a tie,only Penalty shootout shall decide the winner of the game.Choice of the participants is not entertained</li><li>Game crash</li><li>In case if the game hangs or stops in the middle then the match will be restarted.</li>",
+	   "description":"Are you a FIFA Conqueror? We challenge you to prove your skills",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 26
 	  },
 
 	  "b":{"EventName":"Counter Strike Global Offensive",
-	   "rules":"",
-	   "description":"",
+	   "rules":"<li>Allowed Equipment ( to be arranged by participants)</li><li>Laptop</li><li>Cooling pad</li><li>Mouse </li><li>Mouse pad</li><li>Mouse bungee</li><li>Keyboard </li><li>Headphones/Earphones</li><li>A laptop will be provided by default.</li><li>**GAME RULES**</li><li>Map pool</li><li>The map pool will always be the Active Duty map pool and therefore might be updated before each tournament:</li><li>de_dust2</li><li>de_nuke</li><li>de_cache</li><li>de_train</li><li>de_mirage</li><li>de_cobblestone</li><li>de_overpass</li><li>Server settings</li><li>The following game settings will be used:</li><li>mp_startmoney 800</li><li>mp_roundtime 1.75</li><li>mp_freezetime 15</li><li>mp_maxrounds 30</li><li>mp_c4timer 35</li><li>sv_pausable 1</li><li>Server crash</li><li>If the server crashes before three rounds have been completed (in a half), the server must be restarted and the half’s score will be reset to 0-0.</li><li>If the server crashes after the third round has been completed, the half must be restarted with start money 2000 and the score will be counted from the last completed round. The start money is set to 2000 and the team that lost the last round kills itself using “kill” in the console. This round does not count. The half continues with the following round. The start money has to be set to 800 again.</li><li>Choice of side</li><li>A knife round will be played to determine the side. This is forced by the server. The winner of this knife round will choose the side by typing .stay or . switch in the chat.</li><li>Illegal scripts</li><li>In general, all scripts are illegal except for buy, toggle and demo scripts. Here are some examples for illegal scripts:</li><li>Stop shoot scripts (Use or AWP scripts)</li><li>Center view scripts</li><li>Turn scripts (180° or similar)</li><li>No recoil scripts</li><li>Burst fire scripts</li><li>Rate changers (Lag scripts)</li><li>FPS scripts</li><li>Anti-flash scripts or binding (snd_* bindings)</li><li>Bunny hop scripts</li><li>Stop sound scripts</li>",
+	   "description":"Well, you know",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 27
 	  },
 
 	  "c":{"EventName":"Need For Speed",
-	   "rules":"",
-	   "description":"",
+	   "rules":"Race, but calmly",
+	   "description":"Call yourself a drifting champion? Give us a try.",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 28
@@ -246,7 +246,7 @@
 	"robotics":{
 	  "0":{"EventName":"Blazing Wheel",
 	   "rules":"",
-	   "description":"",
+	   "description":"The ever-so-exciting Robo Race.<br><b>Task</b><br><li>Design and construct a remote-controlled (wired/wireless) robot capable of not only running fast but also fighting hurdles on the track in the least time.</li>",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 29
@@ -254,7 +254,7 @@
 
 	  "1":{"EventName":"Robo War",
 	   "rules":"",
-	   "description":"",
+	   "description":"The ultimate battle of the most powerful robot.<br><b>Task</b><br><li>Two bots will fight against each other in the arena. Their aim will be to overpower opponents and throw them out of the arena, or drop them into the pit made in the arena. It will have fixed time duration.</li>",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 30
@@ -262,7 +262,7 @@
 
 	  "2":{"EventName":"Robo Maze",
 	   "rules":"",
-	   "description":"",
+	   "description":"The amazing maze solving experience using Artificial Intelligence.<br><b>Task</b><br><li>Participants have to make an intelligent bot that will find its way out of the maze. The design of the maze will be unknown to the participants.</li>",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 31
@@ -270,7 +270,7 @@
 
 	  "3":{"EventName":"Robo Soccer",
 	   "rules":"",
-	   "description":"",
+	   "description":"The traditional game of soccer played through the hands (or feet) of robots.<br><b>Task</b><br><li>To build a manually-controlled robot capable of playing soccer on an arena specially designed for robotic soccer match. The robot would compete against others in 1 vs 1, or 2 vs 2 matches.</li>",
 	   "eventHead":"",
 	   "prizes":"",
    		"eid": 32

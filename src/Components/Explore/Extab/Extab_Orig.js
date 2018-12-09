@@ -18,38 +18,30 @@ class Extab extends Component {
 
   render() {
   	const event=this.props.eventDetails;
-  	if(!event.eventHead)
-  		event.eventHead='To be announced'
-  	if(!event.description)
-  		event.description='To be announced'  	
-  	if(!event.prizes)
-  		event.prizes='To be announced'  	
-  	if(!event.rules)
-  		event.rules='To be announced'
     return (
     	<div>
 	        <ul className="tabs" role="tablist">
-
+	          <li>
+	        	  <input type="radio" name="tabs" id="tab1" checked />
+	              <label htmlFor="tab1">About</label>
+	              
 	              <div id="tab-content1" className="tab-content">
-	              <div className='f3 underline b'>Description</div>
 	              <p className='eventDescription' dangerouslySetInnerHTML={{__html: event.description}}>
 	              </p>
-	              <div className='f3 underline b'>Prizes</div>
-
 	              <p className='eventPrizes' dangerouslySetInnerHTML={{__html: event.prizes}}>
 	              </p>
-	              <div className='f3 underline b'>Event Heads</div>
-
 	              <p className='eventHead' dangerouslySetInnerHTML={{__html: event.eventHead}}>
 	              </p>
 	              </div>
-
-	              <div className='f3 b underline'>Rules</div>
-
+	          </li>
+	          <li>
+	              <input type="radio" name="tabs" id="tab2" />
+	              <label htmlFor="tab2">Rules</label>
 	              <div id="tab-content2" className="tab-content">
 	              	<p className='eventRules' dangerouslySetInnerHTML={{__html: event.rules}}>
 	              	</p>
 	              </div>
+	          </li>
 	      	</ul>
       	</div>
     );

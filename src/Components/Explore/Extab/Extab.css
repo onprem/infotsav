@@ -6,7 +6,7 @@
   margin: 0 0 0 10px;
   text-align: left;
 }
-.tabs li {
+/*.tabs li {
   float: left;
   margin: 1px;
   display: block;
@@ -15,8 +15,8 @@
   position: absolute;
   top: 0;
   left: -9999px;
-}
-.tabs label {
+}*/
+/*.tabs label {
   display: block;
   padding: 14px 21px;
   border-radius: 5px;
@@ -30,30 +30,30 @@
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-.tabs label:hover {
+}*/
+/*.tabs label:hover {
   background: #703688;
-}
+}*/
 .tabs .tab-content {
   z-index: 2;
-  display: none;
+  display: block;
   overflow: ;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 25px;
-  padding: 25px;
-  position: absolute;
-  top: 53px;
-  left: 0;
+  /*padding: 25px;*/
+  /*position: absolute;*/
+  /*top: 53px;*/
+  /*left: 0;*/
 }
-.tabs [id^="tab"]:checked + label {
+/*.tabs [id^="tab"]:checked + label {
   top: 0;
   padding-top: 17px;
   background: #612e76;
 }
 .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
   display: block;
-}
+}*/
 .gam_el__close-btn, .info_el__close-btn, .man_el__close-btn, .online_el__close-btn, .robo_el__close-btn, .susp_el__close-btn, .tech_el__close-btn{
   position: fixed;
 }
