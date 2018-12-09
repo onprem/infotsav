@@ -51,7 +51,7 @@ class Events extends Component {
 		          <div className="fnc-slide__content">
 		            <h2 className="fnc-slide__heading">
 		              <div className="fnc-slide__heading-line">
-		                <span>Informal</span>
+		                <span>Onsite</span>
 		              </div>
 		              <div className="fnc-slide__heading-line">
 		                <span>Events</span>
@@ -197,7 +197,7 @@ class Events extends Component {
 				          <span className="fnc-nav__control-progress"></span>
 				        </button>
 				        <button className="fnc-nav__control">
-				          Informal
+				          Onsite
 				          <span className="fnc-nav__control-progress"></span>
 				        </button>
 				        <button className="fnc-nav__control">
