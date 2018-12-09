@@ -20,7 +20,7 @@ export const emts = [
 		id:3,
 		icon: 'deepankar.jpg',
 		name: 'Deepankar Singh',
-		phone: '7440525079',
+		phone: '7440535079',
 		email: 'deepankar@infotsav.in'
 	},
 
@@ -133,7 +133,7 @@ export const coord = [
 	{
 		icon: 'mukul.jpg',
 		name: 'Mukul Sikka',
-		phone: '7988621548',
+		phone: '7470485414',
 		email: 'mukul@infotsav.in'
 	},
 
@@ -164,7 +164,7 @@ export const TMheads = [
 	{
 		name: 'Neha Sharma',
 		icon: 'neha.jpg',
-		phone: '8827691666',
+		phone: '6265575184',
 		email: 'neha@infotsav.in'
 	}
 ];
