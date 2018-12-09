@@ -44,8 +44,8 @@ export const emts = [
 		id:6,
 		icon: 'shubham.jpg',
 		name: 'Shubham Bhattacharya',
-		phone: ' ',
-		email: ' '
+		phone: '7507008911',
+		email: 'shubham@infotsav.in'
 	},
 
 	{
