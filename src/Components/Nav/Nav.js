@@ -22,12 +22,11 @@ class Nav extends Component {
 			<label aria-hidden="true" onClick={this.toggleNavView} id="labeel" />
 			<nav id="menu" className='main-nav-nav'>
 				<Link to="/" onClick={this.toggleNavView}>HOME</Link>
-				<Link onClick={this.toggleNavView} to="/profile">ABOUT</Link>
+				<Link onClick={this.toggleNavView} to="/about">ABOUT</Link>
 				<Link onClick={this.toggleNavView} to="/events">EVENTS</Link>
 				<Link onClick={this.toggleNavView} to="/register">REGISTER</Link>
 				<Link onClick={this.toggleNavView} to="/login">LOGIN</Link>
 				<Link onClick={this.toggleNavView} to="/team">OUR TEAM</Link>
-				<Link onClick={this.toggleNavView} to="#">SPONSORS</Link>
 			</nav>
 		</div>
     );

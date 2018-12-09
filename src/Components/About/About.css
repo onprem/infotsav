@@ -1,0 +1,51 @@
+.particlesBackA{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.bout-container {
+  background-color: black;
+  color: white;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: auto;
+	text-align: center;.
+  font-family: "Montserrat", sans-serif;
+  overflow: auto;
+
+}
+
+.aboutus {
+  color: white;
+  width: 70%;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  padding-bottom: 70px;
+}
+
+.dateA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-family: "Rubik";
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-top: 10px;
+  transition: transform linear .1s;
+}
+.dateA span:nth-child(1){
+  font-size: 2.25em;
+}
+
+@media only screen and (max-width: 800px) {
+  .aboutus {
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    text-align: justify;
+    padding-bottom: 60px;
+  }
+}
