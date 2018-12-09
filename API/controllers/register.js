@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 
 const sendEmail = (semail, sverifyHash, seyeFID) => {
 	console.log("Oh Yeah");
-	const verifyLink = 'https://react.infotsav.in/verify/id='+seyeFID+'/hash='+sverifyHash;
+	const verifyLink = 'https://www.infotsav.in/verify/id='+seyeFID+'/hash='+sverifyHash;
 	console.log(verifyLink);
 	var transporter = nodemailer.createTransport({
         host: 'infotsav.in',

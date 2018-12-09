@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 
 const sendEmail = (semail, sverifyHash, seyeFID) => {
 	console.log("Oh Yeah");
-	const verifyLink = 'https://react.infotsav.in/resetPass/id='+seyeFID+'/hash='+sverifyHash;
+	const verifyLink = 'https://www.infotsav.in/resetPass/id='+seyeFID+'/hash='+sverifyHash;
 	console.log(verifyLink);
 	var transporter = nodemailer.createTransport({
         host: 'infotsav.in',
@@ -91,7 +91,7 @@ const handleResetPassRes = (req,res,db, bcrypt)=>{
 						.catch(trx.rollback)
 				}
 				else
-					res.status(302).redirect('https://react.infotsav.in/404');
+					res.status(302).redirect('https://www.infotsav.in/404');
 			})
 		})
 		.catch(trx.rollback)

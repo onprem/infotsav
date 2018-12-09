@@ -41,7 +41,7 @@ app.get('/api/checkToken', withAuth, (req, res) => {
   res.sendStatus(200);
 });
 
-// app.get('/api/*', (req,res) => {res.status(404).redirect('https://react.infotsav.in/404')});
+// app.get('/api/*', (req,res) => {res.status(404).redirect('https://www.infotsav.in/404')});
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, ()=>{
