@@ -16,6 +16,7 @@ import Login from './Components/Login/Login';
 import Team from './Components/Team/Team'
 import Verify from './Components/Verify/Verify';
 import Profile from './Components/Profile/Profile';
+import About from './Components/About/About';
 import logo from './assets/icon.png';
 import './App.css';
 
@@ -107,6 +108,7 @@ class App extends Component {
     			<Route path="/" exact component={Home} />
           <Route path="/events" exact component={Events} />
           <Route path="/team" exact component={Team} />
+          <Route path="/about" exact component={About} />
 
           <Route path="/events/online_events" exact component={Online_Events} />
           <Route path="/events/info_events" exact component={Informal_Events} />
