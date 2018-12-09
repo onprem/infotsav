@@ -186,7 +186,7 @@ export const WebTeam = [
 
 	{
 		name: 'Prem Kumar',
-		icon: 'chopra.jpg',
+		icon: 'prem.jpg',
 		phone: '9950591608',
 		email: 'prem@infotsav.in'
 	},
