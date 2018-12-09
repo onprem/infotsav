@@ -24,6 +24,10 @@ const sendEmail = (semail, sverifyHash, seyeFID) => {
 		        from: '"Infotsav" <admin@infotsav.in>', // sender address
 		        to: semail, // list of receivers
 		        subject: 'Verify your account for Infotsav', // Subject line
+		        headers: {
+			        'List-Unsubscribe': '<mailto:unsubscribe@infotsav.in>',
+			        'Precedence': 'bulk'
+			    },
 		        text: 'Your request for registration in Infotsav 19 has been recieved. Please verify your email account to complete the registration by clicking the following link'+verifyLink+'Team Infotsav', // plain text body
 		        html: '<p>Your request for registration in Infotsav 19 has been recieved. Please verify your email account to complete the registration by clicking the following link </p> <a href="'+verifyLink+'">'+verifyLink+'</a><br /><br />Team Infotsav' // html body
 		    };
