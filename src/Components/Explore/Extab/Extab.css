@@ -60,6 +60,7 @@
 .gam_el__content, .info_el__content, .man_el__content, .online_el__content, .robo_el__content, .susp_el__content, .tech_el__content{
   background: rgba(0,0,0,0.6);
   overflow-y: scroll;
+  /*z-index: 11;*/
 }
 
 ::-webkit-scrollbar {
@@ -70,6 +71,13 @@
 }
 ::-webkit-scrollbar-thumb {
     background: white; 
+}
+
+.gam_el__preview-cont, .info_el__preview-cont, .man_el__preview-cont,.online_el__preview-cont,.robo_el__preview-cont,.susp_el__preview-cont,.tech_el__preview-cont{
+  background: rgba(0,0,0,0.6);
+}
+.gam_el__index, .info_el__index, .man_el__index, .online_el__index,.robo_el__index,.susp_el__index,.tech_el__index{
+  /*z-index: 2;*/
 }
 
 @media only screen and (max-width: 1000px) {
