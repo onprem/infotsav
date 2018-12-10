@@ -6,8 +6,8 @@ const handleLostUpdate = (req,res,db)=>{
 		.increment('count',1)
 		.then(value => {
 			if(value){
-				db.select('*').from('lost').where({user})
-				.then(entry => res.status(200).json(entry[0].count))
+				db.select('*').from('lost')
+				.then(entry => res.status(200).json(entry))
 				.catch(err => res.status(400).json('Could not fetch'))
 			}
 			else 
