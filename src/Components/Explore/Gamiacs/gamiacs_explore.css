@@ -81,17 +81,17 @@
   .gam_el {
     height: 32% !important;
   }
-  .cont.s--gam_el-active .gam_el:nth-child(1):not(.s--active) {
+  .gam_cont.s--gam_el-active .gam_el:nth-child(1):not(.s--active) {
     transform: none;
     opacity: 0;
     transition: opacity 0.95s;
   }
-  .cont.s--gam_el-active .gam_el:nth-child(2):not(.s--active) {
+  .gam_cont.s--gam_el-active .gam_el:nth-child(2):not(.s--active) {
     -webkit-transform: translate3d(0, 105.2083333333%, 0);
           transform: translate3d(0, 105.2083333333%, 0);
     transition: opacity 0.95s;
   }
-  .cont.s--gam_el-active .gam_el:nth-child(3):not(.s--active) {
+  .gam_cont.s--gam_el-active .gam_el:nth-child(3):not(.s--active) {
     -webkit-transform: translate3d(0, 210.4166666667%, 0);
           transform: translate3d(0, 210.4166666667%, 0);
     transition: opacity 0.95s;

@@ -159,9 +159,9 @@ body {
 }
 .tech_el__close-btn {
   z-index: -1;
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
   width: 60px;
   height: 60px;
   opacity: 0;
@@ -360,7 +360,7 @@ body {
   }
   .tech_el__close-btn {
     right: 5px;
-    top: 1px;
+    top: 2px;
     width: 50px;
   }
   .tech_el.s--active {

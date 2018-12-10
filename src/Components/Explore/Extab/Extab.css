@@ -83,7 +83,7 @@
 
 @media only screen and (max-width: 1000px) {
 .gam_el__content, .info_el__content, .man_el__content, .online_el__content, .robo_el__content, .susp_el__content, .tech_el__content{
-    padding: 0;
+    padding: 10px !important;
   }
   .tabs label {
     padding: 7px 21px;
