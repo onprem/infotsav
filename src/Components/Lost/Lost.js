@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './Lost.css';
+import prem1 from '../../assets/lost/prem1.png'
+import prem2 from '../../assets/lost/prem2.png'
+import prem3 from '../../assets/lost/prem3.png'
+import mavi1 from '../../assets/lost/mavi1.png'
+import mavi2 from '../../assets/lost/mavi2.png'
+import mavi3 from '../../assets/lost/mavi3.png'
+import sharma1 from '../../assets/lost/sharma1.png'
+import sharma2 from '../../assets/lost/sharma2.png'
+import sharma3 from '../../assets/lost/sharma3.png'
+import kunji1 from '../../assets/lost/kunji1.png'
+import kunji2 from '../../assets/lost/kunji2.png'
+import kunji3 from '../../assets/lost/kunji3.png'
 
 class Lost extends Component {
 
@@ -21,7 +33,7 @@ class Lost extends Component {
       })
     })
     .then(response => response.json())
-    .then(res => console.log(deadUser, res))
+    .then(res => console.log(res))
     .catch(console.log);
   }
 
@@ -38,10 +50,22 @@ class Lost extends Component {
               <div>
                 <p className="fw1 bold tc mt1 mt4-ns mt2-l f4 f3-ns fw6">{this.state.deadUser.toUpperCase()}, YOU'RE FIRED!</p>
                 <div className="ph3 w-100">
-                  <div className='w-25 dib'><img src='https://robohash.org/chopra?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/kunji?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/mavi?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/sharma?set=set2' alt ='' /></div>
+                { (this.state.deadUser === 'Chopra')?
+                    <div className='w-25 dib'><img className='lostPics' src={prem3} alt ='' /></div>
+                  : <div className='w-25 dib'><img className='lostPics' src={prem2} alt ='' /></div>
+                }
+                { (this.state.deadUser === 'Kunji')?
+                    <div className='w-25 dib'><img className='lostPics' src={kunji3} alt ='' /></div>
+                  : <div className='w-25 dib'><img className='lostPics' src={kunji2} alt ='' /></div>
+                }
+                { (this.state.deadUser === 'Mavi')?
+                    <div className='w-25 dib'><img className='lostPics' src={mavi3} alt ='' /></div>
+                  : <div className='w-25 dib'><img className='lostPics' src={mavi2} alt ='' /></div>
+                }
+                { (this.state.deadUser === 'Sharma')?
+                    <div className='w-25 dib'><img className='lostPics' src={sharma3} alt ='' /></div>
+                  : <div className='w-25 dib'><img className='lostPics' src={sharma2} alt ='' /></div>
+                }
                 </div>
 
                 <h2 className="pt0 dark-gray mt3 fw2 tc">Poor {this.state.deadUser}</h2>
@@ -52,10 +76,10 @@ class Lost extends Component {
                 <p className="fw1 bold tc mt1 mt4-ns mt2-l f4 f3-ns fw6">PICK WHO TO FIRE!</p>
 
                 <div className="ph3 w-100">
-                  <div className='w-25 dib'><img src='https://robohash.org/chopra?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/kunji?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/mavi?set=set2' alt ='' /></div>
-                  <div className='w-25 dib'><img src='https://robohash.org/sharma?set=set2' alt ='' /></div>
+                  <div className='w-25 dib'><img className='lostPics' src={prem1} alt ='' /></div>
+                  <div className='w-25 dib'><img className='lostPics' src={kunji1} alt ='' /></div>
+                  <div className='w-25 dib'><img className='lostPics mavi1' src={mavi1} alt ='' /></div>
+                  <div className='w-25 dib'><img className='lostPics' src={sharma1} alt ='' /></div>
                 </div>
 
 
