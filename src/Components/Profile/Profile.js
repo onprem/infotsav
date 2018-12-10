@@ -6,6 +6,7 @@ import '../../assets/css/fontawesome.min.css'
 import '../../assets/css/signup.css'
 import headers from "../../assets/logo/headers.png"
 import {Loader} from '../_Loader/Loader'
+import './Profile.css'
 
 class Profile extends Component {
 
@@ -34,6 +35,7 @@ class Profile extends Component {
   render() {
   	const { loading, redirect } = this.state;
     return (
+    	<div className='Profile'>
 	   	<div className='register-container'>
 	   	  <div>
 			<Link to='/'><img src={headers} className="headim" alt="infotsav logo" /></Link>
@@ -44,7 +46,8 @@ class Profile extends Component {
 		  			<Redirect to='/login' />
 	  			:
 				    <div id="headdin">
-		  				<h3>Welcome {this.props.userData.id}</h3>
+		  				<h3 className='mv3'>Welcome {this.props.userData.id}</h3>
+		  				<div className='f4'>Event registration opening soon!</div>
 		  			</div>
   			:
   				<Loader />
@@ -53,6 +56,7 @@ class Profile extends Component {
 		    <div id="holdit"></div>
 	  	  </div>
   		  <Footer />
+		</div>
 		</div>
     );
   }

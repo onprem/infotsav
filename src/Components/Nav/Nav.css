@@ -77,23 +77,23 @@ label::before {
           transform: scale(1);
 }
 
-.main-nav-nav a:nth-child(1) {
+.main-nav-nav a:nth-child(2) {
   margin-top: 25%;
   transition-delay: 0s, 100ms;
 }
-.main-nav-nav a:nth-child(2) {
+.main-nav-nav a:nth-child(3) {
   transition-delay: 0s, 150ms;
 }
-.main-nav-nav a:nth-child(3) {
+.main-nav-nav a:nth-child(4) {
   transition-delay: 0s, 200ms;
 }
-.main-nav-nav a:nth-child(4) {
+.main-nav-nav a:nth-child(5) {
   transition-delay: 0s, 250ms;
 }
-.main-nav-nav a:nth-child(5) {
+.main-nav-nav a:nth-child(6) {
   transition-delay: 0s, 300ms;
 }
-.main-nav-nav a:nth-child(6) {
+.main-nav-nav a:nth-child(7) {
   transition-delay: 0s, 350ms;
 }
 /*.main-nav-nav a:hover, .main-nav-nav a:focus {
@@ -182,6 +182,14 @@ label::before {
   color: white;
 }
 
+.main-nav-div{
+  z-index: 6;
+}
+
+.idonnav{
+  cursor: default;
+}
+
 @media only screen and (max-width: 800px) {
   .burgers {
     top: 20px;
@@ -195,13 +203,12 @@ label::before {
     margin-left: 1em;
     margin-right: 0;
     padding: .2em 0em;
-    font-size: 1.75em;
+    font-size: 1.6em;
   }
-  .main-nav-nav a:nth-child(1) {
-    margin-top: 40%;
+  .main-nav-nav a:nth-child(2) {
+    margin-top: 20%;
+  }
+  .idonnav{
   }
 }
 
-.main-nav-div{
-  z-index: 6;
-}

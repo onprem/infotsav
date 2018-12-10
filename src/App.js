@@ -103,7 +103,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-         <Nav />
+        <Nav 
+          logOut={this.logOut} 
+          isLoggedIn={this.state.isLoggedIn} 
+          userData={this.state.user} 
+        />
     		<Switch>
     			<Route path="/" exact component={Home} />
           <Route path="/events" exact component={Events} />
