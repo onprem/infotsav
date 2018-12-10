@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import {Footer} from '../Footer/Footer';
 import '../../assets/css/solid.min.css'
 import '../../assets/css/fontawesome.min.css'
 import '../../assets/css/signup.css'
 import headers from "../../assets/logo/headers.png"
 import {registerFunctions} from './RegisterFunctions'
+import {Loader} from '../_Loader/Loader'
 
 class Register extends Component {
 
@@ -23,7 +24,9 @@ class Register extends Component {
 	    ],
 	    gotData: false,
 	    responseMessage: '',
-	    receivedError: false 
+	    receivedError: false,
+    	loading: true,
+    	redirect: false
     }
     this.userData= {
     		name: '',
@@ -36,8 +39,24 @@ class Register extends Component {
     	}
   }
 
+  componentWillMount(){
+  	if(!this.props.isLoggedIn){
+		let err=false;
+		fetch('/api/checkToken')
+		.then(response => {
+			if(response.status!==200)
+				throw(response);
+		    this.setState({ loading: false, redirect: true });
+		    this.props.updateLoginState(true);
+		})
+		.catch(() => {
+			this.setState({ loading: false });
+  			registerFunctions(this);
+		});
+	} else this.setState({loading: false, redirect: true});
+  }
+
   componentDidMount(){
-  	registerFunctions(this);
   }
 
   requestRegistration = (userData) =>{
@@ -76,6 +95,11 @@ class Register extends Component {
   }
 
   render() {
+  	
+  	const { loading, redirect } = this.state;
+  	if(this.state.redirect){
+  		return <Redirect to='/profile' />
+  	}
   	if(this.state.questions[0].value && !this.state.responseMessage)
   		this.updateUserData();
 
@@ -96,30 +120,33 @@ class Register extends Component {
 		  		<h1>Register</h1>
 		  	</div>
 		  	{
-		  	(this.state.responseMessage)?
-		  		(this.state.receivedError)?
-					<div className='f3 white'>
-						{this.state.responseMessage}
-					</div>
+	  		(loading)?
+	  			<Loader />
+  			:
+			  	(this.state.responseMessage)?
+			  		(this.state.receivedError)?
+						<div className='f3 white'>
+							{this.state.responseMessage}
+						</div>
+					:
+						<div className='f3 white'>
+							{this.state.responseMessage} <br />
+							Please verify your email to continue
+						</div>
 				:
-					<div className='f3 white'>
-						{this.state.responseMessage} <br />
-						Please verify your email to continue
-					</div>
-			:
-			    <div id="register">
-			      <i id="progressButton" className="fas fa-arrow-right next"></i>
-			      <div id="inputContainer">
-			        <input id="inputField" required autoFocus />
-			        <label id="inputLabel"></label>
-			        <select id="selectBox" className='doNotDisplay'>
-			          <option value="male">Male</option>
-			          <option value="female">Female</option>
-			          <option value="other">Other</option>
-			        </select>
-			        <div id="inputProgress"></div>
-			      </div>
-			    </div>
+				    <div id="register">
+				      <i id="progressButton" className="fas fa-arrow-right next"></i>
+				      <div id="inputContainer">
+				        <input id="inputField" required autoFocus />
+				        <label id="inputLabel"></label>
+				        <select id="selectBox" className='doNotDisplay'>
+				          <option value="male">Male</option>
+				          <option value="female">Female</option>
+				          <option value="other">Other</option>
+				        </select>
+				        <div id="inputProgress"></div>
+				      </div>
+				    </div>
 			}
 		    <div id="sendto">Already have an account? <Link to="/login">LOGIN</Link></div>
 		    <div id="holdit"></div>

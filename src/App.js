@@ -124,8 +124,8 @@ class App extends Component {
 
           <Route path="/register" exact render={(props) =>
             <Register {...props} 
-              isLoggedIn={this.state.isLoggedIn} />}
-              updateLoginState={this.updateLoginState} 
+              isLoggedIn={this.state.isLoggedIn}
+              updateLoginState={this.updateLoginState} />} 
           />
      			<Route path="/login" exact render={(props) =>
             <Login {...props} 
