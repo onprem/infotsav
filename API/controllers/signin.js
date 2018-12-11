@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const secret = 'iAmVeryBadAtThis';
 
-const handleSignin = (req,res,db,bcrypt)=>{
+const handleSignin = (req,res,db,bcrypt,xss)=>{
 	const xssOptions = {
 		whiteList: [],
 		stripIgnoreTag: [],
