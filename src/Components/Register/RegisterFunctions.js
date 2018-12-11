@@ -85,23 +85,34 @@ export const registerFunctions = (last) => {
 
     // set the value of the field into the array
     if(questions[position].type === 'sellect'){
-        questions[position].value = selectBox.value
+      questions[position].value = selectBox.value
+      if (!selectBox.value.match(questions[position].pattern || /.+/)) wrong()
+      else ok(function() {
+        
+        // set the progress of the background
+        progress.style.width = ++position * 100 / questions.length + 'vw'
+
+        // if there is a new question, hide current and load next
+        if (questions[position]) hideCurrent(putQuestion)
+        else hideCurrent(done)
+               
+      })
     }
-    else questions[position].value = inputField.value
+    else {
+      questions[position].value = inputField.value
+      // check if the pattern matches
+      if (!inputField.value.match(questions[position].pattern || /.+/)) wrong()
+      else ok(function() {
+        
+        // set the progress of the background
+        progress.style.width = ++position * 100 / questions.length + 'vw'
 
-    // check if the pattern matches
-    if (!inputField.value.match(questions[position].pattern || /.+/)) wrong()
-    else ok(function() {
-      
-      // set the progress of the background
-      progress.style.width = ++position * 100 / questions.length + 'vw'
-
-      // if there is a new question, hide current and load next
-      if (questions[position]) hideCurrent(putQuestion)
-      else hideCurrent(done)
-             
-    })
-
+        // if there is a new question, hide current and load next
+        if (questions[position]) hideCurrent(putQuestion)
+        else hideCurrent(done)
+               
+      })
+    }
   }
 
   // helper

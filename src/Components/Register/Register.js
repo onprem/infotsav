@@ -14,13 +14,13 @@ class Register extends Component {
     super();
     this.state={
 	  	questions: [
-		  {question:"What's your name?"},
-		  {question:"Gender", type: "sellect"},
-		  {question:"College Name?"},
-		  {question:"City?"},
+		  {question:"What's your name?", pattern: /^(\w|\s){3,25}$/},
+		  {question:"Gender", type: "sellect", pattern: /^(male|female|other)$/},
+		  {question:"College Name?", pattern: /^(\w|\s){4,80}$/},
+		  {question:"City?", pattern: /^(\w|\s){3,38}$/},
 		  {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
 		  {question:"What's your phone number?", type:'tel', pattern: /^\d{10}$/},
-		  {question:"Create your password", type: "password"},
+		  {question:"Create your password", type: "password", pattern: /^.{3,36}$/},
 	    ],
 	    gotData: false,
 	    responseMessage: '',
