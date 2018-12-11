@@ -17,6 +17,7 @@ import Team from './Components/Team/Team'
 import Verify from './Components/Verify/Verify';
 import Profile from './Components/Profile/Profile';
 import About from './Components/About/About';
+import ForgotPass from './Components/ForgotPass/ForgotPass';
 import logo from './assets/icon.png';
 import './App.css';
 
@@ -125,7 +126,8 @@ class App extends Component {
           <Route path="/register" exact render={(props) =>
             <Register {...props} 
               isLoggedIn={this.state.isLoggedIn}
-              updateLoginState={this.updateLoginState} />} 
+              updateLoginState={this.updateLoginState} 
+            />} 
           />
      			<Route path="/login" exact render={(props) =>
             <Login {...props} 
@@ -133,15 +135,24 @@ class App extends Component {
               isLoggedIn={this.state.isLoggedIn}
               logOut={this.logOut}
               updateLoginState={this.updateLoginState} 
-              updateEvent={this.updateEvent} />}
+              updateEvent={this.updateEvent} 
+            />}
           />
           <Route path="/profile" render={(props)=> 
             <Profile {...props} 
               userData={this.state.user} 
               isLoggedIn={this.state.isLoggedIn} 
-              updateLoginState={this.updateLoginState} />} 
+              updateLoginState={this.updateLoginState} 
+            />} 
+          />
+          <Route path='/resetPass' exact render={(props) =>
+            <ForgotPass {...props}
+              updateLoginState={this.updateLoginState} 
+              isLoggedIn={this.state.isLoggedIn}
+            />}
           />
           <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
+          <Route path="/resetPass/id=:IFID/hash=:hash" exact component={Verify} />
           <Route component={Lost} />
     		</Switch>
       </div>

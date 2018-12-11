@@ -46,7 +46,6 @@ const handleResetPassReq = (req,res, db, xss) =>{
 		stripIgnoreTagBody: ['script']
 	};
 	const email = xss(req.body.email, xssOptions);
-	// const {email} =req.body;
 	const verifyHash = randomstring.generate(15);
 
 	if(!email)
@@ -58,6 +57,7 @@ const handleResetPassReq = (req,res, db, xss) =>{
 		if(data.length){
 			db.select('*').from('pass_reset').where({email})
 			.then(passData =>{
+				console.log(passData);
 				if(!passData.length){
 					return db('pass_reset').insert({
 						email: email,
@@ -65,7 +65,7 @@ const handleResetPassReq = (req,res, db, xss) =>{
 					})
 					.then((didItHappen)=> {
 						res.status(200).json('Visit the link sent via email to continue');
-						sendEmail(email, verifyHash, data.ifid);				
+						sendEmail(email, verifyHash, data[0].ifid);				
 					})
 					.catch(()=> res.status(400).json('Some error occurred!'))
 				}
@@ -73,7 +73,7 @@ const handleResetPassReq = (req,res, db, xss) =>{
 					return db('pass_reset').update({hash: verifyHash}).where({email})
 					.then(()=>{
 						res.status(200).json('Visit the link sent via email to continue');
-						sendEmail(email, verifyHash, data.ifid);				
+						sendEmail(email, verifyHash, data[0].ifid);				
 					})
 					.catch(()=> res.status(400).json('Some error occurred!'))
 				}

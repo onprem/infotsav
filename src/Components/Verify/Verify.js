@@ -4,6 +4,7 @@ import {Footer} from '../Footer/Footer';
 import '../../assets/css/signup.css'
 import './verify.css'
 import headers from "../../assets/logo/headers.png"
+import {Loader} from '../_Loader/Loader'
 
 class Login extends Component {
 
@@ -80,20 +81,7 @@ class Login extends Component {
 			    </div>
 			    :
 			    (!this.state.responseFailed)?
-			      	<div className="spinner_on_verification">
-						<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-							<circle className="length" fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
-						</svg>
-						<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-							<circle fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
-						</svg>
-						<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-							<circle fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
-						</svg>
-						<svg className='ver_load_svg' viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-							<circle fill="none" strokeWidth="8" strokeLinecap="round" cx="33" cy="33" r="28"></circle>
-						</svg>
-					</div>
+			    	<Loader />
 					:
 					<div className='f3 white'>
 						{this.state.verificationResponse}

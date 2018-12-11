@@ -7,7 +7,7 @@ export const registerFunctions = (last) => {
   var inputContainer = document.getElementById('inputContainer');
   var inputField = document.getElementById('inputField');
   var inputLabel = document.getElementById('inputLabel');
-  var selectBox = document.getElementById('selectBox');
+  // var selectBox = document.getElementById('selectBox');
   var inputProgress = document.getElementById('inputProgress');
   var progress = document.getElementById('progress');
   //
@@ -26,10 +26,10 @@ export const registerFunctions = (last) => {
     transform(0, 0) // ie hack to redraw
     if(e.keyCode === 13) validate()
   })
-  selectBox.addEventListener('keyup', function(e){
-    transform(0, 0) // ie hack to redraw
-    if(e.keyCode === 13) validate()
-  })
+  // selectBox.addEventListener('keyup', function(e){
+  //   transform(0, 0) // ie hack to redraw
+  //   if(e.keyCode === 13) validate()
+  // })
 
   // functions
   // --------------
@@ -38,14 +38,14 @@ export const registerFunctions = (last) => {
   function putQuestion() {
     inputLabel.innerHTML = questions[position].question
 
-    if(questions[position].type === 'sellect'){
-      inputField.classList.add('doNotDisplay');
-      selectBox.classList.remove('doNotDisplay');
-      selectBox.focus();
-    }
-    else {
-      inputField.classList.remove('doNotDisplay');
-      selectBox.classList.add('doNotDisplay');
+    // if(questions[position].type === 'sellect'){
+      // inputField.classList.add('doNotDisplay');
+      // selectBox.classList.remove('doNotDisplay');
+      // selectBox.focus();
+    // }
+    // else {
+      // inputField.classList.remove('doNotDisplay');
+      // selectBox.classList.add('doNotDisplay');
       inputField.value = ''
       inputField.type = questions[position].type || 'text' 
       // if(inputField.type === 'number'){
@@ -54,7 +54,7 @@ export const registerFunctions = (last) => {
       // }
 
       inputField.focus()
-    }
+    // }
 
     showCurrent()
   }
@@ -75,7 +75,7 @@ export const registerFunctions = (last) => {
     //   setTimeout(function() {h1.style.opacity = 1}, 50)
     // }, eTime)
 
-    last.setState({username: questions[0].value, password: questions[1].value });
+    last.setState({username: questions[0].value});
     // window.location.href = '/events';
     
   }
