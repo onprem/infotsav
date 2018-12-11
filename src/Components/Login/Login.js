@@ -14,8 +14,8 @@ class Login extends Component {
     super(props);
     this.state={
 	  	questions: [
-		  {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
-		  {question:"What's your password", type: "password"},
+		  {question:"What's your email?", type: "emaill", pattern: /^(?=[A-Za-z0-9][A-Za-z0-9@._%+-]{5,253}$)[A-Za-z0-9._%+-]{1,64}@(?:(?=[A-Za-z0-9-]{1,63}\.)[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*\.){1,8}[A-Za-z]{2,5}$/},
+		  {question:"What's your password", type: "password", pattern: /^.{3,36}$/},
 	    ],
     	username: '',
     	password: '',

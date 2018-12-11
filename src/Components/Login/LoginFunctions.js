@@ -82,13 +82,11 @@ export const registerFunctions = (last) => {
 
   // when submitting the current question
   function validate() {
-
-    // set the value of the field into the array
-    if(questions[position].type === 'sellect'){
-        questions[position].value = selectBox.value
+    if (questions[position].type === 'emaill'){
+        questions[position].value = inputField.value.toLowerCase();
     }
-    else questions[position].value = inputField.value
-
+    else
+        questions[position].value = inputField.value
     // check if the pattern matches
     if (!inputField.value.match(questions[position].pattern || /.+/)) wrong()
     else ok(function() {
