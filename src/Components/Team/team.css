@@ -145,7 +145,7 @@
     bottom: 30%;
 }
 .our-team .team-content .name{
-    font-size: 14px;
+    font-size: 0.75em;
     font-weight: 800;
     display: block;
     margin-bottom: 3px;
@@ -153,23 +153,23 @@
     transition:all 0.3s ease 0s;
 }
 .our-team:hover .team-content .name{
-    transform:translateY(32px);
+    transform:translateY(2em);
     transition-delay:0.3s;
 }
 .our-team .team-content .email{
-    font-size: 13px;
+    font-size: 0.6em;
     display: block;
 
     transition:all 0.3s ease 0s;
     /*text-transform: capitalize;*/
 }
 .our-team:hover .team-content .email{
-    transform:translateY(-20px);
+    transform:translateY(-2.1em);
     transition-delay:0.3s;
 }
 
 .our-team .team-content .phone{
-    font-size: 14px;
+    font-size: 0.75em;
     display: block;
     transition:all 0.3s ease 0s;
     /*text-transform: capitalize;*/
