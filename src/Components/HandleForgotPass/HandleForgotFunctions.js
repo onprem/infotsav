@@ -59,6 +59,8 @@ export const registerFunctions = (last) => {
   function done() {
     // remove the box if there is no next question
     register.className = 'close'
+    last.setState({formProgress: false});
+
     if(questions[0].value !== questions[1].value){
       last.setState({wrongPass: true});
     }
