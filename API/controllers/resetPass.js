@@ -122,8 +122,24 @@ const handleResetPassRes = (req,res,db, bcrypt)=>{
 	})
 	.catch(err => res.status(400).json('Something went wrong'));
 }
+const handleResetPassInit = (req,res,db)=>{
+	const {id, hash} = req.body;
+	if(!id || !hash)
+	{
+		return res.status(400).json('Incorrect form submission');
+	}
+ 	db.select('*').from('pass_reset').where({hash: hash})
+ 	.then(verification_entry => {
+		if(verification_entry.length)
+			res.sendStatus(200);
+		else
+			res.status(302).redirect('https://www.infotsav.in/404');
+ 	})
 
+
+}
 module.exports = {
 	handleResetPassReq: handleResetPassReq,
+	handleResetPassInit: handleResetPassInit,
 	handleResetPassRes: handleResetPassRes
 };

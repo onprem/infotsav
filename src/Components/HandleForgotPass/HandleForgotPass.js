@@ -22,7 +22,8 @@ class Login extends Component {
     	password: '',
     	wrongPass: false,
     	formProgress: true,
-    	requestSent: false
+    	requestSent: false,
+    	initialCheck: false
     }
   }
   verifyUserFromUrl = () =>{
@@ -43,7 +44,7 @@ class Login extends Component {
 					isVerified: true,
 					verificationResponse: 'Password changed succesfully!'
 				})
-				// setTimeout(this.redirectToLogin, 1300);
+				setTimeout(this.redirectToLogin, 1300);
 			}
 			else if(response.redirected){
 				this.props.history.push('/404')
@@ -62,6 +63,22 @@ class Login extends Component {
 
   redirectToLogin = () =>{
   	this.setState({navigate: true});
+  }
+  componentWillMount(){
+	fetch('/api/resetPassInit', {
+		method: 'post',
+		headers: {'Content-type': 'application/json'},
+		body: JSON.stringify({
+			id: this.props.match.params.IFID,
+			hash: this.props.match.params.hash,
+		})
+	})
+	.then((response) => {
+		if(response.redirected){
+			this.props.history.replace('/404')
+		}
+	})
+	.catch(console.log);
   }
 
   componentDidMount(){
