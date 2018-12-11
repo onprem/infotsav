@@ -56,17 +56,31 @@ const handleResetPassReq = (req,res, db, xss) =>{
 	db.select('*').from('users').where({email})
 	.then((data) =>{
 		if(data.length){
-			return db('pass_reset').insert({
-				email: email,
-				hash: verifyHash
-			})
-			.then(()=> {
-				res.status(200).json('Visit the link sent via email to continue');
-				sendEmail(email, verifyHash, data.ifid);				
+			db.select('*').from('pass_reset').where({email})
+			.then(passData =>{
+				if(!passData.length){
+					return db('pass_reset').insert({
+						email: email,
+						hash: verifyHash
+					})
+					.then((didItHappen)=> {
+						res.status(200).json('Visit the link sent via email to continue');
+						sendEmail(email, verifyHash, data.ifid);				
+					})
+					.catch(()=> res.status(400).json('Some error occurred!'))
+				}
+				else{
+					return db('pass_reset').update({hash: verifyHash}).where({email})
+					.then(()=>{
+						res.status(200).json('Visit the link sent via email to continue');
+						sendEmail(email, verifyHash, data.ifid);				
+					})
+					.catch(()=> res.status(400).json('Some error occurred!'))
+				}
 			})
 		}
 		else
-			res.status(400).json('User does not exists!');
+			res.status(400).json('User does not exist!');
 	})
 	.catch(err => {console.log(err); res.status(400).json('Something went wrong!')});
 }
