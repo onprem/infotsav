@@ -12,7 +12,7 @@ export const emts = [
 		id:2,
 		icon: 'ayushi.jpg',
 		name: 'Ayushi Rastogi',
-		phone: '8959657283',
+		phone: '755519490',
 		email: 'ayushi@infotsav.in'
 	},
 
@@ -28,7 +28,7 @@ export const emts = [
 		id:4,
 		icon: 'juhip.jpg',
 		name: 'Juhi Purswani',
-		phone: '9462109001',
+		phone: '7823666989',
 		email: 'juhi.p@infotsav.in'
 	},
 
@@ -84,7 +84,7 @@ export const emts = [
 		id:11,
 		icon: 'palak.jpg',
 		name: 'Palak Jain',
-		phone: '8899919655',
+		phone: '7943486494',
 		email: 'palak@infotsav.in'
 	},
 
@@ -92,7 +92,7 @@ export const emts = [
 		id:12,
 		icon: 'poorva.jpg',
 		name: 'Poorva Khandare',
-		phone: '7974441908',
+		phone: '7859535921',
 		email: 'poorva@infotsav.in'
 	},
 
@@ -126,7 +126,7 @@ export const coord = [
 	{
 		name: 'Juhi Tiwari',
 		icon: 'juhi.jpg',
-		phone: '9461155105',
+		phone: '8700728483',
 		email: 'juhi@infotsav.in'
 	},
 
@@ -164,7 +164,7 @@ export const TMheads = [
 	{
 		name: 'Neha Sharma',
 		icon: 'neha.jpg',
-		phone: '6265575184',
+		phone: '7722647747',
 		email: 'neha@infotsav.in'
 	}
 ];

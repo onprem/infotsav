@@ -6,8 +6,8 @@ const Card = ({name, email, phone,icon}) => {
 			<img alt='robots' src={require('../../assets/team/'+icon)} />
 		<div className='team-content'> 
 				<p className='name'>{name}</p>
-				<p className='email'>{email}</p>
-				<p className='phone'>{phone}</p>
+				<a href={"mailto:"+email}><p className='email'>{email}</p></a>
+				<a href={"tel:+91"+phone}><p className='phone'>{phone}</p></a>
 			</div>
 		</div>
 
