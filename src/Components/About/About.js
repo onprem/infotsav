@@ -23,10 +23,10 @@ class About extends Component {
 
   render() {
     return (
-	   	<div className='bout-container'>
+	   	<div className='bout-container min-vh-100'>
 	   		<Particles className='particlesBackA' params={particleConfig} />
 			<div>
-				<Link to='#'><img src={headers} className="headimg" alt="infotsav logo" /></Link>
+				<Link to='/'><img src={headers} className="headimg" alt="infotsav logo" /></Link>
 			</div>
 			
 			<div id="disto" className="">
