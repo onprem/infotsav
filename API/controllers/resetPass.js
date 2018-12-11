@@ -87,7 +87,7 @@ const handleResetPassReq = (req,res, db, xss) =>{
 
 
 const handleResetPassRes = (req,res,db, bcrypt)=>{
-	const {id, hash} = req.body;
+	const {id, hash, password} = req.body;
 	db.transaction(trx =>{
 	 	trx.select('*').from('pass_reset').where({hash: hash})
 		.then(verification_entry => {

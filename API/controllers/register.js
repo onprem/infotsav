@@ -81,7 +81,7 @@ const handleRegister = (req,res, db, bcrypt, xss) =>{
 	const college = xss(req.body.userData.college, xssOptions);
 	const city = xss(req.body.userData.city, xssOptions);
 	const phone = xss(req.body.userData.phone, xssOptions);
-	const password = xss(req.body.userData.password, xssOptions);
+	const password = req.body.userData.password;
 	const gender = xss(req.body.userData.gender, xssOptions);
 	console.log(req.body.userData);
 
