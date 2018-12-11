@@ -1,9 +1,9 @@
 import React from 'react';
-import Card from './Card';
+import Small_Card from './Small_Card';
 
 const EmtList = ({ emts }) => {
 	const cardComponent = emts.map((user, i) => {
-		return <Card 
+		return <Small_Card 
 		key={i} 
 		icon={emts[i].icon}
 		name={emts[i].name} 

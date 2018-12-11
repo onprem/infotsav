@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({name, email, phone,icon}) => {
+const Small_Card = ({name, email, phone,icon}) => {
 	return(
 		<div className='tc our-team dib width pa0 ma2 grow bw2 shadow-5'>
 			<img alt='robots' src={require('../../assets/team/'+icon)} />
@@ -14,4 +14,4 @@ const Card = ({name, email, phone,icon}) => {
 		);
 }
 
-export default Card;
+export default Small_Card;
