@@ -12,12 +12,16 @@ class Login extends Component {
     super(props);
     this.state={
 	  	questions: [
-		  {question:"What's your email?", type: "emaill", pattern: /^(?=[A-Za-z0-9][A-Za-z0-9@._%+-]{5,253}$)[A-Za-z0-9._%+-]{1,64}@(?:(?=[A-Za-z0-9-]{1,63}\.)[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*\.){1,8}[A-Za-z]{2,5}$/},
+		  {question:"What's your password", type: "password", pattern: /^.{3,36}$/},
+		  {question:"Once again please?", type: "password", confirm: 1, pattern: /^.{3,36}$/},
 	    ],
     	isVerified: false,
     	verificationResponse: '',
     	navigate: false,
-    	responseFailed: false
+    	responseFailed: false,
+    	password: '',
+    	wrongPass: false,
+    	formProgress: true
     }
   }
   verifyUserFromUrl = () =>{
@@ -26,16 +30,17 @@ class Login extends Component {
 		headers: {'Content-type': 'application/json'},
 		body: JSON.stringify({
 			id: this.props.match.params.IFID,
-			hash: this.props.match.params.hash
+			hash: this.props.match.params.hash,
+			password: this.state.password
 		})
 	})
 	.then((response) => {
 		if(response.status===200){
 			this.setState({
 				isVerified: true,
-				verificationResponse: 'Verification Successful'
+				verificationResponse: 'Password change succesful!'
 			})
-			setTimeout(this.redirectToLogin, 2000);
+			setTimeout(this.redirectToLogin, 1300);
 		}
 		else if(response.redirected){
 			this.props.history.push('/404')
@@ -56,10 +61,17 @@ class Login extends Component {
   }
 
   componentDidMount(){
-  	setTimeout(this.verifyUserFromUrl,400);
+  	// setTimeout(this.verifyUserFromUrl,400);
+  	registerFunctions(this);
   }
 
   render() {
+  		if(this.state.wrongPass){
+  			setTimeout(()=> {
+  				window.location.reload();
+  			}, 1400);
+  		}
+
   		if(this.state.navigate){
   			return <Redirect to="/login" />;
   		}
@@ -72,8 +84,16 @@ class Login extends Component {
    		  <div id="progress"></div>
 		  <div className="center">
 		  	<div id="headdin">
-		  		<h1>Verification</h1>
+		  		<h1>Reset Password</h1>
 		  	</div>
+		    <div id="register">
+		      <i id="progressButton" className="fas fa-arrow-right next"></i>
+		      <div id="inputContainer">
+		        <input id="inputField" required autoFocus />
+		        <label id="inputLabel"></label>
+		        <div id="inputProgress"></div>
+		      </div>
+		    </div>
 		  	{(this.state.isVerified)?
 		  		<div>
 				  	<div className='f3 white'>

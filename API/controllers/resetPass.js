@@ -88,6 +88,10 @@ const handleResetPassReq = (req,res, db, xss) =>{
 
 const handleResetPassRes = (req,res,db, bcrypt)=>{
 	const {id, hash, password} = req.body;
+	if(!id || !hash || !password)
+	{
+		return res.status(400).json('Incorrect form submission');
+	}
 	db.transaction(trx =>{
 	 	trx.select('*').from('pass_reset').where({hash: hash})
 		.then(verification_entry => {
@@ -105,20 +109,21 @@ const handleResetPassRes = (req,res,db, bcrypt)=>{
 								hash: hash
 							})
 							.del()
-							.then(()=> res.status(200).json('Email verification successfull!'))
+							.then(()=> res.status(200).json('Password change successfull!'))
 							.then(trx.commit)
 						})
 						.catch(trx.rollback)
 				}
 				else
-					res.status(302).redirect('https://www.infotsav.in/404');
+					return res.status(302).redirect('https://www.infotsav.in/404');
 			})
 		})
 		.catch(trx.rollback)
 	})
-	.catch(err => res.status(400).json('Something is wrong'));
+	.catch(err => res.status(400).json('Something went wrong'));
 }
 
 module.exports = {
-	handleResetPassReq: handleResetPassReq
+	handleResetPassReq: handleResetPassReq,
+	handleResetPassRes: handleResetPassRes
 };
