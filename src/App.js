@@ -18,6 +18,7 @@ import Verify from './Components/Verify/Verify';
 import Profile from './Components/Profile/Profile';
 import About from './Components/About/About';
 import ForgotPass from './Components/ForgotPass/ForgotPass';
+import HandleForgotPass from './Components/HandleForgotPass/HandleForgotPass';
 import logo from './assets/icon.png';
 import './App.css';
 
@@ -152,7 +153,11 @@ class App extends Component {
             />}
           />
           <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
-          <Route path="/resetPass/id=:IFID/hash=:hash" exact component={Verify} />
+          <Route path="/resetPass/id=:IFID/hash=:hash" exact render={(props) =>
+            <HandleForgotPass {...props}
+              logOut={this.logOut}
+            />}
+          />
           <Route component={Lost} />
     		</Switch>
       </div>
