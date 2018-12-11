@@ -4,6 +4,9 @@
 .width2 {
   width: 20%;
 }
+.width3 {
+  width:50%;
+}
 
 /*--------------------------------------------------------*/
 
@@ -177,6 +180,49 @@
 
 .mob_container {
   display: none;
+}
+
+.team-align {
+  display: flex;
+}
+
+.our-team .team-contentx{
+    position: relative;
+    width: 100%;
+    bottom: 20%;
+    /*padding: 1px 0;*/
+    background-color: #00b3b3;
+    transition:all 0.3s ease 0s;
+}
+.our-team .team-contentx .name{
+    font-size: 0.75em;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    transition:all 0.3s ease 0s;
+}
+.our-team:hover .team-contentx .name{
+    transform:translateY(2em);
+    transition-delay:0.3s;
+}
+.our-team .team-contentx .email{
+    font-size: 0.6em;
+    display: block;
+
+    transition:all 0.3s ease 0s;
+    /*text-transform: capitalize;*/
+}
+.our-team:hover .team-contentx .email{
+    transform:translateY(-2.1em);
+    transition-delay:0.3s;
+}
+
+.our-team .team-contentx .phone{
+    font-size: 0.75em;
+    display: block;
+    transition:all 0.3s ease 0s;
+    /*text-transform: capitalize;*/
 }
 
 @media only screen and (max-width: 800px) {

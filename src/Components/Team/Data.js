@@ -169,7 +169,7 @@ export const TMheads = [
 	}
 ];
 
-export const WebTeam = [
+export const Mob_WebTeam = [
 	{
 		name: 'Manish Mavi',
 		icon: 'mavi.jpg',
@@ -196,5 +196,25 @@ export const WebTeam = [
 		icon: 'kunji.jpg',
 		phone: '8369616043',
 		email: 'kunji@infotsav.in'
+	}
+];
+
+export const PC_WebTeam = [
+	{
+		name: 'Manish Mavi',
+		phone: '9599474147',
+		email: 'mavi@infotsav.in',
+
+		name2: 'Ojaswa Sharma',
+		phone2: '9131102279',
+		email2: 'ojaswa@infotsav.in',
+
+		name1: 'Prem Kumar',
+		phone1: '9950591608',
+		email1: 'prem@infotsav.in',
+
+		name3: 'Rohit Kunji',
+		phone3: '8369616043',
+		email3: 'kunji@infotsav.in'
 	}
 ];

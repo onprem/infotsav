@@ -3,8 +3,9 @@ import {Link} from 'react-router-dom';
 import EmtList from './EmtList';
 import CoordList from './CoordList';
 import TMList from './TMList';
-import WebList from './WebList';
-import {emts,coord,TMheads, WebTeam} from './Data';
+import Mob_WebList from './Mob_WebList';
+import PC_WebList from './PC_WebList';
+import {emts,coord,TMheads, Mob_WebTeam, PC_WebTeam} from './Data';
 // import {parallax} from './Contact_parallax.js';
 import './team.css'
 
@@ -117,7 +118,7 @@ class Team extends Component {
 			       <div className="content-wrapper">
 			       		<div className='tc'>
 				   			<h1>Our Awesome Web Developers</h1>
-							<WebList WebTeam={WebTeam} />
+							<PC_WebList PC_WebTeam={PC_WebTeam} />
 						</div>
 			       </div>
 			     </section>
@@ -134,7 +135,7 @@ class Team extends Component {
 					<TMList TMheads={TMheads} />
 
 					<h1>Our Awesome Web Developers</h1>
-					<WebList WebTeam={WebTeam} />
+					<Mob_WebList Mob_WebTeam={Mob_WebTeam} />
 				</div>
 			</div>
 		</div>
