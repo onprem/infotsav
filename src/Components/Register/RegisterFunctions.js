@@ -99,7 +99,11 @@ export const registerFunctions = (last) => {
       })
     }
     else {
-      questions[position].value = inputField.value
+      if (questions[position].type === 'emaill'){
+        questions[position].value = inputField.value.toLowerCase();
+      }
+      else
+        questions[position].value = inputField.value
       // check if the pattern matches
       if (!inputField.value.match(questions[position].pattern || /.+/)) wrong()
       else ok(function() {
