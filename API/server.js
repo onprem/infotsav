@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
+const xss = require('xss');
 const cookieParser = require('cookie-parser');
 const signin = require('./controllers/signin');
 const profilex = require('./controllers/profilex');
@@ -31,7 +32,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.get('/api', (req,res)=>{ res.send('it is working')});
-app.post('/api/register', (req,res)=> {register.handleRegister(req, res, db, bcrypt)});
+app.post('/api/register', (req,res)=> {register.handleRegister(req, res, db, bcrypt, xss)});
 app.post('/api/verify', (req,res)=>{verify.handleVerifyRequest(req, res, db)});
 app.post('/api/signin', (req,res)=> {signin.handleSignin(req, res, db, bcrypt)});
 app.post('/api/resetPassReq', (req,res)=>{resetPass.handleResetPassReq(req, res, db)});

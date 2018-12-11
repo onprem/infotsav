@@ -39,8 +39,14 @@ const sendEmail = (semail, sverifyHash, seyeFID) => {
 	
 }
 
-const handleResetPassReq = (req,res, db) =>{
-	const {email} =req.body;
+const handleResetPassReq = (req,res, db, xss) =>{
+	const xssOptions = {
+		whiteList: [],
+		stripIgnoreTag: [],
+		stripIgnoreTagBody: ['script']
+	};
+	const email = xss(req.body.email, xssOptions);
+	// const {email} =req.body;
 	const verifyHash = randomstring.generate(15);
 
 	if(!email)

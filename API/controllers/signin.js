@@ -2,9 +2,14 @@ const jwt = require('jsonwebtoken');
 const secret = 'iAmVeryBadAtThis';
 
 const handleSignin = (req,res,db,bcrypt)=>{
-	//(db, bcrypt) => (req, res) =>
+	const xssOptions = {
+		whiteList: [],
+		stripIgnoreTag: [],
+		stripIgnoreTagBody: ['script']
+	};
 	const {password} = req.body;
-	const email = req.body.username;
+	const email = xss(req.body.username, xssOptions);
+	// const email = req.body.username;
 		if(!email || !password)
 	{
 		return res.status(400).json('Incorrect form submission');

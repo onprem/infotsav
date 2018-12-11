@@ -69,8 +69,20 @@ const generateIFID = (db, name) => {
 	else generateIFID(db, name);
 }
 
-const handleRegister = (req,res, db, bcrypt) =>{
-	const {email, name, college, city, phone, gender, password} =req.body.userData;
+const handleRegister = (req,res, db, bcrypt, xss) =>{
+	const xssOptions = {
+		whiteList: [],
+		stripIgnoreTag: [],
+		stripIgnoreTagBody: ['script']
+	};
+	// const {email, name, college, city, phone, gender, password} =xss(req.body.userData, );
+	const email = xss(req.body.userData.email, xssOptions);
+	const name = xss(req.body.userData.name, xssOptions);
+	const college = xss(req.body.userData.college, xssOptions);
+	const city = xss(req.body.userData.city, xssOptions);
+	const phone = xss(req.body.userData.phone, xssOptions);
+	const password = xss(req.body.userData.password, xssOptions);
+	const gender = xss(req.body.userData.gender, xssOptions);
 	console.log(req.body.userData);
 
 	const verifyHash = randomstring.generate(15);
