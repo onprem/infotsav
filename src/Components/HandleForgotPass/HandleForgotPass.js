@@ -63,6 +63,7 @@ class Login extends Component {
 
   redirectToLogin = () =>{
   	this.setState({navigate: true});
+	this.props.logOut();
   }
   componentWillMount(){
 	fetch('/api/resetPassInit', {
