@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import './Extab.css';
 import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
+import 'react-web-tabs/dist/react-web-tabs.css'
+import './Extab.css';
 
 class Extab extends Component {
 
@@ -33,7 +34,7 @@ class Extab extends Component {
     	<div className='white tl tabs'>
         <Tabs defaultTab="one" className='tab-content mv2'>
           <TabList className='mv2'>
-            <Tab tabFor="one">About</Tab>
+            <Tab autoFocus tabFor="one">About</Tab>
             <Tab tabFor="two">Rules</Tab>
             <Tab tabFor="three">Register</Tab>
           </TabList>
@@ -60,8 +61,8 @@ class Extab extends Component {
           	</div>
           </TabPanel>
           <TabPanel tabId="three">
-            <div className='f3 b underline'>Register shit goes here</div>
-            <div className='f3 b underline'>Ho Oh Ho</div>
+            <div className='f3'>Coming soon!</div>
+            <div className='f3 b underline'></div>
           </TabPanel>
         </Tabs>
     	</div>

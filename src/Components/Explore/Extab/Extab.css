@@ -72,14 +72,23 @@
   background: transparent;
   color: white;
   border: 0;
-  padding: .5rem .5rem;
+  padding: .7rem .6rem;
   -webkit-transition: background .3s cubic-bezier(.22,.61,.36,1);
   transition: background .3s cubic-bezier(.22,.61,.36,1)
 }
-.rwt__tab:focus{
+.rwt__tab:focus, .rwt__tab:hover, rwt__tab:active{
   outline: 0;
+  background-color: #00d8ff;
+  background-color: rgba(0,0,0,.4);
+  border-radius: 10px;
 }
 
-.rwt__tablist{
-
-}
+/*.rwt__tablist{
+  border-bottom: 1px solid #ddd
+}*/
+/*.rwt__tablist .rwt__tab:after {
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    border-bottom: 3px solid #00d8ff;
+}*/
