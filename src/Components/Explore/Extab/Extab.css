@@ -7,34 +7,6 @@
   text-align: left;
   padding-bottom: 50px;
 }
-/*.tabs li {
-  float: left;
-  margin: 1px;
-  display: block;
-}
-.tabs input[type="radio"] {
-  position: absolute;
-  top: 0;
-  left: -9999px;
-}*/
-/*.tabs label {
-  display: block;
-  padding: 14px 21px;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: normal;
-  text-transform: uppercase;
-  cursor: pointer;
-  position: relative;
-  top: 4px;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}*/
-/*.tabs label:hover {
-  background: #703688;
-}*/
 .tabs .tab-content {
   z-index: 2;
   display: block;
@@ -47,20 +19,13 @@
   /*top: 53px;*/
   /*left: 0;*/
 }
-/*.tabs [id^="tab"]:checked + label {
-  top: 0;
-  padding-top: 17px;
-  background: #612e76;
-}
-.tabs [id^="tab"]:checked ~ [id^="tab-content"] {
-  display: block;
-}*/
+
 .gam_el__close-btn, .info_el__close-btn, .man_el__close-btn, .online_el__close-btn, .robo_el__close-btn, .susp_el__close-btn, .tech_el__close-btn{
   position: fixed;
 }
 .gam_el__content, .info_el__content, .man_el__content, .online_el__content, .robo_el__content, .susp_el__content, .tech_el__content{
   background: rgba(0,0,0,0.6);
-  overflow-y: scroll;
+  overflow-y: auto;
   /*z-index: 11;*/
 }
 
@@ -100,6 +65,21 @@
 }
 .event_data {
   margin-top: 0px;
-  color: #fff;
+  color: white;
 }
 
+.rwt__tab{
+  background: transparent;
+  color: white;
+  border: 0;
+  padding: .5rem .5rem;
+  -webkit-transition: background .3s cubic-bezier(.22,.61,.36,1);
+  transition: background .3s cubic-bezier(.22,.61,.36,1)
+}
+.rwt__tab:focus{
+  outline: 0;
+}
+
+.rwt__tablist{
+
+}

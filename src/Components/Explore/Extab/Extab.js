@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './Extab.css';
+import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
 
 class Extab extends Component {
 
@@ -29,35 +30,41 @@ class Extab extends Component {
   	if(!event.rules)
   		event.rules='To be announced'
     return (
-    	<div>
-	        <ul className="tabs" role="tablist">
+    	<div className='white tl tabs'>
+        <Tabs defaultTab="one" className='tab-content mv2'>
+          <TabList className='mv2'>
+            <Tab tabFor="one">About</Tab>
+            <Tab tabFor="two">Rules</Tab>
+            <Tab tabFor="three">Register</Tab>
+          </TabList>
+          <TabPanel tabId="one">
+            <div className='f3 underline b'>Description</div>
+            <p className='eventDescription' dangerouslySetInnerHTML={{__html: event.description}}>
+            </p>
+            <div className='f3 underline b'>Prizes</div>
 
-	              <div id="tab-content1" className="tab-content">
-	              <div className='f3 underline b'>Description</div>
-	              <p className='eventDescription' dangerouslySetInnerHTML={{__html: event.description}}>
-	              </p>
-	              <div className='f3 underline b'>Prizes</div>
+            <p className='eventPrizes' dangerouslySetInnerHTML={{__html: event.prizes}}>
+            </p>
+            <div className='f3 underline b'>Event Heads</div>
 
-	              <p className='eventPrizes' dangerouslySetInnerHTML={{__html: event.prizes}}>
-	              </p>
-	              <div className='f3 underline b'>Event Heads</div>
+            <p className='eventHead' dangerouslySetInnerHTML={{__html: event.eventHead}}>
+            </p>
+            <div className='f3 underline b'>Event Organizers</div>
 
-	              <p className='eventHead' dangerouslySetInnerHTML={{__html: event.eventHead}}>
-	              </p>
-                <div className='f3 underline b'>Event Organizers</div>
-
-                <p className='eventHead' dangerouslySetInnerHTML={{__html: event.organizers}}>
-                </p>
-	              </div>
-
-	              <div className='f3 b underline'>Rules</div>
-
-	              <div id="tab-content2" className="tab-content">
-	              	<ul className='eventRules' dangerouslySetInnerHTML={{__html: event.rules}}>
-	              	</ul>
-	              </div>
-	      	</ul>
-      	</div>
+            <p className='eventHead' dangerouslySetInnerHTML={{__html: event.organizers}}>
+            </p>
+          </TabPanel>
+          <TabPanel tabId="two">                
+            <div className='f3 b underline'>Rules</div>
+          	<div className='eventRules' dangerouslySetInnerHTML={{__html: event.rules}}>
+          	</div>
+          </TabPanel>
+          <TabPanel tabId="three">
+            <div className='f3 b underline'>Register shit goes here</div>
+            <div className='f3 b underline'>Ho Oh Ho</div>
+          </TabPanel>
+        </Tabs>
+    	</div>
     );
   }
 }
