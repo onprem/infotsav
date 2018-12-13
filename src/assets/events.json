@@ -6,6 +6,7 @@
 	   		"eventHead":"",
 	   		"organizers":"",
 	   		"prizes":"",
+	   		"maxMembers": 1,
 	   		"eid": 0
 	  	},
 
@@ -15,6 +16,7 @@
 	   "eventHead":"",
 	   "organizers":"",
 	   "prizes":"",
+	   "maxMembers": 1,
 		"eid": 1
 	  },
 
@@ -24,6 +26,7 @@
 	   "eventHead":"",
 	   "organizers":"",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 2
 	  },
 
@@ -33,6 +36,7 @@
 	   "eventHead":"",
 	   "organizers":"",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 3
 	  },
 
@@ -42,6 +46,7 @@
 	   "eventHead":"",
 	   "organizers":"",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 4
 	  },
 
@@ -51,6 +56,7 @@
 	   "eventHead":"",
 	   "organizers":"",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 5
 	  },
 
@@ -60,6 +66,7 @@
 	   "eventHead":"",
 	   "organizers":"",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 6
 	  },
 
@@ -69,6 +76,7 @@
 	   "eventHead":"",
 	   "organizers":"",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 7
 	  }
 	},
@@ -80,6 +88,7 @@
 	   "eventHead":"<li>Abhinav Jaiswal (8959063666)</li><li>Surendra Gangwar (9756066966)</li>",
 	   "organizers":"<li>Abhijeet</li><li>Harshit Patel</li>",
 	   "prizes":"",
+	   "maxMembers": 2,
    		"eid": 8
 	  },
 
@@ -89,6 +98,7 @@
 	   "eventHead":"<li>Sanyam Gupta (7080864810)</li><li>Sanjal Dhir Katiyar (9670112872)</li>",
 	   "organizers":"<li>Ashish Kirti</li><li>Aryanshu Verma</li>",
 	   "prizes":"",
+	   "maxMembers": 2,
    		"eid": 9
 	  },
 
@@ -98,6 +108,7 @@
 	   "eventHead":"<li>Mithilesh Raghav - 8989819765</li><li>Ankit Sharma - 7903284946</li>",
 	   "organizers":"<li>Akash Bhardwaj</li><li>Amisha Sinha</li>",
 	   "prizes":"",
+	   "maxMembers": 2,
    		"eid": 10
 	  },
 
@@ -107,6 +118,7 @@
 	   "eventHead":"<li>Mohd Farhan Tahir (9616407700)</li><li>Mohit Kumar (8717984757)</li>",
 	   "organizers":"<li>Chirag Jindal</li><li>Manvi Gupta</li>",
 	   "prizes":"",
+	   "maxMembers": 2,
    		"eid": 11
 	  },
 
@@ -116,6 +128,7 @@
 	   "eventHead":"<li>Aviharsh Shukla (8765114937)</li><li>Nikhila Nandikam (8765114937)</li><li>Aryan Sachan (8765114937)</li>",
 	   "organizers":"<li>Siddharth Vaish</li><li>Pranay Kumar</li><li>Rushikesh Taksande</li><li>Trushita</li><li>Abhilash</li>",
 	   "prizes":"",
+	   "maxMembers": 5,
    		"eid": 12
 	  }
 	},
@@ -127,6 +140,7 @@
 	   "eventHead":"<li>Yash Jaiswal  (9506496596)</li><li>Yash choudhary  (7024567393)</li><li>Mayank Yadav  (7007826653)</li><li>Chinmay Rane (9969931556)</li><li>Pragati Baheti  (9470937667)</li>",
 	   "organizers":"<li>Rini Pandey </li><li>Simran Gupta</li><li>Guramritpal Singh</li><li>Keshav Gupta</li><li>Chandan Kumar</li><li>Piyush Raikwar</li><li>Ayush Saini</li><li>Ketan Gupta</li>",
 	   "prizes":"",
+	   "maxMembers": 3,
    		"eid": 13
 	  },
 
@@ -136,6 +150,7 @@
 	   "eventHead":"<li>Mehul Bhutalia (7898988724)</li><li>Saurabh Shukla (9198460021)</li><li>Shashank Sharma  (9479479264)</li><li>Shriya Jalan (9450726762)</li>",
 	   "organizers":"<li>Pragnya Tata</li><li>Himanshi Kalra</li><li>Jagdeesh Sugula</li><li>Anuj Singh</li><li>Kannekanti Manoj</li><li>Gokul Raj</li>",
 	   "prizes":"",
+	   "maxMembers": 3,
    		"eid": 14
 	  },
 	  
@@ -145,6 +160,7 @@
 	   "eventHead":"<li>Saurabh Gupta +91-9695320340</li><li>Sanjit Prasad +91-9174275078</li>",
 	   "organizers":"<li>Vaibhav Garg </li><li>Priyash Gupta </li><li>Arihant Jain</li>",
 	   "prizes":"",
+	   "maxMembers": 2,
    		"eid": 15
 	  },
 	  
@@ -154,6 +170,7 @@
 	   "eventHead":"<li>Arjan Singh Bal &nbsp; &nbsp;(arjan3141@gmail.com) &nbsp; &nbsp; (9479383902)",
 	   "organizers":"<li>Pankaj Goyal</li><li>Srinivas Rao</li><li>Utkarsh Aggrawal</li>",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 16
 	  }
 	},
@@ -165,6 +182,7 @@
 	   "eventHead":"",
 	   "organizers":"",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 17
 	  },
 
@@ -174,6 +192,7 @@
 	   "eventHead":"",
 	   "organizers":"",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 18
 	  },
 
@@ -183,6 +202,7 @@
 	   "eventHead":"<li>Sanya Verma (8461922412)</li><li>Shivendra Pratap Singh (8057700393)</li><li>Shraddha Tripathi (8840490678)</li><li>Prakhar Bansal (7351480777)</li>",
 	   "organizers":"<li>Saksham Arjani</li><li>Abhay Chaturvedi</li><li>Samanyu Pobatti</li><li>Deepak Dhantala</li><li>Pradyumn Potapattri</li><li>Virendra Singh</li>",
 	   "prizes":"",
+	   "maxMembers": 4,
    		"eid": 19
 	  }
 	},
@@ -194,6 +214,7 @@
 	   "eventHead":"<li>Nikita Sharma (+91 95753 46899)</li><li>Shivam Sharma (+91 99819 41446)</li>",
 	   "organizers":"<li>Abhishek Pratap Singh</li><li>Ruchika</li>",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 20
 	  },
 
@@ -203,6 +224,7 @@
 	   "eventHead":"<li>Prashant Kumar Tiwari  &nbsp; &nbsp; kumartiwariprashant@gmail.com &nbsp; &nbsp; +91 9451476957</li>",
 	   "organizers":"<li>Saket Saumya</li><li>Sandarbh Yadav</li>",
 	   "prizes":"",
+	   "maxMembers": 3,
    		"eid": 21
 	  },
 
@@ -212,6 +234,7 @@
 	   "eventHead":"<li>Yatharth Saxena (9755862100)</li><li>Kriti Gupta (8989790370)</li>",
 	   "organizers":"<li>Rucha Pallewar</li>",
 	   "prizes":"",
+	   "maxMembers": 3,
    		"eid": 22
 	  },
 
@@ -221,6 +244,7 @@
 	   "eventHead":"<li>Ashish Chandel (8445073950)</li><li>Rishabh Patel (8765129035)</li>",
 	   "organizers":"<li>Nishant Tomar</li><li>Akashdeep </li><li>Sajal</li><li>Vaibhav Krishan</li><li>Kumar Shashwat</li>",
 	   "prizes":"",
+	   "maxMembers": 3,
    		"eid": 23
 	  },
 
@@ -230,6 +254,7 @@
 	   "eventHead":"<li>Gajpal Singh Gond - +919174062987</li><li>Divya Lakhwani</li>",
 	   "organizers":"<li>Nishidha Sri</li><li>Abhishek Kumar Singh</li>",
 	   "prizes":"",
+	   "maxMembers": 4,
    		"eid": 24
 	  },
 
@@ -239,6 +264,7 @@
 	   "eventHead":"<li>Apurva Srivastava - 9414703738</li><li>Riya Khandelwal - 9410873749</li>",
 	   "organizers":"<li>Ujjwal Sharma</li><li>Varun </li><li>Sanchit Bansal</li>",
 	   "prizes":"",
+	   "maxMembers": 2,
    		"eid": 25
 	  }
 	},
@@ -250,6 +276,7 @@
 	   "eventHead":"<li>Abhinav Boruah (9413605460)</li><li>Sugata Roy (9046998933)</li><li>Mukund Upadhyaya (8717885101)</li>",
 	   "organizers":"<li>Aditya Singh</li><li>Saksham Tewari.</li><li>Siddharth Verma</li><li>Vinay Kumar</li>",
 	   "prizes":"",
+	   "maxMembers": 1,
    		"eid": 26
 	  },
 
@@ -259,6 +286,7 @@
 	   "eventHead":"<li>Abhinav Boruah (9413605460)</li><li>Sugata Roy (9046998933)</li><li>Mukund Upadhyaya (8717885101)</li>",
 	   "organizers":"<li>Aditya Singh</li><li>Saksham Tewari.</li><li>Siddharth Verma</li><li>Vinay Kumar</li>",
 	   "prizes":"",
+	   "maxMembers": 5,
    		"eid": 27
 	  },
 
@@ -268,6 +296,7 @@
 	   "eventHead":"<li>Abhinav Boruah (9413605460)</li><li>Sugata Roy (9046998933)</li><li>Mukund Upadhyaya (8717885101)</li>",
 	   "organizers":"<li>Aditya Singh</li><li>Saksham Tewari.</li><li>Siddharth Verma</li><li>Vinay Kumar</li>",
 	   "prizes":"",
+	   "maxMembers": 4,
    		"eid": 28
 	  }
 	},
@@ -279,6 +308,7 @@
 	   "eventHead":"<li>Raahat Gupta (9818815331)</li><li>Sahil Shelangia (9174275003)</li><li>Abhishek Verma (8765251505)</li><li>Khushal Bisani (9303936009)</li><li>Shivam Rathore (9667181136)</li><li>Priyansh Saxena (9808810251)</li><li>Anjali Jain (9413605460)</li>",
 	   "organizers":"<li>Shubham Bhawsar</li><li>Arpit Sharma</li><li>Prashant Rawat</li><li>Prashant Kushwah</li><li>Abhishek Chaurasia</li><li>Smita Gupta</li><li>Queen Saikia</li>",
 	   "prizes":"",
+	   "maxMembers": 4,
    		"eid": 29
 	  },
 
@@ -288,6 +318,7 @@
 	   "eventHead":"<li>Raahat Gupta (9818815331)</li><li>Sahil Shelangia (9174275003)</li><li>Abhishek Verma (8765251505)</li><li>Khushal Bisani (9303936009)</li><li>Shivam Rathore (9667181136)</li><li>Priyansh Saxena (9808810251)</li><li>Anjali Jain (9413605460)</li>",
 	   "organizers":"<li>Shubham Bhawsar</li><li>Arpit Sharma</li><li>Prashant Rawat</li><li>Prashant Kushwah</li><li>Abhishek Chaurasia</li><li>Smita Gupta</li><li>Queen Saikia</li>",
 	   "prizes":"",
+	   "maxMembers": 4,
    		"eid": 30
 	  },
 
@@ -297,6 +328,7 @@
 	   "eventHead":"<li>Raahat Gupta (9818815331)</li><li>Sahil Shelangia (9174275003)</li><li>Abhishek Verma (8765251505)</li><li>Khushal Bisani (9303936009)</li><li>Shivam Rathore (9667181136)</li><li>Priyansh Saxena (9808810251)</li><li>Anjali Jain (9413605460)</li>",
 	   "organizers":"<li>Shubham Bhawsar</li><li>Arpit Sharma</li><li>Prashant Rawat</li><li>Prashant Kushwah</li><li>Abhishek Chaurasia</li><li>Smita Gupta</li><li>Queen Saikia</li>",
 	   "prizes":"",
+	   "maxMembers": 4,
    		"eid": 31
 	  },
 
@@ -306,6 +338,7 @@
 	   "eventHead":"<li>Raahat Gupta (9818815331)</li><li>Sahil Shelangia (9174275003)</li><li>Abhishek Verma (8765251505)</li><li>Khushal Bisani (9303936009)</li><li>Shivam Rathore (9667181136)</li><li>Priyansh Saxena (9808810251)</li><li>Anjali Jain (9413605460)</li>",
 	   "organizers":"<li>Shubham Bhawsar</li><li>Arpit Sharma</li><li>Prashant Rawat</li><li>Prashant Kushwah</li><li>Abhishek Chaurasia</li><li>Smita Gupta</li><li>Queen Saikia</li>",
 	   "prizes":"",
+	   "maxMembers": 4,
    		"eid": 31
 	  },
 
@@ -315,6 +348,7 @@
 	   "eventHead":"<li>Raahat Gupta (9818815331)</li><li>Sahil Shelangia (9174275003)</li><li>Abhishek Verma (8765251505)</li><li>Khushal Bisani (9303936009)</li><li>Shivam Rathore (9667181136)</li><li>Priyansh Saxena (9808810251)</li><li>Anjali Jain (9413605460)</li>",
 	   "organizers":"<li>Shubham Bhawsar</li><li>Arpit Sharma</li><li>Prashant Rawat</li><li>Prashant Kushwah</li><li>Abhishek Chaurasia</li><li>Smita Gupta</li><li>Queen Saikia</li>",
 	   "prizes":"",
+	   "maxMembers": 4,
    		"eid": 32
 	  }
 	}
