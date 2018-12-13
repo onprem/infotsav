@@ -12,6 +12,7 @@ const verify = require('./controllers/verify');
 const withAuth = require('./middleware');
 const resetPass = require('./controllers/resetPass');
 const lost = require('./controllers/lost');
+const eventReg = require('./controllers/eventReg');
 
 const db = knex({
   client: 'mysql',
@@ -38,6 +39,7 @@ app.post('/api/signin', (req,res)=> {signin.handleSignin(req, res, db, bcrypt, x
 app.post('/api/resetPassReq', (req,res)=>{resetPass.handleResetPassReq(req, res, db, xss)});
 app.post('/api/resetPassRes', (req,res)=>{resetPass.handleResetPassRes(req, res, db, bcrypt)});
 app.post('/api/resetPassInit', (req,res)=>{resetPass.handleResetPassInit(req, res, db, bcrypt)});
+app.post('/api/eventReg', (req,res)=>{eventReg.handleEventReg(req, res, db, xss)});
 app.post('/api/lost', (req,res)=>{lost.handleLostUpdate(req, res, db)});
 app.get('/api/logout', (req, res) => {res.clearCookie('token'); res.status(301).redirect('/login');});
 app.get('/api/profilex', withAuth, (req, res) => {profilex.handleProfile(req, res, db)});

@@ -36,7 +36,7 @@ const handleSignin = (req,res,db,bcrypt,xss)=>{
 								// Issue token
 						        const payload = {email};
 						        const token = jwt.sign(payload, secret, {
-						        	expiresIn: '24h'
+						        	expiresIn: '24d'
 						        });
 						        res.status(200).cookie('token', token, { httpOnly: true }).json(userData)
 							})
