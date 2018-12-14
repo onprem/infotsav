@@ -29,7 +29,7 @@ const handleSignin = (req,res,db,bcrypt,xss)=>{
 							db('event_reg')
 							.join('payment', 'event_reg.teamid', '=', 'payment.teamid')
 							.join('events', 'events.eid', '=', 'event_reg.eid')
-							.select('event_reg.eid', 'events.ename', 'events.category', 'payment.teamid', 'payment.status')
+							.select('event_reg.eid', 'events.ename', 'events.category', 'payment.teamid', 'events.fee', 'payment.status')
 							.where('event_reg.ifid', '=', ifid)
 							.then(registrations => {
 								let userData = {

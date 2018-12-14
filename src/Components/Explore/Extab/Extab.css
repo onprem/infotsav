@@ -76,7 +76,7 @@
   -webkit-transition: background .3s cubic-bezier(.22,.61,.36,1);
   transition: background .3s cubic-bezier(.22,.61,.36,1)
 }
-.rwt__tab:focus, .rwt__tab:hover, rwt__tab:active{
+.rwt__tab:focus, .rwt__tab:hover, .rwt__tab:active{
   outline: 0;
   background-color: #00d8ff;
   background-color: rgba(0,0,0,.4);
