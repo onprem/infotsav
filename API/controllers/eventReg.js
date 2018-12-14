@@ -9,14 +9,22 @@ const handleEventReg = (req, res, db, xss) =>{
 	const init = req.body.init;
 	const eid = req.body.eid;
 	const ifid = xss(req.body.ifid);
-	let teamid;
+	let teamid, ifidUser;
+	const email = req.email;
+
 	if(init){
-		// const email = req.email;
 		teamid = ifid+'-'+eid;
 	}
 	else {
 		teamid = req.body.teamid;
 	}
+	db.select('*').from('users').where({email})
+	.then(authUser => {
+		if(!authUser.length)
+			throw(authUser);
+		ifidUser = authUser[0].ifid;
+	})
+	.catch(() => res.status(400).json('What the fuck?'));
 
 	if(!ifid || !eid || !teamid){
 		return res.status(400).json('Incorrect form submission');
@@ -40,11 +48,14 @@ const handleEventReg = (req, res, db, xss) =>{
 						})
 						.into('event_reg')
 						.then(() => {
-							return trx('payment')
-							.insert({
-								teamid: teamid,
-								status: 0
-							})
+							if(init){
+								return trx('payment')
+								.insert({
+									teamid: teamid,
+									status: 0
+								})
+							}
+							else return Promise.resolve(1)
 							.then(() =>{
 								db('event_reg')
 								.join('payment', 'event_reg.teamid', '=', 'payment.teamid')
