@@ -7,6 +7,9 @@ import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 import {Online_Cards} from './online_cards'
 
 class online_explore extends Component {
+	constructor(props){
+		super(props);
+	}
 
 	componentDidMount(){
 		online_explore_function();
@@ -19,7 +22,7 @@ class online_explore extends Component {
 				<div class="online_cont s--inactive">
 
 					  <div class="online_cont__inner">
-					  	<Online_Cards />
+					  	<Online_Cards {...this.props} />
 					  </div>
 				</div>
 			</div>

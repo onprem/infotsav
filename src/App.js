@@ -116,14 +116,62 @@ class App extends Component {
           <Route path="/team" exact component={Team} />
           <Route path="/about" exact component={About} />
 
-          <Route path="/events/online_events" exact component={Online_Events} />
-          <Route path="/events/info_events" exact component={Informal_Events} />
-          <Route path="/events/gamiacs_events" exact component={Gamiacs_Events} />
-          <Route path="/events/man_events" exact component={Managerial_Events} />
-          <Route path="/events/robo_events" exact component={Robotics_Events} />
-          <Route path="/events/susp_events" exact component={SUSP_Events} />
-          <Route path="/events/tech_events" exact component={Technical_Events} />
-
+          <Route path="/events/online_events" exact render={(props) =>
+            <Online_Events {...props}
+              isLoggedIn={this.state.isLoggedIn}
+              updateEvent={this.updateEvent}
+              userData={this.state.user}
+              eventData={this.state.userEventReg}
+            />}
+          />
+          <Route path="/events/info_events" exact render={(props) =>
+            <Informal_Events {...props}
+              isLoggedIn={this.state.isLoggedIn}
+              updateEvent={this.updateEvent}
+              userData={this.state.user}
+              eventData={this.state.userEventReg}
+            />}
+          />
+          <Route path="/events/gamiacs_events" exact render={(props) =>
+            <Gamiacs_Events {...props}
+              isLoggedIn={this.state.isLoggedIn}
+              updateEvent={this.updateEvent}
+              userData={this.state.user}
+              eventData={this.state.userEventReg}
+            />}
+          />
+          <Route path="/events/man_events" exact render={(props) =>
+            <Managerial_Events {...props}
+              isLoggedIn={this.state.isLoggedIn}
+              updateEvent={this.updateEvent}
+              userData={this.state.user}
+              eventData={this.state.userEventReg}
+            />}
+          />
+          <Route path="/events/robo_events" exact render={(props) =>
+            <Robotics_Events {...props}
+              isLoggedIn={this.state.isLoggedIn}
+              updateEvent={this.updateEvent}
+              userData={this.state.user}
+              eventData={this.state.userEventReg}
+            />}
+          />
+          <Route path="/events/susp_events" exact render={(props) =>
+            <SUSP_Events {...props}
+              isLoggedIn={this.state.isLoggedIn}
+              updateEvent={this.updateEvent}
+              userData={this.state.user}
+              eventData={this.state.userEventReg}
+            />}
+          />
+          <Route path="/events/tech_events" exact render={(props) =>
+            <Technical_Events {...props}
+              isLoggedIn={this.state.isLoggedIn}
+              updateEvent={this.updateEvent}
+              userData={this.state.user}
+              eventData={this.state.userEventReg}
+            />}
+          />
           <Route path="/register" exact render={(props) =>
             <Register {...props} 
               isLoggedIn={this.state.isLoggedIn}
@@ -146,13 +194,13 @@ class App extends Component {
               updateLoginState={this.updateLoginState} 
             />} 
           />
+          <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
           <Route path='/resetPass' exact render={(props) =>
             <ForgotPass {...props}
               updateLoginState={this.updateLoginState} 
               isLoggedIn={this.state.isLoggedIn}
             />}
           />
-          <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
           <Route path="/resetPass/id=:IFID/hash=:hash" exact render={(props) =>
             <HandleForgotPass {...props}
               logOut={this.logOut}

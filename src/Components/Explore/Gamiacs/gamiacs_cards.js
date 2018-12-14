@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import events from '../../../assets/events.json';
 import Extab from '../Extab/Extab'
 
-export const Gamiac_Cards = () => {
+export const Gamiac_Cards = (props) => {
 	return(
 		<div>
 			{Object.entries(events.gamiacs).map(([key, value]) =>
@@ -18,7 +18,7 @@ export const Gamiac_Cards = () => {
 			            <div className="gam_el__text">{value.EventName}</div>
 			            <div className="gam_el__close-btn"></div>
 			            <div className="event_data">
-			            	<Extab key={value.eid} eventDetails={value} />
+			            	<Extab key={value.eid} eventDetails={value} {...props} />
 			            </div>
 			          </div>
 			        </div>

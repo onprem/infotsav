@@ -24,7 +24,7 @@ class gamiacs_explore extends Component {
 				<BackToEvents />
 				<div className="gam_cont s--inactive">
 				  <div className="gam_cont__inner">
-				  	<Gamiac_Cards />
+				  	<Gamiac_Cards {...this.props} />
 				  </div>
 				</div>
 			</div>

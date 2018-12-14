@@ -7,6 +7,9 @@ import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 import {Robotics_Cards} from './robo_cards'
 
 class robo_explore extends Component {
+	constructor(props){
+		super(props);
+	}
 
 	componentDidMount(){
 		robo_explore_function();
@@ -20,7 +23,7 @@ class robo_explore extends Component {
 
 			 <div className="robo_cont s--inactive">
 			  <div className="robo_cont__inner">
-			  	<Robotics_Cards />
+			  	<Robotics_Cards {...this.props} />
 			  </div>
 			</div>
 			</div>

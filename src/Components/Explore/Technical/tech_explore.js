@@ -7,6 +7,9 @@ import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 import {Technical_Cards} from './technical_cards'
 
 class tech_explore extends Component {
+	constructor(props){
+		super(props);
+	}
 
 	componentDidMount(){
 		tech_explore_function();
@@ -18,7 +21,7 @@ class tech_explore extends Component {
 				<BackToEvents/>
 				<div className="tech_cont s--inactive">
 			  <div className="tech_cont__inner">
-			  	<Technical_Cards />
+			  	<Technical_Cards {...this.props} />
 			  </div>
 				</div>
 			</div>

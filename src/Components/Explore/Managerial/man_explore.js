@@ -7,6 +7,9 @@ import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 import {Man_Cards} from './man_cards'
 
 class man_explore extends Component {
+	constructor(props){
+		super(props);
+	}
 
 	componentDidMount(){
 		man_explore_function();
@@ -19,7 +22,7 @@ class man_explore extends Component {
 				
 			 <div className="man_cont s--inactive">
 			  <div className="man_cont__inner">
-			  	<Man_Cards />
+			  	<Man_Cards {...this.props} />
 			  </div>
 				</div>
 			</div>

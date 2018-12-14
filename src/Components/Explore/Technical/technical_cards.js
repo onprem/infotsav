@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import events from '../../../assets/events.json';
 import Extab from '../Extab/Extab'
 
-export const Technical_Cards = () => {
+export const Technical_Cards = (props) => {
 	return(
 		<div>
 			{Object.entries(events.technical).map(([key, value]) =>
@@ -17,8 +17,8 @@ export const Technical_Cards = () => {
 			          <div className="tech_el__content">
 			            <div className="tech_el__text">{value.EventName}</div>
 			            <div className="tech_el__close-btn"></div>
-			            <div class="event_data">
-			            	<Extab key={value.eid} eventDetails={value} />
+			            <div className="event_data">
+			            	<Extab key={value.eid} eventDetails={value} {...props} />
 		            	</div>
 			          </div>
 			        </div>

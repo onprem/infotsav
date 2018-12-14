@@ -7,6 +7,9 @@ import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 import {Info_Cards} from './info_cards'
 
 class info_explore extends Component {
+	constructor(props){
+		super(props);
+	}
 
 	componentDidMount(){
 		info_explore_function();
@@ -18,7 +21,7 @@ class info_explore extends Component {
 				<BackToEvents/>
 				<div className="info_cont s--inactive">
 				  <div className="info_cont__inner">
-				  	<Info_Cards />
+				  	<Info_Cards {...this.props} />
 				  </div>
 				</div>
 			</div>
