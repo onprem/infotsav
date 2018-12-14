@@ -5,6 +5,7 @@ import App from './App';
 import {BrowserRouter} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
+import 'babel-polyfill';
 
 ReactDOM.render(
 	<BrowserRouter>

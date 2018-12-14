@@ -19,7 +19,7 @@ class Register extends Component {
 		  {question:"College Name?", pattern: /^(\w|\s){4,80}$/},
 		  {question:"City?", pattern: /^(\w|\s){3,38}$/},
 		  {question:"What's your email?",type: "emaill", pattern: /^(?=[A-Za-z0-9][A-Za-z0-9@._%+-]{5,253}$)[A-Za-z0-9._%+-]{1,64}@(?:(?=[A-Za-z0-9-]{1,63}\.)[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*\.){1,8}[A-Za-z]{2,5}$/},
-		  {question:"What's your phone number?", type:'tel', pattern: /^\d{10}$/},
+		  {question:"What's your phone number?", type:'tel', pattern: /^[6-9]\d{9}$/},
 		  {question:"Create your password", type: "password", pattern: /^.{3,36}$/},
 	    ],
 	    gotData: false,
@@ -131,7 +131,8 @@ class Register extends Component {
 					:
 						<div className='f3 white'>
 							{this.state.responseMessage} <br />
-							Please verify your email to continue
+							Verify your email to continue <br />
+							Didn't get the verification email? Please check your spam folder.
 						</div>
 				:
 				    <div id="register">
