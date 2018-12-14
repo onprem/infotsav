@@ -18,13 +18,14 @@ const handleEventReg = (req, res, db, xss) =>{
 	else {
 		teamid = req.body.teamid;
 	}
-	db.select('*').from('users').where({email})
-	.then(authUser => {
-		if(!authUser.length)
-			throw(authUser);
-		ifidUser = authUser[0].ifid;
-	})
-	.catch(() => res.status(400).json('What the fuck?'));
+	ifidUser=ifid;
+	// db.select('*').from('users').where({email})
+	// .then(authUser => {
+	// 	if(!authUser.length)
+	// 		throw(authUser);
+	// 	ifidUser = authUser[0].ifid;
+	// })
+	// .catch(() => res.status(400).json('What the fuck?'));
 
 	if(!ifid || !eid || !teamid){
 		return res.status(400).json('Incorrect form submission');
@@ -55,18 +56,18 @@ const handleEventReg = (req, res, db, xss) =>{
 									status: 0
 								})
 							}
-							else return Promise.resolve(1)
-							.then(() =>{
-								db('event_reg')
-								.join('payment', 'event_reg.teamid', '=', 'payment.teamid')
-								.join('events', 'events.eid', '=', 'event_reg.eid')
-								.select('event_reg.eid', 'events.ename', 'events.category', 'payment.teamid', 'events.fee', 'payment.status')
-								.where('event_reg.ifid', '=', ifid)
-								.then(registrations =>{
-									res.status(200).json(registrations);
-								})
-								.then(trx.commit)
-							}).catch(trx.rollback)
+							else return Promise.resolve('1');
+						})
+						.then(() =>{
+							db('event_reg')
+							.join('payment', 'event_reg.teamid', '=', 'payment.teamid')
+							.join('events', 'events.eid', '=', 'event_reg.eid')
+							.select('event_reg.eid', 'events.ename', 'events.category', 'payment.teamid', 'events.fee', 'payment.status')
+							.where('event_reg.ifid', '=', ifidUser)
+							.then(registrations =>{
+								res.status(200).json(registrations);
+							})
+							.then(trx.commit)
 						})
 						.catch(trx.rollback)
 					})
