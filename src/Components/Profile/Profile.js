@@ -45,15 +45,30 @@ class Profile extends Component {
 		  		(redirect)?
 		  			<Redirect to='/login' />
 	  			:
-				    <div id="headdin">
-		  				<h3 className='mv3'>Welcome {this.props.userData.id}</h3>
-		  				<div className='f4'>Event registration opening soon!</div>
-		  			</div>
+	  				<div className="profile-content">
+					    <div class="profile-headin">
+			  				<h3 className='mv3 wellc'>Welcome {this.props.userData.name},</h3>
+			  				<div className='profileDetails'>
+			  					<div className="detailsCard">
+			  						<div className="detailsD"><b>IFID:</b> {this.props.userData.id}</div>
+			  						<div className="detailsD"><b>Email:</b> {this.props.userData.email}</div>
+			  					</div>
+			  					<div className="detailsCard">
+			  						<div className="detailsD"><b>Mobile:</b> {this.props.userData.mobile}</div>
+			  						<div className="detailsD"><b>College:</b> {this.props.userData.college}</div>
+			  					</div>
+			  				</div>
+			  			</div>
+			  			<div className="eventTableDiv">
+			  				<h3 className='mv3 wellc'>Your Events</h3>
+			  				Event registration opening soon!
+			  			</div>
+			  		</div>
   			:
   				<Loader />
   			}
 
-		    <div id="holdit"></div>
+		    
 	  	  </div>
   		  <Footer />
 		</div>

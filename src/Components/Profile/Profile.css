@@ -1,0 +1,50 @@
+.profileDetails {
+	display: flex;
+	flex-direction: column;
+	/*align-items: center;*/
+}
+.detailsCard {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.detailsD {
+	min-width: 33%;
+	text-align: left;
+}
+.wellc {
+	text-align: left;
+}
+.profile-content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	min-height: 100vh;
+	font-size: 1.7em;
+	color: white;
+	width: 80%;
+}
+.profile-headin {
+	margin-top: 100px;
+	margin-bottom: 50px;
+	width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+	.detailsCard {
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		width: 90%;
+	}
+	.detailsD {
+		width: 100%;
+		text-align: left;
+		padding-left: 0%;
+	}
+	.wellc {
+		text-align: left;
+		padding-left: 0%;
+	}
+}
