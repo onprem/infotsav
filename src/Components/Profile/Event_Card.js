@@ -5,21 +5,21 @@ const Big_Card = ({ename, category, fee, status}) => {
 	return(
 		<div className='evtCard'>
 			<div className='evtName'>
-				{ename}
+				<b>{ename}</b>
 			</div>
 			<div className='evtCat'>
 				<Link to="/events">{category}</Link>
 			</div>
-			<div className='evtStatus'>
 			{(status)?
-				<b>Paid</b>
+				<div className='evtStatus'>
+					<b>Paid</b>
+				</div>
 			  :
-			  	<div>
-			  		<Link to='#payment-gateway'>Pay Rs. {fee} </Link>
-			  		<Link to="#un-register">Remove Event</Link>
+			  	<div className='evtStatus'>
+			  		<span className="payLink"><Link to='#payment-gateway'>Pay Rs. {fee}</Link></span>
+			  		<span className="unregLink"><Link to="#un-register">Remove</Link></span>
 			  	</div>
 			}
-			</div>
 		</div>
 
 		);
