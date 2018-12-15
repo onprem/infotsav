@@ -26,7 +26,7 @@
 	width: 80%;
 }
 .profile-headin {
-	margin-top: 100px;
+	margin-top: 30px;
 	margin-bottom: 50px;
 	width: 100%;
 }
@@ -49,6 +49,7 @@
 }
 .evtCat {
 	width: 15%;
+	text-transform: capitalize;
 }
 .evtStatus {
 	width: 65%;

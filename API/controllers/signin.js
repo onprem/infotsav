@@ -40,9 +40,9 @@ const handleSignin = (req,res,db,bcrypt,xss)=>{
 								// Issue token
 						        const payload = {email};
 						        const token = jwt.sign(payload, secret, {
-						        	expiresIn: '24d'
+						        	expiresIn: '7d'
 						        });
-						        res.status(200).cookie('token', token, { maxAge: 86400000, httpOnly: true }).json(userData)
+						        res.status(200).cookie('token', token, { maxAge: 604800000, httpOnly: true }).json(userData)
 							})
 						})
 						.catch(err => res.status(400).json('Invalid User'))
