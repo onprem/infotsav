@@ -81,7 +81,7 @@
 	  }
 	},
 
-	"informal":{
+	"onsite":{
 	  "0":{"EventName":"Aptitude Quiz",
 	   "rules":"<li>There will be two rounds conducted. First online round qualifier and then final pen and paper round.</li><li>Total 40 teams will be selected for the pen and paper round.</li><li>A team should consist a maximum of two members.</li><li>Online round will consists of 25 questions.</li><li>50% of the teams selected for the final round will be from ABV-IIITM.</li><li>In any case of false behavior or violation of rules, the team will be disqualified.</li><li>Teams should have its own working internet connection.</li>",
 	   "description":"A standardized test designed to predict an individual's ability to learn certain skills compare intelligence test. An aptitude test is an assessment that evaluates the talent/ability/potential to perform a certain task, with no prior knowledge and/or training.",
@@ -339,7 +339,7 @@
 	   "organizers":"<li>Shubham Bhawsar</li><li>Arpit Sharma</li><li>Prashant Rawat</li><li>Prashant Kushwah</li><li>Abhishek Chaurasia</li><li>Smita Gupta</li><li>Queen Saikia</li>",
 	   "prizes":"",
 	   "maxMembers": 4,
-   		"eid": 31
+   		"eid": 32
 	  },
 
 	  "4":{"EventName":"Robo Soccer",
@@ -349,7 +349,7 @@
 	   "organizers":"<li>Shubham Bhawsar</li><li>Arpit Sharma</li><li>Prashant Rawat</li><li>Prashant Kushwah</li><li>Abhishek Chaurasia</li><li>Smita Gupta</li><li>Queen Saikia</li>",
 	   "prizes":"",
 	   "maxMembers": 4,
-   		"eid": 32
+   		"eid": 33
 	  }
 	}
 }

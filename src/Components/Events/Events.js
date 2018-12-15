@@ -57,7 +57,7 @@ class Events extends Component {
 		                <span>Events</span>
 		              </div>
 		            </h2>
-		            <Link to="events/info_events">
+		            <Link to="events/onsite_events">
 		              <button type="button" className="fnc-slide__action-btn">
 		              Explore
 		                <span data-text="Explore">Explore</span>

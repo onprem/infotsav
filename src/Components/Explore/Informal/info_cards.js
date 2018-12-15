@@ -6,7 +6,7 @@ import Extab from '../Extab/Extab'
 export const Info_Cards = (props) => {
 	return(
 		<div>
-			{Object.entries(events.informal).map(([key, value]) =>
+			{Object.entries(events.onsite).map(([key, value]) =>
 			    <div key={value.eid} className="info_el">
 			      <div className="info_el__overflow">
 			        <div className="info_el__inner">
