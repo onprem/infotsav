@@ -191,7 +191,8 @@ class App extends Component {
             <Profile {...props} 
               userData={this.state.user} 
               isLoggedIn={this.state.isLoggedIn} 
-              updateLoginState={this.updateLoginState} 
+              updateLoginState={this.updateLoginState}
+              eventData={this.state.userEventReg}
             />} 
           />
           <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
