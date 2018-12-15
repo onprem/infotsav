@@ -42,7 +42,7 @@ const handleSignin = (req,res,db,bcrypt,xss)=>{
 						        const token = jwt.sign(payload, secret, {
 						        	expiresIn: '24d'
 						        });
-						        res.status(200).cookie('token', token, { httpOnly: true }).json(userData)
+						        res.status(200).cookie('token', token, { maxAge: 86400000, httpOnly: true }).json(userData)
 							})
 						})
 						.catch(err => res.status(400).json('Invalid User'))
