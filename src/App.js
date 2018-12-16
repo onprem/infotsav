@@ -124,7 +124,7 @@ class App extends Component {
               eventData={this.state.userEventReg}
             />}
           />
-          <Route path="/events/info_events" exact render={(props) =>
+          <Route path="/events/onsite_events" exact render={(props) =>
             <Informal_Events {...props}
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
