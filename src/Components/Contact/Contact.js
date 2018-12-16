@@ -29,28 +29,13 @@ class Contact extends Component {
     this.contactData= {
     		name: '',
     		email: '',
-    		mobile: '',
+    		phone: '',
     		subject: '',
     		message: ''
     	}
   }
 
   componentWillMount(){
- //  	if(!this.props.isLoggedIn){
-	// 	let err=false;
-	// 	fetch('/api/checkToken')
-	// 	.then(response => {
-	// 		if(response.status!==200)
-	// 			throw(response);
-	// 	    this.setState({ loading: false, redirect: true });
-	// 	    this.props.updateLoginState(true);
-	// 	})
-	// 	.catch(() => {
-	// 		this.setState({ loading: false });
- //  			registerFunctions(this);
-	// 	});
-	// } else this.setState({loading: false, redirect: true});
-
   }
 
   componentDidMount(){
@@ -59,31 +44,29 @@ class Contact extends Component {
 
   requestContact = (contactData) =>{
   	let err = false;
-  	console.log(contactData);
-  	this.setState({responseMessage: "Haha Gotem"});
-	// fetch('/api/contact', {
-	// 	method: 'post',
-	// 	headers: {'Content-type': 'application/json'},
-	// 	body: JSON.stringify({contactData})
-	// })
-	// .then(response => {
-	// 	if(response.status !== 200)
-	// 		err = true;
-	// 	return response.json()
-	// })
-	// .then((user) => {
-	// 	if(err)
-	// 		throw(user);
-	// 	this.setState({responseMessage: user});
-	// })
-	// .catch(err => {this.setState({receivedError: true, responseMessage: err})});
+	fetch('/api/contact', {
+		method: 'post',
+		headers: {'Content-type': 'application/json'},
+		body: JSON.stringify({contactData})
+	})
+	.then(response => {
+		if(response.status !== 200)
+			err = true;
+		return response.json()
+	})
+	.then((user) => {
+		if(err)
+			throw(user);
+		this.setState({responseMessage: user});
+	})
+	.catch(err => {this.setState({receivedError: true, responseMessage: err})});
   }
 
   updateContactData = () =>{
   	this.contactData = {
 		name: this.state.questions[0].value,
 		email: this.state.questions[1].value,
-		mobile: this.state.questions[2].value,
+		phone: this.state.questions[2].value,
 		subject: this.state.questions[3].value,
 		message: this.state.questions[4].value
   	};
@@ -99,9 +82,9 @@ class Contact extends Component {
   		this.updateContactData();
 
   	if(this.state.receivedError){
-  		// setTimeout(()=>{
-  		// 	window.location.reload();
-  		// }, 1200);
+  		setTimeout(()=>{
+  			window.location.reload();
+  		}, 1200);
   	}
 
     return (
@@ -126,7 +109,6 @@ class Contact extends Component {
 					:
 						<div className='f3 white'>
 							{this.state.responseMessage} <br />
-							Your message has been submitted.<br />
 							We will reach to you as soon as possible.
 						</div>
 				:
