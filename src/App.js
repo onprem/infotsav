@@ -13,6 +13,7 @@ import Technical_Events from './Components/Explore/Technical/tech_explore'
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
+import Contact from './Components/Contact/Contact';
 import Team from './Components/Team/Team'
 import Verify from './Components/Verify/Verify';
 import Profile from './Components/Profile/Profile';
@@ -115,6 +116,7 @@ class App extends Component {
           <Route path="/events" exact component={Events} />
           <Route path="/team" exact component={Team} />
           <Route path="/about" exact component={About} />
+          <Route path="/contact" exact component={Contact} />
 
           <Route path="/events/online_events" exact render={(props) =>
             <Online_Events {...props}
