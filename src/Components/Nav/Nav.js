@@ -42,6 +42,7 @@ class Nav extends Component {
 					<Link onClick={this.clickOnSign} to='/login'>LOGOUT</Link>
 				}
 				<Link onClick={this.toggleNavView} to="/team">OUR TEAM</Link>
+				<Link onClick={this.toggleNavView} to="/contact">CONTACT US</Link>
 
 			</nav>
 		</div>

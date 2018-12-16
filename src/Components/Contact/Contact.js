@@ -114,23 +114,23 @@ class Contact extends Component {
 				:
 				    <div id="contact">
 				      <div className="inputContainer">
-				        <input className="inputField" required autoFocus />
+				        <input type="text" name="name" className="inputField" required />
 				        <label className="inputLabel"></label>
 				      </div>
 				      <div className="inputContainer">
-				        <input className="inputField" required />
+				        <input type="text" name="email" className="inputField" required />
 				        <label className="inputLabel"></label>
 				      </div>
 				      <div className="inputContainer">
-				        <input className="inputField" required />
+				        <input type="text" name="phone" className="inputField" required />
 				        <label className="inputLabel"></label>
 				      </div>
 				      <div className="inputContainer">
-				        <input className="inputField" required />
+				        <input type="text" name="subject" className="inputField" required />
 				        <label className="inputLabel"></label>
 				      </div>
 				      <div className="inputContainer">
-				        <textarea className="inputField" rows="4" cols="40"></textarea>
+				        <textarea name="message" className="inputField" rows="4" cols="40"></textarea>
 				        <label className="inputLabel"></label>
 				      </div>
 				      <div className="buttonContainer">

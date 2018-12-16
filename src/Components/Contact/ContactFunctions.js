@@ -38,17 +38,6 @@ export const contactFunctions = (last) => {
   function done() {    
     // remove the box if there is no next question
     contact.className = 'close'
-    
-    // add the h1 at the end with the welcome text
-
-    // var h1 = document.createElement('h1')
-    // h1.appendChild(document.createTextNode('Welcome ' + questions[0].value + '!'))
-    // h1.classList.add('registerDoneDone');
-    // setTimeout(function() {
-    //   register.parentElement.appendChild(h1)     
-    //   setTimeout(function() {h1.style.opacity = 1}, 50)
-    // }, eTime)
-
     last.setState({questions, gotData: true});
     // window.location.href = '/events';
     

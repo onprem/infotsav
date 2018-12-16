@@ -21,7 +21,7 @@ const sendEmail = (sname, semail, sphone, ssubject, smessage) => {
 
 	        let mailOptions = {
 		        from: '"Infotsav" <admin@infotsav.in>', // sender address
-		        to: 'prem@infotsav.in, ubuntu@infotsav.in', // list of receivers
+		        to: 'contact@infotsav.in, ubuntu@infotsav.in', // list of receivers
 		        subject: 'Contact Us: by email '+semail, // Subject line,
 		        text: 'Name: '+sname+' Email: '+semail+' Subject: '+ssubject+' Message: '+msgbasic, // plain text body
 		        html: '<b>Name: </b>'+sname+'<br><br><b>Email: </b>'+semail+'<br><br><b>Subject: </b>'+ssubject+'<br><br><b>Message: </b><br><br><div>'+msg+'</div>'// html body

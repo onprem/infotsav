@@ -112,17 +112,17 @@
     width: 300px;
   }
   .inputContainer {
-    width: 250px;
+    width: 300px;
   }
   .buttonContainer {
     width: 180px;
-    margin-left: 35px;
+    margin-left: 60px;
   }
   .inputLabel {
     font-size: 18px;
   }
   #holditc {
-    height: 30px;
+    height: 50px;
   }
   .headim {
     z-index: 2;
