@@ -42,20 +42,9 @@ const handleEventRegCancel = (req, res, db, xss) =>{
 								.select('event_reg.eid', 'events.ename', 'events.category', 'payment.teamid', 'events.fee', 'payment.status')
 								.where('event_reg.ifid', '=', ifidUser)
 								.then(registrations =>{
-									var subquery = trx('event_reg').where({ifid: ifidUser}).select('teamid');
-									trx('event_reg')
-									.join('users','users.ifid', '=', 'event_reg.ifid')
-									.select('event_reg.eid', 'users.ifid', 'users.name', 'event_reg.teamid')
-									.where('event_reg.teamid', 'in', subquery)
-									.then(teamData =>{
-										let eventData = {
-											userEventReg: registrations,
-											userTeams: teamData,
-										}
-										res.status(200).json(eventData);
-									})
-									.then(trx.commit)
+									res.status(200).json(registrations);
 								})
+								.then(trx.commit)
 							}
 							else {
 								trx('payment')
@@ -68,20 +57,9 @@ const handleEventRegCancel = (req, res, db, xss) =>{
 									.select('event_reg.eid', 'events.ename', 'events.category', 'payment.teamid', 'events.fee', 'payment.status')
 									.where('event_reg.ifid', '=', ifidUser)
 									.then(registrations =>{
-										var subquery = trx('event_reg').where({ifid: ifidUser}).select('teamid');
-										trx('event_reg')
-										.join('users','users.ifid', '=', 'event_reg.ifid')
-										.select('event_reg.eid', 'users.ifid', 'users.name', 'event_reg.teamid')
-										.where('event_reg.teamid', 'in', subquery)
-										.then(teamData =>{
-											let eventData = {
-												userEventReg: registrations,
-												userTeams: teamData,
-											}
-											res.status(200).json(eventData);
-										})
-										.then(trx.commit)
+										res.status(200).json(registrations);
 									})
+									.then(trx.commit)
 								})
 							}
 						})
