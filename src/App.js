@@ -24,6 +24,7 @@ import './App.css';
 
 const initialState = {
   userEventReg: [],
+  userTeams: [],
   user: {
     id: '',
     name: '',
@@ -39,6 +40,7 @@ class App extends Component {
     this.state={
       isLoggedIn: false,
       userEventReg: [],
+      userTeams: [],
       user: {
         id: '',
         name: '',
@@ -67,6 +69,7 @@ class App extends Component {
         throw res;
       this.updateUser(res.user);
       this.updateEvent(res.userEventReg);
+      this.updateEventTeams(res.userTeams);
       this.setState({isLoggedIn: true});
     })
     .catch(console.log);
@@ -90,6 +93,9 @@ class App extends Component {
   }
   updateEvent = (data) =>{
     this.setState({userEventReg: data});
+  }
+  updateEventTeams = (data) =>{
+    this.setState({userTeams: data});
   }
 
   updateUser = (user) =>{
@@ -121,6 +127,8 @@ class App extends Component {
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
+              updateEventTeams={this.updateEventTeams} 
+              eventTeams={this.state.userTeams}
               eventData={this.state.userEventReg}
             />}
           />
@@ -129,6 +137,8 @@ class App extends Component {
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
+              updateEventTeams={this.updateEventTeams} 
+              eventTeams={this.state.userTeams}
               eventData={this.state.userEventReg}
             />}
           />
@@ -137,6 +147,8 @@ class App extends Component {
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
+              updateEventTeams={this.updateEventTeams} 
+              eventTeams={this.state.userTeams}
               eventData={this.state.userEventReg}
             />}
           />
@@ -145,6 +157,8 @@ class App extends Component {
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
+              updateEventTeams={this.updateEventTeams} 
+              eventTeams={this.state.userTeams}
               eventData={this.state.userEventReg}
             />}
           />
@@ -153,6 +167,8 @@ class App extends Component {
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
+              updateEventTeams={this.updateEventTeams} 
+              eventTeams={this.state.userTeams}
               eventData={this.state.userEventReg}
             />}
           />
@@ -161,6 +177,8 @@ class App extends Component {
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
+              updateEventTeams={this.updateEventTeams} 
+              eventTeams={this.state.userTeams}
               eventData={this.state.userEventReg}
             />}
           />
@@ -169,6 +187,8 @@ class App extends Component {
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
+              updateEventTeams={this.updateEventTeams} 
+              eventTeams={this.state.userTeams}
               eventData={this.state.userEventReg}
             />}
           />
@@ -185,6 +205,7 @@ class App extends Component {
               logOut={this.logOut}
               updateLoginState={this.updateLoginState} 
               updateEvent={this.updateEvent} 
+              updateEventTeams={this.updateEventTeams} 
             />}
           />
           <Route path="/profile" render={(props)=> 
@@ -193,6 +214,7 @@ class App extends Component {
               isLoggedIn={this.state.isLoggedIn} 
               updateLoginState={this.updateLoginState}
               eventData={this.state.userEventReg}
+              eventTeams={this.state.userTeams}
             />} 
           />
           <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
