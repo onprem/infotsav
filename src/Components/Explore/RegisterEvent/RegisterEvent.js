@@ -19,6 +19,7 @@ class RegisterEvent extends Component {
 
   componentDidUpdate(prevProps, prevState){
     if(this.props.eventData !== prevProps.eventData){
+      console.log('It runs');
       this.checkIsUserRegistered();
     }
   }
@@ -65,10 +66,12 @@ class RegisterEvent extends Component {
     .then(data => {
       if(error)
         throw(data);
+      console.log(data);
       this.props.updateEvent(data.userEventReg);
       this.props.updateEventTeams(data.userTeams);
     })
     .catch(err => {
+      console.log(err);
       this.setState({error: true, errorMessage: err});
     })
   }
@@ -83,7 +86,10 @@ class RegisterEvent extends Component {
         {(this.state.isUserRegistered)?
           <div className='f3'>Registration done</div>
           :
-          <div className='f3'>Registration not done</div>
+          <div className='flex flex-column items-center'>
+            <div className='f3 mid'>Registration not done</div>
+            <a className="f5 link dim br3 ph3 pv2 ma2 black b buttonBackLogin" onClick={this.registerUserForEvent} >Register</a>
+          </div>
         }
       </div>
       );
