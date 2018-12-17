@@ -32,24 +32,17 @@ const handleSignin = (req,res,db,bcrypt,xss)=>{
 							.select('event_reg.eid', 'events.ename', 'events.category', 'payment.teamid', 'events.fee', 'payment.status')
 							.where('event_reg.ifid', '=', ifid)
 							.then(registrations => {
-								var subquery = db('event_reg').where({ifid}).select('teamid');
-								db('event_reg')
-								.join('users','users.ifid', '=', 'event_reg.ifid')
-								.select('event_reg.eid', 'users.ifid', 'users.name', 'event_reg.teamid')
-								.where('event_reg.teamid', 'in', subquery)
-								.then(teamData =>{
-									let userData = {
-										userEventReg: registrations,
-										userTeams: teamData,
-										user: user[0]
-									}
+								let userData = {
+									userEventReg: registrations,
+									user: user[0]
+								}
+
 								// Issue token
-							        const payload = {email};
-							        const token = jwt.sign(payload, secret, {
-							        	expiresIn: '7d'
-							        });
-							        res.status(200).cookie('token', token, { maxAge: 2419200000, httpOnly: true }).json(userData)
-							    })
+						        const payload = {email};
+						        const token = jwt.sign(payload, secret, {
+						        	expiresIn: '24d'
+						        });
+						        res.status(200).cookie('token', token, { maxAge: 86400000, httpOnly: true }).json(userData)
 							})
 						})
 						.catch(err => res.status(400).json('Invalid User'))

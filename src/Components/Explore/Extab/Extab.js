@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
 import 'react-web-tabs/dist/react-web-tabs.css'
 import './Extab.css';
-import RegisterEvent from '../RegisterEvent/RegisterEvent'
 
 class Extab extends Component {
 
@@ -12,6 +11,7 @@ class Extab extends Component {
     this.state={
     }
   }
+
   componentDidMount(){
   }
 
@@ -63,7 +63,8 @@ class Extab extends Component {
           	</div>
           </TabPanel>
           <TabPanel tabId="three">
-            <RegisterEvent {...this.props} />
+            <div className='f3'>Coming soon!</div>
+            <div className='f3 b underline'></div>
           </TabPanel>
         </Tabs>
     	</div>

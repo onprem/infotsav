@@ -11,20 +11,11 @@
 			.select('event_reg.eid', 'events.ename', 'events.category', 'payment.teamid', 'events.fee', 'payment.status')
 			.where('event_reg.ifid', '=', ifid)
 			.then(registrations => {
-				var subquery = db('event_reg').where({ifid}).select('teamid');
-				db('event_reg')
-				.join('users','users.ifid', '=', 'event_reg.ifid')
-				.select('event_reg.eid', 'users.ifid', 'users.name', 'event_reg.teamid')
-				.where('event_reg.teamid', 'in', subquery)
-				.then(teamData =>{
-					let userData = {
-						userEventReg: registrations,
-						userTeams: teamData,
-						user: user[0]
-					}
-					console.log(teamData);
-					res.status(200).json(userData);
-				})
+				let userData = {
+					userEventReg: registrations,
+					user: user[0]
+				}
+				res.status(200).json(userData);
 			})
 		}
 		else

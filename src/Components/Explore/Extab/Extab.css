@@ -83,8 +83,12 @@
   border-radius: 10px;
 }
 
-/*For event registrations
-*/
-.buttonBackLogin{
-  background: #5fd9fe;
-}
+/*.rwt__tablist{
+  border-bottom: 1px solid #ddd
+}*/
+/*.rwt__tablist .rwt__tab:after {
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    border-bottom: 3px solid #00d8ff;
+}*/
