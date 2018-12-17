@@ -22,7 +22,6 @@
 						userTeams: teamData,
 						user: user[0]
 					}
-					console.log(teamData);
 					res.status(200).json(userData);
 				})
 			})

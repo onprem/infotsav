@@ -63,7 +63,7 @@ class Profile extends Component {
 		  			<Redirect to='/login' />
 	  			:
 	  				<div className="profile-content">
-					    <div class="profile-headin">
+					    <div className="profile-headin">
 					    	<h2 className='mv'>PROFILE</h2>
 			  				<h3 className='mv3 wellc'>Welcome {this.props.userData.name},</h3>
 			  				<div className='profileDetails'>

@@ -6,23 +6,46 @@ class RegisterEvent extends Component {
   constructor(props){
     super(props);
     this.state={
+      isUserRegistered: false
     }
   }
 
   componentDidMount(){
+    this.checkIsUserRegistered();
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    if(this.props.eventData.length !== prevProps.eventData.length){
+      this.checkIsUserRegistered();
+    }
+  }
+
+  checkIsUserRegistered = () => {
+    this.setState({isUserRegistered: false});
+    this.props.eventData.forEach((entry, i) => {
+      if(entry.eid === this.props.eventDetails.eid){
+        this.setState({isUserRegistered: true});
+        return;
+      }
+    });
   }
 
   render() {
-  	const event=this.props.eventDetails;
-    const {isLoggedIn}=this.props;
+    console.log(this.props, this.state.isUserRegistered);
+
+  	const {eventDetails, isLoggedIn} = this.props;
     if(isLoggedIn){
       return(
       <div className='white flex flex-column items-center ma4'>
-        <div className='f3'>Coming soon!</div>
+        {(this.state.isUserRegistered)?
+          <div className='f3'>Registration done</div>
+          :
+          <div className='f3'>Registration not done</div>
+        }
       </div>
-
       );
     }
+
     else return(
       <div className='white flex flex-column items-center ma4'>
         <div className='f3'>Login to continue</div>

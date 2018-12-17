@@ -16,7 +16,7 @@ const Event_Card = ({ename, category, fee, status}) => {
 				</div>
 			  :
 			  	<div className='evtStatus'>
-			  		<span className="payLink"><Link to="#Payment">Pay Rs. {fee}</a></span>
+			  		<span className="payLink"><Link to="#Payment">Pay Rs. {fee}</Link></span>
 			  		<span className="unregLink"><Link to="#un-register">Remove</Link></span>
 			  	</div>
 			}
