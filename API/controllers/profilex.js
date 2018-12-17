@@ -14,17 +14,17 @@
 				var subquery = db('event_reg').where({ifid}).select('teamid');
 				db('event_reg')
 				.join('users','users.ifid', '=', 'event_reg.ifid')
-				.groupBy('event_reg.teamid', 'event_reg.eid', 'event_reg.ifid')
+				.select('event_reg.eid', 'users.ifid', 'users.name', 'event_reg.teamid')
 				.where('event_reg.teamid', 'in', subquery)
-				.then((teamData =>{
+				.then(teamData =>{
 					let userData = {
 						userEventReg: registrations,
 						userTeams: teamData,
 						user: user[0]
 					}
-					// console.log(teamData);
+					console.log(teamData);
 					res.status(200).json(userData);
-				}))
+				})
 			})
 		}
 		else
