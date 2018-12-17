@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Route,Switch} from 'react-router-dom';
 import Lost from './Components/Lost/Lost';
 import Nav from './Components/Nav/Nav';
+import Offline from './Components/_Offline/Offline';
 import Events from './Components/Events/Events';
 import Online_Events from './Components/Explore/Online/online_explore'
 import Informal_Events from './Components/Explore/Informal/info_explore'
@@ -106,6 +107,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Offline />
         <Nav 
           logOut={this.logOut} 
           isLoggedIn={this.state.isLoggedIn} 
