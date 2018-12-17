@@ -1,0 +1,32 @@
+.offline {
+	position: fixed;
+	width: 100%;
+	background: red;
+	text-align: left;
+	padding: 12px 35px;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.35em;
+	font-weight: 700;
+	transform: translateY(-100%);
+	transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+	z-index: 20;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.show-notif{
+	transform: translateY(0);
+}
+.close-notif {
+	margin-left: auto;
+	cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+	.offline {
+		padding-left: 10px;
+		padding-right: 20px;
+		justify-content: center;
+		text-align: center;
+	}
+}

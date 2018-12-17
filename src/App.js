@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Route,Switch} from 'react-router-dom';
 import Lost from './Components/Lost/Lost';
 import Nav from './Components/Nav/Nav';
+import Offline from './Components/_Offline/Offline';
 import Events from './Components/Events/Events';
 import Online_Events from './Components/Explore/Online/online_explore'
 import Informal_Events from './Components/Explore/Informal/info_explore'
@@ -13,6 +14,7 @@ import Technical_Events from './Components/Explore/Technical/tech_explore'
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
+import Contact from './Components/Contact/Contact';
 import Team from './Components/Team/Team'
 import Verify from './Components/Verify/Verify';
 import Profile from './Components/Profile/Profile';
@@ -111,6 +113,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Offline />
         <Nav 
           logOut={this.logOut} 
           isLoggedIn={this.state.isLoggedIn} 
@@ -121,6 +124,7 @@ class App extends Component {
           <Route path="/events" exact component={Events} />
           <Route path="/team" exact component={Team} />
           <Route path="/about" exact component={About} />
+          <Route path="/contact" exact component={Contact} />
 
           <Route path="/events/online_events" exact render={(props) =>
             <Online_Events {...props}
