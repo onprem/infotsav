@@ -2,11 +2,11 @@ const checksum = require('../lib/checksum');
 const config = require('../config');
 //const shortid = require('shortid');
 
-const initPayment = function (amount) {
+const initPayment = function (amount, orderid, custid) {
     return new Promise((resolve, reject) => {
         let paymentObj = {
-            ORDER_ID: 'llll',
-            CUST_ID: 'lll',
+            ORDER_ID: orderid,
+            CUST_ID: custid,
             INDUSTRY_TYPE_ID: config.INDUSTRY_TYPE_ID,
             CHANNEL_ID: config.CHANNEL_ID,
             TXN_AMOUNT: amount.toString(),
