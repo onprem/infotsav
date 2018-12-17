@@ -6,7 +6,10 @@ class RegisterEvent extends Component {
   constructor(props){
     super(props);
     this.state={
-      isUserRegistered: false
+      isUserRegistered: false,
+      userTeamId: '',
+      error: false,
+      errorMessage: ''
     }
   }
 
@@ -15,19 +18,59 @@ class RegisterEvent extends Component {
   }
 
   componentDidUpdate(prevProps, prevState){
-    if(this.props.eventData.length !== prevProps.eventData.length){
+    if(this.props.eventData !== prevProps.eventData){
       this.checkIsUserRegistered();
     }
   }
 
   checkIsUserRegistered = () => {
-    this.setState({isUserRegistered: false});
+    this.setState({isUserRegistered: false, userTeamId: ''});
     this.props.eventData.forEach((entry, i) => {
       if(entry.eid === this.props.eventDetails.eid){
-        this.setState({isUserRegistered: true});
+        this.setState({isUserRegistered: true, userTeamId: entry.teamid});
         return;
       }
     });
+  }
+
+  registerUserForEvent = (event) => {
+    let body;
+    if(this.props.isUserRegistered){
+      body = {
+        init: 0,
+        ifid: event.target.value,
+        eid: this.props.eventDetails.eid,
+        teamid: this.state.userTeamId
+      }
+    }
+    else {
+      body = {
+        init: 1,
+        ifid: this.props.userData.id,
+        eid: this.props.eventDetails.eid
+      };
+    }
+
+    let error=false;
+    fetch('/api/eventReg', {
+      method: 'post',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify(body)
+    })
+    .then(response => {
+      if(response.status!==200)
+        error = true;
+      return response.json();
+    })
+    .then(data => {
+      if(error)
+        throw(data);
+      this.props.updateEvent(data.userEventReg);
+      this.props.updateEventTeams(data.userTeams);
+    })
+    .catch(err => {
+      this.setState({error: true, errorMessage: err});
+    })
   }
 
   render() {
