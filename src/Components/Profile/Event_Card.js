@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, Redirect} from 'react-router-dom';
 
-const Big_Card = ({ename, category, fee, status}) => {
+const Event_Card = ({ename, category, fee, status}) => {
 	return(
 		<div className='evtCard'>
 			<div className='evtName'>
@@ -16,7 +16,7 @@ const Big_Card = ({ename, category, fee, status}) => {
 				</div>
 			  :
 			  	<div className='evtStatus'>
-			  		<span className="payLink"><Link to='#payment-gateway'>Pay Rs. {fee}</Link></span>
+			  		<span className="payLink"><Link to="#Payment">Pay Rs. {fee}</a></span>
 			  		<span className="unregLink"><Link to="#un-register">Remove</Link></span>
 			  	</div>
 			}
@@ -25,4 +25,4 @@ const Big_Card = ({ename, category, fee, status}) => {
 		);
 }
 
-export default Big_Card;
+export default Event_Card;

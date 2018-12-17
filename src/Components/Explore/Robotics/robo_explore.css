@@ -1,5 +1,5 @@
 .robo_el {
-  width: 19.2%;
+  width: 16%;
 }
 .robo_el:nth-child(1) {
   -webkit-transform: translate3d(0%, 0, 0);
@@ -101,7 +101,6 @@
   transition-delay: 0.3s;
   background-image: url("../../../assets/photos/ultron.jpg");
 }
-
 .robo_el:nth-child(5) {
   -webkit-transform: translate3d(420.8333333333%, 0, 0);
           transform: translate3d(420.8333333333%, 0, 0);
@@ -120,10 +119,35 @@
   transition-delay: 0.4s;
 }
 .robo_el:nth-child(5) .robo_el__bg {
+  -webkit-transform: translate3d(-61.44%, 0, 0);
+          transform: translate3d(-61.44%, 0, 0);
+}
+.robo_el:nth-child(5) .robo_el__bg:before {
+  transition-delay: 0.4s;
+  background-image: url("../../../assets/photos/ultron.jpg");
+}
+.robo_el:nth-child(6) {
+  -webkit-transform: translate3d(526.041333333%, 0, 0);
+          transform: translate3d(526.041333333%, 0, 0);
+  -webkit-transform-origin: 575.8333333333% 50%;
+          transform-origin: 575.8333333333% 50%;
+}
+.robo_cont.s--robo_el-active .robo_el:nth-child(6):not(.s--active) {
+  -webkit-transform: scale(0.5) translate3d(526.041333333%, 0, 0);
+          transform: scale(0.5) translate3d(526.041333333%, 0, 0);
+  opacity: 0;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.robo_el:nth-child(6) .robo_el__inner {
+  transition-delay: 0.5s;
+}
+.robo_el:nth-child(6) .robo_el__bg {
   -webkit-transform: translate3d(-76.8%, 0, 0);
           transform: translate3d(-76.8%, 0, 0);
 }
-.robo_el:nth-child(5) .robo_el__bg:before {
+.robo_el:nth-child(6) .robo_el__bg:before {
   transition-delay: 0.4s;
   background-image: url("../../../assets/photos/ultron.jpg");
 }
