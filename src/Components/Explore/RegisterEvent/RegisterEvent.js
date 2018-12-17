@@ -88,7 +88,6 @@ class RegisterEvent extends Component {
       </div>
       );
     }
-
     else return(
       <div className='white flex flex-column items-center ma4'>
         <div className='f3'>Login to continue</div>

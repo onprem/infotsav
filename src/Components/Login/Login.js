@@ -71,6 +71,7 @@ class Login extends Component {
 			throw(user);
 		this.props.updateLoginState(true);
 		this.props.updateEvent(user.userEventReg);
+		this.props.updateEventTeams(user.userTeams);
 		this.props.updateUser(user.user);
 		this.setState({
 			gotUserData: true, 
