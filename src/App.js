@@ -219,6 +219,8 @@ class App extends Component {
               updateLoginState={this.updateLoginState}
               eventData={this.state.userEventReg}
               eventTeams={this.state.userTeams}
+              updateEvent={this.updateEvent} 
+              updateEventTeams={this.updateEventTeams} 
             />} 
           />
           <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />

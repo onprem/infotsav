@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, Redirect} from 'react-router-dom';
 
-const Event_Card = ({ename, category, fee, status}) => {
+const Event_Card = ({ename, category, eid, fee, status, deregEvent}) => {
 	return(
 		<div className='evtCard'>
 			<div className='evtName'>
@@ -16,8 +16,8 @@ const Event_Card = ({ename, category, fee, status}) => {
 				</div>
 			  :
 			  	<div className='evtStatus'>
-			  		<span className="payLink"><Link to="#Payment">Pay Rs. {fee}</Link></span>
-			  		<span className="unregLink"><Link to="#un-register">Remove</Link></span>
+			  		<Link to="#Payment"><span className="payLink">Pay Rs. {fee}</span></Link>
+			  		<a className='pointer' onClick={() => deregEvent(eid)}><span className="unregLink">Remove</span></a>
 			  	</div>
 			}
 		</div>

@@ -16,6 +16,8 @@ class Profile extends Component {
     this.state={
     	loading: true,
 	    redirect: false,
+	    error: false,
+	    errorMessage: ''
 	};
   }
 
@@ -33,6 +35,34 @@ class Profile extends Component {
 	} else this.setState({loading: false});
   }
 
+  deregEvent = (eid) => {
+  	let error=false;
+    fetch('/api/eventRegCancel', {
+      method: 'post',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify({
+      	ifid: this.props.userData.id,
+      	eid: eid
+      })
+    })
+    .then(response => {
+      if(response.status!==200)
+        error = true;
+      return response.json();
+    })
+    .then(data => {
+      if(error)
+        throw(data);
+      console.log(data);
+      this.props.updateEvent(data.userEventReg);
+      this.props.updateEventTeams(data.userTeams);
+    })
+    .catch(err => {
+      console.log(err);
+      this.setState({error: true, errorMessage: err});
+    })
+  }
+  
   render() {
   	const { loading, redirect } = this.state;
   	const lenEvt = this.props.eventData.length;
@@ -40,10 +70,13 @@ class Profile extends Component {
 		const evtComponent = event.map((evt, i) => {
 			return <Event_Card 
 			key={i} 
-			ename={event[i].ename} 
+			ename={event[i].ename}
+			eid = {event[i].eid}
 			category={event[i].category}
 			fee={event[i].fee} 
-			status={event[i].status} /> 
+			status={event[i].status} 
+		 	deregEvent={this.deregEvent}
+	 		/> 
 		});
 		return (
 			<div>
@@ -63,7 +96,7 @@ class Profile extends Component {
 		  			<Redirect to='/login' />
 	  			:
 	  				<div className="profile-content">
-					    <div class="profile-headin">
+					    <div className="profile-headin">
 					    	<h2 className='mv'>PROFILE</h2>
 			  				<h3 className='mv3 wellc'>Welcome {this.props.userData.name},</h3>
 			  				<div className='profileDetails'>
