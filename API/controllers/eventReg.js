@@ -1,3 +1,4 @@
+const randomstring = require("randomstring");
 
 const handleEventReg = (req, res, db, xss) =>{
 	const xssOptions = {
@@ -13,7 +14,7 @@ const handleEventReg = (req, res, db, xss) =>{
 	const email = req.email;
 
 	if(init){
-		teamid = ifid+'-'+eid;
+		teamid = ifid+'-'+eid+randomstring.generate(2);
 	}
 	else {
 		teamid = req.body.teamid;

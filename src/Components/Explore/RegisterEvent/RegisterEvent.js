@@ -13,7 +13,8 @@ class RegisterEvent extends Component {
       isTeamEvent: false,
       error: false,
       errorMessage: '',
-      field: ''
+      field: '',
+      payStatus: 0
     }
   }
   componentWillMount(){
@@ -67,10 +68,10 @@ class RegisterEvent extends Component {
   }
   
   checkIsUserRegistered = () => {
-    this.setState({isUserRegistered: false, userTeamId: ''});
+    this.setState({isUserRegistered: false, userTeamId: '', payStatus: 0});
     this.props.eventData.forEach((entry, i) => {
       if(entry.eid === this.props.eventDetails.eid){
-        this.setState({isUserRegistered: true, userTeamId: entry.teamid});
+        this.setState({isUserRegistered: true, userTeamId: entry.teamid, payStatus: entry.status});
         if(this.state.isTeamEvent)
           this.checkIfTeamExists();
         return;
@@ -89,7 +90,7 @@ class RegisterEvent extends Component {
 
   registerUserForEvent = (field) => {
     let body;
-    if(this.props.isUserRegistered){
+    if(this.state.isUserRegistered){
       body = {
         init: 0,
         ifid: field,
@@ -158,7 +159,7 @@ class RegisterEvent extends Component {
   }
 
   render() {
-    console.log(this.state.field);
+    console.log(this.props);
     const {eventDetails, isLoggedIn, userData} = this.props;
 
     const TeamList = ({team}) => {
@@ -168,6 +169,7 @@ class RegisterEvent extends Component {
             serial={parseInt(i)+2}
             mid={member.ifid}
             mname={member.name}
+            paid={this.state.payStatus}
             deregEvent={this.deregEvent}
           />
       );
@@ -188,7 +190,10 @@ class RegisterEvent extends Component {
                 <td className="pv3 pr3 bb b--white-20">{userData.name}</td>
                 <td className="pv3 pr3 bb b--white-20">{userData.id}</td>
                 <td className="pv3 pr3 bb b--white-20">
+                {(!this.state.payStatus)?
                   <a className='pointer dim' onClick={() => this.deregEvent(this.props.userData.id)}><span>Remove</span></a>
+                  : <div />
+                }
                 </td>
               </tr>
               {teamComponent}
@@ -205,6 +210,7 @@ class RegisterEvent extends Component {
               <div className=''>
                 <div className='f3 b underline ma4-ns ma1'>Registrations</div>
                 <TeamList team={this.state.userTeamMembers} />
+                {(this.state.error)?<div className='red f4 mid mh4-ns mv1-ns ma1'>{this.state.errorMessage}</div> : <div /> }
                 {((this.state.userTeamMembers.length+1)<eventDetails.maxMembers)?
                     <div className='flex flex-row items-center flex-wrap ma4-ns ma1'>
                       <input className="idTextField pa2 f4 input-reset ba bg-white b br4 w5" 
@@ -221,11 +227,13 @@ class RegisterEvent extends Component {
               <div className='flex flex-column items-center'>
                 <div className='f3 mid'>Register now!</div>
                 <a className="f5 link dim br3 ph3 pv2 ma2 black b buttonBackLogin" onClick={this.registerUserForEvent} >Register</a>
+                {(this.state.error)?<div className='red f4 mid'>{this.state.errorMessage}</div> : <div /> }
               </div>
             }
           </div>
           <div className='white flex flex-column mt4 mh2-ns mh0'>
             <div className='f5'>* Max members in a team - {eventDetails.maxMembers}</div>
+            {(this.state.isUserRegistered && !this.state.payStatus)? <div className='f5'>** Complete payment from profile</div> : <div /> }
           </div>
         </div>
       );
