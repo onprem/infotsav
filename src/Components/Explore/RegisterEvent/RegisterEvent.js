@@ -98,7 +98,33 @@ class RegisterEvent extends Component {
     .then(data => {
       if(error)
         throw(data);
-      console.log(data);
+      this.props.updateEvent(data.userEventReg);
+      this.props.updateEventTeams(data.userTeams);
+    })
+    .catch(err => {
+      console.log(err);
+      this.setState({error: true, errorMessage: err});
+    })
+  }
+
+  deregEvent = (Tifid) => {
+    let error=false;
+    fetch('/api/eventRegCancel', {
+      method: 'post',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify({
+        ifid: Tifid,
+        eid: this.props.eventDetails.eid
+      })
+    })
+    .then(response => {
+      if(response.status!==200)
+        error = true;
+      return response.json();
+    })
+    .then(data => {
+      if(error)
+        throw(data);
       this.props.updateEvent(data.userEventReg);
       this.props.updateEventTeams(data.userTeams);
     })
@@ -109,7 +135,6 @@ class RegisterEvent extends Component {
   }
 
   render() {
-    console.log(this.props, this.state.userTeamMembers);
     const {eventDetails, isLoggedIn, userData} = this.props;
 
     const TeamList = ({team}) => {
@@ -118,26 +143,29 @@ class RegisterEvent extends Component {
             key={i}
             serial={parseInt(i)+2}
             mid={member.ifid}
-            mname = {member.name}
+            mname={member.name}
+            deregEvent={this.deregEvent}
           />
       );
       return (
-        <div className='white flex flex-column items-center'>
-          <table className="f6 w-100 mw8 center" cellSpacing="0">
+        <div className='white flex flex-column items-center w-100 mh4'>
+          <table className="f4 w-100" cellSpacing="0">
             <thead>
               <tr>
                 <th className="fw6 bb b--white-20 tl pb3 pr3">Index</th>
-                <th className="fw6 bb b--black-20 tl pb3 pr3">Name</th>
-                <th className="fw6 bb b--black-20 tl pb3 pr3">IF-ID</th>
-                <th className="fw6 bb b--black-20 tl pb3 pr3">Remove</th>
+                <th className="fw6 bb b--white-20 tl pb3 pr3">Name</th>
+                <th className="fw6 bb b--white-20 tl pb3 pr3">IF-ID</th>
+                <th className="fw6 bb b--white-20 tl pb3 pr3">Remove</th>
               </tr>
             </thead>
             <tbody className="lh-copy">
               <tr>
-                <td className="pv3 pr3 bb b--black-20">1.</td>
-                <td className="pv3 pr3 bb b--black-20">{userData.name}</td>
-                <td className="pv3 pr3 bb b--black-20">{userData.id}</td>
-                <td className="pv3 pr3 bb b--black-20">Remove</td>
+                <td className="pv3 pr3 bb b--white-20">1.</td>
+                <td className="pv3 pr3 bb b--white-20">{userData.name}</td>
+                <td className="pv3 pr3 bb b--white-20">{userData.id}</td>
+                <td className="pv3 pr3 bb b--white-20">
+                  <a className='pointer' onClick={() => this.deregEvent(this.props.userData.id)}><span>Remove</span></a>
+                </td>
               </tr>
               {teamComponent}
             </tbody>
@@ -148,9 +176,10 @@ class RegisterEvent extends Component {
     if(isLoggedIn){
       return(
         <div>
-          <div className='white flex flex-column items-center ma4'>
+          <div className='white '>
             {(this.state.isUserRegistered)?
               <div className=''>
+                <div className='f3 b underline ma4'>Registrations</div>
                 <TeamList team={this.state.userTeamMembers} />
               </div>
               :
@@ -160,8 +189,8 @@ class RegisterEvent extends Component {
               </div>
             }
           </div>
-          <div className='white flex flex-column mt4 ml2'>
-            <div className='f4'>* Max members in a team - {eventDetails.maxMembers}</div>
+          <div className='white flex flex-column mt4 mh2'>
+            <div className='f5'>* Max members in a team - {eventDetails.maxMembers}</div>
           </div>
         </div>
       );

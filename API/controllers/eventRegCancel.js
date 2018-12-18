@@ -32,7 +32,6 @@ const handleEventRegCancel = (req, res, db, xss) =>{
 								return trx('event_reg').select('*')
 								.where({teamid: tid})
 								.then((entries) => {
-									console.log('Haha', entries, entries.length);
 									if(entries.length){
 										trx('event_reg')
 										.join('payment', 'event_reg.teamid', '=', 'payment.teamid')
