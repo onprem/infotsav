@@ -69,16 +69,20 @@ class Login extends Component {
 	.then((user) => {
 		if(error)
 			throw(user);
-		this.props.updateLoginState(true);
-		this.props.updateEvent(user.userEventReg);
-		this.props.updateEventTeams(user.userTeams);
-		this.props.updateUser(user.user);
+		this.updateAllData(user);
 		this.setState({
 			gotUserData: true, 
 			verification: user.user.confirm
 		})
 	})
 	.catch(err => this.setState({errorRes: err}));
+  }
+
+  updateAllData = (user) => {
+	this.props.updateLoginState(true);
+	this.props.updateUser(user.user);
+	this.props.updateEvent(user.userEventReg);
+	this.props.updateEventTeams(user.userTeams);
   }
 
   render() {

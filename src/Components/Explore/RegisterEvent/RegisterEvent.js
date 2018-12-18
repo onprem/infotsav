@@ -31,7 +31,6 @@ class RegisterEvent extends Component {
 
   componentDidUpdate(prevProps, prevState){
     if(this.props.eventData !== prevProps.eventData){
-      console.log('It runs');
       this.checkIsUserRegistered();
     }
   }
@@ -97,7 +96,9 @@ class RegisterEvent extends Component {
         <div>
           <div className='white flex flex-column items-center ma4'>
             {(this.state.isUserRegistered)?
-              <div className='f3'>Registration done</div>
+              <div className='f3'>
+                Registration done
+              </div>
               :
               <div className='flex flex-column items-center'>
                 <div className='f3 mid'>Register now!</div>

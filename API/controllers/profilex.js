@@ -29,7 +29,7 @@
 		else
 			res.status(404).json('No such user');
 	})
-	.catch(err => res.status(404).json('Something is wrong'));
+	.catch(err => res.status(400).json('Something is wrong'));
 }
 
 module.exports={
