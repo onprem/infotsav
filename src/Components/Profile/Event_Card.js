@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, Redirect} from 'react-router-dom';
 
-const Event_Card = ({ename, category, eid, fee, status, deregEvent}) => {
+const Event_Card = ({ename, category, eid, fee, status, teamid, deregEvent, payEvent}) => {
 	let linkTo;
 	switch(category){
 		case "online": linkTo='/events/online_events'; break;
@@ -13,7 +13,6 @@ const Event_Card = ({ename, category, eid, fee, status, deregEvent}) => {
 		case "technical": linkTo='/events/tech_events'; break;
 		default: linkTo='/events'
 	}
-
 	return(
 		<div className='evtCard'>
 			<div className='evtName'>
@@ -28,7 +27,7 @@ const Event_Card = ({ename, category, eid, fee, status, deregEvent}) => {
 				</div>
 			  :
 			  	<div className='evtStatus'>
-			  		<Link to="#Payment" className="payLink"><span >Pay Rs. {fee}</span></Link>
+			  		<a className='pointer payLink' onClick={() => payEvent(eid, fee, teamid)}><span>Pay Rs. {fee}</span></a>
 			  		<a className='pointer' onClick={() => deregEvent(eid)}><span className="unregLink">Remove</span></a>
 			  	</div>
 			}
