@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import TeamCard from './TeamCard';
 
 class RegisterEvent extends Component {
 
@@ -8,6 +9,8 @@ class RegisterEvent extends Component {
     this.state={
       isUserRegistered: false,
       userTeamId: '',
+      userTeamMembers: [],
+      isTeamEvent: false,
       error: false,
       errorMessage: ''
     }
@@ -27,11 +30,18 @@ class RegisterEvent extends Component {
 
   componentDidMount(){
     this.checkIsUserRegistered();
+    if(this.props.eventDetails.maxMembers>1){
+      this.setState({isTeamEvent: true})
+    }
   }
 
   componentDidUpdate(prevProps, prevState){
     if(this.props.eventData !== prevProps.eventData){
       this.checkIsUserRegistered();
+    }
+    else if(this.props.eventTeams !== prevProps.eventTeams || this.state.userTeamId !== prevState.userTeamId){
+      if(this.state.isTeamEvent)
+        this.checkIfTeamExists();
     }
   }
 
@@ -40,9 +50,20 @@ class RegisterEvent extends Component {
     this.props.eventData.forEach((entry, i) => {
       if(entry.eid === this.props.eventDetails.eid){
         this.setState({isUserRegistered: true, userTeamId: entry.teamid});
+        if(this.state.isTeamEvent)
+          this.checkIfTeamExists();
         return;
       }
     });
+  }
+
+  checkIfTeamExists = () => {
+    this.setState({userTeamMembers: []});
+    this.props.eventTeams.forEach((team, i) => {
+      if(team.teamid === this.state.userTeamId && team.ifid !== this.props.userData.id){
+        this.setState(prevState => ({userTeamMembers: [...prevState.userTeamMembers, team]}));
+      }
+    })
   }
 
   registerUserForEvent = (event) => {
@@ -88,16 +109,49 @@ class RegisterEvent extends Component {
   }
 
   render() {
-    console.log(this.props, this.state.isUserRegistered);
+    console.log(this.props, this.state.userTeamMembers);
+    const {eventDetails, isLoggedIn, userData} = this.props;
 
-  	const {eventDetails, isLoggedIn} = this.props;
+    const TeamList = ({team}) => {
+      const teamComponent = team.map((member, i) =>
+          <TeamCard 
+            key={i}
+            serial={parseInt(i)+2}
+            mid={member.ifid}
+            mname = {member.name}
+          />
+      );
+      return (
+        <div className='white flex flex-column items-center'>
+          <table className="f6 w-100 mw8 center" cellSpacing="0">
+            <thead>
+              <tr>
+                <th className="fw6 bb b--white-20 tl pb3 pr3">Index</th>
+                <th className="fw6 bb b--black-20 tl pb3 pr3">Name</th>
+                <th className="fw6 bb b--black-20 tl pb3 pr3">IF-ID</th>
+                <th className="fw6 bb b--black-20 tl pb3 pr3">Remove</th>
+              </tr>
+            </thead>
+            <tbody className="lh-copy">
+              <tr>
+                <td className="pv3 pr3 bb b--black-20">1.</td>
+                <td className="pv3 pr3 bb b--black-20">{userData.name}</td>
+                <td className="pv3 pr3 bb b--black-20">{userData.id}</td>
+                <td className="pv3 pr3 bb b--black-20">Remove</td>
+              </tr>
+              {teamComponent}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
     if(isLoggedIn){
       return(
         <div>
           <div className='white flex flex-column items-center ma4'>
             {(this.state.isUserRegistered)?
-              <div className='f3'>
-                Registration done
+              <div className=''>
+                <TeamList team={this.state.userTeamMembers} />
               </div>
               :
               <div className='flex flex-column items-center'>
