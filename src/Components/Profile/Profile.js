@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link, Redirect} from 'react-router-dom';
+import queryString from 'query-string';
 import {Footer} from '../Footer/Footer';
 import '../../assets/css/solid.min.css'
 import '../../assets/css/fontawesome.min.css'
@@ -62,6 +63,50 @@ class Profile extends Component {
       this.setState({error: true, errorMessage: err});
     })
   }
+
+  payEvent = (eid, fee, teamid) => {
+  	let error=false;
+  	console.log('fetching payload.....');
+  	console.log(this.props.userData.id+' '+eid+' '+fee+' '+teamid);
+    fetch('/api/eventPayment', {
+      method: 'post',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify({
+      	ifid: this.props.userData.id,
+      	eid: eid.toString(),
+      	fee: fee,
+      	teamid: teamid
+      })
+    })
+    .then(response => {
+      if(response.status!==200)
+        error = true;
+      return response.json();
+    })
+    .then(data => {
+      if(error)
+        throw(data);
+      console.log(data);
+      var params = '';
+      const stringified = queryString.stringify(data);
+      console.log('--------------');
+      console.log(stringified);
+   //    Object.keys(data).forEach(function(key) {
+	  //   params.append(key, data[key]);
+	  //   params = params+
+	  // });
+      fetch('https://securegw-stage.paytm.in/theia/processTransaction', { method: 'POST', body: stringified })
+		    .then(res => {
+		    	console.log('--------------');
+		    	console.log(res);
+		    });
+      //todo: request paytm with this data
+    })
+    .catch(err => {
+      console.log(err);
+      this.setState({error: true, errorMessage: err});
+    })
+  }
   
   render() {
   	const { loading, redirect } = this.state;
@@ -75,7 +120,9 @@ class Profile extends Component {
 			category={event[i].category}
 			fee={event[i].fee} 
 			status={event[i].status} 
-		 	deregEvent={this.deregEvent}
+			teamid={event[i].teamid} 
+		 	deregEvent={this.deregEvent} 
+		 	payEvent={this.payEvent}
 	 		/> 
 		});
 		return (
