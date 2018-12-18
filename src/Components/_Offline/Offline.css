@@ -1,5 +1,6 @@
 .offline {
 	position: fixed;
+	top: 0;
 	width: 100%;
 	background: red;
 	text-align: left;
@@ -8,7 +9,7 @@
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.35em;
 	font-weight: 700;
-	transform: translateY(-100%);
+	transform: translateY(-150%);
 	transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 	z-index: 20;
 	display: flex;
@@ -22,7 +23,7 @@
 	margin-left: auto;
 	cursor: pointer;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 	.offline {
 		padding-left: 10px;
 		padding-right: 20px;
