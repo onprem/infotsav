@@ -128,6 +128,7 @@ class App extends Component {
 
           <Route path="/events/online_events" exact render={(props) =>
             <Online_Events {...props}
+              updateLoginState={this.updateLoginState} 
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
@@ -138,6 +139,7 @@ class App extends Component {
           />
           <Route path="/events/onsite_events" exact render={(props) =>
             <Informal_Events {...props}
+              updateLoginState={this.updateLoginState} 
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
@@ -148,6 +150,7 @@ class App extends Component {
           />
           <Route path="/events/gamiacs_events" exact render={(props) =>
             <Gamiacs_Events {...props}
+              updateLoginState={this.updateLoginState} 
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
@@ -158,6 +161,7 @@ class App extends Component {
           />
           <Route path="/events/man_events" exact render={(props) =>
             <Managerial_Events {...props}
+              updateLoginState={this.updateLoginState} 
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
@@ -168,6 +172,7 @@ class App extends Component {
           />
           <Route path="/events/robo_events" exact render={(props) =>
             <Robotics_Events {...props}
+              updateLoginState={this.updateLoginState} 
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
@@ -178,6 +183,7 @@ class App extends Component {
           />
           <Route path="/events/susp_events" exact render={(props) =>
             <SUSP_Events {...props}
+              updateLoginState={this.updateLoginState} 
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}
@@ -188,6 +194,7 @@ class App extends Component {
           />
           <Route path="/events/tech_events" exact render={(props) =>
             <Technical_Events {...props}
+              updateLoginState={this.updateLoginState} 
               isLoggedIn={this.state.isLoggedIn}
               updateEvent={this.updateEvent}
               userData={this.state.user}

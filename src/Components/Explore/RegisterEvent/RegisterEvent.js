@@ -12,6 +12,18 @@ class RegisterEvent extends Component {
       errorMessage: ''
     }
   }
+  componentWillMount(){
+    if(!this.props.isLoggedIn){
+      let err=false;
+      fetch('/api/checkToken')
+      .then(response => {
+        if(response.status!==200)
+          throw(response);
+        this.props.updateLoginState(true);
+      })
+      .catch(console.log);
+    }
+  }
 
   componentDidMount(){
     this.checkIsUserRegistered();
@@ -82,16 +94,21 @@ class RegisterEvent extends Component {
   	const {eventDetails, isLoggedIn} = this.props;
     if(isLoggedIn){
       return(
-      <div className='white flex flex-column items-center ma4'>
-        {(this.state.isUserRegistered)?
-          <div className='f3'>Registration done</div>
-          :
-          <div className='flex flex-column items-center'>
-            <div className='f3 mid'>Registration not done</div>
-            <a className="f5 link dim br3 ph3 pv2 ma2 black b buttonBackLogin" onClick={this.registerUserForEvent} >Register</a>
+        <div>
+          <div className='white flex flex-column items-center ma4'>
+            {(this.state.isUserRegistered)?
+              <div className='f3'>Registration done</div>
+              :
+              <div className='flex flex-column items-center'>
+                <div className='f3 mid'>Register now!</div>
+                <a className="f5 link dim br3 ph3 pv2 ma2 black b buttonBackLogin" onClick={this.registerUserForEvent} >Register</a>
+              </div>
+            }
           </div>
-        }
-      </div>
+          <div className='white flex flex-column mt4 ml2'>
+            <div className='f4'>* Max members in a team - {eventDetails.maxMembers}</div>
+          </div>
+        </div>
       );
     }
     else return(
