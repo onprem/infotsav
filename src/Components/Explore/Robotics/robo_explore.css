@@ -222,4 +222,14 @@
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
+    .robo_el:nth-child(6) {
+    -webkit-transform: translate3d(0, 526.041333333%, 0);
+            transform: translate3d(0, 526.041333333%, 0);
+    -webkit-transform-origin: 575.8333333333% 50%;
+            transform-origin: 575.8333333333% 50%;
+  }
+  .robo_el:nth-child(6) .robo_el__bg {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
 }
