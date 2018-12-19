@@ -41,17 +41,13 @@ class Team extends Component {
 	        //Down scroll
 	        ticking = true;
 	        if (currentSlideNumber !== totalSlideNumber - 1) {
-	          currentSlideNumber++;
-	          nextItem();
+	          this.nextItem();
 	        }
 	        slideDurationTimeout(slideDurationSetting);
 	      }
 	      if (delta >= scrollSensitivitySetting) {
 	        //Up scroll
 	        ticking = true;
-	        if (currentSlideNumber !== 0) {
-	          currentSlideNumber--;
-	        }
 	        previousItem();
 	        slideDurationTimeout(slideDurationSetting);
 	      }
@@ -70,13 +66,17 @@ class Team extends Component {
 	  window.addEventListener(this.mousewheelEvent, this.parallaxScroll, false);
 
 	  // ------------- SLIDE MOTION ------------- //
-	  function nextItem() {
+	  this.nextItem = () => {
+        currentSlideNumber++;
 	    var $previousSlide = document.getElementsByClassName("background")[currentSlideNumber-1];
 	    $previousSlide.classList.remove("up-scroll");
 	    $previousSlide.classList.add("down-scroll");
 	  }
 
 	  function previousItem() {
+	  	if (currentSlideNumber !== 0) {
+            currentSlideNumber--;
+        }
 	    var $currentSlide = document.getElementsByClassName("background")[currentSlideNumber];
 	    $currentSlide.classList.add("up-scroll");
 	    $currentSlide.classList.remove("down-scroll");
@@ -97,7 +97,7 @@ class Team extends Component {
 							<CoordList coord={coord} />
 						</div>
 				   </div>
-				   <div class="scroll-down"></div>
+				   <div className="scroll-down" onClick={() => this.nextItem()}></div>
 				 </section>
 				 <section className="background">
 				   <div className="content-wrapper">
@@ -106,7 +106,7 @@ class Team extends Component {
 							<EmtList emts={emts} />
 						</div>
 				   </div>
-				   <div class="scroll-down"></div>
+				   <div className="scroll-down" onClick={() => this.nextItem()}></div>
 				 </section>
 			  	 <section className="background">
 			       <div className="content-wrapper">
@@ -115,7 +115,7 @@ class Team extends Component {
 							<TMList TMheads={TMheads} />
 						</div>
 			       </div>
-			       <div class="scroll-down"></div>
+			       <div className="scroll-down" onClick={() => this.nextItem()}></div>
 			     </section>
 			     <section className="background">
 			       <div className="content-wrapper">
