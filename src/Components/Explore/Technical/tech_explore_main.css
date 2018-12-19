@@ -359,9 +359,12 @@ body {
     font-size: 20px;
   }
   .tech_el__close-btn {
-    right: 5px;
+    right: 10px;
     top: 2px;
-    width: 50px;
+    width: 40px;
+  }
+  .tech_el__close-btn:before, .tech_el__close-btn:after {
+  height: 5px;
   }
   .tech_el.s--active {
     -webkit-transform: translate3d(0, 0, 0);

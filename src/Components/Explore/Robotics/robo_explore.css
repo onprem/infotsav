@@ -154,7 +154,7 @@
 
 @media only screen and (max-width: 1000px) {
   .robo_el {
-    height: 19.2% !important;
+    height: 16% !important;
   }
 
   .robo_cont.s--robo_el-active .robo_el:nth-child(1):not(.s--active) {

@@ -358,9 +358,12 @@ body {
     font-size: 20px;
   }
   .robo_el__close-btn {
-    right: 5px;
+    right: 10px;
     top: 2px;
-    width: 50px;
+    width: 40px;
+  }
+  .robo_el__close-btn:before, .robo_el__close-btn:after {
+  height: 5px;
   }
   .robo_el.s--active {
     -webkit-transform: translate3d(0, 0, 0);

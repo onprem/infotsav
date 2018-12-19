@@ -357,9 +357,12 @@ body {
     font-size: 20px;
   }
   .man_el__close-btn {
-    right: 5px;
+    right: 10px;
     top: 2px;
-    width: 50px;
+    width: 40px;
+  }
+  .man_el__close-btn:before, .man_el__close-btn:after {
+  height: 5px;
   }
   .man_el.s--active {
     -webkit-transform: translate3d(0, 0, 0);
