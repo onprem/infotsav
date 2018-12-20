@@ -6,21 +6,27 @@ const handleCallback = (req,res, db) =>{
 	console.log(req.body);
 	paytmIndex.responsePayment(req.body).then(
         success => {
-            var responseData = success;
             console.log('-----------------responseData----------');
-            console.log(responseData);
+            console.log(success);
             var JsonData = {
-            	MID: responseData.MID,
-            	ORDERID: responseData.ORDERID,
-            	CHECKSUMHASH: responseData.CHECKSUMHASH
+            	MID: success.MID,
+            	ORDERID: success.ORDERID,
+            	CHECKSUMHASH: success.CHECKSUMHASH
             };
             console.log('-----------------JsonData----------');
             console.log(JsonData);
-            fetch('https://securegw-stage.paytm.in/merchant-status/getTxnStatus', {
+            function fetch_retry(url, options, n) {
+			    return fetch(url, options).catch(function(error) {
+			        if (n === 1) throw error;
+			        return fetch_retry(url, options, n - 1);
+			    });
+			}
+            fetch_retry('https://securegw-stage.paytm.in/merchant-status/getTxnStatus', {
 				method: 'post',
 				headers: {'Content-type': 'application/json'},
-				body: JSON.stringify(JsonData)
-			})
+				body: JSON.stringify(JsonData),
+				timeout: 15000
+			}, 2)
 			.then(response => {
 				return response.json()
 			})
@@ -46,7 +52,7 @@ const handleCallback = (req,res, db) =>{
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
-								res.status(302).redirect('https://www.infotsav.in/profile');
+								res.status(302).redirect('http://localhost:3000/profile');
 							})
 							.then(trx.commit)
 						}).catch(trx.rollback)
@@ -70,7 +76,7 @@ const handleCallback = (req,res, db) =>{
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
-								res.status(302).redirect('https://www.infotsav.in/profile');
+								res.status(302).redirect('http://localhost:3000/profile');
 							})
 							.then(trx.commit)
 						}).catch(trx.rollback)
@@ -87,14 +93,14 @@ const handleCallback = (req,res, db) =>{
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
-								res.status(302).redirect('https://www.infotsav.in/profile');
+								res.status(302).redirect('http://localhost:3000/profile');
 							})
 							.then(trx.commit)
 						}).catch(trx.rollback)
 					}).catch(err => {console.log(err); res.status(400).json('Something went wrong!')});
 				}
 			})
-			.catch(err => {console.log('error:')});
+			.catch(err => {console.log('error in dverify: '+err)});
         },
         error => {
         	console.log('-----------------shit----------');

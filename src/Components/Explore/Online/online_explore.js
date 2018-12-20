@@ -19,9 +19,9 @@ class online_explore extends Component {
 		return (
 			<div>
 				<BackToEvents/>
-				<div class="online_cont s--inactive">
+				<div className="online_cont s--inactive">
 
-					  <div class="online_cont__inner">
+					  <div className="online_cont__inner">
 					  	<Online_Cards {...this.props} />
 					  </div>
 				</div>
