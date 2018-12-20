@@ -42,6 +42,7 @@ app.get('/api', (req,res)=>{ res.send('it is working')});
 app.post('/api/register', (req,res)=> {register.handleRegister(req, res, db, bcrypt, xss)});
 app.post('/api/verify', (req,res)=>{verify.handleVerifyRequest(req, res, db)});
 app.post('/api/callback', (req,res)=>{callback.handleCallback(req, res, db)});
+app.get('/api/callback', (req,res)=>{callback.handleCallback(req, res, db)});
 app.post('/api/eventPayment', (req,res)=>{eventPayment.handleEventPayment(req, res, db)});
 app.post('/api/signin', (req,res)=> {signin.handleSignin(req, res, db, bcrypt, xss)});
 app.post('/api/contact', (req,res)=> {contact.handleContact(req, res, db, xss)});
