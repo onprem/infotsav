@@ -52,7 +52,7 @@ const handleCallback = (req,res, db) =>{
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
-								res.status(302).redirect('http://infotsav.in/profile');
+								res.status(302).redirect('http://www.infotsav.in/profile');
 							})
 							.then(trx.commit)
 						}).catch(trx.rollback)
@@ -76,7 +76,7 @@ const handleCallback = (req,res, db) =>{
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
-								res.status(302).redirect('http://infotsav.in/profile');
+								res.status(302).redirect('http://www.infotsav.in/profile');
 							})
 							.then(trx.commit)
 						}).catch(trx.rollback)
@@ -93,7 +93,7 @@ const handleCallback = (req,res, db) =>{
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
-								res.status(302).redirect('http://infotsav.in/profile');
+								res.status(302).redirect('http://www.infotsav.in/profile');
 							})
 							.then(trx.commit)
 						}).catch(trx.rollback)
