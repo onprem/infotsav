@@ -159,7 +159,7 @@ class Profile extends Component {
 						    <div className="profile-headin">
 						    	<h2 className='mv'>PLEASE DO NOT REFRESH THIS PAGE</h2>
 				  			</div>
-				  			<form action="https://securegw-stage.paytm.in/theia/processTransaction" method="post" name="payForm">
+				  			<form action="https://securegw.paytm.in/theia/processTransaction" method="post" name="payForm">
 				  				<input type='hidden' name='MID' value={this.state.payload.MID} />
 				  				<input type='hidden' name='CUST_ID' value={this.state.payload.CUST_ID} />
 				  				<input type='hidden' name='CALLBACK_URL' value={this.state.payload.CALLBACK_URL} />

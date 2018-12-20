@@ -21,7 +21,7 @@ const handleCallback = (req,res, db) =>{
 			        return fetch_retry(url, options, n - 1);
 			    });
 			}
-            fetch_retry('https://securegw-stage.paytm.in/merchant-status/getTxnStatus', {
+            fetch_retry('https://securegw.paytm.in/merchant-status/getTxnStatus', {
 				method: 'post',
 				headers: {'Content-type': 'application/json'},
 				body: JSON.stringify(JsonData),
