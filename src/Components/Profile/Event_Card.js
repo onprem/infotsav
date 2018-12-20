@@ -21,7 +21,7 @@ const Event_Card = ({ename, category, eid, fee, status, teamid, deregEvent, payE
 			<div className='evtCat'>
 				<Link to={linkTo} >{category}</Link>
 			</div>
-			{(status)?
+			{(status || fee === 0)?
 				<div className='evtStatus'>
 					<b>Paid</b>
 				</div>

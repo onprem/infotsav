@@ -155,7 +155,7 @@ class Profile extends Component {
 			  		(redirect)?
 			  			<Redirect to='/login' />
 		  			:
-		  				<div className="profile-content">
+		  				<div className="pay-content">
 						    <div className="profile-headin">
 						    	<h2 className='mv'>PLEASE DO NOT REFRESH THIS PAGE</h2>
 				  			</div>
@@ -173,9 +173,11 @@ class Profile extends Component {
 				  			</form>
 				  		</div>
 	  			:
-	  				<div>
-	  					<h2 className='mv'>PLEASE DO NOT REFRESH THIS PAGE</h2>
-	  					<Loader />
+	  				<div className='pay-content'>
+		  				<div className='profile-headin'>
+		  					<h2 className='mv'>PLEASE DO NOT REFRESH THIS PAGE</h2>
+		  				</div>
+		  				<Loader />
 	  				</div>
 	  			}
 

@@ -64,6 +64,25 @@
 	margin-right: 30px;
 }
 
+.pay-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	font-size: 1.4em;
+}
+.pay-content form input {
+	border: 2px solid white;
+	background: white;
+	color: #111a26;
+	text-transform: uppercase;
+	padding: 10px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
 @media only screen and (max-width: 800px) {
 	.profile-content {
 		font-size: 1.3em;
@@ -112,5 +131,8 @@
 	.evtStatus span {
 		padding: 1px 5px 1px 5px;
 		border: 2px solid white;
+	}
+	.pay-content {
+		font-size: 1em;
 	}
 }
