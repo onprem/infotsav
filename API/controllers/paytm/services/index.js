@@ -27,8 +27,6 @@ const initPayment = function (amount, orderid, custid) {
 const responsePayment = function (paymentObject) {
     return new Promise((resolve, reject) => {
         if (checksum.verifychecksum(paymentObject, config.PAYTM_MERCHANT_KEY)) {
-            console.log('iside------------');
-            console.log(paymentObject);
             resolve(paymentObject);
         } else {
             console.log('----shit-iside------------');

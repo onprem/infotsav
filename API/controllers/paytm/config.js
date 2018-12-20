@@ -5,5 +5,5 @@ module.exports = {
   WEBSITE: "WEBSTAGING",
   CHANNEL_ID: "WEB",
   INDUSTRY_TYPE_ID: "Retail",
-  CALLBACK_URL: "http://localhost:3001/api/callback"
+  CALLBACK_URL: "http://api.infotsav.in/callback"
 };

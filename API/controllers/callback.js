@@ -6,8 +6,8 @@ const handleCallback = (req,res, db) =>{
 	console.log(req.body);
 	paytmIndex.responsePayment(req.body).then(
         success => {
-            console.log('-----------------responseData----------');
-            console.log(success);
+            // console.log('-----------------responseData----------');
+            // console.log(success);
             var JsonData = {
             	MID: success.MID,
             	ORDERID: success.ORDERID,
@@ -52,7 +52,7 @@ const handleCallback = (req,res, db) =>{
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
-								res.status(302).redirect('http://localhost:3000/profile');
+								res.status(302).redirect('http://infotsav.in/profile');
 							})
 							.then(trx.commit)
 						}).catch(trx.rollback)
@@ -76,7 +76,7 @@ const handleCallback = (req,res, db) =>{
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
-								res.status(302).redirect('http://localhost:3000/profile');
+								res.status(302).redirect('http://infotsav.in/profile');
 							})
 							.then(trx.commit)
 						}).catch(trx.rollback)
@@ -93,7 +93,7 @@ const handleCallback = (req,res, db) =>{
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
-								res.status(302).redirect('http://localhost:3000/profile');
+								res.status(302).redirect('http://infotsav.in/profile');
 							})
 							.then(trx.commit)
 						}).catch(trx.rollback)
