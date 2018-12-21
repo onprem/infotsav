@@ -24,7 +24,7 @@
 }
 .tech_el:nth-child(1) .tech_el__bg:before {
   transition-delay: 0s;
-  background-image: url("../../../assets/photos/ironman.jpg");
+  background-image: url("../../../assets/event_img/hackathon2.jpg");
 }
 .tech_el:nth-child(2) {
   -webkit-transform: translate3d(105.2083333333%, 0, 0);
@@ -49,7 +49,7 @@
 }
 .tech_el:nth-child(2) .tech_el__bg:before {
   transition-delay: 0.1s;
-  background-image: url("../../../assets/photos/ironman.jpg");
+  background-image: url("../../../assets/event_img/hackathon.jpg");
 }
 .tech_el:nth-child(3) {
   -webkit-transform: translate3d(210.4166666667%, 0, 0);
@@ -74,7 +74,7 @@
 }
 .tech_el:nth-child(3) .tech_el__bg:before {
   transition-delay: 0.2s;
-  background-image: url("../../../assets/photos/ironman.jpg");
+  background-image: url("../../../assets/event_img/coding.jpg");
 }
 .tech_el:nth-child(4) {
   -webkit-transform: translate3d(315.625%, 0, 0);
@@ -99,7 +99,7 @@
 }
 .tech_el:nth-child(4) .tech_el__bg:before {
   transition-delay: 0.3s;
-  background-image: url("../../../assets/photos/ironman.jpg");
+  background-image: url("../../../assets/event_img/coding12.jpg");
 }
 
 @media only screen and (max-width: 1000px) {

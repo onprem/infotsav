@@ -24,7 +24,7 @@
 }
 .susp_el:nth-child(1) .susp_el__bg:before {
   transition-delay: 0s;
-  background-image: url("../../../assets/photos/thor.jpg");
+  background-image: url("../../../assets/event_img/olympiad.jpg");
 }
 .susp_el:nth-child(2) {
   -webkit-transform: translate3d(105.2083333333%, 0, 0);
@@ -49,7 +49,7 @@
 }
 .susp_el:nth-child(2) .susp_el__bg:before {
   transition-delay: 0.1s;
-  background-image: url("../../../assets/photos/thor.jpg");
+  background-image: url("../../../assets/event_img/innovateTheGood.jpg");
 }
 .susp_el:nth-child(3) {
   -webkit-transform: translate3d(210.4166666667%, 0, 0);

@@ -24,7 +24,7 @@
 }
 .robo_el:nth-child(1) .robo_el__bg:before {
   transition-delay: 0s;
-  background-image: url("../../../assets/photos/ultron.jpg");
+  background-image: url("../../../assets/event_img/blaze.jpg");
 }
 .robo_el:nth-child(2) {
   -webkit-transform: translate3d(105.2083333333%, 0, 0);
@@ -74,7 +74,7 @@
 }
 .robo_el:nth-child(3) .robo_el__bg:before {
   transition-delay: 0.2s;
-  background-image: url("../../../assets/photos/ultron.jpg");
+  background-image: url("../../../assets/event_img/robowar.jpg");
 }
 .robo_el:nth-child(4) {
   -webkit-transform: translate3d(315.625%, 0, 0);
@@ -99,7 +99,7 @@
 }
 .robo_el:nth-child(4) .robo_el__bg:before {
   transition-delay: 0.3s;
-  background-image: url("../../../assets/photos/ultron.jpg");
+  background-image: url("../../../assets/event_img/drone.jpg");
 }
 .robo_el:nth-child(5) {
   -webkit-transform: translate3d(420.8333333333%, 0, 0);
@@ -124,7 +124,7 @@
 }
 .robo_el:nth-child(5) .robo_el__bg:before {
   transition-delay: 0.4s;
-  background-image: url("../../../assets/photos/ultron.jpg");
+  background-image: url("../../../assets/event_img/course.jpg");
 }
 .robo_el:nth-child(6) {
   -webkit-transform: translate3d(526.041333333%, 0, 0);
@@ -149,7 +149,7 @@
 }
 .robo_el:nth-child(6) .robo_el__bg:before {
   transition-delay: 0.4s;
-  background-image: url("../../../assets/photos/ultron.jpg");
+  background-image: url("../../../assets/event_img/robosoccer.jpg");
 }
 
 @media only screen and (max-width: 1000px) {

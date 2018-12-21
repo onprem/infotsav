@@ -24,7 +24,7 @@
 }
 .man_el:nth-child(1) .man_el__bg:before {
   transition-delay: 0s;
-  background-image: url("../../../assets/photos/nickfury.jpg");
+  background-image: url("../../../assets/event_img/jobs.jpg");
 }
 .man_el:nth-child(2) {
   -webkit-transform: translate3d(105.2083333333%, 0, 0);
@@ -49,7 +49,7 @@
 }
 .man_el:nth-child(2) .man_el__bg:before {
   transition-delay: 0.1s;
-  background-image: url("../../../assets/photos/nickfury.jpg");
+  background-image: url("../../../assets/event_img/pinnacle.jpg");
 }
 .man_el:nth-child(3) {
   -webkit-transform: translate3d(210.4166666667%, 0, 0);
@@ -74,7 +74,7 @@
 }
 .man_el:nth-child(3) .man_el__bg:before {
   transition-delay: 0.2s;
-  background-image: url("../../../assets/photos/nickfury.jpg");
+  background-image: url("../../../assets/event_img/corporate.jpg");
 }
 .man_el:nth-child(4) {
   -webkit-transform: translate3d(315.625%, 0, 0);
@@ -99,7 +99,8 @@
 }
 .man_el:nth-child(4) .man_el__bg:before {
   transition-delay: 0.3s;
-  background-image: url("../../../assets/photos/nickfury.jpg");
+  filter: blur(10px);
+  background-image: url("../../../assets/event_img/iplauction.jpg");
 }
 .man_el:nth-child(5) {
   -webkit-transform: translate3d(420.8333333333%, 0, 0);
@@ -124,7 +125,7 @@
 }
 .man_el:nth-child(5) .man_el__bg:before {
   transition-delay: 0.4s;
-  background-image: url("../../../assets/photos/nickfury.jpg");
+  background-image: url("../../../assets/event_img/brandsome.jpg");
 }
 .man_el:nth-child(6) {
   -webkit-transform: translate3d(526.041333333%, 0, 0);
@@ -149,7 +150,7 @@
 }
 .man_el:nth-child(6) .man_el__bg:before {
   transition-delay: 0.4s;
-  background-image: url("../../../assets/photos/nickfury.jpg");
+  background-image: url("../../../assets/event_img/sameeksha.jpeg");
 }
 @media only screen and (max-width: 1000px) {
 
