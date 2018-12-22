@@ -30,44 +30,130 @@ class Extab extends Component {
   		event.prizes='To be announced'  	
   	if(!event.rules)
   		event.rules='To be announced'
-    return (
-    	<div className='white tl tabs'>
-        <Tabs defaultTab="one" className='tab-content mv2'>
-          <TabList className='mv2'>
-            <Tab autoFocus tabFor="one">About</Tab>
-            <Tab tabFor="two">Rules</Tab>
-            <Tab tabFor="three">Register</Tab>
-          </TabList>
-          <TabPanel tabId="one">
-            <div className='f3 underline b'>Description</div>
-            <p className='eventDescription' dangerouslySetInnerHTML={{__html: event.description}}>
-            </p>
-            <div className='f3 underline b'>Prizes</div>
+    if (event.eid === 13) { // Hackathon
+      return (
+        <div className='white tl tabs'>
+          <Tabs defaultTab="one" className='tab-content mv2'>
+            <TabList className='mv2'>
+              <Tab autoFocus tabFor="one">About</Tab>
+              <Tab tabFor="two">Rules</Tab>
+              <Tab tabFor="three">Register</Tab>
+            </TabList>
+            <TabPanel tabId="one">
+              <div className='f3 underline b'>Description</div>
+              <p className='eventDescription' dangerouslySetInnerHTML={{__html: event.description}}>
+              </p>
+              <div className='f3 underline b'>Prizes</div>
 
-            <p className='eventPrizes' dangerouslySetInnerHTML={{__html: event.prizes}}>
-            </p>
-            <div className='f3 underline b'>Event Heads</div>
+              <p className='eventPrizes' dangerouslySetInnerHTML={{__html: event.prizes}}>
+              </p>
+              <div className='f3 underline b'>Event Heads</div>
 
-            <p className='eventHead' dangerouslySetInnerHTML={{__html: event.eventHead}}>
-            </p>
-            <div className='f3 underline b'>Event Organizers</div>
+              <p className='eventHead' dangerouslySetInnerHTML={{__html: event.eventHead}}>
+              </p>
+              <div className='f3 underline b'>Event Organizers</div>
 
-            <p className='eventHead' dangerouslySetInnerHTML={{__html: event.organizers}}>
-            </p>
-          </TabPanel>
-          <TabPanel tabId="two">                
-            <div className='f3 b underline'>Rules</div>
-          	<div className='eventRules'>
-              <ul dangerouslySetInnerHTML={{__html: event.rules}}>
-              </ul>
-          	</div>
-          </TabPanel>
-          <TabPanel tabId="three">
-            <RegisterEvent {...this.props} />
-          </TabPanel>
-        </Tabs>
-    	</div>
-    );
+              <p className='eventHead' dangerouslySetInnerHTML={{__html: event.organizers}}>
+              </p>
+            </TabPanel>
+            <TabPanel tabId="two">                
+              <div className='f3 b underline'>Rules</div>
+              <div className='eventRules'>
+                <ul dangerouslySetInnerHTML={{__html: event.rules}}>
+                </ul>
+              </div>
+            </TabPanel>
+            <TabPanel tabId="three">
+              <div className='white flex flex-column items-center ma4'>
+                Registration for this event will be done on selected platforms. Teams qualifying the prelims would have to register here afterwards.
+              </div>
+            </TabPanel>
+          </Tabs>
+        </div>
+      );
+    }
+    else if (event.eid === 14) { // Techathlon
+      return (
+        <div className='white tl tabs'>
+          <Tabs defaultTab="one" className='tab-content mv2'>
+            <TabList className='mv2'>
+              <Tab autoFocus tabFor="one">About</Tab>
+              <Tab tabFor="two">Rules</Tab>
+              <Tab tabFor="three">Register</Tab>
+            </TabList>
+            <TabPanel tabId="one">
+              <div className='f3 underline b'>Description</div>
+              <p className='eventDescription' dangerouslySetInnerHTML={{__html: event.description}}>
+              </p>
+              <div className='f3 underline b'>Prizes</div>
+
+              <p className='eventPrizes' dangerouslySetInnerHTML={{__html: event.prizes}}>
+              </p>
+              <div className='f3 underline b'>Event Heads</div>
+
+              <p className='eventHead' dangerouslySetInnerHTML={{__html: event.eventHead}}>
+              </p>
+              <div className='f3 underline b'>Event Organizers</div>
+
+              <p className='eventHead' dangerouslySetInnerHTML={{__html: event.organizers}}>
+              </p>
+            </TabPanel>
+            <TabPanel tabId="two">                
+              <div className='f3 b underline'>Rules</div>
+              <div className='eventRules'>
+                <ul dangerouslySetInnerHTML={{__html: event.rules}}>
+                </ul>
+              </div>
+            </TabPanel>
+            <TabPanel tabId="three">
+              <div className='white flex flex-column items-center ma4'>
+                Registration for this event will be done on selected platforms. Teams qualifying the prelims would have to register here afterwards.
+              </div>
+            </TabPanel>
+          </Tabs>
+        </div>
+      );
+    }
+    else {
+      return (
+        <div className='white tl tabs'>
+          <Tabs defaultTab="one" className='tab-content mv2'>
+            <TabList className='mv2'>
+              <Tab autoFocus tabFor="one">About</Tab>
+              <Tab tabFor="two">Rules</Tab>
+              <Tab tabFor="three">Register</Tab>
+            </TabList>
+            <TabPanel tabId="one">
+              <div className='f3 underline b'>Description</div>
+              <p className='eventDescription' dangerouslySetInnerHTML={{__html: event.description}}>
+              </p>
+              <div className='f3 underline b'>Prizes</div>
+
+              <p className='eventPrizes' dangerouslySetInnerHTML={{__html: event.prizes}}>
+              </p>
+              <div className='f3 underline b'>Event Heads</div>
+
+              <p className='eventHead' dangerouslySetInnerHTML={{__html: event.eventHead}}>
+              </p>
+              <div className='f3 underline b'>Event Organizers</div>
+
+              <p className='eventHead' dangerouslySetInnerHTML={{__html: event.organizers}}>
+              </p>
+            </TabPanel>
+            <TabPanel tabId="two">                
+              <div className='f3 b underline'>Rules</div>
+              <div className='eventRules'>
+                <ul dangerouslySetInnerHTML={{__html: event.rules}}>
+                </ul>
+              </div>
+            </TabPanel>
+            <TabPanel tabId="three">
+              <RegisterEvent {...this.props} />
+            </TabPanel>
+          </Tabs>
+        </div>
+      );
+    }
   }
 }
 
