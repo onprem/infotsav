@@ -1,9 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 import events from '../../../assets/events.json';
 import Extab from '../Extab/Extab'
 
-export const Online_Cards = (props) => {
+export const OnlineCards = (props) => {
 	return(
 		<div>
 			{Object.entries(events.online).map(([key, value]) =>

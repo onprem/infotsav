@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import EmtList from './EmtList';
 import CoordList from './CoordList';
 import TMList from './TMList';
-import Mob_WebList from './Mob_WebList';
-import PC_WebList from './PC_WebList';
+import MobWebList from './Mob_WebList';
+import PcWebList from './PC_WebList';
 import {emts,coord,TMheads, Mob_WebTeam, PC_WebTeam} from './Data';
 // import {parallax} from './Contact_parallax.js';
 import './team.css'
@@ -16,7 +15,7 @@ class Team extends Component {
 		    // ------------- VARIABLES ------------- //
 	    let ticking = false;
 	    let isFirefox = (/Firefox/i.test(navigator.userAgent));
-	    let isIe = (/MSIE/i.test(navigator.userAgent)) || (/Trident.*rv\:11\./i.test(navigator.userAgent));
+	    let isIe = (/MSIE/i.test(navigator.userAgent)) || (/Trident.*rv:11\./i.test(navigator.userAgent));
 	    let scrollSensitivitySetting = 30; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive) 
 	    let slideDurationSetting = 600; //Amount of time for which slide is "locked"
 	    let currentSlideNumber = 0;
@@ -36,7 +35,7 @@ class Team extends Component {
 	      delta = evt.wheelDelta;
 	    }
 
-	    if (ticking != true) {
+	    if (ticking !== true) {
 	      if (delta <= -scrollSensitivitySetting) {
 	        //Down scroll
 	        ticking = true;
@@ -121,7 +120,7 @@ class Team extends Component {
 			       <div className="content-wrapper">
 			       		<div className='tc'>
 				   			<h1>Our Awesome Web Developers</h1>
-							<PC_WebList PC_WebTeam={PC_WebTeam} />
+							<PcWebList PC_WebTeam={PC_WebTeam} />
 						</div>
 			       </div>
 			     </section>
@@ -138,7 +137,7 @@ class Team extends Component {
 					<TMList TMheads={TMheads} />
 
 					<h1>Our Awesome Web Developers</h1>
-					<Mob_WebList Mob_WebTeam={Mob_WebTeam} />
+					<MobWebList Mob_WebTeam={Mob_WebTeam} />
 				</div>
 			</div>
 		</div>

@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import {tech_explore_function} from './tech_explore_function';
 import './tech_explore.css';
 import './tech_explore_main.css'
 import {BackToEvents} from '../../_BackToEvents/BackToEvents'
-import {Technical_Cards} from './technical_cards'
+import {TechnicalCards} from './technical_cards'
 
 class tech_explore extends Component {
-	constructor(props){
-		super(props);
-	}
+	// constructor(props){
+	// 	super(props);
+	// }
 
 	componentDidMount(){
 		tech_explore_function();
@@ -21,7 +20,7 @@ class tech_explore extends Component {
 				<BackToEvents/>
 				<div className="tech_cont s--inactive">
 			  <div className="tech_cont__inner">
-			  	<Technical_Cards {...this.props} />
+			  	<TechnicalCards {...this.props} />
 			  </div>
 				</div>
 			</div>

@@ -19,7 +19,7 @@ class RegisterEvent extends Component {
   }
   componentWillMount(){
     if(!this.props.isLoggedIn){
-      let err=false;
+      //let err=false;
       fetch('/api/checkToken')
       .then(response => {
         if(response.status!==200)
@@ -191,7 +191,7 @@ class RegisterEvent extends Component {
                 <td className="pv3 pr3 bb b--white-20">{userData.id}</td>
                 <td className="pv3 pr3 bb b--white-20">
                 {(!this.state.payStatus)?
-                  <a className='pointer dim' onClick={() => this.deregEvent(this.props.userData.id)}><span>Remove</span></a>
+                  <span className='pointer dim' onClick={() => this.deregEvent(this.props.userData.id)}>Remove</span>
                   : <div />
                 }
                 </td>
@@ -217,7 +217,7 @@ class RegisterEvent extends Component {
                         onChange={this.onTypeChange} 
                         onKeyPress={this._handleKeyPress}
                         placeholder='Enter IFID to register' type="text" name="userId" />
-                      <a className="f5 link dim br4 ph3 pv2 ma2 black b buttonBackLogin" onClick={this._handleEventEntry} >Register</a>
+                      <span className="f5 link dim br4 ph3 pv2 ma2 black b buttonBackLogin" onClick={this._handleEventEntry} >Register</span>
                     </div>
                     :
                     <div />
@@ -226,7 +226,7 @@ class RegisterEvent extends Component {
               :
               <div className='flex flex-column items-center'>
                 <div className='f3 mid'>Register now!</div>
-                <a className="f5 link dim br3 ph3 pv2 ma2 black b buttonBackLogin" onClick={this.registerUserForEvent} >Register</a>
+                <span className="f5 link dim br3 ph3 pv2 ma2 black b buttonBackLogin" onClick={this.registerUserForEvent} >Register</span>
                 {(this.state.error)?<div className='red f4 mid'>{this.state.errorMessage}</div> : <div /> }
               </div>
             }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link, Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Footer} from '../Footer/Footer';
 import '../../assets/css/solid.min.css'
 import '../../assets/css/fontawesome.min.css'
@@ -23,8 +23,7 @@ class Contact extends Component {
 	    gotData: false,
 	    responseMessage: '',
 	    receivedError: false,
-    	loading: false,
-    	redirect: false
+    	loading: false
     }
     this.contactData= {
     		name: '',
@@ -77,7 +76,7 @@ class Contact extends Component {
 
   render() {
   	
-  	const { loading, redirect } = this.state;
+  	const { loading } = this.state;
   	if(this.state.questions[0].value && !this.state.responseMessage)
   		this.updateContactData();
 

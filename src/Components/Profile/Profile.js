@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link, Redirect} from 'react-router-dom';
-import queryString from 'query-string';
 import {Footer} from '../Footer/Footer';
 import '../../assets/css/solid.min.css'
 import '../../assets/css/fontawesome.min.css'
@@ -8,7 +7,7 @@ import '../../assets/css/signup.css'
 import headers from "../../assets/logo/headers.png"
 import {Loader} from '../_Loader/Loader'
 import './Profile.css'
-import Event_Card from './Event_Card';
+import EventCard from './Event_Card';
 
 class Profile extends Component {
 
@@ -36,7 +35,6 @@ class Profile extends Component {
 
   componentWillMount(){
   	if(!this.props.isLoggedIn){
-		let err=false;
 		fetch('/api/checkToken')
 		.then(response => {
 			if(response.status!==200)
@@ -125,7 +123,7 @@ class Profile extends Component {
   	const lenEvt = this.props.eventData.length;
   	const EventList = ({ event }) => {
 		const evtComponent = event.map((evt, i) => {
-			return <Event_Card 
+			return <EventCard 
 			key={i} 
 			ename={event[i].ename}
 			eid = {event[i].eid}

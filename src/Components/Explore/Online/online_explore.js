@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import {online_explore_function} from './online_explore_function';
 import './online_explore.css';
 import './online_explore_main.css';
 import {BackToEvents} from '../../_BackToEvents/BackToEvents'
-import {Online_Cards} from './online_cards'
+import {OnlineCards} from './online_cards'
 
 class online_explore extends Component {
-	constructor(props){
-		super(props);
-	}
+	// constructor(props){
+	// 	super(props);
+	// }
 
 	componentDidMount(){
 		online_explore_function();
@@ -22,7 +21,7 @@ class online_explore extends Component {
 				<div className="online_cont s--inactive">
 
 					  <div className="online_cont__inner">
-					  	<Online_Cards {...this.props} />
+					  	<OnlineCards {...this.props} />
 					  </div>
 				</div>
 			</div>

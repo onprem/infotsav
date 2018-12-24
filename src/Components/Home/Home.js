@@ -50,7 +50,7 @@ class Home extends Component {
 					<img src={inf_starlord} className="infologo" id="inimg" alt="infotsav logo" />
 				</div>
 				<div className="centimg">
-					<img src={starlord} className="image" id="heroimg" alt="image of superhero" />
+					<img src={starlord} className="image" id="heroimg" alt="superhero" />
 				</div>
 				<div className="date">
 					<span>8-9</span>
@@ -69,13 +69,13 @@ class Home extends Component {
 				</Link>
 			</div>
 			<div className="social colsch">
-				<a className="soc" href="https://www.facebook.com/infotsav" target="_blank"><span className="fab fa-facebook-f"></span></a>
-				<a className="soc" href="https://www.instagram.com/infotsav19" target="_blank"><span className="fab fa-instagram"></span></a>
-				<a className="soc" href="https://twitter.com/infotsav" target="_blank"><span className="fab fa-twitter"></span></a>
-				<a className="soc" href="https://www.linkedin.com/in/infotsav-iiitm-9b9941174/" target="_blank"><span className="fab fa-linkedin-in"></span></a>
+				<a className="soc" href="https://www.facebook.com/infotsav" target="_blank" rel="noopener noreferrer"><span className="fab fa-facebook-f"></span></a>
+				<a className="soc" href="https://www.instagram.com/infotsav19" target="_blank" rel="noopener noreferrer"><span className="fab fa-instagram"></span></a>
+				<a className="soc" href="https://twitter.com/infotsav" target="_blank" rel="noopener noreferrer"><span className="fab fa-twitter"></span></a>
+				<a className="soc" href="https://www.linkedin.com/in/infotsav-iiitm-9b9941174/" target="_blank" rel="noopener noreferrer"><span className="fab fa-linkedin-in"></span></a>
 			</div>
 			<div>
-				<a href="https://www.facebook.com/Infotsav/videos/565533523902143/" target="_blank"><img src={youtube} alt="teaser" className="yt shake-slow" /></a>
+				<a href="https://www.facebook.com/Infotsav/videos/565533523902143/" target="_blank" rel="noopener noreferrer"><img src={youtube} alt="teaser" className="yt shake-slow" /></a>
 			</div>
 		</div>
     );

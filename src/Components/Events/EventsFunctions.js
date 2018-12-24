@@ -13,16 +13,16 @@ export const EventsFunctions = () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 
-  var $$ = function(selector, context) {
-    var context = context || document;
+  var $$ = function(selector, contextx) {
+    var context = contextx || document;
     var elements = context.querySelectorAll(selector);
     return [].slice.call(elements);
   };
 
-  function _fncSliderInit($slider, options) {
+  function _fncSliderInit($sliderr, options) {
     var prefix = ".fnc-";
 
-    var $slider = $slider;
+    var $slider = $sliderr;
     var $slidesCont = $slider.querySelector(prefix + "slider__slides");
     var $slides = $$(prefix + "slide", $slider);
     var $controls = $$(prefix + "nav__control", $slider);
@@ -69,10 +69,12 @@ export const EventsFunctions = () => {
       $activeControlsBg.classList.remove("m--nav-bg-before");
       $prevControl.classList.remove("m--prev-control");
       $prevControl.classList.add("m--reset-progress");
+      // eslint-disable-next-line
       var triggerLayout = $prevControl.offsetTop;
       $prevControl.classList.remove("m--reset-progress");
 
       sliding = false;
+      // eslint-disable-next-line
       var layoutTrigger = $slider.offsetTop;
 
       if (autoSlidingActive && !autoSlidingBlocked) {
@@ -100,6 +102,7 @@ export const EventsFunctions = () => {
       $activeSlide.classList.add("m--before-sliding");
       $activeControlsBg.classList.add("m--nav-bg-before");
 
+      // eslint-disable-next-line
       var layoutTrigger = $activeSlide.offsetTop;
 
       $activeSlide.classList.add("m--active-slide");
@@ -145,6 +148,7 @@ export const EventsFunctions = () => {
       setAutoslidingTO();
       
       $slider.classList.add("m--with-autosliding");
+      // eslint-disable-next-line
       var triggerLayout = $slider.offsetTop;
       
       var delay = +options.autoSlidingDelay || autoSlidingDelay;

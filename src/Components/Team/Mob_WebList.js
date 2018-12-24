@@ -1,9 +1,9 @@
 import React from 'react';
-import Big_Card from './Big_Card';
+import BigCard from './Big_Card';
 
-const Mob_WebList = ({ Mob_WebTeam }) => {
+const MobWebList = ({ Mob_WebTeam }) => {
 	const cardComponent2 = Mob_WebTeam.map((user, i) => {
-		return <Big_Card 
+		return <BigCard 
 		key={i} 
 		name={Mob_WebTeam[i].name} 
 		icon={Mob_WebTeam[i].icon}
@@ -17,4 +17,4 @@ const Mob_WebList = ({ Mob_WebTeam }) => {
 		);
 }
 
-export default Mob_WebList;
+export default MobWebList;

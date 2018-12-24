@@ -84,10 +84,10 @@ class Lost extends Component {
 
 
                 <div className="mt1 ph3 w-100">
-                  <div className='w-25 dib'><a className="f5 fw5 link dim br3 ph3 pv2 mb1 dib white bg-light-purple pointer" value="Chopra" onClick={this.onPress}>Chopra</a></div>
-                  <div className='w-25 dib'><a className="f5 fw5 link dim br3 ph3 pv2 mb1 dib white bg-light-purple pointer" value="Kunji" onClick={this.onPress}>Kunji</a></div>
-                  <div className='w-25 dib'><a className="f5 fw5 link dim br3 ph3 pv2 mb1 dib white bg-light-purple pointer" value="Mavi" onClick={this.onPress}>Mavi</a></div>
-                  <div className='w-25 dib'><a className="f5 fw5 link dim br3 ph3 pv2 mb1 dib white bg-light-purple pointer" value="Sharma" onClick={this.onPress}>Sharma</a></div>
+                  <div className='w-25 dib'><span className="f5 fw5 link dim br3 ph3 pv2 mb1 dib white bg-light-purple pointer" value="Chopra" onClick={this.onPress}>Chopra</span></div>
+                  <div className='w-25 dib'><span className="f5 fw5 link dim br3 ph3 pv2 mb1 dib white bg-light-purple pointer" value="Kunji" onClick={this.onPress}>Kunji</span></div>
+                  <div className='w-25 dib'><span className="f5 fw5 link dim br3 ph3 pv2 mb1 dib white bg-light-purple pointer" value="Mavi" onClick={this.onPress}>Mavi</span></div>
+                  <div className='w-25 dib'><span className="f5 fw5 link dim br3 ph3 pv2 mb1 dib white bg-light-purple pointer" value="Sharma" onClick={this.onPress}>Sharma</span></div>
                 </div>
 
                 <p className="fw1 dark-gray tc mt4 mt5-l mb0 f4 f3-ns baskerville">In a forgiving mood? Let them all keep their jobs.</p>

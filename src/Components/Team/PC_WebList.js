@@ -1,9 +1,9 @@
 import React from 'react';
-import Team_Card from './Team_Card';
+import TeamCard from './Team_Card';
 
-const PC_WebList = ({ PC_WebTeam }) => {
+const PcWebList = ({ PC_WebTeam }) => {
 	const cardComponent3 = PC_WebTeam.map((user, i) => {
-		return <Team_Card 
+		return <TeamCard 
 		key={i} 
 		name={PC_WebTeam[i].name} 
 		phone={PC_WebTeam[i].phone} 
@@ -25,4 +25,4 @@ const PC_WebList = ({ PC_WebTeam }) => {
 		);
 }
 
-export default PC_WebList;
+export default PcWebList;

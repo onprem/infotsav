@@ -1,7 +1,7 @@
 import React from 'react';
 import team from '../../assets/team/team.jpg';
 
-const Team_Card = ({name, email, phone,name1, email1, phone1,name2, email2, phone2,name3, email3, phone3 }) => {
+const TeamCard = ({name, email, phone,name1, email1, phone1,name2, email2, phone2,name3, email3, phone3 }) => {
 	return(
 		<div className='our-team dib width3'>
 			<img alt='Web Team' src={team} />
@@ -36,4 +36,4 @@ const Team_Card = ({name, email, phone,name1, email1, phone1,name2, email2, phon
 		);
 }
 
-export default Team_Card;
+export default TeamCard;

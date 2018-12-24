@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link, Redirect} from 'react-router-dom';
 
 const TeamCard = ({serial, mid, mname, paid, deregEvent}) => {
 	return(
@@ -9,7 +8,7 @@ const TeamCard = ({serial, mid, mname, paid, deregEvent}) => {
         <td className="pv3 pr3 bb b--white-20">{mid}</td>
         <td className="pv3 pr3 bb b--white-20">
          	{(!paid)?
-                  <a className='pointer dim' onClick={() => deregEvent(mid)}><span>Remove</span></a>
+                  <span className='pointer dim' onClick={() => deregEvent(mid)}>Remove</span>
                   : <div />
         	}
         </td>

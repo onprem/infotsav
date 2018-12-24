@@ -1,9 +1,9 @@
 import React from 'react';
-import Big_Card from './Big_Card';
+import BigCard from './Big_Card';
 
 const TMList = ({ TMheads }) => {
 	const cardComponent2 = TMheads.map((user, i) => {
-		return <Big_Card 
+		return <BigCard 
 		key={i} 
 		name={TMheads[i].name} 
 		icon={TMheads[i].icon}

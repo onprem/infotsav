@@ -1,9 +1,9 @@
 import React from 'react';
-import Big_Card from './Big_Card';
+import BigCard from './Big_Card';
 
 const CoordList = ({ coord }) => {
 	const cardComponent2 = coord.map((user, i) => {
-		return <Big_Card 
+		return <BigCard 
 		key={i} 
 		name={coord[i].name} 
 		icon={coord[i].icon}

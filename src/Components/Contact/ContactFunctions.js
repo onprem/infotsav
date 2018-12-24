@@ -9,11 +9,8 @@ export const contactFunctions = (last) => {
   //
   var tTime = 100  // transition transform time from #register in ms
   var wTime = 200  // transition width time from #register in ms
-  var eTime = 1000 // transition width time from inputLabel in ms
 
   // init
-  // --------------
-  var position = 0
   var i = 0
 
   putQuestion()

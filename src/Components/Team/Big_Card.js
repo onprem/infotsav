@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Big_Card = ({name, email, phone, icon}) => {
+const BigCard = ({name, email, phone, icon}) => {
 	return(
 		<div className='tc our-team dib width2 pa0 ma2 grow bw2 shadow-5'>
 			<img alt='Coordinators' src={require('../../assets/team/'+icon)} />
@@ -14,4 +14,4 @@ const Big_Card = ({name, email, phone, icon}) => {
 		);
 }
 
-export default Big_Card;
+export default BigCard;

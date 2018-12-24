@@ -28,7 +28,6 @@ class Login extends Component {
   }
   componentWillMount(){
   	if(!this.props.isLoggedIn){
-		let err=false;
 		fetch('/api/checkToken')
 		.then(response => {
 			if(response.status!==200)
@@ -86,7 +85,7 @@ class Login extends Component {
   }
 
   render() {
-  	const { loading, redirect } = this.state;
+  	const { loading } = this.state;
   	if(this.state.redirect){
   		return <Redirect to='/profile' />
   	}

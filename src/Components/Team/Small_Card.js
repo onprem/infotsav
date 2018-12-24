@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Small_Card = ({name, email, phone,icon}) => {
+const SmallCard = ({name, email, phone,icon}) => {
 	return(
 		<div className='tc our-team dib width pa0 ma2 grow bw2 shadow-5'>
 			<img alt='EMT' src={require('../../assets/team/'+icon)} />
@@ -14,4 +14,4 @@ const Small_Card = ({name, email, phone,icon}) => {
 		);
 }
 
-export default Small_Card;
+export default SmallCard;

@@ -1,9 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 import events from '../../../assets/events.json';
 import Extab from '../Extab/Extab'
 
-export const Man_Cards = (props) => {
+export const ManCards = (props) => {
 	return(
 		<div>
 			{Object.entries(events.managerial).map(([key, value]) =>
