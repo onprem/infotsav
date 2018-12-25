@@ -15,7 +15,7 @@ const withAdmin = function(req, res, next) {
       if (err) {
         res.status(401).json('Unauthorized: Invalid token');
       } else {
-      	if (decoded.email === 'prem@infotsav.in'){
+      	if (decoded.email === 'prem@infotsav.in' || decoded.email === 'admin@infotsav.in'){
         	req.email = decoded.email;
         	next();
         }

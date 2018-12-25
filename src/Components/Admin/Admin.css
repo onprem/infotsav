@@ -4,12 +4,19 @@
 	align-items: flex-start;
 	justify-content: flex-start;
 	min-height: 100vh;
-	font-size: 1.5em;
+	font-size: 1.35em;
 	color: white;
-	width: 80%;
+	width: 100%;
 }
 .admin-headin {
 	margin-top: 30px;
-	margin-bottom: 50px;
 	width: 100%;
+}
+
+.payments {
+	width: 100%;
+}
+
+.payments div {
+	margin-bottom: 50px;
 }
