@@ -18,6 +18,7 @@ import Contact from './Components/Contact/Contact';
 import Team from './Components/Team/Team'
 import Verify from './Components/Verify/Verify';
 import Profile from './Components/Profile/Profile';
+import Admin from './Components/Admin/Admin';
 import About from './Components/About/About';
 import ForgotPass from './Components/ForgotPass/ForgotPass';
 import HandleForgotPass from './Components/HandleForgotPass/HandleForgotPass';
@@ -40,6 +41,7 @@ class App extends Component {
     super();
     this.state={
       isLoggedIn: false,
+      isAdmin: false,
       userEventReg: [],
       userTeams: [],
       user: {
@@ -72,12 +74,18 @@ class App extends Component {
       this.updateEvent(res.userEventReg);
       this.updateEventTeams(res.userTeams);
       this.setState({isLoggedIn: true});
+      if (res.user.ifid === 'ADMIN') {
+        this.setState({isAdmin: true})
+      }
     })
     .catch(console.log);
   }
 
   updateLoginState = (value) =>{
     this.setState({isLoggedIn: value});
+  }
+  updateAdminState = (value) =>{
+    this.setState({isAdmin: value});
   }
   logOut = () =>{
     if(this.state.isLoggedIn){
@@ -223,6 +231,19 @@ class App extends Component {
               userData={this.state.user} 
               isLoggedIn={this.state.isLoggedIn} 
               updateLoginState={this.updateLoginState}
+              eventData={this.state.userEventReg}
+              eventTeams={this.state.userTeams}
+              updateEvent={this.updateEvent} 
+              updateEventTeams={this.updateEventTeams} 
+            />} 
+          />
+          <Route path="/admin" render={(props)=> 
+            <Admin {...props} 
+              userData={this.state.user} 
+              isLoggedIn={this.state.isLoggedIn} 
+              isAdmin={this.state.isAdmin} 
+              updateLoginState={this.updateLoginState}
+              updateAdminState={this.updateAdminState}
               eventData={this.state.userEventReg}
               eventTeams={this.state.userTeams}
               updateEvent={this.updateEvent} 

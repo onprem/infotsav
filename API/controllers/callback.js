@@ -8,13 +8,13 @@ const handleCallback = (req,res, db) =>{
         success => {
             // console.log('-----------------responseData----------');
             // console.log(success);
-            var JsonData = {
+            var jsonData = {
             	MID: success.MID,
             	ORDERID: success.ORDERID,
             	CHECKSUMHASH: success.CHECKSUMHASH
             };
             console.log('-----------------JsonData----------');
-            console.log(JsonData);
+            console.log(jsonData);
             function fetch_retry(url, options, n) {
 			    return fetch(url, options).catch(function(error) {
 			        if (n === 1) throw error;
@@ -24,7 +24,7 @@ const handleCallback = (req,res, db) =>{
             fetch_retry('https://securegw.paytm.in/merchant-status/getTxnStatus', {
 				method: 'post',
 				headers: {'Content-type': 'application/json'},
-				body: JSON.stringify(JsonData),
+				body: JSON.stringify(jsonData),
 				timeout: 15000
 			}, 2)
 			.then(response => {
@@ -48,7 +48,8 @@ const handleCallback = (req,res, db) =>{
 								txnid: user.TXNID,
 								fee: user.TXNAMOUNT,
 								txndate: user.TXNDATE,
-								status: "SUCCESS"
+								status: "SUCCESS",
+								checksum: jsonData.CHECKSUMHASH
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
@@ -72,7 +73,8 @@ const handleCallback = (req,res, db) =>{
 								txnid: user.TXNID,
 								fee: user.TXNAMOUNT,
 								txndate: user.TXNDATE,
-								status: user.STATUS
+								status: user.STATUS,
+								checksum: jsonData.CHECKSUMHASH
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{
@@ -89,7 +91,8 @@ const handleCallback = (req,res, db) =>{
 								txnid: user.TXNID,
 								fee: user.TXNAMOUNT,
 								txndate: user.TXNDATE,
-								status: "FAILURE"
+								status: "FAILURE",
+								checksum: jsonData.CHECKSUMHASH
 							})
 							.where({orderid: user.ORDERID})
 							.then(() =>{

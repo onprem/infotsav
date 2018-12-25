@@ -7,6 +7,7 @@ const xss = require('xss');
 const cookieParser = require('cookie-parser');
 const signin = require('./controllers/signin');
 const profilex = require('./controllers/profilex');
+const checkAdmin = require('./controllers/checkAdmin');
 const register = require('./controllers/register');
 const verify = require('./controllers/verify');
 const contact = require('./controllers/contact');
@@ -54,6 +55,7 @@ app.post('/api/eventRegCancel', withAuth, (req,res)=>{eventRegCancel.handleEvent
 app.post('/api/lost', (req,res)=>{lost.handleLostUpdate(req, res, db)});
 app.get('/api/logout', (req, res) => {res.clearCookie('token'); res.status(301).redirect('/login');});
 app.get('/api/profilex', withAuth, (req, res) => {profilex.handleProfile(req, res, db)});
+app.get('/api/checkAdmin', withAuth, (req, res) => {checkAdmin.handleAdmin(req, res)});
 app.get('/api/checkToken', withAuth, (req, res) => {
   res.sendStatus(200);
 });

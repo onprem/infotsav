@@ -1,0 +1,15 @@
+.admin-content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	min-height: 100vh;
+	font-size: 1.5em;
+	color: white;
+	width: 80%;
+}
+.admin-headin {
+	margin-top: 30px;
+	margin-bottom: 50px;
+	width: 100%;
+}
