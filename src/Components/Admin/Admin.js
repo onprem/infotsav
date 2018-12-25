@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link, Redirect} from 'react-router-dom';
+import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import {Footer} from '../Footer/Footer';
 import '../../assets/css/solid.min.css'
 import '../../assets/css/fontawesome.min.css'
@@ -7,8 +8,9 @@ import '../../assets/css/signup.css'
 import headers from "../../assets/logo/headers.png"
 import {Loader} from '../_Loader/Loader'
 import './Admin.css'
-import SuccessCard from './PaymentCards/SuccessCard';
-import PendingCard from './PaymentCards/PendingCard';
+import SuccessCard from './Cards/SuccessCard';
+import PendingCard from './Cards/PendingCard';
+import UsersCard from './Cards/UsersCard';
 
 class Admin extends Component {
 
@@ -20,6 +22,8 @@ class Admin extends Component {
 	    error: false,
 	    successPayments: [],
 	    pendingPayments: [],
+	    users: [],
+	    stats: [],
 	    errorMessage: ''
 	};
   }
@@ -44,6 +48,7 @@ class Admin extends Component {
 
   componentDidMount(){
   	this.requestPaymentData();
+  	this.requestUserData();
   }
 
   requestPaymentData = () =>{
@@ -58,10 +63,56 @@ class Admin extends Component {
       if(err)
         throw res;
       this.updatePayments(res);
-      console.log(res);
     })
     .catch(console.log);
   }
+  requestUserData = () =>{
+    let err=false;
+    fetch('/api/getusers')
+    .then(response => {
+      if(response.status!==200)
+        err=true;
+      return response.json();
+    })
+    .then(res => {
+      if(err)
+        throw res;
+      this.setState({ users: res.users });
+      this.updateUserStats(res.users);
+    })
+    .catch(console.log);
+  }
+
+  updateUserStats = (users) => {
+  	var stats = [];
+  	var datex='2018-12-05';
+  	var j = 0;
+  	var k = 0
+  	for (var i in users) {
+  		var z = users[i].timest.substring(0, 10);
+  		if (datex !== z) {
+  			var ob = {date: datex, users: j, confirmed: k};
+  			stats.push(ob);
+  			datex = z;
+  			j = 1;
+  			if (users[i].confirm) {
+  				k = 1;
+  			} else {
+  				k = 0;
+  			}
+  		}
+  		else {
+  			j = j+1;
+  			if (users[i].confirm) {
+  				k = k+1;
+  			}
+  		}
+  	}
+  	var obc = {date: datex, users: j, confirmed: k};
+  	stats.push(obc);
+  	this.setState({ stats: stats });
+  }
+
   updatePayments = (data) =>{
     this.setState({
     	successPayments: data.successPayments,
@@ -92,6 +143,45 @@ class Admin extends Component {
 
   render() {
   	const { loading, redirect } = this.state;
+  	const UsersList = ({userArray}) => {
+      const usersComponent = userArray.map((member, i) =>
+          <UsersCard 
+            key={i}
+            serial={parseInt(i)+1} 
+            ifid={member.ifid} 
+            name={member.name} 
+            gender={member.gender} 
+            college={member.college} 
+            city={member.city} 
+            email={member.email} 
+            mobile={member.mobile} 
+            confirm={member.confirm} 
+          />
+      );
+      return (
+      	<div className='white flex flex-column items-center w-100'>
+      	  <h4 className='mv4 payh'>Registered Users: {userArray.length}</h4>
+          <table className="f4 w-100" cellSpacing="0">
+            <thead>
+              <tr>
+                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Index</th>
+                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">IF-ID</th>
+                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Name</th>
+                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Gender</th>
+                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">College</th>
+                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">City</th>
+                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Email</th>
+                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Mobile</th>
+                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Confirmed</th>
+              </tr>
+            </thead>
+            <tbody className="lh-copy">
+            	{usersComponent}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
   	const SuccessList = ({pays}) => {
       const successComponent = pays.map((member, i) =>
           <SuccessCard 
@@ -158,6 +248,20 @@ class Admin extends Component {
         </div>
       );
     }
+    const SimpleAreaChart = () => {
+	  	return (
+	    	<AreaChart width={1500} height={400} data={this.state.stats}
+	            margin={{top: 10, right: 30, left: 0, bottom: 0}}>
+	        <CartesianGrid strokeDasharray="3 3" stroke='#fff' />
+	        <XAxis dataKey="date" stroke='#fff' />
+	        <YAxis stroke='#fff' />
+	        <Tooltip isAnimationActive={false} />
+	        <Legend verticalAlign="top" height={36}/>
+	        <Area name="Users" type='linear' dataKey='users' stroke='#ff5050' fill='#ff4d4d' />
+	        <Area name="Confirmed" type='linear' dataKey='confirmed' stroke='#ff8c1a' fill='#ffa64d' />
+	      </AreaChart>
+	    );
+	}
     return (
     	<div className='Profile'>
 	   	<div className='register-container'>
@@ -177,6 +281,11 @@ class Admin extends Component {
 			  				<h3>Payments</h3>			  				
 			  				<SuccessList pays={this.state.successPayments} />
 			  				<PendingList pays={this.state.pendingPayments} />
+			  			</div>
+			  			<div className="users">
+			  				<h2>Users</h2>
+			  				<SimpleAreaChart />			  				
+			  				<UsersList userArray={this.state.users} />
 			  			</div>
 			  		</div>
   			:

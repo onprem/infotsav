@@ -20,6 +20,7 @@ const callback = require('./controllers/callback');
 const eventPayment = require('./controllers/eventPayment');
 const doubleVerify = require('./controllers/doubleVerify');
 const payments = require('./controllers/payments');
+const getUsers = require('./controllers/getUsers');
 require("dotenv").config();
 
 const db = knex({
@@ -59,6 +60,7 @@ app.post('/api/lost', (req,res)=>{lost.handleLostUpdate(req, res, db)});
 app.get('/api/logout', (req, res) => {res.clearCookie('token'); res.status(301).redirect('/login');});
 app.get('/api/profilex', withAuth, (req, res) => {profilex.handleProfile(req, res, db)});
 app.get('/api/payments', withAdmin, (req, res) => {payments.returnPayments(req, res, db)});
+app.get('/api/getusers', withAdmin, (req, res) => {getUsers.returnUsers(req, res, db)});
 app.get('/api/checkAdmin', withAdmin, (req, res) => {
   res.sendStatus(200);
 });
