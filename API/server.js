@@ -7,7 +7,7 @@ const xss = require('xss');
 const cookieParser = require('cookie-parser');
 const signin = require('./controllers/signin');
 const profilex = require('./controllers/profilex');
-const checkAdmin = require('./controllers/checkAdmin');
+const withAdmin = require('./controllers/withAdmin');
 const register = require('./controllers/register');
 const verify = require('./controllers/verify');
 const contact = require('./controllers/contact');
@@ -18,6 +18,7 @@ const eventReg = require('./controllers/eventReg');
 const eventRegCancel = require('./controllers/eventRegCancel');
 const callback = require('./controllers/callback');
 const eventPayment = require('./controllers/eventPayment');
+const doubleVerify = require('./controllers/doubleVerify');
 require("dotenv").config();
 
 const db = knex({
@@ -44,6 +45,7 @@ app.post('/api/register', (req,res)=> {register.handleRegister(req, res, db, bcr
 app.post('/api/verify', (req,res)=>{verify.handleVerifyRequest(req, res, db)});
 app.post('/api/callback', (req,res)=>{callback.handleCallback(req, res, db)});
 app.get('/api/callback', (req,res)=>{callback.handleCallback(req, res, db)});
+app.post('/api/dverify', (req,res)=>{doubleVerify.handleDverify(req, res, db)});
 app.post('/api/eventPayment', (req,res)=>{eventPayment.handleEventPayment(req, res, db)});
 app.post('/api/signin', (req,res)=> {signin.handleSignin(req, res, db, bcrypt, xss)});
 app.post('/api/contact', (req,res)=> {contact.handleContact(req, res, db, xss)});
@@ -55,7 +57,9 @@ app.post('/api/eventRegCancel', withAuth, (req,res)=>{eventRegCancel.handleEvent
 app.post('/api/lost', (req,res)=>{lost.handleLostUpdate(req, res, db)});
 app.get('/api/logout', (req, res) => {res.clearCookie('token'); res.status(301).redirect('/login');});
 app.get('/api/profilex', withAuth, (req, res) => {profilex.handleProfile(req, res, db)});
-app.get('/api/checkAdmin', withAuth, (req, res) => {checkAdmin.handleAdmin(req, res)});
+app.get('/api/checkAdmin', withAdmin, (req, res) => {
+  res.sendStatus(200);
+});
 app.get('/api/checkToken', withAuth, (req, res) => {
   res.sendStatus(200);
 });
