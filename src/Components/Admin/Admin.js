@@ -16,6 +16,8 @@ class Admin extends Component {
     	loading: true,
 	    redirect: false,
 	    error: false,
+	    successPayments: [],
+	    pendingPayments: [],
 	    errorMessage: ''
 	};
   }
@@ -38,6 +40,33 @@ class Admin extends Component {
 	}
   }
 
+  componentDidMount(){
+  	this.requestPaymentData();
+  }
+
+  requestPaymentData = () =>{
+    let err=false;
+    fetch('/api/payments')
+    .then(response => {
+      if(response.status!==200)
+        err=true;
+      return response.json();
+    })
+    .then(res => {
+      if(err)
+        throw res;
+      this.updatePayments(res);
+      console.log(res);
+    })
+    .catch(console.log);
+  }
+  updatePayments = (data) =>{
+    this.setState({
+    	successPayments: data.successPayments,
+    	pendingPayments: data.pendingPayments
+    });
+  }
+
   render() {
   	const { loading, redirect } = this.state;
     return (
@@ -53,8 +82,12 @@ class Admin extends Component {
 	  			:
 	  				<div className="admin-content">
 					    <div className="admin-headin">
-					    	<h2 className='mv'>ADMIN</h2>
+					    	<h2 className='mv'>ADMIN DASHBOARD</h2>
 			  				<h3 className='mv3 wellc'>Welcome {this.props.userData.name},</h3>
+			  			</div>
+			  			<div className="payments">
+			  				<h3>Payments</h3>
+
 			  			</div>
 			  		</div>
   			:
