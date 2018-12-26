@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link, Redirect} from 'react-router-dom';
-import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from 'recharts';
 import {Footer} from '../Footer/Footer';
 import '../../assets/css/solid.min.css'
 import '../../assets/css/fontawesome.min.css'
@@ -250,16 +250,18 @@ class Admin extends Component {
     }
     const SimpleAreaChart = () => {
 	  	return (
-	    	<AreaChart width={1500} height={400} data={this.state.stats}
-	            margin={{top: 10, right: 30, left: 0, bottom: 0}}>
-	        <CartesianGrid strokeDasharray="3 3" stroke='#fff' />
-	        <XAxis dataKey="date" stroke='#fff' />
-	        <YAxis stroke='#fff' />
-	        <Tooltip isAnimationActive={false} />
-	        <Legend verticalAlign="top" height={36}/>
-	        <Area name="Users" type='linear' dataKey='users' stroke='#ff5050' fill='#ff4d4d' />
-	        <Area name="Confirmed" type='linear' dataKey='confirmed' stroke='#ff8c1a' fill='#ffa64d' />
-	      </AreaChart>
+	  		<ResponsiveContainer height={400} width="100%">
+		    	<AreaChart data={this.state.stats}
+		            margin={{top: 10, right: 30, left: 0, bottom: 0}}>
+		        <CartesianGrid strokeDasharray="3 3" stroke='#fff' />
+		        <XAxis dataKey="date" stroke='#fff' />
+		        <YAxis stroke='#fff' />
+		        <Tooltip isAnimationActive={false} />
+		        <Legend verticalAlign="top" height={36}/>
+		        <Area name="Users" type='linear' dataKey='users' stroke='#ff5050' fill='#ff4d4d' />
+		        <Area name="Confirmed" type='linear' dataKey='confirmed' stroke='#ff8c1a' fill='#ffa64d' />
+		      </AreaChart>
+		    </ResponsiveContainer>
 	    );
 	}
     return (

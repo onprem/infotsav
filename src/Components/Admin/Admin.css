@@ -20,3 +20,8 @@
 .payments div, .users div {
 	margin-bottom: 50px;
 }
+
+.users {
+	width: 96%;
+	margin-left: 2%;
+}

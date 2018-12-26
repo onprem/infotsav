@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const EventCard = ({ename, category, eid, fee, status, teamid, deregEvent, payEvent}) => {
+	let feeTotal = fee + (fee*0.0239)
 	let linkTo;
 	switch(category){
 		case "online": linkTo='/events/online_events'; break;
@@ -27,7 +28,7 @@ const EventCard = ({ename, category, eid, fee, status, teamid, deregEvent, payEv
 				</div>
 			  :
 			  	<div className='evtStatus'>
-			  		<span className='pointer payLink' onClick={() => payEvent(eid, fee, teamid)}>Pay Rs. {fee}</span>
+			  		<span className='pointer payLink' onClick={() => payEvent(eid, feeTotal, teamid)}>Pay Rs. {fee}</span>
 			  		<span className='pointer unregLink' onClick={() => deregEvent(eid)}>Remove</span>
 			  	</div>
 			}
