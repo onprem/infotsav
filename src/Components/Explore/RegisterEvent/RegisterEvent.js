@@ -14,7 +14,8 @@ class RegisterEvent extends Component {
       error: false,
       errorMessage: '',
       field: '',
-      payStatus: 0
+      payStatus: 0,
+      offerEvent: false
     }
   }
   componentWillMount(){
@@ -27,6 +28,9 @@ class RegisterEvent extends Component {
         this.props.updateLoginState(true);
       })
       .catch(console.log);
+    }
+    if(this.props.eventDetails.eid === 29 || this.props.eventDetails.eid === 30 || this.props.eventDetails.eid === 33 || this.props.eventDetails.eid === 34){
+      this.setState({offerEvent: true});
     }
   }
 
@@ -159,7 +163,7 @@ class RegisterEvent extends Component {
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const {eventDetails, isLoggedIn, userData} = this.props;
 
     const TeamList = ({team}) => {
@@ -234,6 +238,7 @@ class RegisterEvent extends Component {
           <div className='white flex flex-column mt4 mh2-ns mh0'>
             <div className='f5'>* Max members in a team - {eventDetails.maxMembers}</div>
             {(this.state.isUserRegistered && !this.state.payStatus)? <div className='f5'>** Complete payment from profile</div> : <div /> }
+            {(this.state.offerEvent)? <div className='f4'> This event is eligible for the New Year Offer. Register and pay for Blazing Wheel, Mini Robo War, Course Chaser and Robo Soccer to avail cashback.</div> : <div /> }
           </div>
         </div>
       );
