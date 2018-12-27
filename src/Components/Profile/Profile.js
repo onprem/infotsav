@@ -19,6 +19,7 @@ class Profile extends Component {
 	    error: false,
 	    errorMessage: '',
 	    paymentActive: false,
+	    isEligible: false,
         payload: {
             MID: '',
             ORDER_ID: '',
@@ -117,7 +118,7 @@ class Profile extends Component {
       this.setState({error: true, errorMessage: err});
     })
   }
-  
+
   render() {
   	const { loading, redirect, paymentActive } = this.state;
   	const lenEvt = this.props.eventData.length;
@@ -140,6 +141,29 @@ class Profile extends Component {
 				{evtComponent}
 			</div>
 		);
+	}
+	const doesEventExist = (eid) => {
+	  	var res = false;
+	  	console.log('heck', this.props.eventData);
+	  	this.props.eventData.forEach((evt) => {
+	  		if (eid === evt.eid) {
+	  			res = true;
+	  			console.log("Good");
+	  		}
+	  	});
+	  	console.log('res: ', res)
+	  	return res;
+	}
+	const IsEligible = () => {
+		if (doesEventExist(29) && doesEventExist(30) && doesEventExist(33) && doesEventExist(34)) {
+			return (
+				<p>Congrats! You are eligible for a refund. Find more about it <a href='#social-media-post'>HERE</a></p>
+			);
+		} else {
+			return (
+				<p></p>
+			);
+		}
 	}
 	if (paymentActive) {
 		return (
@@ -214,6 +238,7 @@ class Profile extends Component {
 				  			</div>
 				  			<div className="eventTableDiv">
 				  				<h3 className='mv3 urevt'>Your Events</h3>
+				  				<IsEligible />
 				  				{(lenEvt)?
 				  					<EventList event={this.props.eventData} />
 				  				  :
