@@ -238,7 +238,7 @@ class RegisterEvent extends Component {
           <div className='white flex flex-column mt4 mh2-ns mh0'>
             <div className='f5'>* Max members in a team - {eventDetails.maxMembers}</div>
             {(this.state.isUserRegistered && !this.state.payStatus)? <div className='f5'>** Complete payment from profile</div> : <div /> }
-            {(this.state.offerEvent)? <div className='f4'> This event is eligible for the New Year Offer. Register and pay for Blazing Wheel, Mini Robo War, Course Chaser and Robo Soccer to avail cashback.</div> : <div /> }
+            {(this.state.offerEvent)? <div className='f4'> This event is eligible for the New Year Gift. Register and pay for Blazing Wheel, Mini Robo War, Course Chaser and Robo Soccer to avail cashback.</div> : <div /> }
           </div>
         </div>
       );

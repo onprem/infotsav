@@ -17,7 +17,7 @@ const EventCard = ({ename, category, eid, fee, status, teamid, deregEvent, payEv
 	return(
 		<div className='evtCard'>
 			<div className='evtName'>
-				<b>{ename}</b>
+				<Link to={linkTo} ><b>{ename}</b></Link>
 			</div>
 			<div className='evtCat'>
 				<Link to={linkTo} >{category}</Link>
@@ -28,8 +28,8 @@ const EventCard = ({ename, category, eid, fee, status, teamid, deregEvent, payEv
 				</div>
 			  :
 			  	<div className='evtStatus'>
-			  		<span className='pointer payLink' onClick={() => payEvent(eid, feeTotal, teamid)}>Pay Rs. {fee}</span>
-			  		<span className='pointer unregLink' onClick={() => deregEvent(eid)}>Remove</span>
+			  		<span className='pointer payLink dim' onClick={() => payEvent(eid, feeTotal, teamid)}>Pay Rs. {fee}</span>
+			  		<span className='pointer unregLink dim' onClick={() => deregEvent(eid)}>Remove</span>
 			  	</div>
 			}
 		</div>
