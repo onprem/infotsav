@@ -21,6 +21,7 @@ const eventPayment = require('./controllers/eventPayment');
 const doubleVerify = require('./controllers/doubleVerify');
 const payments = require('./controllers/payments');
 const getUsers = require('./controllers/getUsers');
+const easter = require('./controllers/easter');
 require("dotenv").config();
 
 const db = knex({
@@ -56,6 +57,8 @@ app.post('/api/resetPassRes', (req,res)=>{resetPass.handleResetPassRes(req, res,
 app.post('/api/resetPassInit', (req,res)=>{resetPass.handleResetPassInit(req, res, db, bcrypt)});
 app.post('/api/eventReg', withAuth, (req,res)=>{eventReg.handleEventReg(req, res, db, xss)});
 app.post('/api/eventRegCancel', withAuth, (req,res)=>{eventRegCancel.handleEventRegCancel(req, res, db, xss)});
+app.post('/api/easterRedeem', withAuth, (req,res)=>{easter.handleEasterRedeem(req, res, db, xss)});
+app.get('/api/easterScore', (req,res)=>{easter.fetchScore(req, res, db)});
 app.post('/api/lost', (req,res)=>{lost.handleLostUpdate(req, res, db)});
 app.get('/api/logout', (req, res) => {res.clearCookie('token'); res.status(301).redirect('/login');});
 app.get('/api/profilex', withAuth, (req, res) => {profilex.handleProfile(req, res, db)});
