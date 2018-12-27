@@ -1,0 +1,3 @@
+Queries for future reference and immediate use
+
+SELECT `teamid`, `eid`, COUNT(*) FROM `event_reg` GROUP BY `teamid`;
