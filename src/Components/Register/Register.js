@@ -129,8 +129,8 @@ class Register extends Component {
 						</div>
 					:
 						<div className='f3 white'>
-							{this.state.responseMessage} <br />
-							Verify your email to continue <br />
+							{this.state.responseMessage} <br /><br />
+							Verify your email to continue <br /><br />
 							Didn't get the verification email? Please check your spam folder.
 						</div>
 				:

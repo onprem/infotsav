@@ -123,7 +123,7 @@ const handleRegister = (req,res, db, bcrypt, xss) =>{
 								ifid: eyeFID
 							})
 							.then(() => {
-								res.status(200).json('Sucessfully Registered');
+								res.status(200).json('Sucessfully Registered. An email has been sent to '+email+' .');
 								sendEmail(name, email, verifyHash, eyeFID);
 							})
 							.then(trx.commit)
