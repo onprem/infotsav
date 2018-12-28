@@ -7,6 +7,7 @@ import headers from "../../assets/logo/headers.png"
 import youtube from "../../assets/photos/youtube-s.png"
 import '../../assets/css/fontawesome.min.css'
 import '../../assets/css/brands.min.css'
+import '../../assets/css/solid.min.css'
 import '../../assets/css/csshake.min.css'
 import {homeFunctions, stopHomeFunctions} from './HomeFunctions.js';
 import Particles from 'react-particles-js';

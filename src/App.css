@@ -10,3 +10,14 @@
     transform: rotate(360deg);
   }
 }
+
+.fallback {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #111a26; /*#25A3FF;*/
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}

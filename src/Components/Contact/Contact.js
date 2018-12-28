@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {Footer} from '../Footer/Footer';
-import '../../assets/css/solid.min.css'
-import '../../assets/css/fontawesome.min.css'
+import '../../assets/css/signup.css'
 import './contact.css'
 import headers from "../../assets/logo/headers.png"
 import {contactFunctions} from './ContactFunctions'

@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense, lazy }from 'react';
 import {Route,Switch} from 'react-router-dom';
-import Lost from './Components/Lost/Lost';
 import Nav from './Components/Nav/Nav';
 import Offline from './Components/_Offline/Offline';
-import Events from './Components/Events/Events';
-import OnlineEvents from './Components/Explore/Online/online_explore'
-import InformalEvents from './Components/Explore/Informal/info_explore'
-import GamiacsEvents from './Components/Explore/Gamiacs/gamiacs_explore'
-import ManagerialEvents from './Components/Explore/Managerial/man_explore'
-import RoboticsEvents from './Components/Explore/Robotics/robo_explore'
-import SuspEvents from './Components/Explore/SUSP/susp_explore'
-import TechnicalEvents from './Components/Explore/Technical/tech_explore'
 import Home from './Components/Home/Home';
-import Register from './Components/Register/Register';
-import Login from './Components/Login/Login';
-import Contact from './Components/Contact/Contact';
-import Team from './Components/Team/Team'
-import Verify from './Components/Verify/Verify';
-import Profile from './Components/Profile/Profile';
-import Admin from './Components/Admin/Admin';
-import About from './Components/About/About';
-import ForgotPass from './Components/ForgotPass/ForgotPass';
-import HandleForgotPass from './Components/HandleForgotPass/HandleForgotPass';
+import Events from './Components/Events/Events';
+import {Loader} from './Components/_Loader/Loader'
 import './App.css';
+
+const Lost = lazy(() => import('./Components/Lost/Lost'));
+const OnlineEvents = lazy(() => import('./Components/Explore/Online/online_explore'));
+const InformalEvents = lazy(() => import('./Components/Explore/Informal/info_explore'));
+const GamiacsEvents = lazy(() => import('./Components/Explore/Gamiacs/gamiacs_explore'));
+const ManagerialEvents = lazy(() => import('./Components/Explore/Managerial/man_explore'));
+const RoboticsEvents = lazy(() => import('./Components/Explore/Robotics/robo_explore'));
+const SuspEvents = lazy(() => import('./Components/Explore/SUSP/susp_explore'));
+const TechnicalEvents = lazy(() => import('./Components/Explore/Technical/tech_explore'));
+const Register = lazy(() =>  import('./Components/Register/Register'));
+const Login = lazy(() =>  import('./Components/Login/Login'));
+const Contact = lazy(() =>  import('./Components/Contact/Contact'));
+const Team = lazy(() =>  import('./Components/Team/Team'));
+const Verify = lazy(() =>  import('./Components/Verify/Verify'));
+const Profile = lazy(() =>  import('./Components/Profile/Profile'));
+const Admin = lazy(() =>  import('./Components/Admin/Admin'));
+const About = lazy(() =>  import('./Components/About/About'));
+const ForgotPass = lazy(() =>  import('./Components/ForgotPass/ForgotPass'));
+const HandleForgotPass = lazy(() =>  import('./Components/HandleForgotPass/HandleForgotPass'));
 
 const initialState = {
   userEventReg: [],
@@ -126,6 +128,7 @@ class App extends Component {
           isLoggedIn={this.state.isLoggedIn} 
           userData={this.state.user} 
         />
+        <Suspense fallback={<div className="fallback"><span><Loader /></span></div>}>
     		<Switch>
     			<Route path="/" exact component={Home} />
           <Route path="/events" exact component={Events} />
@@ -264,6 +267,7 @@ class App extends Component {
           />
           <Route component={Lost} />
     		</Switch>
+        </Suspense>
       </div>
     );
   }
