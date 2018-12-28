@@ -51,13 +51,10 @@ class RegisterEvent extends Component {
     }
   }
   onTypeChange = (event) => {
-    console.log(event);
     this.setState({field:event.target.value.toUpperCase()})
-    // console.log(searchedRobots);
   }
 
   _handleKeyPress = (event) => {
-    console.log(event);
     if(event.key === 'Enter'){
       this._handleEventEntry();
     }
