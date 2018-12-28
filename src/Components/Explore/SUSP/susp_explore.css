@@ -74,7 +74,7 @@
 }
 .susp_el:nth-child(3) .susp_el__bg:before {
   transition-delay: 0.2s;
-  background-image: url("../../../assets/photos/thor.jpg");
+  background-image: url("../../../assets/event_img/whizzTroop.jpg");
 }
 @media only screen and (max-width: 1000px) {
   .susp_el {

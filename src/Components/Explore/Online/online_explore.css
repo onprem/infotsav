@@ -149,7 +149,7 @@
 }
 .online_el:nth-child(6) .online_el__bg:before {
   transition-delay: 0.5s;
-  background-image: url("../../../assets/photos/blackwidow.jpg");
+  background-image: url("../../../assets/event_img/memes.jpg");
 }
 .online_el:nth-child(7) {
   -webkit-transform: translate3d(631.249%, 0, 0);
@@ -174,7 +174,7 @@
 }
 .online_el:nth-child(7) .online_el__bg:before {
   transition-delay: 0.6s;
-  background-image: url("../../../assets/photos/blackwidow.jpg");
+  background-image: url("../../../assets/event_img/posterMaking.jpg");
 }
 .online_el:nth-child(8) {
   -webkit-transform: translate3d(736.457%, 0, 0);
@@ -199,7 +199,7 @@
 }
 .online_el:nth-child(8) .online_el__bg:before {
   transition-delay: 0.7s;
-  background-image: url("../../../assets/photos/blackwidow.jpg");
+  background-image: url("../../../assets/event_img/photography.jpg");
 }
 
 @media only screen and (max-width: 1000px) {
