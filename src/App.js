@@ -5,6 +5,8 @@ import Offline from './Components/_Offline/Offline';
 import Home from './Components/Home/Home';
 import Events from './Components/Events/Events';
 import {Loader} from './Components/_Loader/Loader'
+import Login from './Components/Login/Login'
+import Profile from './Components/Profile/Profile'
 import './App.css';
 
 const Lost = lazy(() => import('./Components/Lost/Lost'));
@@ -16,11 +18,9 @@ const RoboticsEvents = lazy(() => import('./Components/Explore/Robotics/robo_exp
 const SuspEvents = lazy(() => import('./Components/Explore/SUSP/susp_explore'));
 const TechnicalEvents = lazy(() => import('./Components/Explore/Technical/tech_explore'));
 const Register = lazy(() =>  import('./Components/Register/Register'));
-const Login = lazy(() =>  import('./Components/Login/Login'));
 const Contact = lazy(() =>  import('./Components/Contact/Contact'));
 const Team = lazy(() =>  import('./Components/Team/Team'));
 const Verify = lazy(() =>  import('./Components/Verify/Verify'));
-const Profile = lazy(() =>  import('./Components/Profile/Profile'));
 const Admin = lazy(() =>  import('./Components/Admin/Admin'));
 const About = lazy(() =>  import('./Components/About/About'));
 const ForgotPass = lazy(() =>  import('./Components/ForgotPass/ForgotPass'));
@@ -229,7 +229,7 @@ class App extends Component {
               updateEventTeams={this.updateEventTeams} 
             />}
           />
-          <Route path="/profile" render={(props)=> 
+          <Route path="/profile" exact render={(props)=> 
             <Profile {...props} 
               userData={this.state.user} 
               isLoggedIn={this.state.isLoggedIn} 
@@ -240,7 +240,7 @@ class App extends Component {
               updateEventTeams={this.updateEventTeams} 
             />} 
           />
-          <Route path="/admin" render={(props)=> 
+          <Route path="/admin" exact render={(props)=> 
             <Admin {...props} 
               userData={this.state.user} 
               isLoggedIn={this.state.isLoggedIn} 

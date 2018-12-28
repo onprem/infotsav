@@ -4,7 +4,7 @@ SELECT `teamid`, `eid`, COUNT(*) FROM `event_reg` GROUP BY `teamid`;
 
 SELECT `ifid`, SUM(score) AS `total` FROM `easter_redeem` GROUP BY `ifid` ORDER BY `total` DESC;
 
-SELECT easter_redeem.ifid, users.name, SUM(easter_redeem.score) AS `total` FROM `easter_redeem`, `users` WHERE easter_redeem.ifid = users.ifid GROUP BY easter_redeem.ifid, users.name ORDER BY `total` DESC;
+SELECT easter_redeem.ifid, users.name, SUM(easter_redeem.score) AS `total` FROM `easter_redeem`, `users` WHERE easter_redeem.ifid = users.ifid GROUP BY easter_redeem.ifid, users.name ORDER BY `total` DESC LIMIT 15;
 
 SELECT easter_redeem.ifid, users.name, SUM(easter_redeem.score) AS `total` FROM `easter_redeem` INNER JOIN `users` ON easter_redeem.ifid = users.ifid GROUP BY easter_redeem.ifid ORDER BY `total` DESC;
 
