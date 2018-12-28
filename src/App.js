@@ -10,6 +10,7 @@ import Profile from './Components/Profile/Profile'
 import './App.css';
 
 const Lost = lazy(() => import('./Components/Lost/Lost'));
+const Easter = lazy(() => import('./Components/Easter/Easter'));
 const OnlineEvents = lazy(() => import('./Components/Explore/Online/online_explore'));
 const InformalEvents = lazy(() => import('./Components/Explore/Informal/info_explore'));
 const GamiacsEvents = lazy(() => import('./Components/Explore/Gamiacs/gamiacs_explore'));
@@ -251,6 +252,13 @@ class App extends Component {
               eventTeams={this.state.userTeams}
               updateEvent={this.updateEvent} 
               updateEventTeams={this.updateEventTeams} 
+            />} 
+          />
+          <Route path="/easter" exact render={(props)=> 
+            <Easter {...props} 
+              userData={this.state.user} 
+              isLoggedIn={this.state.isLoggedIn} 
+              updateLoginState={this.updateLoginState}
             />} 
           />
           <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
