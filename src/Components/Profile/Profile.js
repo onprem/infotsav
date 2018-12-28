@@ -144,14 +144,11 @@ class Profile extends Component {
 	}
 	const doesEventExist = (eid) => {
 	  	var res = false;
-	  	console.log('heck', this.props.eventData);
 	  	this.props.eventData.forEach((evt) => {
 	  		if (eid === evt.eid) {
 	  			res = true;
-	  			console.log("Good");
 	  		}
 	  	});
-	  	console.log('res: ', res)
 	  	return res;
 	}
 	const IsEligible = () => {
@@ -161,7 +158,7 @@ class Profile extends Component {
 			);
 		} else {
 			return (
-				<p></p>
+				null
 			);
 		}
 	}
