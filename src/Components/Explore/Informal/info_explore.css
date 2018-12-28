@@ -24,7 +24,7 @@
 }
 .info_el:nth-child(1) .info_el__bg:before {
   transition-delay: 0s;
-  background-image: url("../../../assets/photos/captainamerica.jpg");
+  background-image: url("../../../assets/event_img/aptQuiz.jpg");
 }
 .info_el:nth-child(2) {
   -webkit-transform: translate3d(105.2083333333%, 0, 0);
@@ -49,7 +49,7 @@
 }
 .info_el:nth-child(2) .info_el__bg:before {
   transition-delay: 0.1s;
-  background-image: url("../../../assets/photos/captainamerica.jpg");
+  background-image: url("../../../assets/event_img/marvelQuiz.jpg");
 }
 .info_el:nth-child(3) {
   -webkit-transform: translate3d(210.4166666667%, 0, 0);
@@ -74,7 +74,7 @@
 }
 .info_el:nth-child(3) .info_el__bg:before {
   transition-delay: 0.2s;
-  background-image: url("../../../assets/photos/captainamerica.jpg");
+  background-image: url("../../../assets/event_img/BITQuiz.jpg");
 }
 .info_el:nth-child(4) {
   -webkit-transform: translate3d(315.625%, 0, 0);
@@ -99,7 +99,7 @@
 }
 .info_el:nth-child(4) .info_el__bg:before {
   transition-delay: 0.3s;
-  background-image: url("../../../assets/photos/captainamerica.jpg");
+  background-image: url("../../../assets/event_img/programmingQuiz.png");
 }
 .info_el:nth-child(5) {
   -webkit-transform: translate3d(420.8333333333%, 0, 0);
@@ -124,7 +124,7 @@
 }
 .info_el:nth-child(5) .info_el__bg:before {
   transition-delay: 0.4s;
-  background-image: url("../../../assets/photos/captainamerica.jpg");
+  background-image: url("../../../assets/event_img/treasureHunt.jpg");
 }
 .info_el:hover .info_el__bg:after {
   opacity: 0;
