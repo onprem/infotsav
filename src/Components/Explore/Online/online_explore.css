@@ -124,7 +124,7 @@
 }
 .online_el:nth-child(5) .online_el__bg:before {
   transition-delay: 0.4s;
-  background-image: url("../../../assets/photos/blackwidow.jpg");
+  background-image: url("../../../assets/event_img/pranksters.jpg");
 }
 .online_el:nth-child(6) {
   -webkit-transform: translate3d(526.041333333%, 0, 0);
