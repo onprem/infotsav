@@ -214,7 +214,7 @@ class RegisterEvent extends Component {
               <div className=''>
                 <div className='f3 b underline ma4-ns ma1'>Registrations</div>
                 <TeamList team={this.state.userTeamMembers} />
-                {(this.state.error)?<div className='red f4 mid mh4-ns mv1-ns ma1'>{this.state.errorMessage}</div> : <div /> }
+                {(this.state.error)?<div className='red f4 mid mh4-ns mv1-ns ma1'>{this.state.errorMessage}</div> : null }
                 {((this.state.userTeamMembers.length+1)<eventDetails.maxMembers)?
                     <div className='flex flex-row items-center flex-wrap ma4-ns ma1'>
                       <input className="idTextField pa2 f4 input-reset ba bg-white b br4 w5" 
@@ -231,20 +231,22 @@ class RegisterEvent extends Component {
               <div className='flex flex-column items-center'>
                 <div className='f3 mid'>Register now!</div>
                 <span className="f5 link dim br3 ph3 pv2 ma2 black b buttonBackLogin" onClick={this.registerUserForEvent} >Register</span>
-                {(this.state.error)?<div className='red f4 mid'>{this.state.errorMessage}</div> : <div /> }
+                {(this.state.error)?<div className='red f4 mid'>{this.state.errorMessage}</div> : null }
               </div>
             }
           </div>
           <div className='white flex flex-column mt4 mh2-ns mh0'>
             <div className='f5'>* Max members in a team - {eventDetails.maxMembers}</div>
-            {(this.state.isUserRegistered && !this.state.payStatus)? <div className='f5'>** Complete payment from profile</div> : <div /> }
-            {(this.state.offerEvent)? <div className='f4'> This event is eligible for the New Year Gift. Register and pay for Blazing Wheel, Mini Robo War, Course Chaser and Robo Soccer to avail cashback.</div> : <div /> }
+            {(this.state.isUserRegistered && !this.state.payStatus)? <div className='f5'>** Complete payment from profile</div> : null }
+            {(this.state.offerEvent)? <div className='f4'> This event is eligible for the New Year Gift. Register and pay for Blazing Wheel, Mini Robo War, Course Chaser and Robo Soccer to avail cashback of ₹300.</div> : null }
           </div>
         </div>
       );
     }
     else return(
       <div className='white flex flex-column items-center ma4'>
+        {(this.state.offerEvent)? <div className='f4'> This event is eligible for the New Year Gift. Register and pay for Blazing Wheel, Mini Robo War, Course Chaser and Robo Soccer to avail cashback of ₹300.</div> : null }
+        <br />
         <div className='f3'>Login to continue</div>
         <Link className="f5 link dim br3 ph3 pv2 ma2 dib black b buttonBackLogin" to="/login">Login</Link>
       </div>
