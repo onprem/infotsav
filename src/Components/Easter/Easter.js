@@ -99,7 +99,31 @@ class Easter extends Component {
   }
 
   _handleEasterRedeem = () =>{
-  	console.log('Hi', this.state.field);
+  	document.getElementById('easter-code').value='';
+  	let error = false;
+    fetch('/api/easterRedeem', {
+      method: 'post',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify({
+      	egg: this.state.field,
+      })
+    })
+    .then(response => {
+      if(response.status!==200)
+        error = true;
+      return response.json();
+    })
+    .then((scores) => {
+    	if(error)
+    		throw(scores);
+		this.setState({
+			userScore: scores.userScore[0].total,
+			leaderboard: scores.leaderboard
+		});
+    })
+    .catch(err => {
+    	this.setState({error: true, errorMessage: err});
+    })
   }
 
   render() {
@@ -147,7 +171,7 @@ class Easter extends Component {
 	  				{//(lenEvt)?
 	  					//<EventList event={this.props.eventData} />
 	  				  //:
-	  				  	"They who is't deserve honor art not yet hither!"
+	  				  	"They who is't deserve honor art not hither!"
 	  				}
 	  			</div>
 	  		</div>
