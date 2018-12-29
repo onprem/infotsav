@@ -17,12 +17,18 @@
 				.select('event_reg.eid', 'users.ifid', 'users.name', 'event_reg.teamid')
 				.where('event_reg.teamid', 'in', subquery)
 				.then(teamData =>{
-					let userData = {
-						userEventReg: registrations,
-						userTeams: teamData,
-						user: user[0]
-					}
-					res.status(200).json(userData);
+					db('easter_redeem')
+					.sum({total: 'score'})
+					.where({ifid})
+					.then(userScore => {
+						let userData = {
+							userEventReg: registrations,
+							userTeams: teamData,
+							user: user[0],
+							userScore: userScore[0].total
+						}
+						res.status(200).json(userData);						
+					})
 				})
 			})
 		}

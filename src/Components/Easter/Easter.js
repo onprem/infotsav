@@ -119,6 +119,7 @@ class Easter extends Component {
 				userScore: scores.userScore[0].total,
 				leaderboard: scores.leaderboard
 			});
+			this.props.updateUserScore(scores.userScore[0].total);
 	    })
 	    .catch(err => {
 	    	this.setState({error: true, errorMessage: err});

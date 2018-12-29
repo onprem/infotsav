@@ -36,7 +36,8 @@ const initialState = {
     email: '',
     college: '',
     mobile: '',
-  }
+  },
+  userScore: 0
 }
 
 class App extends Component {
@@ -53,7 +54,8 @@ class App extends Component {
         email: '',
         college: '',
         mobile: '',
-      }
+      },
+      userScore: 0
     }
   }
 
@@ -76,6 +78,7 @@ class App extends Component {
       this.updateUser(res.user);
       this.updateEvent(res.userEventReg);
       this.updateEventTeams(res.userTeams);
+      this.updateUserScore(res.userScore)
       this.setState({isLoggedIn: true});
       if (res.user.ifid === 'ADMIN') {
         this.setState({isAdmin: true})
@@ -84,12 +87,6 @@ class App extends Component {
     .catch(console.log);
   }
 
-  updateLoginState = (value) =>{
-    this.setState({isLoggedIn: value});
-  }
-  updateAdminState = (value) =>{
-    this.setState({isAdmin: value});
-  }
   logOut = () =>{
     if(this.state.isLoggedIn){
       fetch('/api/logout')
@@ -102,6 +99,15 @@ class App extends Component {
       })
       .catch(console.log)
     }
+  }
+  updateUserScore = (value) =>{
+    this.setState({userScore: value});
+  }
+  updateLoginState = (value) =>{
+    this.setState({isLoggedIn: value});
+  }
+  updateAdminState = (value) =>{
+    this.setState({isAdmin: value});
   }
   updateEvent = (data) =>{
     this.setState({userEventReg: data});
@@ -130,151 +136,153 @@ class App extends Component {
           userData={this.state.user} 
         />
         <Suspense fallback={<div className="fallback"><span><Loader /></span></div>}>
-    		<Switch>
-    			<Route path="/" exact component={Home} />
-          <Route path="/events" exact component={Events} />
-          <Route path="/team" exact component={Team} />
-          <Route path="/about" exact component={About} />
-          <Route path="/contact" exact component={Contact} />
+      		<Switch>
+      			<Route path="/" exact component={Home} />
+            <Route path="/events" exact component={Events} />
+            <Route path="/team" exact component={Team} />
+            <Route path="/about" exact component={About} />
+            <Route path="/contact" exact component={Contact} />
 
-          <Route path="/events/online_events" exact render={(props) =>
-            <OnlineEvents {...props}
-              updateLoginState={this.updateLoginState} 
-              isLoggedIn={this.state.isLoggedIn}
-              updateEvent={this.updateEvent}
-              userData={this.state.user}
-              updateEventTeams={this.updateEventTeams} 
-              eventTeams={this.state.userTeams}
-              eventData={this.state.userEventReg}
-            />}
-          />
-          <Route path="/events/onsite_events" exact render={(props) =>
-            <InformalEvents {...props}
-              updateLoginState={this.updateLoginState} 
-              isLoggedIn={this.state.isLoggedIn}
-              updateEvent={this.updateEvent}
-              userData={this.state.user}
-              updateEventTeams={this.updateEventTeams} 
-              eventTeams={this.state.userTeams}
-              eventData={this.state.userEventReg}
-            />}
-          />
-          <Route path="/events/gamiacs_events" exact render={(props) =>
-            <GamiacsEvents {...props}
-              updateLoginState={this.updateLoginState} 
-              isLoggedIn={this.state.isLoggedIn}
-              updateEvent={this.updateEvent}
-              userData={this.state.user}
-              updateEventTeams={this.updateEventTeams} 
-              eventTeams={this.state.userTeams}
-              eventData={this.state.userEventReg}
-            />}
-          />
-          <Route path="/events/man_events" exact render={(props) =>
-            <ManagerialEvents {...props}
-              updateLoginState={this.updateLoginState} 
-              isLoggedIn={this.state.isLoggedIn}
-              updateEvent={this.updateEvent}
-              userData={this.state.user}
-              updateEventTeams={this.updateEventTeams} 
-              eventTeams={this.state.userTeams}
-              eventData={this.state.userEventReg}
-            />}
-          />
-          <Route path="/events/robo_events" exact render={(props) =>
-            <RoboticsEvents {...props}
-              updateLoginState={this.updateLoginState} 
-              isLoggedIn={this.state.isLoggedIn}
-              updateEvent={this.updateEvent}
-              userData={this.state.user}
-              updateEventTeams={this.updateEventTeams} 
-              eventTeams={this.state.userTeams}
-              eventData={this.state.userEventReg}
-            />}
-          />
-          <Route path="/events/susp_events" exact render={(props) =>
-            <SuspEvents {...props}
-              updateLoginState={this.updateLoginState} 
-              isLoggedIn={this.state.isLoggedIn}
-              updateEvent={this.updateEvent}
-              userData={this.state.user}
-              updateEventTeams={this.updateEventTeams} 
-              eventTeams={this.state.userTeams}
-              eventData={this.state.userEventReg}
-            />}
-          />
-          <Route path="/events/tech_events" exact render={(props) =>
-            <TechnicalEvents {...props}
-              updateLoginState={this.updateLoginState} 
-              isLoggedIn={this.state.isLoggedIn}
-              updateEvent={this.updateEvent}
-              userData={this.state.user}
-              updateEventTeams={this.updateEventTeams} 
-              eventTeams={this.state.userTeams}
-              eventData={this.state.userEventReg}
-            />}
-          />
-          <Route path="/register" exact render={(props) =>
-            <Register {...props} 
-              isLoggedIn={this.state.isLoggedIn}
-              updateLoginState={this.updateLoginState} 
-            />} 
-          />
-     			<Route path="/login" exact render={(props) =>
-            <Login {...props} 
-              updateUser={this.updateUser}
-              isLoggedIn={this.state.isLoggedIn}
-              logOut={this.logOut}
-              updateLoginState={this.updateLoginState} 
-              updateEvent={this.updateEvent} 
-              updateEventTeams={this.updateEventTeams} 
-            />}
-          />
-          <Route path="/profile" exact render={(props)=> 
-            <Profile {...props} 
-              userData={this.state.user} 
-              isLoggedIn={this.state.isLoggedIn} 
-              updateLoginState={this.updateLoginState}
-              eventData={this.state.userEventReg}
-              eventTeams={this.state.userTeams}
-              updateEvent={this.updateEvent} 
-              updateEventTeams={this.updateEventTeams} 
-            />} 
-          />
-          <Route path="/admin" exact render={(props)=> 
-            <Admin {...props} 
-              userData={this.state.user} 
-              isLoggedIn={this.state.isLoggedIn} 
-              isAdmin={this.state.isAdmin} 
-              updateLoginState={this.updateLoginState}
-              updateAdminState={this.updateAdminState}
-              eventData={this.state.userEventReg}
-              eventTeams={this.state.userTeams}
-              updateEvent={this.updateEvent} 
-              updateEventTeams={this.updateEventTeams} 
-            />} 
-          />
-          <Route path="/easter" exact render={(props)=> 
-            <Easter {...props} 
-              userData={this.state.user} 
-              isLoggedIn={this.state.isLoggedIn} 
-              updateLoginState={this.updateLoginState}
-            />} 
-          />
-          <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
-          <Route path='/resetPass' exact render={(props) =>
-            <ForgotPass {...props}
-              updateLoginState={this.updateLoginState} 
-              isLoggedIn={this.state.isLoggedIn}
-            />}
-          />
-          <Route path="/resetPass/id=:IFID/hash=:hash" exact render={(props) =>
-            <HandleForgotPass {...props}
-              logOut={this.logOut}
-            />}
-          />
-          <Route component={Lost} />
-    		</Switch>
+            <Route path="/events/online_events" exact render={(props) =>
+              <OnlineEvents {...props}
+                updateLoginState={this.updateLoginState} 
+                isLoggedIn={this.state.isLoggedIn}
+                updateEvent={this.updateEvent}
+                userData={this.state.user}
+                updateEventTeams={this.updateEventTeams} 
+                eventTeams={this.state.userTeams}
+                eventData={this.state.userEventReg}
+              />}
+            />
+            <Route path="/events/onsite_events" exact render={(props) =>
+              <InformalEvents {...props}
+                updateLoginState={this.updateLoginState} 
+                isLoggedIn={this.state.isLoggedIn}
+                updateEvent={this.updateEvent}
+                userData={this.state.user}
+                updateEventTeams={this.updateEventTeams} 
+                eventTeams={this.state.userTeams}
+                eventData={this.state.userEventReg}
+              />}
+            />
+            <Route path="/events/gamiacs_events" exact render={(props) =>
+              <GamiacsEvents {...props}
+                updateLoginState={this.updateLoginState} 
+                isLoggedIn={this.state.isLoggedIn}
+                updateEvent={this.updateEvent}
+                userData={this.state.user}
+                updateEventTeams={this.updateEventTeams} 
+                eventTeams={this.state.userTeams}
+                eventData={this.state.userEventReg}
+              />}
+            />
+            <Route path="/events/man_events" exact render={(props) =>
+              <ManagerialEvents {...props}
+                updateLoginState={this.updateLoginState} 
+                isLoggedIn={this.state.isLoggedIn}
+                updateEvent={this.updateEvent}
+                userData={this.state.user}
+                updateEventTeams={this.updateEventTeams} 
+                eventTeams={this.state.userTeams}
+                eventData={this.state.userEventReg}
+              />}
+            />
+            <Route path="/events/robo_events" exact render={(props) =>
+              <RoboticsEvents {...props}
+                updateLoginState={this.updateLoginState} 
+                isLoggedIn={this.state.isLoggedIn}
+                updateEvent={this.updateEvent}
+                userData={this.state.user}
+                updateEventTeams={this.updateEventTeams} 
+                eventTeams={this.state.userTeams}
+                eventData={this.state.userEventReg}
+              />}
+            />
+            <Route path="/events/susp_events" exact render={(props) =>
+              <SuspEvents {...props}
+                updateLoginState={this.updateLoginState} 
+                isLoggedIn={this.state.isLoggedIn}
+                updateEvent={this.updateEvent}
+                userData={this.state.user}
+                updateEventTeams={this.updateEventTeams} 
+                eventTeams={this.state.userTeams}
+                eventData={this.state.userEventReg}
+              />}
+            />
+            <Route path="/events/tech_events" exact render={(props) =>
+              <TechnicalEvents {...props}
+                updateLoginState={this.updateLoginState} 
+                isLoggedIn={this.state.isLoggedIn}
+                updateEvent={this.updateEvent}
+                userData={this.state.user}
+                updateEventTeams={this.updateEventTeams} 
+                eventTeams={this.state.userTeams}
+                eventData={this.state.userEventReg}
+              />}
+            />
+            <Route path="/register" exact render={(props) =>
+              <Register {...props} 
+                isLoggedIn={this.state.isLoggedIn}
+                updateLoginState={this.updateLoginState} 
+              />} 
+            />
+       			<Route path="/login" exact render={(props) =>
+              <Login {...props} 
+                updateUser={this.updateUser}
+                isLoggedIn={this.state.isLoggedIn}
+                logOut={this.logOut}
+                updateLoginState={this.updateLoginState} 
+                updateEvent={this.updateEvent} 
+                updateEventTeams={this.updateEventTeams} 
+              />}
+            />
+            <Route path="/profile" exact render={(props)=> 
+              <Profile {...props} 
+                userData={this.state.user} 
+                isLoggedIn={this.state.isLoggedIn} 
+                updateLoginState={this.updateLoginState}
+                eventData={this.state.userEventReg}
+                eventTeams={this.state.userTeams}
+                updateEvent={this.updateEvent} 
+                updateEventTeams={this.updateEventTeams}
+                userScore={this.state.userScore}
+              />} 
+            />
+            <Route path="/admin" exact render={(props)=> 
+              <Admin {...props} 
+                userData={this.state.user} 
+                isLoggedIn={this.state.isLoggedIn} 
+                isAdmin={this.state.isAdmin} 
+                updateLoginState={this.updateLoginState}
+                updateAdminState={this.updateAdminState}
+                eventData={this.state.userEventReg}
+                eventTeams={this.state.userTeams}
+                updateEvent={this.updateEvent} 
+                updateEventTeams={this.updateEventTeams} 
+              />} 
+            />
+            <Route path="/easter" exact render={(props)=> 
+              <Easter {...props} 
+                userData={this.state.user} 
+                isLoggedIn={this.state.isLoggedIn} 
+                updateLoginState={this.updateLoginState}
+                updateUserScore={this.updateUserScore}
+              />} 
+            />
+            <Route path="/verify/id=:IFID/hash=:hash" exact component={Verify} />
+            <Route path='/resetPass' exact render={(props) =>
+              <ForgotPass {...props}
+                updateLoginState={this.updateLoginState} 
+                isLoggedIn={this.state.isLoggedIn}
+              />}
+            />
+            <Route path="/resetPass/id=:IFID/hash=:hash" exact render={(props) =>
+              <HandleForgotPass {...props}
+                logOut={this.logOut}
+              />}
+            />
+            <Route component={Lost} />
+      		</Switch>
         </Suspense>
       </div>
     );
