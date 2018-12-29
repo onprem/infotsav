@@ -9,7 +9,7 @@ const handleEventRegCancel = (req, res, db, xss) =>{
 	const {ifid, eid} = req.body;
 	const email = req.email;
 
-	if(!ifid){
+	if(!ifid || !eid.toString().length){
 		return res.status(400).json('Incomplete request!');
 	}
 	
