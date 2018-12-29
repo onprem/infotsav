@@ -154,7 +154,7 @@ class Profile extends Component {
 			);
 		} else {
 			return (
-				<p></p>
+				null
 			);
 		}
 	}
