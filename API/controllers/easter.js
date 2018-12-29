@@ -85,11 +85,9 @@ const handleEasterRedeem = (req,res,db,xss)=>{
 }
 
 const fetchScore = (req,res,db)=>{
-	const email = req.email;
-	return db.select('*').from('users').where({email})
-	.then(userInf => {
-		const ifid = userInf[0].ifid;
-		db('easter_redeem')
+	const {ifid, isLoggedIn} = req.body;
+	if(isLoggedIn){
+		return db('easter_redeem')
 		.join('users', 'users.ifid', '=', 'easter_redeem.ifid')
 		.select('easter_redeem.ifid', 'name')
 		.sum({total: 'score'})
@@ -105,8 +103,21 @@ const fetchScore = (req,res,db)=>{
 				return res.status(200).json(score);
 			})
 		})
-	})
-	.catch(err => {console.log(err); return res.status(400).json('Something is wrong');});
+		.catch(err => {console.log(err); return res.status(400).json('Something is wrong');});
+	}
+	else {
+		return db('easter_redeem')
+		.join('users', 'users.ifid', '=', 'easter_redeem.ifid')
+		.select('easter_redeem.ifid', 'name')
+		.sum({total: 'score'})
+		.groupBy('easter_redeem.ifid')
+		.orderBy('total', 'desc')
+		.limit(15)
+		.then((leaderboard) => {
+			return res.status(200).json(leaderboard);
+		})
+		.catch(err => {console.log(err); return res.status(400).json('Something is wrong');});
+	}
 }
 
 module.exports={

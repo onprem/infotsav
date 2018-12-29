@@ -65,7 +65,6 @@ class Profile extends Component {
     .then(data => {
       if(error)
         throw(data);
-      console.log(data);
       this.props.updateEvent(data.userEventReg);
       this.props.updateEventTeams(data.userTeams);
     })
@@ -78,8 +77,6 @@ class Profile extends Component {
   payEvent = (eid, fee, teamid) => {
   	this.setState({loading: true, paymentActive: true});
   	let error=false;
-  	console.log('fetching payload.....');
-  	console.log(this.props.userData.id+' '+eid+' '+fee+' '+teamid);
     fetch('/api/eventPayment', {
       method: 'post',
       headers: {'Content-type': 'application/json'},
@@ -98,7 +95,6 @@ class Profile extends Component {
     .then(data => {
       if(error)
         throw(data);
-      console.log(data);
       this.setState(Object.assign(this.state.payload, {
 	      	MID: data.MID,
 	        ORDER_ID: data.ORDER_ID,
@@ -144,14 +140,11 @@ class Profile extends Component {
 	}
 	const doesEventExist = (eid) => {
 	  	var res = false;
-	  	console.log('heck', this.props.eventData);
 	  	this.props.eventData.forEach((evt) => {
 	  		if (eid === evt.eid) {
 	  			res = true;
-	  			console.log("Good");
 	  		}
 	  	});
-	  	console.log('res: ', res)
 	  	return res;
 	}
 	const IsEligible = () => {

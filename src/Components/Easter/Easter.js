@@ -6,6 +6,7 @@ import '../../assets/css/fontawesome.min.css'
 import '../../assets/css/signup.css'
 import headers from "../../assets/logo/headers.png"
 import {Loader} from '../_Loader/Loader'
+import './Easter.css'
 
 class Easter extends Component {
 
@@ -28,11 +29,16 @@ class Easter extends Component {
 				throw(response);
 		    this.setState({ loading: false });
 		    this.props.updateLoginState(true);
+			this.fetchScore();
 		})
 		.catch(() => {this.setState({ loading: false, redirect: true });});
 	} else this.setState({loading: false});
+  }
 
-	this.fetchScore();
+  componentDidMount(){
+  	console.log(this.state, this.props);
+  	console.log('%cOhMyHeavens!', 'background: #222; color: #bada55; font-size: 2rem');
+  	console.log(`You did good coming here! Here is an easter code for ya!`)
   }
 
   onTypeChange = (event) => {
@@ -46,7 +52,20 @@ class Easter extends Component {
   }
 
   fetchScore = () => {
-
+  	let error = false;
+    fetch('/api/easterScore', {
+      method: 'post',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify({
+      	ifid: this.props.userData.id,
+      	isLoggedIn: this.props.isLoggedIn
+      })
+    })
+    .then(response => {
+      if(response.status!==200)
+        error = true;
+      return response.json();
+    })
   }
 
   _handleEasterRedeem = () =>{
@@ -62,7 +81,7 @@ class Easter extends Component {
 		  	</div>
 			<div className="white flex flex-column items-center">
 			  	<div id="headdin" className="mt5">
-					<h2>Easter Eggs</h2>
+					<h2>Easter Hunt</h2>
 				</div>
 			{(!loading)?
 				(this.props.isLoggedIn)?
@@ -92,6 +111,17 @@ class Easter extends Component {
 			:
 				<Loader />
 			}
+			<div className="easter-content">
+	  			<div className="eventTableDiv">
+	  				<h3 className='mv3 urevt'>Table of Honor</h3>
+	  				{//(lenEvt)?
+	  					//<EventList event={this.props.eventData} />
+	  				  //:
+	  				  	"They who is't deserve honor art not yet hither!"
+	  				}
+	  			</div>
+	  		</div>
+
 			</div>
 			<Footer />
 		</div>
