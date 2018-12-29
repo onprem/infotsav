@@ -20,7 +20,8 @@ const handleEventReg = (req, res, db, xss) =>{
 		teamid = req.body.teamid;
 	}
 	
-	if(!ifid || !eid || !teamid){
+	if(!ifid || !teamid){
+		console.log(req.body);
 		return res.status(400).json('Incorrect form submission');
 	}
 	

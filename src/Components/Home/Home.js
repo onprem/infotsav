@@ -34,6 +34,7 @@ class Home extends Component {
   componentWillUnmount(){
   	stopHomeFunctions();
   	window.clearTimeout(this.spideyTO);
+	document.getElementById('wrapper-spiderman').style.display='none';
   }
   spideyAction = (event) => {
   	alert(`Glad you made it here! Try entering 'SpidermanTuneChurayaMereDilKaChain' as an easter code!`);
