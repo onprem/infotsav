@@ -7,6 +7,7 @@ import '../../assets/css/signup.css'
 import headers from "../../assets/logo/headers.png"
 import {Loader} from '../_Loader/Loader'
 import './Easter.css'
+import TeamCard from './TeamCard';
 
 class Easter extends Component {
 
@@ -45,9 +46,6 @@ class Easter extends Component {
   	console.log(`You did good coming here! Here is an easter code for ya!`)
   }
   componentDidUpdate(prevProps, prevState){
-  	// console.log(this.props.userData.id, prevProps.userData.id);
-  	// if(this.props.userData !== prevProps.userData)
-  	// 	this.fetchScore();
   }
 
   onTypeChange = (event) => {
@@ -61,7 +59,6 @@ class Easter extends Component {
   }
 
   fetchScore = () => {
-  	console.log('Hoo');
   	let error = false;
     fetch('/api/easterScore', {
       method: 'post',
@@ -99,35 +96,70 @@ class Easter extends Component {
   }
 
   _handleEasterRedeem = () =>{
+  	if(this.state.field){
+	  	let error = false;
+	    fetch('/api/easterRedeem', {
+	      method: 'post',
+	      headers: {'Content-type': 'application/json'},
+	      body: JSON.stringify({
+	      	egg: this.state.field,
+	      })
+	    })
+	    .then(response => {
+	      if(response.status!==200)
+	        error = true;
+	      return response.json();
+	    })
+	    .then((scores) => {
+	    	if(error)
+	    		throw(scores);
+			this.setState({
+				error: false,
+				errorMessage: '',
+				userScore: scores.userScore[0].total,
+				leaderboard: scores.leaderboard
+			});
+	    })
+	    .catch(err => {
+	    	this.setState({error: true, errorMessage: err});
+	    })
+	}
   	document.getElementById('easter-code').value='';
-  	let error = false;
-    fetch('/api/easterRedeem', {
-      method: 'post',
-      headers: {'Content-type': 'application/json'},
-      body: JSON.stringify({
-      	egg: this.state.field,
-      })
-    })
-    .then(response => {
-      if(response.status!==200)
-        error = true;
-      return response.json();
-    })
-    .then((scores) => {
-    	if(error)
-    		throw(scores);
-		this.setState({
-			userScore: scores.userScore[0].total,
-			leaderboard: scores.leaderboard
-		});
-    })
-    .catch(err => {
-    	this.setState({error: true, errorMessage: err});
-    })
+	this.setState({field: ''});
   }
 
   render() {
   	const { loading } = this.state;
+
+    const Leaderboard = ({ranks}) => {
+      const teamComponent = ranks.map((member, i) =>
+          <TeamCard 
+            key={i}
+            serial={parseInt(i)+1}
+            mid={member.ifid}
+            mname={member.name}
+            score={member.total}
+          />
+      );
+      return (
+        <div className='white flex flex-column items-center w-100 mh4-ns mh1'>
+          <table className="f4 w-100" cellSpacing="0">
+            <thead>
+              <tr>
+                <th className="fw6-ns fw8 bb b--white-20 tc pb3 pr3">Rank</th>
+                <th className="fw6-ns fw8 bb b--white-20 tc pb3 pr3">Name</th>
+                <th className="fw6-ns fw8 bb b--white-20 tc pb3 pr3">IF-ID</th>
+                <th className="fw6-ns fw8 bb b--white-20 tc pb3 pr3">Score</th>
+              </tr>
+            </thead>
+            <tbody className="lh-copy" id='leader-body'>
+              {teamComponent}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
     return (
 	   	<div className='register-container min-vh-100 w-100'>
    			<div>
@@ -135,11 +167,12 @@ class Easter extends Component {
 		  	</div>
 			<div className="white flex flex-column items-center">
 			  	<div id="headdin" className="mt5">
-					<h2>Easter Hunt</h2>
+					<div className='f1 b ma3 mt4'>Easter Hunt</div>
 				</div>
 			{(!loading)?
 				(this.props.isLoggedIn)?
 					<div className="white flex flex-column items-center">
+						{(this.state.userScore)?<div className='f3'>Your score: {this.state.userScore}</div> : null}
 						<input className="pa2 pt3 f3 br1 input-reset ba bg-white dib-ns db w-100" 
 							type="text" 
 							name="easter-code"  
@@ -153,6 +186,7 @@ class Easter extends Component {
 					      	value="Redeem" 
 					      	onClick={this._handleEasterRedeem}
 				      	/>
+  						{(this.state.error)?<div className='f4 ma2'>{this.state.errorMessage}</div> : null}
 					</div>
 				:
 					<div className='f3 white'>
@@ -168,9 +202,9 @@ class Easter extends Component {
 			<div className="easter-content">
 	  			<div className="eventTableDiv">
 	  				<h3 className='mv3 urevt'>Table of Honor</h3>
-	  				{//(lenEvt)?
-	  					//<EventList event={this.props.eventData} />
-	  				  //:
+	  				{(this.state.leaderboard.length)?
+	  					<Leaderboard ranks={this.state.leaderboard} />
+	  				  :
 	  				  	"They who is't deserve honor art not hither!"
 	  				}
 	  			</div>
