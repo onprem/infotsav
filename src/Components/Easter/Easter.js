@@ -91,7 +91,7 @@ class Easter extends Component {
     	}
     })
     .catch(err => {
-    	this.setState({error: true, errorMessage: err});
+    	console.log(err);
     })
   }
 

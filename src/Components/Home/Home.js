@@ -12,7 +12,7 @@ import '../../assets/css/csshake.min.css'
 import {homeFunctions, stopHomeFunctions} from './HomeFunctions.js';
 import Particles from 'react-particles-js';
 import particleConfig from '../../assets/particlesjs-config.json';
-
+import './Spidey.css'
 
 class Home extends Component {
 
@@ -26,10 +26,18 @@ class Home extends Component {
   componentDidMount(){
   	homeFunctions();
   	// console.log(particleConfig);
+  	this.spideyTO = window.setTimeout(() => {
+  		document.getElementById('wrapper-spiderman').style.display='unset';
+  	}, (Math.floor(Math.random() * 20)+50)*1000)
   }
 
   componentWillUnmount(){
   	stopHomeFunctions();
+  	window.clearTimeout(this.spideyTO);
+  }
+  spideyAction = (event) => {
+  	alert(`Glad you made it here! Try entering 'SpidermanTuneChurayaMereDilKaChain' as an easter code!`);
+	document.getElementById('wrapper-spiderman').style.display='none';
   }
 
   render() {
@@ -45,7 +53,23 @@ class Home extends Component {
 				<span className="c2" id="c2"></span>
 				<span className="c3" id="c3"></span>
 			</div>
-			
+			<div id='wrapper-spiderman'>
+			  <div id="spiderman" className='pointer' onClick={this.spideyAction} >
+			    <div className="head">
+			      <div className="eye-left"></div>
+			      <div className="eye-right"></div>
+			    </div>
+			    <div className="body">
+			      <div className="spider"></div>
+			      <div className="arm-left"></div>
+			      <div className="arm-right"></div>
+			    </div>
+			    <div className="legs">
+			      <div className="boot-left"></div>
+			      <div className="boot-right"></div>
+			    </div>
+			  </div>
+		  	</div>
 			<div id="disto" className="">
 				<div className="infodiv">
 					<img src={inf_starlord} className="infologo" id="inimg" alt="infotsav logo" />
