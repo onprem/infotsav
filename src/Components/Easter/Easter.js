@@ -17,7 +17,9 @@ class Easter extends Component {
 	    redirect: false,
 	    error: false,
 	    errorMessage: '',
-      	field: ''
+      	field: '',
+      	userScore: 0,
+      	leaderboard: []
 	};
   }
 
@@ -31,14 +33,21 @@ class Easter extends Component {
 		    this.props.updateLoginState(true);
 			this.fetchScore();
 		})
-		.catch(() => {this.setState({ loading: false, redirect: true });});
-	} else this.setState({loading: false});
+		.catch(() => {this.fetchScore(); this.setState({ loading: false, redirect: true });});
+	} else{ 
+		this.setState({loading: false});
+		this.fetchScore();
+	}
   }
 
   componentDidMount(){
-  	console.log(this.state, this.props);
   	console.log('%cOhMyHeavens!', 'background: #222; color: #bada55; font-size: 2rem');
   	console.log(`You did good coming here! Here is an easter code for ya!`)
+  }
+  componentDidUpdate(prevProps, prevState){
+  	// console.log(this.props.userData.id, prevProps.userData.id);
+  	// if(this.props.userData !== prevProps.userData)
+  	// 	this.fetchScore();
   }
 
   onTypeChange = (event) => {
@@ -52,6 +61,7 @@ class Easter extends Component {
   }
 
   fetchScore = () => {
+  	console.log('Hoo');
   	let error = false;
     fetch('/api/easterScore', {
       method: 'post',
@@ -65,6 +75,26 @@ class Easter extends Component {
       if(response.status!==200)
         error = true;
       return response.json();
+    })
+    .then((scores) => {
+    	if(error)
+    		throw(scores);
+    	if(this.props.isLoggedIn){
+    		if(scores.userScore[0].total === null)
+    			this.fetchScore();
+    		else {
+    			this.setState({
+	    			userScore: scores.userScore[0].total,
+	    			leaderboard: scores.leaderboard
+	    		});
+    		}
+    	}
+    	else {
+    		this.setState({leaderboard: scores});
+    	}
+    })
+    .catch(err => {
+    	this.setState({error: true, errorMessage: err});
     })
   }
 
