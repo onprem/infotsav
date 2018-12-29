@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link, Redirect} from 'react-router-dom';
+import { Accordion } from 'react-accessible-accordion';
 import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from 'recharts';
 import {Footer} from '../Footer/Footer';
 import '../../assets/css/solid.min.css'
@@ -87,8 +88,9 @@ class Admin extends Component {
   	var stats = [];
   	var datex='2018-12-05';
   	var j = 0;
-  	var k = 0
-  	for (var i in users) {
+  	var k = 0;
+    var i = users.length-1;
+  	for (i; i >= 0; i--) {
   		var z = users[i].timest.substring(0, 10);
   		if (datex !== z) {
   			var ob = {date: datex, users: j, confirmed: k};
@@ -161,24 +163,9 @@ class Admin extends Component {
       return (
       	<div className='white flex flex-column items-center w-100'>
       	  <h4 className='mv4 payh'>Registered Users: {userArray.length}</h4>
-          <table className="f4 w-100" cellSpacing="0">
-            <thead>
-              <tr>
-                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Index</th>
-                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">IF-ID</th>
-                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Name</th>
-                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Gender</th>
-                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">College</th>
-                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">City</th>
-                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Email</th>
-                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Mobile</th>
-                <th className="fw6-ns fw8 bb b--white-20 pb3 pr3">Confirmed</th>
-              </tr>
-            </thead>
-            <tbody className="lh-copy">
-            	{usersComponent}
-            </tbody>
-          </table>
+          <Accordion>
+          	{usersComponent}
+          </Accordion>
         </div>
       );
     }

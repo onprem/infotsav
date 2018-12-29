@@ -1,22 +1,30 @@
 import React from 'react';
+import { AccordionItem, AccordionItemTitle, AccordionItemBody } from 'react-accessible-accordion';
 
 const UsersCard = ({serial, ifid, name, gender, college, city, email, mobile, confirm }) => {
 	return(
-      <tr className='hover-bg-black-10'>
-        <td className="pv3 pl2 pr2 pr3 bb b--white-20">{serial}.</td>
-        <td className="pv3 pr3 bb b--white-20">{ifid}</td>
-        <td className="pv3 pr3 bb b--white-20">{name}</td>
-        <td className="pv3 pr3 bb b--white-20">{gender}</td>
-        <td className="pv3 pr3 bb b--white-20">{college}</td>
-        <td className="pv3 pr3 bb b--white-20">{city}</td>
-        <td className="pv3 pr3 bb b--white-20"><a href={"mailto:"+email}>{email}</a></td>
-        <td className="pv3 pr3 bb b--white-20"><a href={"tel:"+mobile}>{mobile}</a></td>
-        {(confirm)?
-        	<td className="pv3 pr3 bb b--white-20"><span className="fas fa-check-circle" style={{color: 'rgb(40, 246, 40)'}}></span></td>
+      <AccordionItem>
+        <AccordionItemTitle>
+          <span>{serial}.</span>
+          <span>{ifid}</span>
+          <span>{name}</span>
+          {(confirm)?
+            <span className="fas fa-check-circle" style={{color: 'rgb(40, 246, 40)'}}></span>
           :
-        	<td className="pv3 pr3 bb b--white-20"><span className="fas fa-times-circle" style={{color: '#d22a2a'}}></span></td>
-        }
-      </tr>
+            <span className="fas fa-times-circle" style={{color: '#d22a2a'}}></span>
+          }
+        </AccordionItemTitle>
+        <AccordionItemBody>
+          <div className="acc-body-div">
+            <span>{college}</span>
+            <span>{city}</span>
+          </div>
+          <div className="acc-body-div">
+            <span><a href={"mailto:"+email}>{email}</a></span>
+            <span><a href={"tel:"+mobile}>{mobile}</a></span>
+          </div>
+        </AccordionItemBody>
+      </AccordionItem>
 	);
 }
 

@@ -1,5 +1,5 @@
 const returnUsers=(req,res,db)=>{
- 	db.select('*').from('users').orderBy('timest', 'asc')
+ 	db.select('*').from('users').orderBy('timest', 'desc')
 	.then(allUsers => {
 		let userData = {
 			users: allUsers
