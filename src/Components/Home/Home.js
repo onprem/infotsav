@@ -13,22 +13,23 @@ import {homeFunctions, stopHomeFunctions} from './HomeFunctions.js';
 import Particles from 'react-particles-js';
 import particleConfig from '../../assets/particlesjs-config.json';
 import './Spidey.css'
+import Modal from 'react-awesome-modal';
 
 class Home extends Component {
 
   constructor(){
     super();
     this.state={
+    	visibleModal: false
     }
   }
 
   // particleParams =
   componentDidMount(){
   	homeFunctions();
-  	// console.log(particleConfig);
   	this.spideyTO = window.setTimeout(() => {
   		document.getElementById('wrapper-spiderman').style.display='unset';
-  	}, (Math.floor(Math.random() * 20)+50)*1000)
+  	}, (Math.floor(Math.random() * 30)+60)*1000)
   }
 
   componentWillUnmount(){
@@ -36,8 +37,8 @@ class Home extends Component {
   	window.clearTimeout(this.spideyTO);
 	document.getElementById('wrapper-spiderman').style.display='none';
   }
-  spideyAction = (event) => {
-  	alert(`Glad you made it here! Try entering 'SpidermanTuneChurayaMereDilKaChain' as an easter code!`);
+  spideyAction = () => {
+  	this.setState({visibleModal: true});
 	document.getElementById('wrapper-spiderman').style.display='none';
   }
 
@@ -71,6 +72,15 @@ class Home extends Component {
 			    </div>
 			  </div>
 		  	</div>
+            <Modal 
+                visible={this.state.visibleModal}
+                effect="fadeInDown"
+                onClickAway={() => this.setState({visibleModal: false})}
+            >
+                <div className='black f5 flex flex-column items-center pa3 bg-near-gray'>
+                    <div className='mb2'>Glad you made it here!</div><div className='t mh2'> Try entering '<b>SpidermanTuneChurayaMereDilKaChain</b>' as an easter code!</div>
+                </div>
+            </Modal>
 			<div id="disto" className="">
 				<div className="infodiv">
 					<img src={inf_starlord} className="infologo" id="inimg" alt="infotsav logo" />
