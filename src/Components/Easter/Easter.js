@@ -22,10 +22,11 @@ class Easter extends Component {
       	userScore: 0,
       	leaderboard: []
 	};
+  this.i=0;
   }
 
   componentWillMount(){
-  	if(!this.props.isLoggedIn){
+	 if(!this.props.isLoggedIn){
 		fetch('/api/checkToken')
 		.then(response => {
 			if(response.status!==200)
@@ -38,7 +39,7 @@ class Easter extends Component {
 	} else{ 
 		this.setState({loading: false});
 		this.fetchScore();
-	}
+	 }
   }
 
   componentDidMount(){
@@ -77,11 +78,13 @@ class Easter extends Component {
     	if(error)
     		throw(scores);
     	if(this.props.isLoggedIn){
-    		if(scores.userScore[0].total === null)
+    		if(scores.userScore[0].total === null && this.i<5){
+          this.i++;
     			this.fetchScore();
+        }
     		else {
     			this.setState({
-	    			userScore: scores.userScore[0].total,
+	    			userScore: scores.userScore[0].total || '0',
 	    			leaderboard: scores.leaderboard
 	    		});
     		}
