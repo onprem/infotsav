@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Thasadith:400,700');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+body {
+	margin: 0;
+	background: url('../assets/bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	color: white;
+}
+a {
+	/*text-decoration: none;*/
+	color: white;
+}
+.container {
+	font-family: 'Thasadith', sans-serif;
+	text-align: center;
+	display: flex;
+	font-size: 3.2em;
+	flex-direction: column;
+	min-height: 100%;
+	align-items: center;
+}
+.container h3 {
+	margin: 60px 0 20px 0;
+}
+.container div:nth-child(3) {
+	position: fixed;
+	bottom: 50px;
+}
+.code {
+	font-family: 'Anonymous Pro', monospace;
+}
+.copyIcon {
+	fill: white;
+}
+#hidden {
+	display: none;
+}
+@media only screen and (max-width: 1000px) {
+	body {
+		min-height: 100vh;
+	}
+	.container {
+		font-size: 4.1em;
+		width: 90%;
+		margin-left: 5%;
+	}
+	.container div:nth-child(3) {
+		bottom: 120px;
+	}
+}
