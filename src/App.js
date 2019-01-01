@@ -101,7 +101,8 @@ class App extends Component {
     }
   }
   updateUserScore = (value) =>{
-    this.setState({userScore: value});
+    if(value !== null)
+      this.setState({userScore: value});
   }
   updateLoginState = (value) =>{
     this.setState({isLoggedIn: value});
@@ -234,6 +235,7 @@ class App extends Component {
                 updateLoginState={this.updateLoginState} 
                 updateEvent={this.updateEvent} 
                 updateEventTeams={this.updateEventTeams} 
+                updateUserScore={this.updateUserScore}
               />}
             />
             <Route path="/profile" exact render={(props)=> 
