@@ -6,12 +6,10 @@ class Offline extends Component {
 		var offNotif = document.getElementsByClassName('offline')[0];
 		var closeNotif = document.getElementsByClassName('close-notif')[0];
 		window.addEventListener('offline', function(e) { 
-			console.log('offline'); 
 			offNotif.classList.add('show-notif');
 		});
 
 		window.addEventListener('online', function(e) { 
-			console.log('online');
 			offNotif.classList.remove('show-notif');
 		});
 

@@ -8,6 +8,7 @@ import headers from "../../assets/logo/headers.png"
 import {Loader} from '../_Loader/Loader'
 import './Easter.css'
 import TeamCard from './TeamCard';
+import Modal from 'react-awesome-modal';
 
 class Easter extends Component {
 
@@ -18,25 +19,26 @@ class Easter extends Component {
 	    redirect: false,
 	    error: false,
 	    errorMessage: '',
-      	field: '',
-      	userScore: 0,
-      	leaderboard: []
-	};
-  this.i=0;
+    	field: '',
+    	userScore: 0,
+    	leaderboard: [],
+      visibleModal: false
+    };
+    this.i=0;
   }
 
   componentWillMount(){
-	 if(!this.props.isLoggedIn){
-		fetch('/api/checkToken')
-		.then(response => {
-			if(response.status!==200)
-				throw(response);
-		    this.setState({ loading: false });
-		    this.props.updateLoginState(true);
-			this.fetchScore();
-		})
-		.catch(() => {this.fetchScore(); this.setState({ loading: false, redirect: true });});
-	} else{ 
+    if(!this.props.isLoggedIn){
+  		fetch('/api/checkToken')
+  		.then(response => {
+  			if(response.status!==200)
+  				throw(response);
+  		    this.setState({ loading: false });
+  		    this.props.updateLoginState(true);
+  			this.fetchScore();
+  		})
+  		.catch(() => {this.fetchScore(); this.setState({ loading: false, redirect: true });});
+    } else{ 
 		this.setState({loading: false});
 		this.fetchScore();
 	 }
@@ -127,9 +129,15 @@ class Easter extends Component {
 	    .catch(err => {
 	    	this.setState({error: true, errorMessage: err});
 	    })
-	}
+    }
   	document.getElementById('easter-code').value='';
-	this.setState({field: ''});
+    this.setState({field: ''});
+  }
+
+  clickHeadingHandle =(event) => {
+    if(event.detail === 3){
+      this.setState({visibleModal: true});
+    }
   }
 
   render() {
@@ -167,12 +175,21 @@ class Easter extends Component {
     return (
 	   	<div className='register-container min-vh-100 w-100'>
    			<div>
-				<Link to='/'><img src={headers} className="headim" alt="infotsav logo" /></Link>
+				  <Link to='/'><img src={headers} className="headim" alt="infotsav logo" /></Link>
 		  	</div>
-			<div className="white flex flex-column items-center">
-			  	<div id="headdin" className="mt5">
-					<div className='f1 b ma3 mt4'>Easter Hunt</div>
-				</div>
+          <Modal 
+              visible={this.state.visibleModal}
+              effect="fadeInDown"
+              onClickAway={() => this.setState({visibleModal: false})}
+          >
+            <div className='black f5 flex flex-column items-center pa3 bg-near-gray'>
+                <div className='mb2'>Damn! You got it right.</div><div className='t mh2'> Here is your easter code: '<b>TheLokiClick</b>'</div>
+            </div>
+          </Modal>
+        <div className="white flex flex-column items-center">
+		  	<div id="headdin" className="mt5">
+					<div className='f1 b ma3 mt4' onClick={this.clickHeadingHandle}>Easter Hunt</div>
+			  </div>
 			{(!loading)?
 				(this.props.isLoggedIn)?
 					<div className="white flex flex-column items-center">
