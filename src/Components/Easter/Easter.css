@@ -4,7 +4,19 @@
 	align-items: flex-start;
 	justify-content: flex-start;
 	/*min-height: 100vh;*/
-	font-size: 1.5em;
+	font-size: 1.3em;
 	color: white;
 	width: 80%;
+}
+.easterTableDiv {
+	width: 100%;
+	padding-bottom: 100px;
+}
+
+.easterRulesDiv{
+	width: 100%;
+}
+
+.easter-content li {
+	margin: 3px;
 }
