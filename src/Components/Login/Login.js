@@ -82,6 +82,7 @@ class Login extends Component {
 	this.props.updateUser(user.user);
 	this.props.updateEvent(user.userEventReg);
 	this.props.updateEventTeams(user.userTeams);
+    this.props.updateUserScore(user.userScore);
   }
 
   render() {

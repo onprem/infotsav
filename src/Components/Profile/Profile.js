@@ -227,6 +227,11 @@ class Profile extends Component {
 				  						<div className="detailsD"><b>Mobile:</b> {this.props.userData.mobile}</div>
 				  						<div className="detailsD"><b>College:</b> {this.props.userData.college}</div>
 				  					</div>
+				  					<br />
+				  					<div className='detailsCard'>
+				  						<div className="detailsD"><b>Easter Hunt Score:</b> {this.props.userScore}</div>
+				  						<div className="detailsD fw5"><Link to='/easter'>Found an egg?</Link></div>
+				  					</div>
 				  				</div>
 				  			</div>
 				  			<div className="eventTableDiv">

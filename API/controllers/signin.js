@@ -38,17 +38,23 @@ const handleSignin = (req,res,db,bcrypt,xss)=>{
 								.select('event_reg.eid', 'users.ifid', 'users.name', 'event_reg.teamid')
 								.where('event_reg.teamid', 'in', subquery)
 								.then(teamData =>{
-									let userData = {
-										userEventReg: registrations,
-										userTeams: teamData,
-										user: user[0]
-									}
-								// Issue token
-							        const payload = {email};
-							        const token = jwt.sign(payload, secret, {
-							        	expiresIn: '7d'
-							        });
-							        res.status(200).cookie('token', token, { maxAge: 2419200000, httpOnly: true }).json(userData)
+									db('easter_redeem')
+									.sum({total: 'score'})
+									.where({ifid})
+									.then(userScore => {
+										let userData = {
+											userEventReg: registrations,
+											userTeams: teamData,
+											user: user[0],
+											userScore: userScore[0].total
+										}
+									// Issue token
+								        const payload = {email};
+								        const token = jwt.sign(payload, secret, {
+								        	expiresIn: '30d'
+								        });
+								        res.status(200).cookie('token', token, { maxAge: 2419200000, httpOnly: true }).json(userData)
+								    })
 							    })
 							})
 						})
