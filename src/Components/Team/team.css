@@ -7,7 +7,12 @@
 .width3 {
   width:50%;
 }
-
+/*.mob_container {
+  background: #1f1f1f;
+}*/
+body{
+  background: #1f1f1f;
+}
 /*--------------------------------------------------------*/
 
 .background {
