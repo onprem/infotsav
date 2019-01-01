@@ -1,9 +1,9 @@
 import React from 'react';
 import team from '../../assets/team/team.jpg';
 
-const TeamCard = ({name, email, phone,name1, email1, phone1,name2, email2, phone2,name3, email3, phone3 }) => {
+const TeamCard = ({onClickEaster, name, email, phone,name1, email1, phone1,name2, email2, phone2,name3, email3, phone3 }) => {
 	return(
-		<div className='our-team dib width3'>
+		<div className='our-team dib width3' onClick={onClickEaster}>
 			<img alt='Web Team' src={team} />
 			<div className='team-align'>
 				<div className='team-contentx'> 

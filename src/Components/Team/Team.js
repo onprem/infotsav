@@ -7,8 +7,16 @@ import PcWebList from './PC_WebList';
 import {emts,coord,TMheads, Mob_WebTeam, PC_WebTeam} from './Data';
 // import {parallax} from './Contact_parallax.js';
 import './team.css'
+import Modal from 'react-awesome-modal';
 
 class Team extends Component {
+
+	constructor(props){
+		super(props);
+		this.state = {
+			visibleModalWeb: false
+		}
+	}
 
 	componentDidMount() {
 		// parallax();
@@ -85,9 +93,22 @@ class Team extends Component {
 	  window.removeEventListener(this.mousewheelEvent, this.parallaxScroll, false);
 	}
 
+	onClickWebEaster = () => {
+
+	}
+
 	render () {
 	return (
 		<div>
+			<Modal 
+              visible={this.state.visibleModalWeb}
+              effect="fadeInUp"
+              onClickAway={() => this.setState({visibleModalWeb: false})}
+          	>
+	            <div className='black f5 flex flex-column items-center pa3 bg-near-gray'>
+	                <div className='mb2'>Ofcourse we have an easter egg on ourselves!</div><div className='t mh2'> There you go: '<b>XXXMen</b>'. Classy, right?</div>
+	            </div>
+          	</Modal>
 			 <div className="container">
 				 <section className="background">
 				   <div className="content-wrapper">
@@ -120,7 +141,7 @@ class Team extends Component {
 			       <div className="content-wrapper">
 			       		<div className='tc'>
 				   			<h1>Our Awesome Web Developers</h1>
-							<PcWebList PC_WebTeam={PC_WebTeam} />
+							<PcWebList onClickEaster={() => {this.setState({visibleModalWeb: true});}} PC_WebTeam={PC_WebTeam} />
 						</div>
 			       </div>
 			     </section>
@@ -137,7 +158,7 @@ class Team extends Component {
 					<TMList TMheads={TMheads} />
 
 					<h1>Our Awesome Web Developers</h1>
-					<MobWebList Mob_WebTeam={Mob_WebTeam} />
+					<MobWebList onClickEaster={() => {this.setState({visibleModalWeb: true});}} Mob_WebTeam={Mob_WebTeam} />
 				</div>
 			</div>
 		</div>

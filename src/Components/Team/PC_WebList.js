@@ -1,9 +1,10 @@
 import React from 'react';
 import TeamCard from './Team_Card';
 
-const PcWebList = ({ PC_WebTeam }) => {
+const PcWebList = ({ PC_WebTeam, onClickEaster }) => {
 	const cardComponent3 = PC_WebTeam.map((user, i) => {
-		return <TeamCard 
+		return <TeamCard
+		onClickEaster={onClickEaster}
 		key={i} 
 		name={PC_WebTeam[i].name} 
 		phone={PC_WebTeam[i].phone} 
