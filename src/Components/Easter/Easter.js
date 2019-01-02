@@ -9,6 +9,7 @@ import {Loader} from '../_Loader/Loader'
 import './Easter.css'
 import TeamCard from './TeamCard';
 import Modal from 'react-awesome-modal';
+import spideyEgg from '../../assets/photos/spidey_easter.png'
 
 class Easter extends Component {
 
@@ -23,7 +24,8 @@ class Easter extends Component {
     	userScore: 0,
     	leaderboard: [],
       visibleModal: false,
-      visibleModal2: false
+      visibleModal2: false,
+      visibleModal3: false
     };
     this.i=0;
   }
@@ -47,8 +49,17 @@ class Easter extends Component {
 
   componentDidMount(){
   	console.log('%cOhMyHeavens!', 'background: #222; color: #bada55; font-size: 2rem');
-  	console.log(`You did good coming here! Here is an easter code for ya!`)
+  	console.log(`You did good coming here! Here is an easter code for ya!`);
+    this.spideyTO = window.setTimeout(() => {
+      document.getElementById('spideyEgg').style.display='unset';
+    }, 180000);
   }
+
+  componentWillUnmount(){
+    window.clearTimeout(this.spideyTO);
+    document.getElementById('spideyEgg').style.display='none';
+  }
+
   componentDidUpdate(prevProps, prevState){
   }
 
@@ -145,6 +156,10 @@ class Easter extends Component {
       this.setState({visibleModal2: true});
     }
   }
+  ponderEggHandle = () => {
+    this.setState({visibleModal3: true});
+    document.getElementById('spideyEgg').style.display='none';
+  }
 
   render() {
   	const { loading } = this.state;
@@ -183,13 +198,16 @@ class Easter extends Component {
    			<div>
 				  <Link to='/'><img src={headers} className="headim" alt="infotsav logo" /></Link>
 		  	</div>
+        <div id='spideyEgg' onClick={this.ponderEggHandle} className='spideyEgg'>
+          <img src={spideyEgg} />
+        </div>
           <Modal 
               visible={this.state.visibleModal}
               effect="fadeInDown"
               onClickAway={() => this.setState({visibleModal: false})}
           >
             <div className='black f5 flex flex-column items-center pa3 bg-near-gray'>
-                <div className='mb2'>Damn! You got it right.</div><div className='t mh2'> Here is your easter code: '<b>TheLokiClick</b>'</div>
+              <div className='mb2'>Damn! You got it right.</div><div className='t mh2'> Here is your easter code: '<b>TheLokiClick</b>'</div>
             </div>
           </Modal>
           <Modal 
@@ -198,7 +216,16 @@ class Easter extends Component {
               onClickAway={() => this.setState({visibleModal2: false})}
           >
             <div className='black f5 flex flex-column items-center pa3 bg-near-gray'>
-                <div className='mb2'>Well, that's really smart of you!</div><div className='t mh2'> Here is your easter code: '<b>TheObviousOne</b>'</div>
+              <div className='mb2'>Well, that's really smart of you!</div><div className='t mh2'> Here is your easter code: '<b>TheObviousOne</b>'</div>
+            </div>
+          </Modal>
+          <Modal 
+              visible={this.state.visibleModal3}
+              effect="fadeInUp"
+              onClickAway={() => this.setState({visibleModal3: false})}
+          >
+            <div className='black f5 flex flex-column items-center pa3 bg-near-gray'>
+              <div className='mb2'>Guess you have a lot to think about!</div><div className='t mh2'> Here's a gift for you: '<b>ThePonderEgg</b>'</div>
             </div>
           </Modal>
         <div className="white flex flex-column items-center">
@@ -240,7 +267,7 @@ class Easter extends Component {
             <h3 className='urevt'>Guidelines</h3>
             <div className='tl'>
               <ul>
-
+                <li>The contest will commence from 4th January 2019.</li>
                 <li>Various easter eggs are hidden in the website. Find them and redeem the code here to get points.</li>
                 <li>Easter eggs can be found at various places, for example, at a subdomain, or you can click (or <span onClick={this.doubleClickHandle}>double click</span>) around the website to find some.</li>
                 <li>The easter eggs will be related to <i>The Marvel Cinematic Universe</i>. Well, mostly.</li>

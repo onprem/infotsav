@@ -20,3 +20,12 @@
 .easter-content li {
 	margin: 3px;
 }
+
+.spideyEgg{
+	display: none;
+	cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	width: 40px;
+}

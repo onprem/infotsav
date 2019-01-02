@@ -232,7 +232,7 @@ class Profile extends Component {
 			  						</div>
 				  					<div className='detailsCard'>
 				  						<div className="detailsD"><b>Easter Hunt Score:</b> {this.props.userScore}</div>
-				  						<div className="detailsD fw5"><Link to='/easter'>Found an egg?</Link></div>
+				  						<div className="detailsD fw5 tc tc-m tl-ns "><Link to='/easter'>Found an egg?</Link></div>
 				  					</div>
 				  				</div>
 				  			</div>
