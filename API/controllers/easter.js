@@ -11,6 +11,7 @@ const handleEasterRedeem = (req,res,db,xss)=>{
 	if(!email || !egg)
 		throw('Nani?');
 	db.transaction(trx =>{
+		console.log('Easter =>', egg, '<=');
 	 	trx.select('*').from('easter').where({egg})
 	 	.then(easterEgg => {
 	 		if(easterEgg.length){
