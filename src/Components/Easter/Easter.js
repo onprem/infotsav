@@ -199,7 +199,7 @@ class Easter extends Component {
 				  <Link to='/'><img src={headers} className="headim" alt="infotsav logo" /></Link>
 		  	</div>
         <div id='spideyEgg' onClick={this.ponderEggHandle} className='spideyEgg'>
-          <img src={spideyEgg} />
+          <img src={spideyEgg} alt='' />
         </div>
           <Modal 
               visible={this.state.visibleModal}
