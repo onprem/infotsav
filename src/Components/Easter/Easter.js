@@ -277,7 +277,7 @@ class Easter extends Component {
                 <li>Various easter eggs are hidden in the website. Find them and redeem the code here to get points.</li>
                 <li>Easter eggs can be found at various places, for example, at a subdomain, or you can click (or <span onClick={this.doubleClickHandle}>double click</span>) around the website to find some.</li>
                 <li>The easter eggs will be related to <i>The Marvel Cinematic Universe</i>. Well, mostly.</li>
-                <li>Example? At a subdomain such as <a className='link white underline' href='https://firstavenger.infotsav.in'>firstavenger.infotsav.in</a> (Yes, you'll get points from it).</li>
+                <li>Example? At a subdomain such as <a className='link white underline' rel="noopener noreferrer" target="_blank" href='https://firstavenger.infotsav.in'>firstavenger.infotsav.in</a> (Yes, you'll get points from it).</li>
                 <li>Each easter egg has an initial score which will decrease with each redemption. That means the sooner you find an egg, higher the points you get. Be the first one to find an Egg and get max points.</li>
                 <li>The highest scorers will be awarded.</li>
                 <li>The person with most unique finds ( a unique find is an easter egg which is discovered only by a single person) will also be rewarded.</li>
