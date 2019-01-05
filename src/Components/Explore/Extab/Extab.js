@@ -106,7 +106,7 @@ class Extab extends Component {
             </TabPanel>
             <TabPanel tabId="three">
               <div className='white flex flex-column items-center ma4'>
-                Registration for this event will be done on selected platforms. Teams qualifying the prelims would have to register here afterwards.
+                Registrations for Round-1 can be done on <a className='link white underline' rel="noopener noreferrer" target="_blank" href='https://www.codechef.com/COMB2018'>https://www.codechef.com/COMB2018</a>.<br />Teams qualifying the prelims need to register here later.
               </div>
             </TabPanel>
           </Tabs>
