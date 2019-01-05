@@ -205,7 +205,7 @@ class Events extends Component {
 				          <span className="fnc-nav__control-progress"></span>
 				        </button>
 				        <button className="fnc-nav__control">
-				          School + USP
+				          School + Whizz Troop
 				          <span className="fnc-nav__control-progress"></span>
 				        </button>
 				        <button className="fnc-nav__control">
