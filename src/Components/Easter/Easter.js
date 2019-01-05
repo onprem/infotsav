@@ -273,7 +273,7 @@ class Easter extends Component {
             <h3 className='urevt'>Guidelines</h3>
             <div className='tl'>
               <ul>
-                <li>The contest will commence from 4th January 2019.</li>
+                <li>The contest will commence from 7th January 2019.</li>
                 <li>Various easter eggs are hidden in the website. Find them and redeem the code here to get points.</li>
                 <li>Easter eggs can be found at various places, for example, at a subdomain, or you can click (or <span onClick={this.doubleClickHandle}>double click</span>) around the website to find some.</li>
                 <li>The easter eggs will be related to <i>The Marvel Cinematic Universe</i>. Well, mostly.</li>
