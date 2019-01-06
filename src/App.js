@@ -4,6 +4,7 @@ import Nav from './Components/Nav/Nav';
 import Offline from './Components/_Offline/Offline';
 import Home from './Components/Home/Home';
 import Events from './Components/Events/Events';
+import Sponsors from './Components/Sponsors/sponsors'
 import {Loader} from './Components/_Loader/Loader'
 import Login from './Components/Login/Login'
 import Profile from './Components/Profile/Profile'
@@ -143,6 +144,7 @@ class App extends Component {
             <Route path="/team" exact component={Team} />
             <Route path="/about" exact component={About} />
             <Route path="/contact" exact component={Contact} />
+            <Route path="/sponsors" exact component={Sponsors} />
 
             <Route path="/events/online_events" exact render={(props) =>
               <OnlineEvents {...props}
