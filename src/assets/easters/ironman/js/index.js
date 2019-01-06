@@ -31,7 +31,7 @@ var messageController = (function(){
       input.value = "";
     },
     starkReply: function(){
-      if(store.includes('easter')){
+      if(store.toLowerCase().includes('easter')){
         var reply = `Haha. Here is your easter code: <b>JarvisWhereIsMyUnderwear</b>`;
       }
       else{
