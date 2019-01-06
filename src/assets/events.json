@@ -177,20 +177,20 @@
 
 	"school":{
 	  "0":{"EventName":"School Olympiad",
-	   "rules":"",
-	   "description":"",
-	   "eventHead":"",
-	   "organizers":"",
+	   "rules":"<li>Participation should be in the form of team of 3.</li><li>Olympiad will be conducted in 2 rounds.</li><li> First round will be a pen paper based round, and the shortlisted teams from first round will be sent forward to second round.</li><li>Second round will be a quiz contest, testing the intellectual skills of the students.</li><br><br><br>Note:-<br>Both the rounds would be on-site rounds only.",
+	   "description":"Infotsav'19 is all set and ready to inspire the minds of the young aspirants of Gwalior! A whole new set of junior level events like quizzes, idea presentation are being organised. The  Quizzes will be organised  for school children which will be a true test of their intellect, wit and knowledge. Students who crave for the knowledge of technology and wish to explore the wonders of computing should surely aim to win! Along with these General knowledge and a bit of out of the box reasoning will help sharpen your minds as well.",
+	   "eventHead":"<li>Palak Jain (9870865193)</li><li>Nilay Gupta (9044712480)</li>",
+	   "organizers":"<li>Rucha Pallewar</li><li>Utkarsh Dwivedi</li>",
 	   "prizes":"Worth ₹10k",
-	   "maxMembers": 1,
+	   "maxMembers": 3,
    		"eid": 17
 	  },
 
 	  "1":{"EventName":"Innovate the Good",
 	   "rules":"",
-	   "description":"",
-	   "eventHead":"",
-	   "organizers":"",
+	   "description":"Young minds always are the most Powerful ones when it comes to imagination and thinking new ideas. <br><br>Here in IIIT Gwalior, students would get the amazing opportunity to showcase their Idea and compete amongst themselves to fight for the best one.This event invites students to participate as a team/individual to give a presentation for their Innovation.The experience will for sure enhance the creativity, communication, presentation and technical skills of the students.",
+	   "eventHead":"<li>Palak Jain (9870865193)</li><li>Nilay Gupta (9044712480)</li>",
+	   "organizers":"<li>Rucha Pallewar</li><li>Utkarsh Dwivedi</li>",
 	   "prizes":"Worth ₹10k",
 	   "maxMembers": 1,
    		"eid": 18
@@ -212,7 +212,7 @@
 	   "rules":"<li>There will be three on-campus rounds for the event. Rounds shall proceed parallelly for candidates with technical and managerial background.</li><li>Round 1: It will be an MCQ round of one hour with 50 questions. It will contain aptitude and Technical/Managerial (whichever applicable) questions to test the basic knowledge of the candidates. There will be negative marking for incorrect response in this round.</li><li>Round 2: It will be a 2-hour programming round, consisting of 5 questions for the Technical position, and a Group Discussion round for the Managerial position.</li><li>Round 3: The final round will be an interview round. Here the candidates will be expected to answer the questions similar to a regular company interview. The result of this round lies solely in the hands of the judges. Separate interview would be conducted for candidates of Technical and Managerial background.</li><li>Candidates are also requested to remain updated with the event updates that comes up on Facebook page of INFOTSAV and Infotsav website. </li><li>An online mock MCQ round will be conducted which will give a necessary preparation assessment.</li>",
 	   "description":"Why wait for the final year to prepare yourself for placements? Infotsav 19 brings you an event for you to experience just the same - Jobs. It is an on-site event where candidates would go through multiple rounds designed as a replica of an actual placement procedure, for both, a Technical and a Managerial position.",
 	   "eventHead":"<li>Nikita Sharma (+91 95753 46899)</li><li>Shivam Sharma (+91 99819 41446)</li>",
-	   "organizers":"<li>Abhishek Pratap Singh</li><li>Ruchika</li>",
+	   "organizers":"<li>Abhishek Pratap Singh</li><li>Ruchika Agrawal</li>",
 	   "prizes":"Worth ₹15k",
 	   "maxMembers": 1,
    		"eid": 20
@@ -327,7 +327,7 @@
 	   "description":"The ultimate battle of the most powerful robot.<br><br><b>Task</b><br><li>Two bots will fight against each other in the arena. Their aim will be to overpower opponents and throw them out of the arena, or drop them into the pit made in the arena. It will have fixed time duration.</li>",
 	   "eventHead":"<li>Raahat Gupta (9818815331)</li><li>Sahil Shelangia (9174275003)</li><li>Abhishek Verma (8765251505)</li><li>Khushal Bisani (9303936009)</li><li>Shivam Rathore (9667181136)</li><li>Priyansh Saxena (9808810251)</li><li>Anjali Jain (9413605460)</li>",
 	   "organizers":"<li>Shubham Bhawsar</li><li>Arpit Sharma</li><li>Prashant Rawat</li><li>Prashant Kushwah</li><li>Abhishek Chaurasia</li><li>Smita Gupta</li><li>Queen Saikia</li>",
-	   "prizes":"Worth ₹15k",
+	   "prizes":"Worth ₹18k",
 	   "maxMembers": 4,
    		"eid": 31
 	  },
