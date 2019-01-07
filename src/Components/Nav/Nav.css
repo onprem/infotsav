@@ -190,27 +190,7 @@ label::before {
   cursor: default;
 }
 
-@media only screen and (max-width: 800px) {
-  .burgers {
-    top: 20px;
-    right: 5px;
-    width: 40px;
-  }
-  .main-nav-nav {
-    width: 280px;
-  }
-  .main-nav-nav a {
-    margin-left: 1em;
-    margin-right: 0;
-    padding: .2em 0em;
-    font-size: 1.6em;
-  }
-  .main-nav-nav a:nth-child(2) {
-    margin-top: 20%;
-  }
-  .idonnav{
-  }
-}
+
 
 /* EGG */
 
@@ -241,8 +221,39 @@ label::before {
   font-size: 0.52em;
   color: black;
   padding: 0;
-  margin-top: -5px;
+  margin-top: 25px;
   margin-left: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .burgers {
+    top: 20px;
+    right: 5px;
+    width: 40px;
+  }
+  .main-nav-nav {
+    width: 280px;
+  }
+  .main-nav-nav a {
+    margin-left: 1em;
+    margin-right: 0;
+    padding: .2em 0em;
+    font-size: 1.6em;
+  }
+  .main-nav-nav a:nth-child(2) {
+    margin-top: 20%;
+  }
+  .idonnav{
+  }
+  .egg{
+    width: 50px;
+    height: 65px;
+  }
+  .egg_text{
+    font-size: .35em;
+    margin-left: 2px;
+  }
+
 }
 
 @-webkit-keyframes wobble {

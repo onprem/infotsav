@@ -43,15 +43,15 @@ class Nav extends Component {
 				}
 				<Link onClick={this.toggleNavView} to="/team">OUR TEAM</Link>
 				<Link onClick={this.toggleNavView} to="/contact">CONTACT US</Link>
-				
-				<div className='egg'>
+				<div>
 				  <Link onClick={this.toggleNavView} to="/easter">
-				  	<div className="egg_text">
-				  		FOUND AN EGG?
-				  	</div>
-				  </Link>  
-				</div>
-				
+					<div className='egg'>
+					  	<div className="egg_text">
+					  		FOUND AN EGG?
+					  	</div>
+					</div>
+				  </Link>
+			  	</div>  
 			</nav>
 		</div>
     );
