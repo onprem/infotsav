@@ -236,25 +236,19 @@ class Easter extends Component {
 				(this.props.isLoggedIn)?
 					<div className="white flex flex-column items-center">
 						{(this.state.userScore)?<div className='f3'>Your score: {this.state.userScore}</div> : null}
-	          <div className='f3 white'>
-              Easter eggs can be redeemed once the contest begins. Any redemptions before the commencement of the contest are invalid and will reset.
-            </div>
-            {
-
-       //        <input className="pa2 pt3 f3 br1 input-reset ba bg-white dib-ns db w-100" 
-							// type="text" 
-							// name="easter-code"  
-							// id="easter-code" 
-							// placeholder='Enter code to redeem' 
-	      //                   onChange={this.onTypeChange} 
-	      //                   onKeyPress={this._handleKeyPress}
-  					// 	/>
-				   //    	<input className="b white ma2 ph3 pv2 input-reset ba b--white bg-transparent dim pointer f5 dib-ns db" 
-					  //     	type="submit" 
-					  //     	value="Redeem" 
-					  //     	onClick={this._handleEasterRedeem}
-				   //    	/>
-              }
+              <input className="pa2 pt3 f3 br1 input-reset ba bg-white dib-ns db w-100" 
+  							type="text" 
+  							name="easter-code"  
+  							id="easter-code" 
+  							placeholder='Enter code to redeem' 
+                onChange={this.onTypeChange} 
+                onKeyPress={this._handleKeyPress}
+  						/>
+				      	<input className="b white ma2 ph3 pv2 input-reset ba b--white bg-transparent dim pointer f5 dib-ns db" 
+					      	type="submit" 
+					      	value="Redeem" 
+					      	onClick={this._handleEasterRedeem}
+				      	/>
   						{(this.state.error)?<div className='f4 ma2'>{this.state.errorMessage}</div> : null}
 					</div>
 				:
