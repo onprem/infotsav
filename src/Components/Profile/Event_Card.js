@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const EventCard = ({ename, category, eid, fee, status, teamid, deregEvent, payEvent}) => {
-	let feeTotal = fee + (fee*0.0239)
+	let feeTotal = Math.round(fee + (fee*0.0239));
 	let linkTo;
 	switch(category){
 		case "online": linkTo='/events/online_events'; break;

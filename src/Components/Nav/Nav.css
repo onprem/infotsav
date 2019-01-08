@@ -190,6 +190,41 @@ label::before {
   cursor: default;
 }
 
+
+
+/* EGG */
+
+.egg {
+  position: fixed;
+  bottom: -5px;
+  left: 20%;
+  /*-webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);*/
+  width: 75px;
+  height: 94px;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  border-top-left-radius: 50% 60%;
+  border-top-right-radius: 50% 60%;
+  border-bottom-left-radius: 50% 40%;
+  border-bottom-right-radius: 50% 40%;
+  box-shadow: inset -10px -5px #EAEFDD;
+  -webkit-animation: wobble 8s linear infinite;
+          animation: wobble 8s linear infinite;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+}
+.egg_text {
+  width: 50px;
+  text-align: center;
+  font-size: 0.52em;
+  color: black;
+  padding: 0;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
 @media only screen and (max-width: 800px) {
   .burgers {
     top: 20px;
@@ -210,5 +245,50 @@ label::before {
   }
   .idonnav{
   }
+  .egg{
+    width: 50px;
+    height: 65px;
+  }
+  .egg_text{
+    font-size: .35em;
+    margin-left: 2px;
+  }
+
 }
 
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  25% {
+    -webkit-transform: rotate(35.65370757deg) translate(-50%, -50%);
+            transform: rotate(35.65370757deg) translate(-50%, -50%);
+  }
+  75% {
+    -webkit-transform: rotate(-8.40722035deg) translate(-50%, -50%);
+            transform: rotate(-8.40722035deg) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+}
+@keyframes wobble {
+  0% {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  25% {
+    -webkit-transform: rotate(35.65370757deg) translate(-50%, -50%);
+            transform: rotate(35.65370757deg) translate(-50%, -50%);
+  }
+  75% {
+    -webkit-transform: rotate(-8.40722035deg) translate(-50%, -50%);
+            transform: rotate(-8.40722035deg) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+}
