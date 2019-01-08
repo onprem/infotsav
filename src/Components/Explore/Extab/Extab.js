@@ -64,7 +64,15 @@ class Extab extends Component {
             </TabPanel>
             <TabPanel tabId="three">
               <div className='white flex flex-column items-center ma4'>
-                Registration for this event will be done on selected platforms. Teams qualifying the prelims would have to register here afterwards.
+                <div>
+                  Fill the google form at <a className='link white underline' href="https://goo.gl/forms/oIhdzCedbBjxtz7l2" target='_blank' rel="noopener noreferrer">https://goo.gl/forms/oIhdzCedbBjxtz7l2</a> to register for zonal rounds.<br />
+                </div>
+                <div>
+                  Upcoming Zonals: IET Lucknow
+                </div>
+                <div>
+                  Teams qualifying the zonals need to register here later.
+                </div>
               </div>
             </TabPanel>
           </Tabs>
