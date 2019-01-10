@@ -35,6 +35,15 @@ a {
 	width: 100%;
 }
 
+.campusAmbassador {
+  position: fixed;
+  right: 6%;
+  margin-top: 30px;
+  font-size: 20px;
+  border: 2px solid white;
+
+}
+
 .image {
 	width: 250px;
 }
@@ -353,6 +362,10 @@ a {
 @media only screen and (max-width: 800px) {
   .box{
     transform: scale(0.7);
+  }
+  
+  .campusAmbassador {
+    display: none;
   }
 
 	.infologo {

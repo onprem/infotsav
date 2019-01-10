@@ -17,6 +17,7 @@ const InformalEvents = lazy(() => import('./Components/Explore/Informal/info_exp
 const GamiacsEvents = lazy(() => import('./Components/Explore/Gamiacs/gamiacs_explore'));
 const ManagerialEvents = lazy(() => import('./Components/Explore/Managerial/man_explore'));
 const RoboticsEvents = lazy(() => import('./Components/Explore/Robotics/robo_explore'));
+const CampusAmbassador = lazy(() => import('./Components/CampusAmbassador/CA'));
 const SuspEvents = lazy(() => import('./Components/Explore/SUSP/susp_explore'));
 const TechnicalEvents = lazy(() => import('./Components/Explore/Technical/tech_explore'));
 const Register = lazy(() =>  import('./Components/Register/Register'));
@@ -145,6 +146,7 @@ class App extends Component {
             <Route path="/about" exact component={About} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/sponsors" exact component={Sponsors} />
+            <Route path="/ambassador" exact component={CampusAmbassador} />
 
             <Route path="/events/online_events" exact render={(props) =>
               <OnlineEvents {...props}
