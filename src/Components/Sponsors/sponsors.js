@@ -6,9 +6,12 @@ class sponsors extends Component {
 
 	render() {
 		return (
-			<div>
-			Hello
-		</div>
+			<div className="sp-main">
+				<h1 className="sp-head">Sponsors</h1>
+				<div className="sp-slider">
+					<h1>Past Sponsors</h1>
+				</div>
+			</div>
 			);
 
 	}
