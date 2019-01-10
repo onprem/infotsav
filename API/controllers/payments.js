@@ -3,7 +3,7 @@ const returnPayments=(req,res,db)=>{
  	db.select('*').from('paytm').where({status})
 	.then(payments => {
 		var status='PENDING'
-		db.select('*').from('paytm').where({status})
+		db.select('*').from('paytm').where({status}).orderBy('txndate', 'desc')
 		.then(pendPayments => {
 			let payData = {
 				pendingPayments: pendPayments,
