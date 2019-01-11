@@ -124,9 +124,9 @@
 
 	  "4":{"EventName":"Treasure Hunt",
 	   "rules":"<li>Maximum of five members per team.</li><li>Prelims will be conducted*.</li><li>The clues are to be found in a particular order. A team cannot skip a clue. Skipping a clue leads to disqualification of the team.</li><li>Do not search for clues in off-limit areas.</li><li>If you found other team’s clue by any chance never tamper it. A violation of this rule could cause disqualification of your team.</li><li>You move any object to search the clue, kindly replace it back.</li><li>All the clues of the teams are different and located at different places but the final destination i.e. the treasure is same. The team which finds the treasure wins first.</li>",
-	   "description":"",
+	   "description":"As the hunt for the Infinity Stones is over, get  ready to be a part of an exciting journey across our campus with your teammates in search for the treasure that brings Tony stark back....",
 	   "eventHead":"<li>Aviharsh Shukla (8765114937)</li><li>Nikhila Nandikam (8765114937)</li><li>Aryan Sachan (8765114937)</li>",
-	   "organizers":"<li>Siddharth Vaish</li><li>Pranay Kumar</li><li>Rushikesh Taksande</li><li>Trushita</li><li>Abhilash</li>",
+	   "organizers":"<li>Pranay Kumar</li><li>Rushikesh Taksande</li><li>Trushita</li><li>Abhilash</li>",
 	   "prizes":"Worth ₹5k",
 	   "maxMembers": 5,
    		"eid": 12
@@ -177,7 +177,7 @@
 
 	"school":{
 	  "0":{"EventName":"School Olympiad",
-	   "rules":"<li>Participation should be in the form of team of 3.</li><li>Olympiad will be conducted in 2 rounds.</li><li> First round will be a pen paper based round, and the shortlisted teams from first round will be sent forward to second round.</li><li>Second round will be a quiz contest, testing the intellectual skills of the students.</li><br><br><br>Note:-<br>Both the rounds would be on-site rounds only.",
+	   "rules":"<li>Participation should be in the form of team of 2.</li><li>Olympiad will be conducted in 2 Groups.<ul>For Classes 6th - 8th</ul><ul>For Class 11th - 12th</ul></li><br><br><li>For Classes 6th - 8th :</li><ul>The paper will contain questions about general mathematics, science, basic IT and General Knowledge.</ul><br><li>For Classes 11th - 12th:</li><ul>The paper will be a mock JEE mains.</ul><ul>The marking scheme will be similar to the actual examination.</ul>",
 	   "description":"Infotsav'19 is all set and ready to inspire the minds of the young aspirants of Gwalior! A whole new set of junior level events like quizzes, idea presentation are being organised. The  Quizzes will be organised  for school children which will be a true test of their intellect, wit and knowledge. Students who crave for the knowledge of technology and wish to explore the wonders of computing should surely aim to win! Along with these General knowledge and a bit of out of the box reasoning will help sharpen your minds as well.",
 	   "eventHead":"<li>Palak Jain (9870865193)</li><li>Nilay Gupta (9044712480)</li>",
 	   "organizers":"<li>Rucha Pallewar</li><li>Utkarsh Dwivedi</li>",
@@ -232,7 +232,7 @@
 	   "rules":"<li>Participation - A team of 1 to 3 members can participate in this event.</li><li>Event will be divided into three rounds<ul><li>Round 1: A list of designation in company will be given to the team and they will have to decide what position every individual have to play in team. For example: A team of 1/3 participants will be given a list of designations in a company (CEO, manager etc.) from which they can choose. Each member will select a unique position for him/her. Each individual will be given a problem/crisis statement which may occur in a company and he/she has to answer accordingly. <ul><li>Time of 1 min will be given to team to discuss the points and maximum of 1.5 min will be given to each individual to present his/her points. </li><li>Points of each individual will be added to team points.</li></ul></li><li>Round 2: Team as a whole will be given a situation of crisis. <ul><li>Time of 60 sec will be given to team to discuss the points and maximum of 2 min will be given to each team to present their points. </li></ul></li><li>Round 3: The top 2 teams will compete against each other in face-off. In 1st half of this round, a problem statement will be given to both the teams. One team will present the solution of the crisis and the other team will counter their points and vice-versa in second half (another problem statement).<ul><li>Each half will be of 3 min.</li></ul></li></ul></li><li>Types of crisis that will be covered in problem statements – Technical, Employee misconduct, Product recalls/defect, Conflict with interest, Rumors , Management misconduct or work-place violence. </li>",
 	   "description":"The participants would be given a real life crisis situation that they have to overcome. They need to show their managerial skill, team work and witty tactics that they will implementing in order to solve the crisis.",
 	   "eventHead":"<li>Yatharth Saxena (9755862100)</li><li>Kriti Gupta (8989790370)</li>",
-	   "organizers":"<li>Rucha Pallewar</li>",
+	   "organizers":"<li>Riya Jain</li><li>Saumya Gupta</li><li>Shivam Gupta</li><li>Anuj Sharma</li>",
 	   "prizes":"Worth ₹15k",
 	   "maxMembers": 3,
    		"eid": 22
@@ -274,7 +274,7 @@
 	   "rules":"<li>Allowed Equipment ( to be arranged by participants)<ul><li>Laptop</li><li>Cooling pad</li><li>Mouse </li><li>Mouse pad</li><li>Mouse bungee</li><li>Keyboard </li><li>Headphones/Earphones</li><li>Controller/Gamepad.</li></ul></li><li>A laptop will be provided by default.</li><li>Matches<ul><li>All Matches played are solo.There are no team matches.</li></ul></li><li>Version<ul><li>All matches are played in FIFA 2018 version only.</li></ul></li><li>General Rules<ul><li>Teams Allowed<ul><li>The matches will be played between international teams only.Allowed teams are as follows:<ul><li>ARGENTINA</li><li>BELGIUM</li><li>BRAZIL</li><li>FRANCE</li><li>GERMANY</li><li>ITAlY</li><li>PORTUGAL</li><li>SPAIN</li></ul></li><li>Participants must select any one team from the above.</li></ul></li><li>TIE BREAKER : In case of a tie,only Penalty shootout shall decide the winner of the game.Choice of the participants is not entertained</li><li>Game crash : In case if the game hangs or stops in the middle then the match will be restarted.</li></ul></li>",
 	   "description":"Are you a FIFA Conqueror? We challenge you to prove your skills",
 	   "eventHead":"<li>Abhinav Boruah (8518046231)</li><li>Sugata Roy (9046998933)</li><li>Mukund Upadhyaya (8717885101)</li>",
-	   "organizers":"<li>Aditya Singh</li><li>Saksham Tewari.</li><li>Siddharth Verma</li><li>Vinay Kumar</li>",
+	   "organizers":"<li>Aditya Singh</li><li>Saksham Tewari</li><li>Siddharth Verma</li><li>Vinay Kumar</li>",
 	   "prizes":"Worth ₹3k",
 	   "maxMembers": 1,
    		"eid": 26
@@ -282,9 +282,9 @@
 
 	  "1":{"EventName":"Counter Strike Global Offensive",
 	   "rules":"<li>Allowed Equipment ( to be arranged by participants)<ul><li>Laptop</li><li>Cooling pad</li><li>Mouse </li><li>Mouse pad</li><li>Mouse bungee</li><li>Keyboard </li><li>Headphones/Earphones</li></ul></li><li>A laptop will be provided by default.</li><li>General Rules<ul><li>Map pool<ul><li>The map pool will always be the Active Duty map pool and therefore might be updated before each tournament:<ul><li>de_dust2</li><li>de_nuke</li><li>de_cache</li><li>de_train</li><li>de_mirage</li><li>de_inferno</li><li>de_overpass</li></ul></li></ul></li><li>Server settings<ul><li>The following game settings will be used:<ul><li>mp_startmoney 800</li><li>mp_roundtime 1.92</li><li>mp_freezetime 15</li><li>mp_maxrounds 30</li><li>mp_c4timer 40</li><li>sv_pausable 1</li></ul></li></ul></li><li>Server crash<ul><li>If the server crashes before three rounds have been completed (in a half), the server must be restarted and the half’s score will be reset to 0-0.</li><li>If the server crashes after the third round has been completed, the half must be restarted with start money 2000 and the score will be counted from the last completed round. The start money is set to 2000 and the team that lost the last round kills itself using “kill” in the console. This round does not count. The half continues with the following round. The start money has to be set to 800 again.</li></ul></li><li>Choice of side<ul><li>A knife round will be played to determine the side. This is forced by the server. The winner of this knife round will choose the side by typing .stay or . switch in the chat.</li></ul></li><li>Illegal scripts<ul><li>In general, all scripts are illegal except for buy, toggle and demo scripts. Here are some examples for illegal scripts:<ul><li>Stop shoot scripts (Use or AWP scripts)</li><li>Center view scripts</li><li>Jump-Throw Scripts</li><li>Turn scripts (180° or similar)</li><li>No recoil scripts</li><li>Burst fire scripts</li><li>Rate changers (Lag scripts)</li><li>FPS scripts</li><li>Anti-flash scripts or binding (snd_* bindings)</li><li>Bunny hop scripts</li><li>Stop sound scripts</li></ul></li></ul></li></ul></li>",
-	   "description":"",
+	   "description":"Global Offensive, like prior games in the Counter-Strike series, is an objective-based, multiplayer first-person shooter. Two opposing teams, known as the Terrorists and the Counter Terrorists, compete in game modes to complete objectives, such as securing a location to plant or defuse a bomb and rescuing or guarding hostages. At the end of each round, players are rewarded based on their individual performance with in-game currency to spend on more powerful weapons in subsequent rounds. Winning rounds results in more money than losing, and completing objectives such as killing enemy players gives cash bonuses.",
 	   "eventHead":"<li>Abhinav Boruah (8518046231)</li><li>Sugata Roy (9046998933)</li><li>Mukund Upadhyaya (8717885101)</li>",
-	   "organizers":"<li>Aditya Singh</li><li>Saksham Tewari.</li><li>Siddharth Verma</li><li>Vinay Kumar</li>",
+	   "organizers":"<li>Aditya Singh</li><li>Saksham Tewari</li><li>Siddharth Verma</li><li>Vinay Kumar</li>",
 	   "prizes":"Worth ₹17.5k",
 	   "maxMembers": 5,
    		"eid": 27
