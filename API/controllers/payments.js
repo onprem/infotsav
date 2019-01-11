@@ -1,6 +1,6 @@
 const returnPayments=(req,res,db)=>{
 	var status='SUCCESS';
- 	db.select('*').from('paytm').where({status})
+ 	db.select('*').from('paytm').where({status}).orderBy('txndate', 'desc')
 	.then(payments => {
 		var status='PENDING'
 		db.select('*').from('paytm').where({status}).orderBy('txndate', 'desc')
