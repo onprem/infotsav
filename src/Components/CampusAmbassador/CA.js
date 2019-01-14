@@ -92,7 +92,7 @@ class CA extends Component {
 		  </div>
    		  <div id="progress"></div>
 		  <div className="center">
-		    <div id="headdin">
+		    <div id="headdin" className="mt0-ns mt5">
 		  		<h1>Be Our Campus Ambassador</h1>
 		  	</div>
 		  	{
@@ -131,8 +131,8 @@ class CA extends Component {
 				        <textarea name="message" className="inputField" rows="4" cols="40"></textarea>
 				        <label className="inputLabel"></label>
 				      </div>
-				      <div className="buttonContainer">
-				        <button id="submitButton">Submit</button>
+				      <div className="buttonContainer pointer dim">
+				        <button id="submitButton" className="pointer">Submit</button>
 				      </div>
 				    </div>
 

@@ -28,6 +28,7 @@ class Nav extends Component {
 
 			<nav id="menu" className='main-nav-nav'>
 				<div className='white b f5 ma3 idonnav'>{this.props.userData.id}</div>
+				
 				<Link to="/" onClick={this.toggleNavView}>HOME</Link>
 				<Link onClick={this.toggleNavView} to="/about">ABOUT</Link>
 				<Link onClick={this.toggleNavView} to="/events">EVENTS</Link>
@@ -52,6 +53,9 @@ class Nav extends Component {
 					</div>
 				  </Link>
 			  	</div>  
+			  	<Link to="/ambassador" id='CampusAssNav' onClick={this.toggleNavView}>
+					<div className='white dim b f5 ba br4 pa1 ph2 idonnav CampusAssNavDiv'>Join us</div>
+				</Link>
 			</nav>
 		</div>
     );

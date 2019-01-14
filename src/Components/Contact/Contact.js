@@ -131,8 +131,8 @@ class Contact extends Component {
 				        <textarea name="message" className="inputField" rows="4" cols="40"></textarea>
 				        <label className="inputLabel"></label>
 				      </div>
-				      <div className="buttonContainer">
-				        <button id="submitButton">Submit</button>
+				      <div className="buttonContainer dim pointer">
+				        <button id="submitButton" className="pointer">Submit</button>
 				      </div>
 				    </div>
 
