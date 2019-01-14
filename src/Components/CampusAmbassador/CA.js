@@ -42,7 +42,7 @@ class CA extends Component {
 
   requestContact = (contactData) =>{
   	let err = false;
-	fetch('/api/contact', {
+	fetch('/api/campusAss', {
 		method: 'post',
 		headers: {'Content-type': 'application/json'},
 		body: JSON.stringify({contactData})
