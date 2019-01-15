@@ -62,18 +62,19 @@ class Extab extends Component {
                 </ul>
               </div>
             </TabPanel>
-            <TabPanel tabId="three">
+            <TabPanel tabId="three"> 
               <div className='white flex flex-column items-center ma4'>
                 <div>
                   Fill the google form at <a className='link white underline' href="https://goo.gl/forms/oIhdzCedbBjxtz7l2" target='_blank' rel="noopener noreferrer">https://goo.gl/forms/oIhdzCedbBjxtz7l2</a> to register for zonal rounds.<br />
                 </div>
                 <div>
-                  Upcoming Zonals: IET Lucknow
+                  Teams qualifying the zonals need to register here.
                 </div>
                 <div>
-                  Teams qualifying the zonals need to register here later.
+                  Registrations without qualifying the zonal round will be considered invalid.
                 </div>
               </div>
+              <RegisterEvent {...this.props} />
             </TabPanel>
           </Tabs>
         </div>
