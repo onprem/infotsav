@@ -22,15 +22,19 @@ const EventCard = ({ename, category, eid, fee, status, teamid, deregEvent, payEv
 			<div className='evtCat'>
 				<Link to={linkTo} >{category}</Link>
 			</div>
-			{(status || fee === 0)?
+			{(status === 1 || fee === 0)?
 				<div className='evtStatus'>
 					<b>Paid</b>
 				</div>
-			  :
-			  	<div className='evtStatus'>
-			  		<span className='pointer payLink dim' onClick={() => payEvent(eid, feeTotal, teamid)}>Pay Rs. {fee}</span>
-			  		<span className='pointer unregLink dim' onClick={() => deregEvent(eid)}>Remove</span>
-			  	</div>
+			  :(status === 2)?
+			  	  <div className='evtStatus'>
+					<b>Pending</b>
+				  </div>
+			  	:
+				  <div className='evtStatus'>
+				  	<span className='pointer payLink dim' onClick={() => payEvent(eid, feeTotal, teamid)}>Pay Rs. {fee}</span>
+				  	<span className='pointer unregLink dim' onClick={() => deregEvent(eid)}>Remove</span>
+				  </div>
 			}
 		</div>
 

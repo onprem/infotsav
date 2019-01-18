@@ -73,6 +73,12 @@ const handleDverify = (req,res, db) =>{
 		}else {
 			db.transaction(trx=>{
 				return trx.select('*').from('paytm').where({orderid: user.ORDERID})
+				.then(oid => {
+					return trx('payment').update({
+						status: 0
+					})
+					.where({teamid: oid[0].teamid})
+				})
 				.then(() =>{
 					return trx('paytm').update({
 						txnid: user.TXNID,
