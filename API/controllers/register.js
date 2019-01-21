@@ -60,7 +60,7 @@ const isUniqueIFID = (db, IFID) =>{
 
 const generateIFID = (db, name) => {
 	let IFID = 'IF-';
-	let nameChars = name.substr(0,2).toUpperCase();
+	let nameChars = name.replace(/[\s.]/g, "").toUpperCase().substr(0,2);
 	IFID = IFID+nameChars+'-'+randomstring.generate({length:3, charset:'numeric'});
 	let unique = isUniqueIFID(db, IFID);
 	if(true){
