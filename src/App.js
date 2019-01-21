@@ -7,6 +7,7 @@ import Events from './Components/Events/Events';
 import Sponsors from './Components/Sponsors/sponsors'
 import {Loader} from './Components/_Loader/Loader'
 import Login from './Components/Login/Login'
+import Cultural from './Components/Cultural/Cultural'
 import Profile from './Components/Profile/Profile'
 import './App.css';
 
@@ -147,6 +148,7 @@ class App extends Component {
             <Route path="/contact" exact component={Contact} />
             <Route path="/sponsors" exact component={Sponsors} />
             <Route path="/ambassador" exact component={CampusAmbassador} />
+            { /* <Route path="/cultural" exact component={Cultural} /> */ } 
 
             <Route path="/events/online_events" exact render={(props) =>
               <OnlineEvents {...props}
