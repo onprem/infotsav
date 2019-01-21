@@ -8,3 +8,11 @@ SELECT easter_redeem.ifid, users.name, SUM(easter_redeem.score) AS `total` FROM 
 
 SELECT easter_redeem.ifid, users.name, SUM(easter_redeem.score) AS `total` FROM `easter_redeem` INNER JOIN `users` ON easter_redeem.ifid = users.ifid GROUP BY easter_redeem.ifid ORDER BY `total` DESC;
 
+SELECT es.ename, COUNT(*) FROM users u INNER JOIN event_reg e ON u.ifid=e.ifid INNER JOIN events es ON es.eid=e.eid INNER JOIN payment pay ON pay.teamid=e.teamid
+WHERE pay.status=1
+GROUP BY es.ename
+ORDER BY `es`.`ename` ASC
+
+SELECT DISTINCT es.ename, pay.teamid FROM users u INNER JOIN event_reg e ON u.ifid=e.ifid INNER JOIN events es ON es.eid=e.eid INNER JOIN payment pay ON pay.teamid=e.teamid
+WHERE pay.status=1
+ORDER BY `es`.`ename` ASC

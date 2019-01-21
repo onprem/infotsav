@@ -165,7 +165,9 @@ class RegisterEvent extends Component {
   }
 
   render() {
-    // console.log(this.props);
+     if(this.props.eventDetails.eid === 20)
+      console.log(this.props, this.state);
+   // console.log(this.props);
     const {eventDetails, isLoggedIn, userData} = this.props;
 
     const TeamList = ({team}) => {
@@ -224,10 +226,10 @@ class RegisterEvent extends Component {
                         onKeyPress={this._handleKeyPress}
                         placeholder='Enter IFID to register' type="text" name="userId" />
                       <span className="f5 link dim br4 ph3 pv2 ma2 black b buttonBackLogin" onClick={this._handleEventEntry} >Register</span>
-                      <Link to='/profile'><span className="f5 link dim br4 ph3 pv2 ma2 black b buttonBackLogin">Pay Now</span></Link>
+                      {(eventDetails.eid>7 && !(eventDetails.eid===21) && !this.state.payStatus)? <Link to='/profile'><span className="f5 link dim br4 ph3 pv2 ma2 black b buttonBackLogin">Pay Now</span></Link> : null}
                     </div>
                     :
-                    <Link to='/profile'><div className="f5 link dim tc br4 ph3 pv2 mt4 ml2 black b buttonBackLogin">Pay Now</div></Link>
+                    (eventDetails.eid>7 && !(eventDetails.eid===21) && !this.state.payStatus)? <Link to='/profile'><div className="f5 link dim tc br4 ph3 pv2 mt4 ml2 black b buttonBackLogin">Pay Now</div></Link> : null
                 }
               </div>
               :
