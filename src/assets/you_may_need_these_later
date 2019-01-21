@@ -13,6 +13,6 @@ WHERE pay.status=1
 GROUP BY es.ename
 ORDER BY `es`.`ename` ASC
 
-SELECT DISTINCT es.ename, pay.teamid FROM users u INNER JOIN event_reg e ON u.ifid=e.ifid INNER JOIN events es ON es.eid=e.eid INNER JOIN payment pay ON pay.teamid=e.teamid
-WHERE pay.status=1
+SELECT es.ename AS Event, COUNT(DISTINCT pay.teamid) AS Payments FROM users u INNER JOIN event_reg e ON u.ifid=e.ifid INNER JOIN events es ON es.eid=e.eid INNER JOIN payment pay ON pay.teamid=e.teamid
+WHERE pay.status=1 GROUP  BY es.ename
 ORDER BY `es`.`ename` ASC

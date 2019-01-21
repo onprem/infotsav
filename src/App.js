@@ -7,10 +7,10 @@ import Events from './Components/Events/Events';
 import Sponsors from './Components/Sponsors/sponsors'
 import {Loader} from './Components/_Loader/Loader'
 import Login from './Components/Login/Login'
-import Cultural from './Components/Cultural/Cultural'
 import Profile from './Components/Profile/Profile'
 import './App.css';
 
+// const Cultural = lazy(() => import('./Components/Cultural/Cultural'));
 const Lost = lazy(() => import('./Components/Lost/Lost'));
 const Easter = lazy(() => import('./Components/Easter/Easter'));
 const OnlineEvents = lazy(() => import('./Components/Explore/Online/online_explore'));
@@ -22,6 +22,7 @@ const CampusAmbassador = lazy(() => import('./Components/CampusAmbassador/CA'));
 const SuspEvents = lazy(() => import('./Components/Explore/SUSP/susp_explore'));
 const TechnicalEvents = lazy(() => import('./Components/Explore/Technical/tech_explore'));
 const Register = lazy(() =>  import('./Components/Register/Register'));
+const QuickRegister = lazy(() =>  import('./Components/QuickRegister/QuickRegister'));
 const Contact = lazy(() =>  import('./Components/Contact/Contact'));
 const Team = lazy(() =>  import('./Components/Team/Team'));
 const Verify = lazy(() =>  import('./Components/Verify/Verify'));
@@ -149,7 +150,7 @@ class App extends Component {
             <Route path="/sponsors" exact component={Sponsors} />
             <Route path="/ambassador" exact component={CampusAmbassador} />
             { /* <Route path="/cultural" exact component={Cultural} /> */ }
-
+            <Route path="/marvel" exact component={QuickRegister} />
             <Route path="/events/online_events" exact render={(props) =>
               <OnlineEvents {...props}
                 updateLoginState={this.updateLoginState} 

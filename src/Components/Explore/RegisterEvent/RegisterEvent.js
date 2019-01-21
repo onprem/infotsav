@@ -165,9 +165,7 @@ class RegisterEvent extends Component {
   }
 
   render() {
-     if(this.props.eventDetails.eid === 20)
-      console.log(this.props, this.state);
-   // console.log(this.props);
+    // console.log(this.props);
     const {eventDetails, isLoggedIn, userData} = this.props;
 
     const TeamList = ({team}) => {
