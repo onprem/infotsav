@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Cultural.css'
-import zephyrton from '../../assets/photos/zephyrton.png'
+// import zephyrton from '../../assets/photos/zephyrton.png'
 
 class Cultural extends Component {
 
@@ -87,7 +87,7 @@ class Cultural extends Component {
 				   <div class="night-wrapper">
 							<img src="max_wall.jpg" />
 				   </div>
-						<img class="martin" src={zephyrton} />
+						<img class="martin" src="../../assets/photos/zephyrton.png" />
 						<img class="martin_logo" src="martin_logo.png"></img>
 					<div class="slant"></div>
 						<p class="date">7th Feb</p>
