@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Cultural.css'
+import zephyrton from '../../assets/photos/zephyrton.png'
 
 class Cultural extends Component {
 
@@ -83,15 +84,17 @@ class Cultural extends Component {
 		<div>
 			 <div className="container">
 				 <section className="background">
-				   <div className="content-wrapper">
-				   		<div className='tc'>
-				   			<h1>EDM Night</h1>
-						</div>
+				   <div class="night-wrapper">
+							<img src="max_wall.jpg" />
 				   </div>
+						<img class="martin" src={zephyrton} />
+						<img class="martin_logo" src="martin_logo.png"></img>
+					<div class="slant"></div>
+						<p class="date">7th Feb</p>
 				   <div className="scroll-down" onClick={() => this.nextItem()}></div>
 				 </section>
 				 <section className="background">
-				   <div className="content-wrapper">
+				   <div className="content-wrappe">
 				   		<div className='tc'>
 				   			<h1>Event Management Team</h1>
 						</div>

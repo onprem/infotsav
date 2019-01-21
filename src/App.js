@@ -148,7 +148,7 @@ class App extends Component {
             <Route path="/contact" exact component={Contact} />
             <Route path="/sponsors" exact component={Sponsors} />
             <Route path="/ambassador" exact component={CampusAmbassador} />
-            { /* <Route path="/cultural" exact component={Cultural} /> */ } 
+            { /* <Route path="/cultural" exact component={Cultural} /> */ }
 
             <Route path="/events/online_events" exact render={(props) =>
               <OnlineEvents {...props}

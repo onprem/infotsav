@@ -22,10 +22,10 @@
 
 .download_btn {
   position: absolute;
-  left: 105px;
+  left: 25px;
   margin-top: 15px;
   margin-bottom: 50px;
-  font-size: 20px;
+  font-size: 15px;
   border: 2px solid cyan;
 }
 

@@ -151,6 +151,53 @@ body{
   100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
 
+/*-----------------------------------------------------------*/
+
+.night-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  filter: hue-rotate(150deg);
+}
+
+.martin {
+  position: fixed;
+  bottom: 0;
+}
+
+.martin_logo {
+  position: fixed;
+  top:0;
+  filter: hue-rotate(180deg);
+
+
+}
+
+
+.slant {
+  width: 600px;
+  height: 1000px;
+  transform: skew(150deg);
+  background: rgba(0, 0, 255, 0.2);
+  z-index: 2;
+  position: fixed;
+  top:0;
+  right:0;
+}
+
+/*.date {
+  position: fixed;
+  top:100px;
+  font-family: 'Aleo', serif;
+  right: 110px;
+  font-size: 60px;
+  color: #fff;
+  z-index:3; 
+}*/
+
+/*---------------------------------------------------*/
+
 @media only screen and (max-width: 800px) {
   .container {
     display: none;
