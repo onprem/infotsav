@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import TeamCard from './TeamCard';
+import Modal from 'react-awesome-modal';
 
 class RegisterEvent extends Component {
 
@@ -15,7 +16,8 @@ class RegisterEvent extends Component {
       errorMessage: '',
       field: '',
       payStatus: 0,
-      offerEvent: false
+      offerEvent: false,
+      visibleModal: false
     }
   }
   componentWillMount(){
@@ -121,6 +123,9 @@ class RegisterEvent extends Component {
     .then(data => {
       if(error)
         throw(data);
+      if(!this.state.isUserRegistered && this.props.eventDetails.maxMembers > 1 ){
+        this.setState({visibleModal: true});
+      }     
       this.props.updateEvent(data.userEventReg);
       this.props.updateEventTeams(data.userTeams);
       this.setState({error: false, errorMessage: ''});
@@ -219,9 +224,10 @@ class RegisterEvent extends Component {
                         onKeyPress={this._handleKeyPress}
                         placeholder='Enter IFID to register' type="text" name="userId" />
                       <span className="f5 link dim br4 ph3 pv2 ma2 black b buttonBackLogin" onClick={this._handleEventEntry} >Register</span>
+                      <Link to='/profile'><span className="f5 link dim br4 ph3 pv2 ma2 black b buttonBackLogin">Pay Now</span></Link>
                     </div>
                     :
-                    <div />
+                    <Link to='/profile'><div className="f5 link dim tc br4 ph3 pv2 mt4 ml2 black b buttonBackLogin">Pay Now</div></Link>
                 }
               </div>
               :
@@ -237,7 +243,16 @@ class RegisterEvent extends Component {
             {(this.state.isUserRegistered && !this.state.payStatus)? <div className='f5'>** Complete payment from profile</div> : null }
             {(this.state.offerEvent)? <div className='f4'> This event is eligible for the New Year Gift. Register and pay for Blazing Wheel, Mini Robo War, Course Chaser and Robo Soccer to avail cashback of ₹300.</div> : null }
           </div>
-        </div>
+          <Modal 
+                visible={this.state.visibleModal}
+                effect="fadeInUp"
+                onClickAway={() => this.setState({visibleModal: false})}
+            >
+              <div className='black f5 flex flex-column items-center pa3 bg-near-gray'>
+                <div className='mb2'>Enter IFID of users to add them to your team</div>
+              </div>
+          </Modal> 
+          </div>
       );
     }
     else return(
