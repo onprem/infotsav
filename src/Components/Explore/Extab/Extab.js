@@ -156,6 +156,16 @@ class Extab extends Component {
               <div className='eventRules'>
                 <ul dangerouslySetInnerHTML={{__html: event.rules}}>
                 </ul>
+                {
+                  (event.eid === 22) ? 
+                  <div>
+                      <a className="download_btn dim pointer br4 ph2 pv1" href="../../../assets/ProblemStatement.docx" download>
+                      DOWNLOAD PROBLEM STATEMENT
+                      </a>
+                  </div>
+                  :
+                  <div />
+                }
               </div>
             </TabPanel>
             <TabPanel tabId="three">

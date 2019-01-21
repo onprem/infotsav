@@ -20,6 +20,14 @@
   /*left: 0;*/
 }
 
+.download_btn {
+  position: fixed;
+  left: 105px;
+  margin-top: 15px;
+  font-size: 20px;
+  border: 2px solid cyan;
+}
+
 .gam_el__close-btn, .info_el__close-btn, .man_el__close-btn, .online_el__close-btn, .robo_el__close-btn, .susp_el__close-btn, .tech_el__close-btn{
   position: fixed;
 }
