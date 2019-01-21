@@ -159,7 +159,7 @@ class Extab extends Component {
                 {
                   (event.eid === 22) ? 
                   <div>
-                      <a className="download_btn dim pointer br4 ph2 pv1" href="../../../assets/ProblemStatement.docx" download>
+                      <a className="download_btn dim pointer br4 ph2 pv1" href="www.infotsav.in/assets/ProblemStatement.docx" download>
                       DOWNLOAD PROBLEM STATEMENT
                       </a>
                   </div>
