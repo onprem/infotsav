@@ -150,7 +150,17 @@ class App extends Component {
             <Route path="/sponsors" exact component={Sponsors} />
             <Route path="/ambassador" exact component={CampusAmbassador} />
             { /* <Route path="/cultural" exact component={Cultural} /> */ }
-            <Route path="/marvel" exact component={QuickRegister} />
+            <Route path="/marvel" exact render={(props) =>
+              <QuickRegister {...props} 
+                updateUser={this.updateUser}
+                isLoggedIn={this.state.isLoggedIn}
+                logOut={this.logOut}
+                updateLoginState={this.updateLoginState} 
+                updateEvent={this.updateEvent} 
+                updateEventTeams={this.updateEventTeams} 
+                updateUserScore={this.updateUserScore}
+              />}
+            />           
             <Route path="/events/online_events" exact render={(props) =>
               <OnlineEvents {...props}
                 updateLoginState={this.updateLoginState} 

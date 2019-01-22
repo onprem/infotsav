@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import {Footer} from '../Footer/Footer';
 import '../../assets/css/signup.css'
 import './contact.css'
@@ -9,8 +9,8 @@ import {Loader} from '../_Loader/Loader'
 
 class QuickRegister extends Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state={
 	  	questions: [
 		  {question:"What's your name?", pattern: /^(\w|\s){3,30}$/},
@@ -28,7 +28,7 @@ class QuickRegister extends Component {
     		name: '',
     		email: '',
     		phone: '',
-    		subject: '',
+    		college: '',
     		event: ''
     	}
   }
@@ -39,34 +39,68 @@ class QuickRegister extends Component {
   componentDidMount(){
   	contactFunctions(this);
   }
+  
+  requestLogin = (user, pass) =>{
+  	let error=false;
+	fetch('/api/signin', {
+		method: 'post',
+		headers: {'Content-type': 'application/json'},
+		body: JSON.stringify({
+			username: user,
+			password: pass
+		})
+	})
+	.then(response => {
+		if(response.status!==200)
+			error=true;
+		return response.json()})
+	.then((user) => {
+		if(error)
+			throw(user);
+		this.updateAllData(user);
+		this.setState({
+			gotUserData: true, 
+			verification: user.user.confirm
+		})
+	})
+	.catch(err => this.setState({errorRes: err}));
+  }
 
   requestContact = (contactData) =>{
-  	console.log('Hehe');
   	let err = false;
-	// fetch('/api/contact', {
-	// 	method: 'post',
-	// 	headers: {'Content-type': 'application/json'},
-	// 	body: JSON.stringify({contactData})
-	// })
-	// .then(response => {
-	// 	if(response.status !== 200)
-	// 		err = true;
-	// 	return response.json()
-	// })
-	// .then((user) => {
-	// 	if(err)
-	// 		throw(user);
-	// 	this.setState({responseMessage: user});
-	// })
-	// .catch(err => {this.setState({receivedError: true, responseMessage: err})});
+	fetch('/api/QuickRegister', {
+		method: 'post',
+		headers: {'Content-type': 'application/json'},
+		body: JSON.stringify({contactData})
+	})
+	.then(response => {
+		if(response.status !== 200)
+			err = true;
+		return response.json()
+	})
+	.then((user) => {
+		if(err)
+			throw(user);
+		this.requestLogin(user.email, user.ifid);
+		// this.setState({responseMessage: user});
+	})
+	.catch(err => {this.setState({receivedError: true, responseMessage: err})});
+  }
+
+  updateAllData = (user) => {
+	this.props.updateLoginState(true);
+	this.props.updateUser(user.user);
+	this.props.updateEvent(user.userEventReg);
+	this.props.updateEventTeams(user.userTeams);
+    this.props.updateUserScore(user.userScore);
   }
 
   updateContactData = () =>{
   	this.contactData = {
 		name: this.state.questions[0].value,
 		email: this.state.questions[1].value,
-		phone: this.state.questions[2].value,
-		subject: this.state.questions[3].value,
+		college: this.state.questions[2].value,
+		phone: this.state.questions[3].value,
 		event: this.state.questions[4].value
   	};
   	if(this.state.gotData && !this.state.responseMessage){
@@ -84,6 +118,9 @@ class QuickRegister extends Component {
   		setTimeout(()=>{
   			window.location.reload();
   		}, 1200);
+  	}
+  	if(this.state.gotUserData && this.state.verification){
+  		return <Redirect to='/profile' />
   	}
 
     return (
