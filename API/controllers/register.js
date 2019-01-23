@@ -11,7 +11,7 @@ const sendEmail = (sname, semail, sverifyHash, seyeFID) => {
         secure: false, // true for 465, false for other ports
         auth: {
             user: 'admin', // generated ethereal user
-            pass: 'test123' // generated ethereal password
+            pass: 'igtsea6am' // generated ethereal password
         }
     });
     transporter.verify(function(error, success) {

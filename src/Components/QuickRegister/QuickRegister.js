@@ -22,7 +22,8 @@ class QuickRegister extends Component {
 	    gotData: false,
 	    responseMessage: '',
 	    receivedError: false,
-    	loading: false
+    	loading: false,
+    	done: false
     }
     this.contactData= {
     		name: '',
@@ -68,7 +69,7 @@ class QuickRegister extends Component {
 
   requestContact = (contactData) =>{
   	let err = false;
-	fetch('/api/QuickRegister', {
+	fetch('/api/quickRegister', {
 		method: 'post',
 		headers: {'Content-type': 'application/json'},
 		body: JSON.stringify({contactData})
@@ -103,7 +104,8 @@ class QuickRegister extends Component {
 		phone: this.state.questions[3].value,
 		event: this.state.questions[4].value
   	};
-  	if(this.state.gotData && !this.state.responseMessage){
+  	if(this.state.gotData && !this.state.responseMessage && !this.state.done){
+  		this.setState({done: true});
   		this.requestContact(this.contactData);
   	}
   }
@@ -111,7 +113,7 @@ class QuickRegister extends Component {
   render() {
   	
   	const { loading } = this.state;
-  	if(this.state.questions[0].value && !this.state.responseMessage)
+  	if(this.state.questions[0].value && !this.state.responseMessage && !this.state.done)
   		this.updateContactData();
 
   	if(this.state.receivedError){

@@ -11,7 +11,7 @@ const sendEmail = (sname, semail, sverifyHash, seyeFID) => {
         secure: false, // true for 465, false for other ports
         auth: {
             user: 'admin', // generated ethereal user
-            pass: 'test123' // generated ethereal password
+            pass: 'igtsea6am' // generated ethereal password
         }
     });
     transporter.verify(function(error, success) {
@@ -124,41 +124,34 @@ const handleQuickRegister = (req,res, db, bcrypt, xss) =>{
 							if(init){
 								teamid = eyeFID+'-'+eid+randomstring.generate(2);
 							}
-							trx.select('*').from('event_reg').where({ifid: eyeFID, eid})
+							return trx.select('*').from('event_reg').where({ifid: eyeFID, eid})
 							.then(reges =>{
 								if(reges.length)
 									return res.status(400).json('Already registered!');
 								else{
-									return trx('users').select('*').where({ifid: eyeFID})
-									.then(data2 => {
-										if(!data2.length)
-											return res.status(400).json('User does not exist!');
-										else{
-											return trx('event_reg').insert({
-												ifid: eyeFID,
-												eid: eid,
-												teamid: teamid
+									return trx('event_reg').insert({
+										ifid: eyeFID,
+										eid: eid,
+										teamid: teamid
+									})
+									.then(() => {
+										if(init){
+											return trx('payment')
+											.insert({
+												teamid: teamid,
+												status: 0
 											})
 											.then(() => {
-												if(init){
-													return trx('payment')
-													.insert({
-														teamid: teamid,
-														status: 0
-													})
-													.then(() => {
-														sendEmail(name, email, verifyHash, eyeFID);
-														return res.status(200).json({
-															email: email,
-															ifid: eyeFID
-														})
-														.then(trx.commit)
-													})
-												}
+												res.status(200).json({
+													email: email,
+													ifid: eyeFID
+												});
+												sendEmail(name, email, verifyHash, eyeFID);
 											})
-											.catch(trx.rollback)
+											.then(trx.commit)
 										}
 									})
+									.catch(trx.rollback)
 								}
 							})
 							.catch(trx.rollback)
