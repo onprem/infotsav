@@ -23,8 +23,8 @@ const sendEmail = (sname, semail, sphone, ssubject, smessage) => {
 		        from: '"Infotsav" <admin@infotsav.in>', // sender address
 		        to: 'contact@infotsav.in, ubuntu@infotsav.in', // list of receivers
 		        subject: 'CAMPUS AMBASSADOR: by email '+semail, // Subject line,
-		        text: 'Name: '+sname+' Email: '+semail+' Subject: '+ssubject+' Message: '+msgbasic, // plain text body
-		        html: '<b>Name: </b>'+sname+'<br><br><b>Email: </b>'+semail+'<br><br><b>Subject: </b>'+ssubject+'<br><br><b>Message: </b><br><br><div>'+msg+'</div>'// html body
+		        text: 'Name: '+sname+' Email: '+semail+' Phone:'+sphone+' Subject: '+ssubject+' Message: '+msgbasic, // plain text body
+		        html: '<b>Name: </b>'+sname+'<br><br><b>Email: </b>'+semail+'<br><br><b>Phone: </b>'+sphone+'<br><br><b>Subject: </b>'+ssubject+'<br><br><b>Message: </b><br><br><div>'+msg+'</div>'// html body
 		    };
 		    transporter.sendMail(mailOptions, (error, info) => {
 		        if (error) {
