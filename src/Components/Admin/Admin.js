@@ -161,7 +161,7 @@ class Admin extends Component {
           />
       );
       return (
-      	<div className='white flex flex-column items-center w-100'>
+      	<div className='white flex flex-column items-center w-100 usersListHeight'>
       	  <h4 className='mv4 payh'>Registered Users: {userArray.length}</h4>
           <Accordion>
           	{usersComponent}
@@ -268,13 +268,13 @@ class Admin extends Component {
 			  			</div>
 			  			<div className="payments">
 			  				<h3>Payments</h3>			  				
-			  				<SuccessList pays={this.state.successPayments} />
+			  				<SuccessList className='limitTableSize' pays={this.state.successPayments} />
 			  				<PendingList pays={this.state.pendingPayments} />
 			  			</div>
 			  			<div className="users">
 			  				<h2>Users</h2>
 			  				<SimpleAreaChart />			  				
-			  				<UsersList userArray={this.state.users} />
+			  				<UsersList className='hehe' userArray={this.state.users} />
 			  			</div>
 			  		</div>
   			:
