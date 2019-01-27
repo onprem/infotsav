@@ -14,10 +14,12 @@ class NoPayment extends Component {
 		this.closeListen();
 	}
 	render() {
+				// <span>&nbsp; Announcement: Considering the requests from participants and campus ambassadors, the deadline for registrations has been extended to 01-Feb-19.</span>
+
 		return(
 		  	<div className="announcement show-notif">
 		  		<span className="fas fa-exclamation-circle"></span>
-				<span>&nbsp; Announcement: Considering the requests from participants and campus ambassadors, the deadline for registrations has been extended to 01-Feb-19.</span>
+				<span>&nbsp; Announcement: Due to technical problems, the deadline for registrations has been extended to 28-Jan-19.</span>
 				<span className="close-ann fas fa-times"></span>
 			</div>
 		);
