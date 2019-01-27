@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link, Redirect} from 'react-router-dom';
 import {Footer} from '../Footer/Footer';
 import '../../assets/css/signup.css'
-import './contact.css'
+import './quickReg.css'
 import headers from "../../assets/logo/headers.png"
 import {contactFunctions} from './ContactFunctions'
 import {Loader} from '../_Loader/Loader'
@@ -131,8 +131,8 @@ class QuickRegister extends Component {
 			<Link to='/'><img src={headers} className="headim" alt="infotsav logo" /></Link>
 		  </div>
    		  <div id="progress"></div>
-		  <div className="center">
-		    <div id="headdin">
+		  <div className="center qcenter">
+		    <div id="headdin" className=''>
 		  		<h1>Register</h1>
 		  	</div>
 		  	{
@@ -189,9 +189,19 @@ class QuickRegister extends Component {
 				      <div className="buttonContainer dim pointer">
 				        <button id="submitButton" className="pointer">Submit</button>
 				      </div>
+				     
 				    </div>
 
 			}
+			 <div className="guidelinesForQuickReg tl white f4-ns f5 ml3">
+		      	<b>Please note the following points:</b>
+	      		<ul>
+			      	<li>Passes to the cultural nights for both the days are clubbed with event registrations.</li>
+					<li>Register in any of the events and get entry to the cultural night.</li>				      
+					<li>The cultural nights will begin at 6 PM in the evening, post which entry to the institute will not be allowed.</li>				      
+					<li>It is compulsory to bring your college ID cards.</li>				      
+	      		</ul>
+	      	</div>
 		    <div id="holditc"></div>
 	  	  </div>
   		  <Footer />

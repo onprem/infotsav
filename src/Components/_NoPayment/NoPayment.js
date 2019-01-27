@@ -17,7 +17,7 @@ class NoPayment extends Component {
 		return(
 		  	<div className="announcement show-notif">
 		  		<span className="fas fa-exclamation-circle"></span>
-				<span>&nbsp; Announcement: Due to heavy participation, last date for payments is 27-Jan-19.</span>
+				<span>&nbsp; Announcement: Considering the requests from participants and campus ambassadors, the deadline for registrations has been extended to 01-Feb-19.</span>
 				<span className="close-ann fas fa-times"></span>
 			</div>
 		);
