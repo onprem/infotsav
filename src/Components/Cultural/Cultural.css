@@ -1,9 +1,13 @@
+@font-face {
+  font-family: b;
+  src: url(../../assets/webfonts/b.ttf);
+}
 body{
   background: #1f1f1f;
 }
 /*--------------------------------------------------------*/
 
-.background {
+.cul_background {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -18,7 +22,7 @@ body{
           transform: translateY(30vh);
   transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
 }
-.background:before {
+.cul_background:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -27,50 +31,28 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
 }
-.background:first-child {
-  background-image: url(../../assets/photos/edm_wall.jpg);
+.cul_background:first-child {
+  background-image: url(../../assets/photos/edm_wall_2.jpg);
   -webkit-transform: translateY(-15vh);
           transform: translateY(-15vh);
 }
-.background:first-child .content-wrapper {
+.cul_background:first-child .content-wrapper {
   -webkit-transform: translateY(15vh);
           transform: translateY(15vh);
 }
-.background:nth-child(2) {
+.cul_background:nth-child(2) {
   background-image: url(../../assets/photos/talk_wall.jpg);
 }
 
 /* Set stacking context of slides */
-.background:nth-child(1) {
+.cul_background:nth-child(1) {
   z-index: 2;
 }
 
-.background:nth-child(2) {
+.cul_background:nth-child(2) {
   z-index: 1;
-}
-
-
-.content-wrapper {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-flow: column nowrap;
-  color: #fff;
-  font-family: Montserrat;
-  text-transform: uppercase;
-  -webkit-transform: translateY(40vh);
-          transform: translateY(40vh);
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
-}
-.content-title {
-  font-size: 12vh;
-  line-height: 1.4;
 }
 
 .background.up-scroll {
@@ -153,82 +135,171 @@ body{
 
 /*-----------------------------------------------------------*/
 
-.night-wrapper {
+.edm_wall {
   width: 100vw;
   height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
-  filter: hue-rotate(150deg);
+  
 }
 
-.martin {
-  position: fixed;
-  bottom: 0;
+/*.cul_filter {
+  width: 100vw;
+}*/
+
+.cul_data1 {
+  position: absolute;
+  bottom: 36vh;
+  right: 11%;
+  color: white;
+  z-index: 5;
+  font-size: 2.5vw;
+  font-family: 'b';
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.martin_logo {
-  position: fixed;
-  top:0;
-  filter: hue-rotate(180deg);
+.cul_data2 {
+  position: absolute;
+  bottom: 29vh;
+  width: 23%;
+  right: 11%;
+  z-index: 5;
+  color: white;
+}
 
+.cul_headlogo {
+  z-index: 5;
+}
 
+.cul_data3 {
+  position: absolute;
+  bottom: 18vh;
+  z-index: 5;
+  right: 16%;
+  width: 21%;
+  color: white;
+}
+
+.mojo {
+  position: absolute;
+  bottom: 15vh;
+  width: 40vw;
+  left: 0;
+  filter: hue-rotate(10deg);
+}
+
+.cul_head {
+  position: absolute;
+  top:8vh;
+  left:28vw;
+  font-size: 8vw;
+  font-family: 'b';
+  background:white;
+  -webkit-background-clip: text;
+  letter-spacing: 5px;
+  opacity: 0.9;
+  -webkit-text-fill-color: transparent;
 }
 
 
 .slant {
-  width: 600px;
-  height: 1000px;
+  width: 30%;
+  height: 100%;
   transform: skew(150deg);
-  background: rgba(0, 0, 255, 0.2);
+  background: linear-gradient(to bottom, blue, white);
+  opacity: 0.4;
   z-index: 2;
   position: fixed;
   top:0;
-  right:0;
+  right:0%;
 }
 
-/*.date {
-  position: fixed;
-  top:100px;
-  font-family: 'Aleo', serif;
-  right: 110px;
-  font-size: 60px;
+.cul_date {
+  position: absolute;
+  top:50vh;
+  font-family: 'b';
+  right: 3.5%;
+  font-size: 3.5vw;
   color: #fff;
   z-index:3; 
-}*/
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cul_time {
+  position: absolute;
+  top:56vh;
+  font-family: 'b';
+  right: 3.5%;
+  font-size: 3.5vw;
+  color: #fff;
+  z-index:3; 
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cul_background_mob {
+  display: none;
+}
 
 /*---------------------------------------------------*/
 
-@media only screen and (max-width: 800px) {
-  .container {
-    display: none;
-  }
-  .mob_container {
-    display: block;
-  }
-  .mob_content-wrapper {
-    height: 100vh;
-    /*display: flex;*/
-    justify-content: center;
-    text-align: center;
-    /*flex-flow: column nowrap;*/
-    color: #fff;
-    font-family: Montserrat;
-    /*text-transform: uppercase;*/
-    -webkit-transform: translateY(4vh);
-            transform: translateY(4vh);
-    will-change: transform;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
-  }
-  .width {
-    width: 300px;
-  }
-  .width2 {
-    width: 300px;
-  }
+@media only screen and (max-width: 1200px) {
+  
+  .slant {
+  display: none;
 }
-a {
-  text-decoration: none;
-  color: white;
+
+.cul_head {
+  top:22vh;
+  left: 15vw;
+  letter-spacing: none;
+  font-size: 11vw;
+  margin: 0;
+}
+
+.cul_date {
+  position: relative;
+  top:25vh;
+  font-size: 9vw;
+}
+
+.cul_time {
+  position: relative;
+  top:20vh;
+  font-size: 9vw;
+}
+
+.cul_data1 {
+  position: relative;
+  top: 15vh;
+  left: 0.5vw;
+  font-size: 12vw;
+}
+
+.cul_data2 {
+  position: relative;
+  top: 9vh;
+  left: -1vh;
+  width: 30vw;
+}
+
+.cul_data3 {
+  position: relative;
+  top:8.5vh;
+  right: -1vh;
+  width: 30vw;
+}
+
+.mojo {
+  bottom: 15.2vh;
+  left: 0;
+  width: 100vw;
+  filter: hue-rotate(10deg);
+}
+
 }

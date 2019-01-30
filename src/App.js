@@ -10,7 +10,7 @@ import Login from './Components/Login/Login'
 import Profile from './Components/Profile/Profile'
 import './App.css';
 
-// const Cultural = lazy(() => import('./Components/Cultural/Cultural'));
+const Cultural = lazy(() => import('./Components/Cultural/Cultural'));
 const Lost = lazy(() => import('./Components/Lost/Lost'));
 const Easter = lazy(() => import('./Components/Easter/Easter'));
 const OnlineEvents = lazy(() => import('./Components/Explore/Online/online_explore'));
@@ -149,7 +149,7 @@ class App extends Component {
             <Route path="/contact" exact component={Contact} />
             <Route path="/sponsors" exact component={Sponsors} />
             <Route path="/ambassador" exact component={CampusAmbassador} />
-            { /* <Route path="/cultural" exact component={Cultural} /> */ }
+            <Route path="/cultural" exact component={Cultural} />
             <Route path="/marvel" exact render={(props) =>
               <QuickRegister {...props} 
                 updateUser={this.updateUser}
