@@ -8,6 +8,7 @@ import headers from "../../assets/logo/headers.png"
 import {Loader} from '../_Loader/Loader'
 import './Profile.css'
 import EventCard from './Event_Card';
+import Modal from 'react-awesome-modal';
 
 class Profile extends Component {
 
@@ -30,7 +31,8 @@ class Profile extends Component {
             WEBSITE: '',
             INDUSTRY_TYPE_ID: '',
             CHECKSUMHASH: ''
-        }
+        },
+        visibleModal: false
 	};
   }
 
@@ -115,6 +117,10 @@ class Profile extends Component {
     })
   }
 
+  stopEventPayments = () => {
+  	this.setState({visibleModal: true});
+  }
+
   render() {
   	const { loading, redirect, paymentActive } = this.state;
   	const lenEvt = this.props.eventData.length;
@@ -129,7 +135,7 @@ class Profile extends Component {
 			status={event[i].status} 
 			teamid={event[i].teamid} 
 		 	deregEvent={this.deregEvent} 
-		 	payEvent={this.payEvent}
+		 	payEvent={this.stopEventPayments}
 	 		/> 
 		});
 		return (
@@ -150,7 +156,7 @@ class Profile extends Component {
 	const IsEligible = () => {
 		if (doesEventExist(29) && doesEventExist(30) && doesEventExist(33) && doesEventExist(34)) {
 			return (
-				<p>Congrats! You are eligible for a refund. Find more about it <a href='#social-media-post'>HERE</a></p>
+				<p>Congrats! You are eligible for a refund. Find more about it <a href='https://www.facebook.com/Infotsav/photos/a.238690002833178/1979212865447541/?type=3&theater'>HERE</a></p>
 			);
 		} else {
 			return (
@@ -210,7 +216,16 @@ class Profile extends Component {
 				<Link to='/'><img src={headers} className="headim" alt="infotsav logo" /></Link>
 			  </div>
 			  <div className="center">
-			  {(!loading)?
+			  <Modal 
+                visible={this.state.visibleModal}
+                effect="fadeInDown"
+                onClickAway={() => this.setState({visibleModal: false})}
+            	>
+	                <div className='black f5 flex flex-column items-center pa3 bg-near-gray'>
+	                    <div className='mb2 b'>Registrations are now closed!</div>
+	                </div>
+            	</Modal>
+            {(!loading)?
 			  		(redirect)?
 			  			<Redirect to='/login' />
 		  			:
