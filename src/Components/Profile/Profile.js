@@ -135,7 +135,7 @@ class Profile extends Component {
 			status={event[i].status} 
 			teamid={event[i].teamid} 
 		 	deregEvent={this.deregEvent} 
-		 	payEvent={this.stopEventPayments}
+		 	payEvent={this.payEvent}
 	 		/> 
 		});
 		return (
