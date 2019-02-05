@@ -201,6 +201,7 @@ body{
   letter-spacing: 5px;
   opacity: 0.9;
   -webkit-text-fill-color: transparent;
+  z-index: 1;
 }
 
 
@@ -256,7 +257,8 @@ body{
 
 .cul_head {
   top:22vh;
-  left: 15vw;
+  /*left: 15vw;*/
+  left: 21%;
   letter-spacing: none;
   font-size: 11vw;
   margin: 0;

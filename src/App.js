@@ -2,7 +2,7 @@ import React, { Component, Suspense, lazy }from 'react';
 import {Route,Switch} from 'react-router-dom';
 import Nav from './Components/Nav/Nav';
 import Offline from './Components/_Offline/Offline';
-import NoPayment from './Components/_NoPayment/NoPayment';
+// import NoPayment from './Components/_NoPayment/NoPayment';
 import Home from './Components/Home/Home';
 import Events from './Components/Events/Events';
 import {Loader} from './Components/_Loader/Loader'
@@ -136,7 +136,9 @@ class App extends Component {
     return (
       <div className="App">
         <Offline />
-        <NoPayment />
+        {
+        //<NoPayment />
+        }
         <Nav 
           logOut={this.logOut} 
           isLoggedIn={this.state.isLoggedIn} 
