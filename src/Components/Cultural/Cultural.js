@@ -97,13 +97,13 @@ class Cultural extends Component {
 			 <div className="cul_container">
 				 <section className="cul_background">
 				   		<h1 className="cul_head">EDM NIGHT</h1>
-						<img class="mojo" src={mojo} />
+						<img class="mojo" src={mojo} alt="mojo"/>
 					<div class="slant"></div>
 						<p className="cul_date">9th Feb</p>
 						<p className="cul_time">9 PM Onwards</p>
 						<p className="cul_data1">Performed At</p>
-						<img className="cul_data2" src={sunburn}></img>
-						<img className="cul_data3" src={fanfest}></img>
+						<img className="cul_data2" src={sunburn} alt="logo"></img>
+						<img className="cul_data3" src={fanfest} alt="logo"></img>
 				   { /* <div className="scroll-down" onClick={() => this.nextItem()}></div> */ }
 				 </section>
 

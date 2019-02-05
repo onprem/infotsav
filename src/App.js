@@ -5,13 +5,13 @@ import Offline from './Components/_Offline/Offline';
 // import NoPayment from './Components/_NoPayment/NoPayment';
 import Home from './Components/Home/Home';
 import Events from './Components/Events/Events';
-import Sponsors from './Components/Sponsors/sponsors'
 import {Loader} from './Components/_Loader/Loader'
 import Login from './Components/Login/Login'
 import Profile from './Components/Profile/Profile'
 import './App.css';
 
 const Cultural = lazy(() => import('./Components/Cultural/Cultural'));
+const Sponsors = lazy(() => import('./Components/Sponsors/sponsors'));
 const Lost = lazy(() => import('./Components/Lost/Lost'));
 const Easter = lazy(() => import('./Components/Easter/Easter'));
 const OnlineEvents = lazy(() => import('./Components/Explore/Online/online_explore'));
