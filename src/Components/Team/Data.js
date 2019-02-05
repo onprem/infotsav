@@ -218,3 +218,35 @@ export const PC_WebTeam = [
 		email3: 'kunji@infotsav.in'
 	}
 ];
+
+export const sponsorsteam = [
+	{
+		name: 'Daksh Berry',
+		icon: 'daksh.jpg',
+		phone: '9599474147',
+	},
+
+	{
+		name: 'Aman Mishra',
+		icon: 'aman.jpg',
+		phone: '8840547929',
+	},
+
+	{
+		name: 'Aditya Tanwar',
+		icon: 'tanwar.jpg',
+		phone: '8130986933',
+	},
+
+	{
+		name: 'Ayush Maurya',
+		icon: 'maurya.jpg',
+		phone: '9079876338',
+	},
+
+	{
+		name: 'Siddharth Jain',
+		icon: 'jain.jpg',
+		phone: '9256800777',
+	}
+];

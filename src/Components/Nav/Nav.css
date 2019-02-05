@@ -253,6 +253,7 @@ label::before {
   }
   .main-nav-nav a {
     margin-left: 1em;
+    line-height: 0.8em;
     margin-right: 0;
     padding: .2em 0em;
     font-size: 1.6em;
