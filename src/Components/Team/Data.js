@@ -223,7 +223,7 @@ export const sponsorsteam = [
 	{
 		name: 'Daksh Berry',
 		icon: 'daksh.jpg',
-		phone: '9599474147',
+		phone: '7009348482',
 	},
 
 	{
