@@ -8,7 +8,6 @@ import abc2 from '../../assets/sponsors/abc2.png'
 import abc3 from '../../assets/sponsors/abc3.png'
 import abc4 from '../../assets/sponsors/abc4.png'
 import abc5 from '../../assets/sponsors/abc5.png'
-import abc6 from '../../assets/sponsors/abc6.png'
 import abc7 from '../../assets/sponsors/abc7.png'
 import abc8 from '../../assets/sponsors/abc8.png'
 import abc10 from '../../assets/sponsors/abc10.png'
@@ -38,7 +37,6 @@ class sponsors extends Component {
 						<img className="sp pa5" src={abc3} alt="sponsor"/>
 						<img className="sp pa5" src={abc4} alt="sponsor"/>
 						<img className="sp pa5" src={abc5} alt="sponsor"/>
-						<img className="sp pa5" src={abc6} alt="sponsor"/>
 						<img className="sp pa5" src={abc7} alt="sponsor"/>
 						<img className="sp pa5" src={abc8} alt="sponsor"/>
 						<img className="sp pa5" src={abc10} alt="sponsor"/>

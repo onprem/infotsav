@@ -228,25 +228,32 @@ export const sponsorsteam = [
 
 	{
 		name: 'Aman Mishra',
-		icon: 'aman.jpg',
+		icon: 'aman.jpeg',
 		phone: '8840547929',
 	},
 
 	{
 		name: 'Aditya Tanwar',
-		icon: 'tanwar.jpg',
+		icon: 'tanwar.jpeg',
 		phone: '8130986933',
 	},
 
 	{
 		name: 'Ayush Maurya',
-		icon: 'maurya.jpg',
+		icon: 'maurya.jpeg',
 		phone: '9079876338',
 	},
 
 	{
+		name: 'Nishant Tomar',
+		icon: 'tomar.jpeg',
+		phone: '9425171336',
+	},
+
+
+	{
 		name: 'Siddharth Jain',
-		icon: 'jain.jpg',
+		icon: 'jain.jpeg',
 		phone: '9256800777',
 	}
 ];
