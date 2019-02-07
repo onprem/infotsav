@@ -2,7 +2,7 @@ import React, { Component, Suspense, lazy }from 'react';
 import {Route,Switch} from 'react-router-dom';
 import Nav from './Components/Nav/Nav';
 import Offline from './Components/_Offline/Offline';
-// import NoPayment from './Components/_NoPayment/NoPayment';
+import NoPayment from './Components/_NoPayment/NoPayment';
 import Home from './Components/Home/Home';
 import Events from './Components/Events/Events';
 import {Loader} from './Components/_Loader/Loader'
@@ -28,6 +28,7 @@ const Contact = lazy(() =>  import('./Components/Contact/Contact'));
 const Team = lazy(() =>  import('./Components/Team/Team'));
 const Verify = lazy(() =>  import('./Components/Verify/Verify'));
 const Admin = lazy(() =>  import('./Components/Admin/Admin'));
+const EventAdmin = lazy(() =>  import('./Components/Admin/EventAdmin'));
 const About = lazy(() =>  import('./Components/About/About'));
 const ForgotPass = lazy(() =>  import('./Components/ForgotPass/ForgotPass'));
 const HandleForgotPass = lazy(() =>  import('./Components/HandleForgotPass/HandleForgotPass'));
@@ -137,7 +138,7 @@ class App extends Component {
       <div className="App">
         <Offline />
         {
-        //<NoPayment />
+        <NoPayment />
         }
         <Nav 
           logOut={this.logOut} 
@@ -273,6 +274,19 @@ class App extends Component {
             />
             <Route path="/admin" exact render={(props)=> 
               <Admin {...props} 
+                userData={this.state.user} 
+                isLoggedIn={this.state.isLoggedIn} 
+                isAdmin={this.state.isAdmin} 
+                updateLoginState={this.updateLoginState}
+                updateAdminState={this.updateAdminState}
+                eventData={this.state.userEventReg}
+                eventTeams={this.state.userTeams}
+                updateEvent={this.updateEvent} 
+                updateEventTeams={this.updateEventTeams} 
+              />} 
+            />
+            <Route path="/eventadm" exact render={(props)=> 
+              <EventAdmin {...props} 
                 userData={this.state.user} 
                 isLoggedIn={this.state.isLoggedIn} 
                 isAdmin={this.state.isAdmin} 

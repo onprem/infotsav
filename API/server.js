@@ -22,6 +22,7 @@ const callback = require('./controllers/callback');
 const eventPayment = require('./controllers/eventPayment');
 const doubleVerify = require('./controllers/doubleVerify');
 const payments = require('./controllers/payments');
+const eventRegList = require('./controllers/eventRegList');
 const getUsers = require('./controllers/getUsers');
 const easter = require('./controllers/easter');
 require("dotenv").config();
@@ -68,6 +69,7 @@ app.get('/api/logout', (req, res) => {res.clearCookie('token'); res.status(301).
 app.get('/api/profilex', withAuth, (req, res) => {profilex.handleProfile(req, res, db)});
 app.get('/api/payments', withAdmin, (req, res) => {payments.returnPayments(req, res, db)});
 app.get('/api/getusers', withAdmin, (req, res) => {getUsers.returnUsers(req, res, db)});
+app.post('/api/eventRegList', (req, res) => {eventRegList.eventRegList(req, res, db)});
 app.get('/api/checkAdmin', withAdmin, (req, res) => {
   res.sendStatus(200);
 });
