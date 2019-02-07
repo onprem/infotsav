@@ -49,7 +49,7 @@ class Home extends Component {
 			<div>
 				<Link to='#'><img src={headers} className="headimg" alt="infotsav logo" /></Link>
 			</div>
-			<a href="www.infotsav.in/assets/Infotsav'19 Schedule.pdf" download>
+			<a href="https://www.infotsav.in/assets/Infotsav'sSchedule.pdf" download>
 				<div className='campusAmbassador dim pointer br4 ph2 pv1'>
                       DOWNLOAD SCHEDULE
 				</div>

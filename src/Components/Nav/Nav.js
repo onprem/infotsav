@@ -55,7 +55,7 @@ class Nav extends Component {
 					</div>
 				  </Link>
 			  	</div>  
-			  	<a href="www.infotsav.in/assets/Infotsav'19 Schedule.pdf" id='CampusAssNav' download>
+			  	<a href="https://www.infotsav.in/assets/Infotsav'sSchedule.pdf" id='CampusAssNav' download>
 					<div className='white dim b f5 ba br4 pa1 ph2 idonnav CampusAssNavDiv'>SCHEDULE</div>
 				</a>
 			</nav>
