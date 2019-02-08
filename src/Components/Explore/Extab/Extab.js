@@ -36,7 +36,6 @@ class Extab extends Component {
             <TabList className='mv2'>
               <Tab autoFocus tabFor="one">About</Tab>
               <Tab tabFor="two">Rules</Tab>
-              <Tab tabFor="three">Register</Tab>
             </TabList>
             <TabPanel tabId="one">
               <div className='f3 underline b'>Description</div>
@@ -87,7 +86,6 @@ class Extab extends Component {
             <TabList className='mv2'>
               <Tab autoFocus tabFor="one">About</Tab>
               <Tab tabFor="two">Rules</Tab>
-              <Tab tabFor="three">Register</Tab>
             </TabList>
             <TabPanel tabId="one">
               <div className='f3 underline b'>Description</div>
@@ -132,7 +130,6 @@ class Extab extends Component {
             <TabList className='mv2'>
               <Tab autoFocus tabFor="one">About</Tab>
               <Tab tabFor="two">Rules</Tab>
-              <Tab tabFor="three">Register</Tab>
             </TabList>
             <TabPanel tabId="one">
               <div className='f3 underline b'>Description</div>

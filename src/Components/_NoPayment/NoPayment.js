@@ -19,9 +19,7 @@ class NoPayment extends Component {
 		return(
 		  	<div className="announcement show-notif">
 		  		<span className="fas fa-exclamation-circle"></span>
-						<li><span>&nbsp;Please carry your college IDs</span></li>
-						<li><span>Please cooperate with our security guidelines.</span></li>
-						<li><span>Consumption of drugs and alcohol is prohibited.</span></li>
+						<span>&nbsp;Online Registrations has been closed !</span>
 				<span className="close-ann fas fa-times"></span>
 			</div>
 		);
