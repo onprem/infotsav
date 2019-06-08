@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './Home.css';
 import inf_starlord from "../../assets/logo/inf-starlord.png";
-import starlord from "../../assets/hero/starlord.png";
+import starlord from "../../assets/hero/starlord.webp";
 import headers from "../../assets/logo/headers.png"
 import youtube from "../../assets/photos/youtube-s.png"
 import '../../assets/css/fontawesome.min.css'

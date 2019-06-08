@@ -3,10 +3,10 @@ import inf_black from "../../assets/logo/inf-black.png";
 import inf_thor from "../../assets/logo/inf-thor.png";
 import inf_strange from "../../assets/logo/inf-strange.png";
 
-import starlord from "../../assets/hero/starlord.png";
-import blackfinal from "../../assets/hero/blackfinal.png";
-import thorfinal from "../../assets/hero/thorfinal.png";
-import strange from "../../assets/hero/strange.png";
+import starlord from "../../assets/hero/starlord.webp";
+import blackfinal from "../../assets/hero/blackfinal.webp";
+import thorfinal from "../../assets/hero/thorfinal.webp";
+import strange from "../../assets/hero/strange.webp";
 
 
 let myVar, myTar, myBar1, myBar2, myBar3, myBar4, myBar;
