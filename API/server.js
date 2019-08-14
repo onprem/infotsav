@@ -30,12 +30,10 @@ require("dotenv").config();
 const db = knex({
   client: 'mysql',
   connection: {
-  	// connectionString: process.env.DATABASE_URL,
-  	// ssl: true
-    host : 'infotsav.in',
-    user : 'infotsav',
-    password : 'tukki@123',
-    database : 'infotsav'
+    host : process.env.DB_HOST,
+    user : process.env.DB_USER,
+    password : process.env.DB_PASS,
+    database : process.env.DB_NAME
   }
 });
 
