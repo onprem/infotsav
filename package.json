@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "query-string": "^6.8.2",
+    "query-string": "^6.8.3",
     "react": "^16.9.0",
     "react-accessible-accordion": "^3.0.0",
     "react-awesome-modal": "^2.0.5",
