@@ -1,6 +1,8 @@
 # Infotsav
 Website for Infotsav '19, IIIT Gwalior
 
+Infotsav is a platform which gives a competitive and healthy atmosphere to compete, develop and nourish the creativity and innovation.The Annual Technical Festival of IIIT Gwalior.
+
 This website is built with the help of React and Node.js
 
 ### Frontend
